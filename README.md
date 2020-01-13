@@ -3,7 +3,7 @@
 
 This is a repository project made with Unity for our current 5 months semester!
 
-`Unity version used: 2019.3.0f3
+`Unity version used: 2019.3.0f3`
 
 ---
 
