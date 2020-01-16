@@ -71,7 +71,7 @@ MonoBehaviour:
   lastModified: 637147876198021551
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4946625497306344667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   lastModified: 637147876196974369
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4145100697870957684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +108,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2406897950224883921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Test.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Test.bank
+  SubDir: 
+  lastModified: 637147894046169695
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-786867441673753035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,16 +158,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 4919325903920094353}
-  - {fileID: -4946625497306344667}
-  - {fileID: -5675744498994347676}
+  - {fileID: 5058834124692933140}
+  - {fileID: -2406897950224883921}
   EditorEvents:
   - {fileID: 493641654788184927}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4946625497306344667}
+  - {fileID: 5058834124692933140}
   StringsBanks:
   - {fileID: 4919325903920094353}
-  stringsBankWriteTime: 637147876196984340
+  stringsBankWriteTime: 637147894045990163
   cacheVersion: 3
 --- !u!114 &493641654788184927
 MonoBehaviour:
@@ -166,7 +184,7 @@ MonoBehaviour:
   Path: event:/Test
   guid: d1be8acca9961244ab9a709039701201
   Banks:
-  - {fileID: -5675744498994347676}
+  - {fileID: -2406897950224883921}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -189,6 +207,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Test.bank
   SubDir: 
   lastModified: 637147836373152140
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2669018861716258223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Test.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Test.bank
+  SubDir: 
+  lastModified: 637147893809324340
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -215,6 +251,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1512
+--- !u!114 &4679220687265985242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637147893809114897
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4919325903920094353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,11 +283,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637147876196984340
+  lastModified: 637147894045990163
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 776
+  Exists: 1
+--- !u!114 &5058834124692933140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637147894045980180
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &5558111312437164208
 MonoBehaviour:
