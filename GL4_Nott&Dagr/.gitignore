@@ -1,41 +1,67 @@
-###
-# Unity folders and files
-###
-!/[Aa]ssets/**/*.meta
-[Bb]uild/
-[Ll]ibrary/
-[Ll]ocal[Cc]ache/
-[Oo]bj/
-[Tt]emp/
-[Uu]nityGenerated/
-# file on crash reports
-sysinfo.txt
+# Supyrb .gitignore standalone v0.2.0
 
-###
-# VS/MD solution and project files
-###
-[Ee]xportedObj/
-*.booproj
-*.csproj
-*.sln
-*.suo
+# Unity generated
+/.gradle/**
+/Temp/**
+/Library/**
+/obj/**
+
+# Visual Studio / Rider / MonoDevelop generated
+/ExportedObj/**
+/obj
+/.vs/**
 *.svd
-*.unityproj
-*.user
 *.userprefs
+*.csproj
 *.pidb
-*.vs
-*.ide
-.DS_Store
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
 
-###
+*.csproj
+*.cache
+*Resharper*
+*ReSharper*
+*.orig
+*.orig.*
+*sln*
+
+.idea/**
+/Assets/Plugins/Editor/Jetbrains/*
+/Assets/Plugins/Editor/Jetbrains.meta
+
 # OS generated
-###
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-Icon?
 ehthumbs.db
 Thumbs.db
+report.xml
+
+# Other
+/CodeCoverage/**
+/SHFB/Help/**
+
+# FMOD
+/Assets/FMODStudioCache.asset
+/Assets/FMODStudioCache.asset.meta
+fmod.log
+fmod_editor.log
+
+# FMOD studio (In folder FMOD)
+/FMOD/**.user
+/FMOD/**.unsaved
+/FMOD/**.cache
+/FMOD/**.restore
+
+# Custom
+/Builds/**
+/Data/**
+/Assets/_Project/Preferences/Editor/Credentials/**
+/Assets/_Project/Preferences/Editor/Credentials.meta
+/Assets/Temp/**
+/Assets/Temp.meta
