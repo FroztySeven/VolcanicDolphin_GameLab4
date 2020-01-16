@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMod/NottOkDagr/NottOkDagr.fspro
-  sourceBankPath: Assets\FMod\NottOkDagr\Build
+  sourceProjectPath: FMod\NottOkDagr\NottOkDagr.fspro
+  sourceBankPath: FMod\NottOkDagr\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
