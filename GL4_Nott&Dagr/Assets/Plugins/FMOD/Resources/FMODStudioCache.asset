@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7695777955342079663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637147825289204930
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6452810825621142585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637147832940826234
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4145100697870957684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,7 +53,7 @@ MonoBehaviour:
   lastModified: 637147809600831698
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,15 +68,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7945328839674498102}
-  - {fileID: -4145100697870957684}
-  EditorEvents: []
+  - {fileID: -6452810825621142585}
+  EditorEvents:
+  - {fileID: 3249816253449813174}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4145100697870957684}
+  - {fileID: -6452810825621142585}
   StringsBanks:
   - {fileID: 7945328839674498102}
-  stringsBankWriteTime: 637147809601031150
+  stringsBankWriteTime: 637147832940846191
   cacheVersion: 3
+--- !u!114 &3249816253449813174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Test
+  m_EditorClassIdentifier: 
+  Path: event:/Test
+  guid: d1be8acca9961244ab9a709039701201
+  Banks:
+  - {fileID: -6452810825621142585}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1512
+--- !u!114 &5558111312437164208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TestEvent
+  m_EditorClassIdentifier: 
+  Path: event:/TestEvent
+  guid: bbb3a7bc6c77764fae5a97838b76f450
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1512
 --- !u!114 &7945328839674498102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,9 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMod/NottOkDagr/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637147809601031150
+  lastModified: 637147832940846191
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 688
+    Value: 730
   Exists: 1
