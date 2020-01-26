@@ -41,7 +41,7 @@ MonoBehaviour:
   - Platform: 1
     Value: 1
   - Platform: 2
-    Value: 1
+    Value: 0
   - Platform: 20
     Value: 0
   OverlaySettings:
@@ -79,6 +79,11 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Test
+  - Enemies
+  - Environment
+  - Music
+  - Objects
+  - Players
+  - UI
   BanksToLoad: []
   LiveUpdatePort: 9264

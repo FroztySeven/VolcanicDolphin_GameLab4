@@ -415,6 +415,7 @@ namespace FMODUnity
 
         }
 
+        #if UNITY_EDITOR
         private void OnEnable()
         {
             if (SwitchSettingsMigration == false)
@@ -433,7 +434,14 @@ namespace FMODUnity
             // Fix up slashes for old settings meta data.
             sourceProjectPath = RuntimeUtils.GetCommonPlatformPath(sourceProjectPath);
             SourceBankPathUnformatted = RuntimeUtils.GetCommonPlatformPath(SourceBankPathUnformatted);
-        }
-    }
 
+            // Remove the FMODStudioCache if in the old location
+            string oldCache = "Assets/Plugins/FMOD/Resources/FMODStudioCache.asset";
+            if (File.Exists(oldCache))
+            {
+                AssetDatabase.DeleteAsset(oldCache);
+            }
+        }
+        #endif
+    }
 }
