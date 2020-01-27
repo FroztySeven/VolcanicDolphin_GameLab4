@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/J-T Testing/Character Selection.unity
+    guid: 6aa606dd3ce2bbd488634736ab36bdc6
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Split Screen Test.unity
+    guid: 92ade5d34560f664bb40c2c2155e325d
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Static Size 5.unity
+    guid: 49580d731dc38cc43b5b3628406a90a5
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Static Size 10.unity
+    guid: f363b3c8a29222748baffd7d1454afad
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Static Size 15.unity
+    guid: 79745c01e7c4ed44b85f2806ff99d3f0
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Zoom Test.unity
+    guid: e3a5e439f28b74e4a81b5b45fd929a16
   m_configObjects: {}
