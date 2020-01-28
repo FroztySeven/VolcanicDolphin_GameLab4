@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovementTest : MonoBehaviour
 {
-    public static PlayerMovementTest instance;
-
     public enum NightOrDay { Night, Day }
 
     public NightOrDay setPlayer;
@@ -25,7 +23,7 @@ public class PlayerMovementTest : MonoBehaviour
 
     private int doubleJumpCounter = 0;
 
-    private bool canMove = true;
+    public bool canMove = true;
     private bool isGrounded;
     private bool isOnwall;
 
@@ -40,8 +38,6 @@ public class PlayerMovementTest : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-
         if (setPlayer.ToString() == "Night")
         {
             if (CharacterStoredInfo.instance)

@@ -135,6 +135,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -312,11 +313,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f9cf16d1fdd2143ae04c84ede5d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterFreezeSpeed: 0.5
   frozenWaterTile: {fileID: 11400000, guid: f836c178fcf89a7488c3f6480e6aaca2, type: 2}
   frozenWaterEndTile: {fileID: 11400000, guid: 2e40610da963571428cc7f73e5c2f48d, type: 2}
   waterTile: {fileID: 11400000, guid: a6d41a8da7bf79b43af3e9aa44b0ef61, type: 2}
   waterEndTile: {fileID: 11400000, guid: e411a549891da124a80821f547129d03, type: 2}
   standingOnTile: {fileID: 0}
+  roofTile: {fileID: 11400000, guid: a0de2b2a40a195747b4cc27dacdd59e7, type: 2}
+  aboveTile: {fileID: 0}
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
   highlightMap: {fileID: 0}
   typeOfGround:
     serializedVersion: 2
