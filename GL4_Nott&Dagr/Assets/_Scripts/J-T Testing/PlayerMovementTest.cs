@@ -23,9 +23,9 @@ public class PlayerMovementTest : MonoBehaviour
 
     private int doubleJumpCounter = 0;
 
-    public bool canMove = true;
+    private bool canMove = true;
     private bool isGrounded;
-    private bool isOnwall;
+    private bool isOnWall;
 
     [SerializeField]
     private LayerMask whatIsGround;
@@ -33,6 +33,9 @@ public class PlayerMovementTest : MonoBehaviour
     public float groundedRadius;
     public float ceilingRadius;
     public Vector2 wallSize;
+
+    [HideInInspector]
+    public bool isOnLadder;
 
     public Transform groundCheck, ceilingCheck, wallCheck;
 
@@ -66,7 +69,7 @@ public class PlayerMovementTest : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = false;
-        isOnwall = false;
+        isOnWall = false;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
         for (int i = 0; i < colliders.Length; i++)
@@ -82,7 +85,7 @@ public class PlayerMovementTest : MonoBehaviour
         {
             if (wallColliders[i].gameObject != gameObject)
             {
-                isOnwall = true;
+                isOnWall = true;
             }
         }
     }
@@ -108,16 +111,24 @@ public class PlayerMovementTest : MonoBehaviour
 
             if (canDoubleJump && !isGrounded && doubleJumpCounter >= 1 && Input.GetButtonDown("JumpP" + playerId))
             {
+                theRB.velocity = Vector2.zero;
                 theRB.AddForce(new Vector2(0f, jumpForce));
                 Debug.Log("Player" + playerId + " is Double Jumping!");
                 doubleJumpCounter = 0;
+            }
+
+            if (isOnLadder)
+            {
+                moveInput.y = Input.GetAxisRaw("VerticalP" + playerId);
+
+                theRB.velocity = new Vector2(moveInput.x * movementSpeed, moveInput.y * movementSpeed);
             }
 
         }
 
         // If player is on the wall, slide down.
 
-        if (!isGrounded && isOnwall)
+        if (!isGrounded && isOnWall)
         {
             moveInput.y += -10f;
 

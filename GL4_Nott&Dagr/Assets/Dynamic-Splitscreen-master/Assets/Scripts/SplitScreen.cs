@@ -91,7 +91,7 @@ public class SplitScreen : MonoBehaviour {
 			offset2.x = Mathf.Clamp(offset.x,-splitDistance/2,splitDistance/2);
 			offset2.y = Mathf.Clamp(offset.y,-splitDistance/2,splitDistance/2);
 			offset2.z = Mathf.Clamp(offset.z,-splitDistance/2,splitDistance/2);
-			Vector3 midPoint2 = player2.position - offset;
+			Vector3 midPoint2 = player2.position - offset2;
 
 			//Sets the splitter and camera to active and sets the second camera position as to avoid lerping continuity errors.
 			if (splitter.activeSelf == false) {
