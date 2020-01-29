@@ -9,8 +9,8 @@ public class PlayerMovementTest : MonoBehaviour
 
     public NightOrDay setPlayer;
 
-    //[HideInInspector]
-    public int playerId;
+    [HideInInspector]
+    public int playerId = 0;
 
     public bool singlePlayer;
     private bool swapInputs;
@@ -59,6 +59,10 @@ public class PlayerMovementTest : MonoBehaviour
                 }
                 singlePlayer = CharacterStoredInfo.instance.singlePlayer;
             }
+            else
+            {
+                playerId = 1;
+            }
         }
 
         if (setPlayer.ToString() == "Day")
@@ -74,6 +78,10 @@ public class PlayerMovementTest : MonoBehaviour
                     playerId = 2;
                 }
                 singlePlayer = CharacterStoredInfo.instance.singlePlayer;
+            }
+            else
+            {
+                playerId = 2;
             }
         }
     }
