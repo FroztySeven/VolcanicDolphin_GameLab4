@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setPlayer: 1
   playerId: 0
+  singlePlayer: 0
   movementSpeed: 10
   jumpForce: 750
   theRB: {fileID: 7788640642130820838}

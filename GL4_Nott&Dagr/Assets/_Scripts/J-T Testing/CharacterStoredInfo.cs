@@ -9,6 +9,8 @@ public class CharacterStoredInfo : MonoBehaviour
 
     public int night, day;
 
+    public bool singlePlayer;
+
     private void Awake()
     {
         instance = this;
@@ -21,7 +23,7 @@ public class CharacterStoredInfo : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("Character Selection Test");
+            SceneManager.LoadScene("Character Selection");
         }
     }
 }

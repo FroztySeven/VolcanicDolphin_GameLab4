@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/J-T Testing/Start.unity
-    guid: 6aa606dd3ce2bbd488634736ab36bdc6
+    path: Assets/Scenes/J-T Testing/Character Selection.unity
+    guid: 889ec1b1778506c4dabf03d09228a782
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Prototype Level.unity
+    guid: 09ae3c641a858e045b95a9e189861311
   - enabled: 1
     path: Assets/Scenes/J-T Testing/Camera Tests/Camera Split Screen Test.unity
     guid: 92ade5d34560f664bb40c2c2155e325d

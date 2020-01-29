@@ -9,8 +9,11 @@ public class PlayerMovementTest : MonoBehaviour
 
     public NightOrDay setPlayer;
 
-    [HideInInspector]
+    //[HideInInspector]
     public int playerId;
+
+    public bool singlePlayer;
+    private bool swapInputs;
 
     public float movementSpeed;
     public float jumpForce;
@@ -37,6 +40,7 @@ public class PlayerMovementTest : MonoBehaviour
     [HideInInspector]
     public bool isOnLadder;
 
+
     public Transform groundCheck, ceilingCheck, wallCheck;
 
     private void Awake()
@@ -45,11 +49,15 @@ public class PlayerMovementTest : MonoBehaviour
         {
             if (CharacterStoredInfo.instance)
             {
-                playerId = CharacterStoredInfo.instance.night;
-            }
-            else
-            {
-                playerId = 1;
+                if (CharacterStoredInfo.instance.night != 0)
+                {
+                    playerId = CharacterStoredInfo.instance.night;
+                }
+                else
+                {
+                    playerId = 1;
+                }
+                singlePlayer = CharacterStoredInfo.instance.singlePlayer;
             }
         }
 
@@ -57,11 +65,15 @@ public class PlayerMovementTest : MonoBehaviour
         {
             if (CharacterStoredInfo.instance)
             {
-                playerId = CharacterStoredInfo.instance.day;
-            }
-            else
-            {
-                playerId = 2;
+                if (CharacterStoredInfo.instance.day != 0)
+                {
+                    playerId = CharacterStoredInfo.instance.day;
+                }
+                else
+                {
+                    playerId = 2;
+                }
+                singlePlayer = CharacterStoredInfo.instance.singlePlayer;
             }
         }
     }
@@ -147,6 +159,37 @@ public class PlayerMovementTest : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Joystick2Button6))
         {
             SceneManager.LoadScene("Character Selection");
+        }
+
+        if (singlePlayer)
+        {
+            // Xbox controller button Y toggle
+            if (Input.GetButtonDown("SwapP1P2"))
+            {
+                if (setPlayer.ToString() == "Night")
+                {
+                    if (playerId == 1)
+                    {
+                        playerId = 2;
+                    }
+                    else
+                    {
+                        playerId = 1;
+                    }
+                }
+
+                if (setPlayer.ToString() == "Day")
+                {
+                    if (playerId == 1)
+                    {
+                        playerId = 2;
+                    }
+                    else
+                    {
+                        playerId = 1;
+                    }
+                }
+            }
         }
     }
 }

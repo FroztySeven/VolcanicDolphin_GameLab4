@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject P1, P2, checkmark, pressAToPlay, levelSelect, playButton;
+    public GameObject P1, P2, checkmark, pressAToPlay, levelSelect, levelStart, levelSelectFirstButton;
 
     public int playerId;
 
@@ -21,7 +21,7 @@ public class CharacterSelection : MonoBehaviour
 
     private bool changedLocation = false;
     private bool characterSelected = false;
-    private bool playersSelected = false;
+    private bool playersSelected = true;
 
     //private void Start()
     //{
@@ -32,7 +32,7 @@ public class CharacterSelection : MonoBehaviour
     {
         moveInput.x = Input.GetAxisRaw("HorizontalP" + playerId);
 
-        if (!characterSelected)
+        if (!characterSelected && !playersSelected)
         {
             if (moveInput.x < 0 && position > positionMin && !changedLocation)
             {
@@ -94,11 +94,12 @@ public class CharacterSelection : MonoBehaviour
 
             if (Input.GetButtonDown("JumpP" + playerId))
             {
-                playersSelected = true;
+                P1.GetComponent<CharacterSelection>().playersSelected = true;
+                P2.GetComponent<CharacterSelection>().playersSelected = true;
                 levelSelect.SetActive(true);
                 EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
                 es.SetSelectedGameObject(null);
-                es.SetSelectedGameObject(es.firstSelectedGameObject);
+                es.SetSelectedGameObject(levelSelectFirstButton);
                 //pressAToPlay.SetActive(true);
                 //selectedCounter++;
             }
@@ -113,6 +114,31 @@ public class CharacterSelection : MonoBehaviour
             //    SceneManager.LoadScene("Test");
             //}
         }
+    }
+
+    public void SinglePlayer()
+    {
+        P1.GetComponent<CharacterSelection>().playersSelected = true;
+        P2.GetComponent<CharacterSelection>().playersSelected = true;
+        CharacterStoredInfo.instance.singlePlayer = true;
+        levelStart.SetActive(false);
+        levelSelect.SetActive(true);
+        EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        es.SetSelectedGameObject(null);
+        es.SetSelectedGameObject(levelSelectFirstButton);
+    }
+
+    public void MultiPlayer()
+    {
+        CharacterStoredInfo.instance.singlePlayer = false;
+        Invoke("SetCharSelectionActive", 0.5f);
+        levelStart.SetActive(false);
+    }
+
+    private void SetCharSelectionActive()
+    {
+        P1.GetComponent<CharacterSelection>().playersSelected = false;
+        P2.GetComponent<CharacterSelection>().playersSelected = false;
     }
 
     public void LevelOne()
@@ -138,5 +164,10 @@ public class CharacterSelection : MonoBehaviour
     public void LevelFive()
     {
         SceneManager.LoadScene("Camera Split Screen Test");
+    }
+
+    public void LevelSix()
+    {
+        SceneManager.LoadScene("Prototype Level");
     }
 }
