@@ -20,8 +20,6 @@ public class AuraCrash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag + "  Tag");
-
         if (other.gameObject.CompareTag("NottAura"))
         {
                 crashForce = dagr.transform.position - nott.transform.position; // dagr then nott
@@ -31,7 +29,8 @@ public class AuraCrash : MonoBehaviour
                 {
                     if (Input.GetButton("AuraPushP1"))
                     {
-                       nottRB.AddForce(crashForce * -30, ForceMode2D.Impulse); //change this when i fix the bug
+                       dagrRB.AddForce(crashForce * -30, ForceMode2D.Impulse); //change this when i fix the bug
+                       Debug.Log("AuraPushP1");
                     }
                 }
 
@@ -41,7 +40,9 @@ public class AuraCrash : MonoBehaviour
                 }
                 else
                 {
-                    dagrRB.velocity *= -15;
+                    dagr.GetComponent<PlayerMovementTest>().enabled = false;
+                    dagrRB.velocity *= -5;
+                    StartCoroutine(turnOnMovement());
                 }
         }
         
@@ -54,7 +55,8 @@ public class AuraCrash : MonoBehaviour
             {
                 if (Input.GetButton("AuraPushP2"))
                 {
-                    dagrRB.AddForce(crashForce * 6, ForceMode2D.Impulse);
+                    nottRB.AddForce(crashForce * -30, ForceMode2D.Impulse);
+                    Debug.Log("AuraPushP2");
                 }
             }
 
@@ -63,9 +65,19 @@ public class AuraCrash : MonoBehaviour
                 nottRB.velocity *= -1.5f;
             }
             else
-            {
-                nottRB.velocity *= -15;
+            { 
+                nott.GetComponent<PlayerMovementTest>().enabled = false;
+                nottRB.velocity *= -5;
+                StartCoroutine(turnOnMovement());
             }
         }
     }
+
+    private IEnumerator turnOnMovement()
+    {
+        yield return new WaitForSeconds(0.15f);
+        dagr.GetComponent<PlayerMovementTest>().enabled = true;
+        nott.GetComponent<PlayerMovementTest>().enabled = true;
+    }
+    
 }
