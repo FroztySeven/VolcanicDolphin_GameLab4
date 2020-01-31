@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 7779846750098210842}
   - component: {fileID: 7339977784284609012}
   - component: {fileID: 4475830151783184276}
+  - component: {fileID: 443863837837746459}
   m_Layer: 9
   m_Name: Aura
   m_TagString: DagrAura
@@ -198,6 +199,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42666668, y: 0.42666668}
   m_EdgeRadius: 0
+--- !u!114 &443863837837746459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3846428973273867091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21cd16b906710e84e8f84dbf018e78cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nott: {fileID: 0}
+  dagr: {fileID: 0}
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0
