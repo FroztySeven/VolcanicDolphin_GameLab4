@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: 8859650044047498875
     second: xbox-one-buttons-png-4-transparent_1
+  - first:
+      213: 3990497091269958610
+    second: xbox-one-buttons-png-4-transparent_2
+  - first:
+      213: -4741348018854731389
+    second: xbox-one-buttons-png-4-transparent_3
+  - first:
+      213: 8292358488108495621
+    second: xbox-one-buttons-png-4-transparent_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -108,6 +117,90 @@ TextureImporter:
       bones: []
       spriteID: 79f78904e3d3560459052f88c8525805
       internalID: 8859650044047498875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xbox-one-buttons-png-4-transparent_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 226
+        width: 50
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9910bd947ae063a0800000000000000
+      internalID: -6674076861180405345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xbox-one-buttons-png-4-transparent_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 194
+        width: 50
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db106246f7116730800000000000000
+      internalID: 3990497091269958610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xbox-one-buttons-png-4-transparent_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 162
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38169abf819533eb0800000000000000
+      internalID: -4741348018854731389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xbox-one-buttons-png-4-transparent_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 130
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503f6e13c10641370800000000000000
+      internalID: 8292358488108495621
       vertices: []
       indices: 
       edges: []

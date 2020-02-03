@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject P1, P2, checkmark, pressAToPlay, levelSelect, levelStart, levelSelectFirstButton;
+    public GameObject P1, P2, checkmark, pressAToPlay, levelSelect, levelStart, howToPlay, startSelectFirstButton, backButton, levelSelectFirstButton;
 
     public int playerId;
 
@@ -203,5 +203,25 @@ public class CharacterSelection : MonoBehaviour
     public void LevelSix()
     {
         SceneManager.LoadScene("Prototype Level");
+    }
+
+    public void HowToPlay()
+    {
+        howToPlay.SetActive(true);
+        levelStart.SetActive(false);
+
+        EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        es.SetSelectedGameObject(null);
+        es.SetSelectedGameObject(backButton);
+    }
+
+    public void BackButton()
+    {
+        levelStart.SetActive(true);
+        howToPlay.SetActive(false);
+
+        EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        es.SetSelectedGameObject(null);
+        es.SetSelectedGameObject(es.firstSelectedGameObject);
     }
 }
