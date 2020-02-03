@@ -15,6 +15,7 @@ public class KeyOpenDoor : MonoBehaviour
         if (other.gameObject.CompareTag("Key"))
         {
             door.GetComponent<SpriteRenderer>().sprite = openDoor;
+            door.GetComponent<BoxCollider2D>().enabled = true;
             other.gameObject.SetActive(false);
         }
     }

@@ -57,14 +57,31 @@ public class CharacterSelection : MonoBehaviour
                     transform.position = controllerNight.position;
                     if (Input.GetButtonDown("JumpP" + playerId))
                     {
-                        Destroy(P1.GetComponent<CharacterSelection>().controllerNight.gameObject);
-                        Destroy(P2.GetComponent<CharacterSelection>().controllerNight.gameObject);
+                        //Destroy(P1.GetComponent<CharacterSelection>().controllerNight.gameObject);
+                        //Destroy(P2.GetComponent<CharacterSelection>().controllerNight.gameObject);
+                        P1.GetComponent<CharacterSelection>().controllerNight.gameObject.SetActive(false);
+                        P2.GetComponent<CharacterSelection>().controllerNight.gameObject.SetActive(false);
                         P1.GetComponent<CharacterSelection>().positionMin++;
                         P2.GetComponent<CharacterSelection>().positionMin++;
                         //enabled = false;
                         CharacterStoredInfo.instance.night = playerId;
                         checkmark.SetActive(true);
                         characterSelected = true;
+
+                        if (P1.transform.position.x == P2.transform.position.x)
+                        {
+                            if (!P1.GetComponent<CharacterSelection>().characterSelected)
+                            {
+                                //P1.transform.position = controllerStart.position;
+                                P1.GetComponent<CharacterSelection>().position++;
+                            }
+
+                            if (!P2.GetComponent<CharacterSelection>().characterSelected)
+                            {
+                                //P2.transform.position = controllerStart.position;
+                                P2.GetComponent<CharacterSelection>().position++;
+                            }
+                        }
                     }
                     break;
 
@@ -76,14 +93,31 @@ public class CharacterSelection : MonoBehaviour
                     transform.position = controllerDay.position;
                     if (Input.GetButtonDown("JumpP" + playerId))
                     {
-                        Destroy(P1.GetComponent<CharacterSelection>().controllerDay.gameObject);
-                        Destroy(P2.GetComponent<CharacterSelection>().controllerDay.gameObject);
+                        P1.GetComponent<CharacterSelection>().controllerDay.gameObject.SetActive(false);
+                        P2.GetComponent<CharacterSelection>().controllerDay.gameObject.SetActive(false);
                         P1.GetComponent<CharacterSelection>().positionMax--;
                         P2.GetComponent<CharacterSelection>().positionMax--;
                         //enabled = false;
                         CharacterStoredInfo.instance.day = playerId;
                         checkmark.SetActive(true);
                         characterSelected = true;
+
+                        if (P1.transform.position.x == P2.transform.position.x)
+                        {
+                            if (!P1.GetComponent<CharacterSelection>().characterSelected)
+                            {
+                                //P1.transform.position = controllerStart.position;
+                                P1.GetComponent<CharacterSelection>().position--;
+                                Debug.Log("P1");
+                            }
+
+                            if (!P2.GetComponent<CharacterSelection>().characterSelected)
+                            {
+                                //P2.transform.position = controllerStart.position;
+                                P2.GetComponent<CharacterSelection>().position--;
+                                Debug.Log("P2");
+                            }
+                        }
                     }
                     break;
             }

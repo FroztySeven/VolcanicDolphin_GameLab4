@@ -284,7 +284,6 @@ public class HighlightInFront : MonoBehaviour
 
     private IEnumerator FreezeWater(Vector3Int tilePos, TileBase currentTile, TileBase currentTileFrozen)
     {
-        Debug.Log("IEnumerator Activated");
         tilePos.y -= 1;
         yield return new WaitForSeconds(waterFreezeSpeed);
         if (waterMap.GetTile(tilePos) == currentTile)
@@ -292,7 +291,6 @@ public class HighlightInFront : MonoBehaviour
             waterMap.SetTile(tilePos, null);
             waterMap.SetTile(tilePos, currentTileFrozen);
             StartCoroutine(FreezeWater(tilePos, currentTile, currentTileFrozen));
-            Debug.Log("Renewed!");
         }
 
         if (waterMap.GetTile(tilePos) == waterEndTile)

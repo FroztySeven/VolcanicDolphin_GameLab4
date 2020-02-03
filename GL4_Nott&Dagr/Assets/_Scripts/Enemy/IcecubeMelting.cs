@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class IcecubeMelting : MonoBehaviour
 {
@@ -9,6 +10,34 @@ public class IcecubeMelting : MonoBehaviour
     public GameObject iceCube;
     public GameObject pickupKey;
 
+    private Tilemap waterMap;
+
+    public TileBase water, frozenWater;
+
+    private Vector3Int currentCell;
+
+    private void Awake()
+    {
+        waterMap = GameObject.Find("TM_Water").GetComponent<Tilemap>();
+    }
+
+    private void Update()
+    {
+        currentCell = waterMap.WorldToCell(transform.position);
+        currentCell.y -= 1;
+
+        TileBase current = waterMap.GetTile(currentCell);
+
+        if (current == water)
+        {
+            waterMap.gameObject.layer = 10;
+        }
+
+        if (current == frozenWater)
+        {
+            waterMap.gameObject.layer = default;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -47,5 +76,11 @@ public class IcecubeMelting : MonoBehaviour
                 }
             }
         }
+
+        //if (other.tag == "TM_Water")
+        //{
+        //    Debug.Log("Hello!");
+        //    other.gameObject.layer = 10;
+        //}
     }
 }
