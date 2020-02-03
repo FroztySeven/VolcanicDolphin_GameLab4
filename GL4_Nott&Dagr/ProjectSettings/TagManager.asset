@@ -8,6 +8,7 @@ TagManager:
   - DagrAura
   - NottAura
   - MeltableIce
+  - Key
   layers:
   - Default
   - TransparentFX
