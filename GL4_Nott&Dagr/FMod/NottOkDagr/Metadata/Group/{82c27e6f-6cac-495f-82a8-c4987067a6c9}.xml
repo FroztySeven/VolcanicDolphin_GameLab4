@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{82c27e6f-6cac-495f-82a8-c4987067a6c9}">
+		<property name="name">
+			<value>IceFreeze</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{96e18bdb-544d-44d3-9436-7d4ef647e9c4}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{ef651f6b-b12f-4cde-b4bd-9bceb71791fc}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{aaafa47e-f687-4c6f-b068-2b0cf82cbd2f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{96e18bdb-544d-44d3-9436-7d4ef647e9c4}">
+		<relationship name="effects">
+			<destination>{95bf4e20-66a3-4172-bfc1-90e515e2b06d}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{ef651f6b-b12f-4cde-b4bd-9bceb71791fc}" />
+	<object class="MixerBusFader" id="{95bf4e20-66a3-4172-bfc1-90e515e2b06d}" />
+</objects>

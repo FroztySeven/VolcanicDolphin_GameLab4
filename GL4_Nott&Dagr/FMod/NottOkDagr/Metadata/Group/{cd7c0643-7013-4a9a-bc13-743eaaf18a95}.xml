@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{cd7c0643-7013-4a9a-bc13-743eaaf18a95}">
+		<property name="name">
+			<value>IceMelt</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{9e6131c7-6c94-459b-b7f7-1666e05cafc4}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{bc2fbd48-7343-4293-b0a9-acd736c0f137}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{aaafa47e-f687-4c6f-b068-2b0cf82cbd2f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{9e6131c7-6c94-459b-b7f7-1666e05cafc4}">
+		<relationship name="effects">
+			<destination>{cd01f1b7-ac8d-4b8f-a2be-0c81c136f620}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{bc2fbd48-7343-4293-b0a9-acd736c0f137}" />
+	<object class="MixerBusFader" id="{cd01f1b7-ac8d-4b8f-a2be-0c81c136f620}" />
+</objects>
