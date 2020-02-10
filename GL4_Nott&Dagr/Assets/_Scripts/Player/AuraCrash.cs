@@ -8,6 +8,7 @@ using UnityEngine.Assertions.Must;
 public class AuraCrash : MonoBehaviour
 {
     public GameObject nott, dagr;
+    public int auraPushForce = 10;
     
     private Vector3 crashForce;
     private Rigidbody2D nottRB, dagrRB;
@@ -30,13 +31,13 @@ public class AuraCrash : MonoBehaviour
                 crashForce = dagr.transform.position - nott.transform.position; // dagr then nott
                 crashForce.Normalize();
                 
-                if (nottRB.velocity.x <= 0)
+                if (nottRB.velocity.x == 0)
                 {
                     if (connectedControllers.Length == 1) // if it is only one player
                     {
                         if (Input.GetButton("AuraPushP1"))
                         {
-                            nottRB.AddForce(crashForce * -30, ForceMode2D.Impulse); //change this when i fix the bug
+                            nottRB.AddForce(crashForce * (-auraPushForce * 3), ForceMode2D.Impulse); //change this when i fix the bug
                             Debug.Log("AuraPushP2");
                         }
                     }
@@ -58,7 +59,7 @@ public class AuraCrash : MonoBehaviour
                 else
                 {
                     dagr.GetComponent<PlayerMovementTest>().enabled = false;
-                    dagrRB.velocity *= -4;
+                    dagrRB.velocity *= -3;
                     StartCoroutine(turnOnMovement());
                 }
         }
@@ -68,11 +69,11 @@ public class AuraCrash : MonoBehaviour
             crashForce = nott.transform.position - dagr.transform.position; // nott then dagr
             crashForce.Normalize();
             
-            if (dagrRB.velocity.x <= 0)
+            if (dagrRB.velocity.x == 0)
             {
                 if (Input.GetButton("AuraPushP1"))
                 {
-                    dagrRB.AddForce(crashForce * 10, ForceMode2D.Impulse);
+                    dagrRB.AddForce(crashForce * auraPushForce, ForceMode2D.Impulse);
                     Debug.Log("AuraPushP1");
                 }
             }
@@ -84,7 +85,7 @@ public class AuraCrash : MonoBehaviour
             else
             { 
                 nott.GetComponent<PlayerMovementTest>().enabled = false;
-                nottRB.velocity *= -4;
+                nottRB.velocity *= -3;
                 StartCoroutine(turnOnMovement());
             }
         }
