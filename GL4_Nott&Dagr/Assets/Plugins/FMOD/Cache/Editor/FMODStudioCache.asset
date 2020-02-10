@@ -288,6 +288,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6152759488220074273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
+  SubDir: 
+  lastModified: 637157448612277594
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6109004223906475230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +432,11 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-5350377993291301336
+=======
+--- !u!114 &-4966004409725220030
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,6 +446,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+<<<<<<< HEAD
   m_Name: bank:/UI.bank
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/UI.bank
@@ -472,6 +495,16 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4000
+=======
+  m_Name: bank:/Objects.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
+  SubDir: 
+  lastModified: 637157448612297548
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 --- !u!114 &-4867282290570829437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +757,11 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+<<<<<<< HEAD
 --- !u!114 &-2729559652107277850
+=======
+--- !u!114 &-2560464683827906376
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -734,6 +771,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+<<<<<<< HEAD
   m_Name: bank:/Players.bank
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Players.bank
@@ -742,6 +780,16 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+=======
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637157448612277594
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 --- !u!114 &-2210912109306880854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,7 +804,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637169261383845749
+=======
+  lastModified: 637157448612287567
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -798,7 +850,11 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-1649067914192873973
+=======
+--- !u!114 &-1936447523350038948
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -808,11 +864,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+<<<<<<< HEAD
   m_Name: bank:/Music.bank
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Music.bank
   SubDir: 
   lastModified: 637169261383865707
+=======
+  m_Name: bank:/Players.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Players.bank
+  SubDir: 
+  lastModified: 637157448612307521
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -920,6 +984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -2210912109306880854}
+<<<<<<< HEAD
   - {fileID: -8006676163711992446}
   - {fileID: -6779307340195871847}
   - {fileID: 2507669912719958733}
@@ -937,6 +1002,22 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2210912109306880854}
   stringsBankWriteTime: 637169261383845749
+=======
+  - {fileID: -6152759488220074273}
+  - {fileID: -2560464683827906376}
+  - {fileID: 7465580687234803908}
+  - {fileID: 7589551557786496531}
+  - {fileID: -4966004409725220030}
+  - {fileID: -1936447523350038948}
+  - {fileID: 524768466592706187}
+  EditorEvents: []
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 7465580687234803908}
+  StringsBanks:
+  - {fileID: -2210912109306880854}
+  stringsBankWriteTime: 637157448612287567
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
   cacheVersion: 3
 --- !u!114 &507248780362917234
 MonoBehaviour:
@@ -953,6 +1034,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Music.bank
   SubDir: 
   lastModified: 637157448612297548
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &524768466592706187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637157448612307521
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1656,7 +1755,11 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &7177500713413938789
+=======
+--- !u!114 &7465580687234803908
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1666,6 +1769,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+<<<<<<< HEAD
   m_Name: bank:/Music.bank
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Music.bank
@@ -1692,6 +1796,16 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+=======
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637157448612287567
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 --- !u!114 &7519045784686794656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1710,7 +1824,11 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+<<<<<<< HEAD
 --- !u!114 &7655073459402981681
+=======
+--- !u!114 &7589551557786496531
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1720,6 +1838,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+<<<<<<< HEAD
   m_Name: bank:/Enemies.bank
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
@@ -1728,6 +1847,16 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+=======
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637157448612297548
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+>>>>>>> 637419a4900bd8fda63c35de2b620d8ac01376a3
 --- !u!114 &7894384004615593894
 MonoBehaviour:
   m_ObjectHideFlags: 0
