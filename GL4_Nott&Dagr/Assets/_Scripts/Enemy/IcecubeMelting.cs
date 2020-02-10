@@ -71,7 +71,8 @@ public class IcecubeMelting : MonoBehaviour
                     isIceCubeExisting = false;
 
                     gameObject.transform.Find("key_01").gameObject.AddComponent<BoxCollider2D>();
-                    GetComponent<Rigidbody2D>().mass = 110f;
+                    GetComponent<Rigidbody2D>().mass = 1110f;
+                    GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     /*gameObject.transform.Find("key_01").gameObject.AddComponent<Rigidbody2D>();*/
                 }
             }

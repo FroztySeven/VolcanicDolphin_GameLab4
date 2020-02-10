@@ -26,7 +26,8 @@ public class PlayerMovementTest : MonoBehaviour
 
     private int doubleJumpCounter = 0;
 
-    private bool canMove = true;
+    [HideInInspector]
+    public bool canMove = true;
     private bool isGrounded;
     private bool isOnWall;
 
@@ -99,8 +100,17 @@ public class PlayerMovementTest : MonoBehaviour
                 isGrounded = true;
             }
         }
-    
-        Collider2D[] wallColliders = Physics2D.OverlapBoxAll(wallCheck.position, wallSize, 0f);
+
+        //Collider2D[] wallColliders = Physics2D.OverlapBoxAll(wallCheck.position, wallSize, 0f);
+        //for (int i = 0; i < wallColliders.Length; i++)
+        //{
+        //    if (wallColliders[i].gameObject != gameObject)
+        //    {
+        //        isOnWall = true;
+        //    }
+        //}
+
+        Collider2D[] wallColliders = Physics2D.OverlapCircleAll(wallCheck.position, 0.2f, whatIsGround);
         for (int i = 0; i < wallColliders.Length; i++)
         {
             if (wallColliders[i].gameObject != gameObject)
@@ -126,6 +136,13 @@ public class PlayerMovementTest : MonoBehaviour
                 Debug.Log("Player" + playerId + " is Jumping!");
                 doubleJumpCounter++;
             }
+
+            // Movement while in air.
+
+            //if (!isGrounded)
+            //{
+            //    theRB.velocity = new Vector2((moveInput.x * movementSpeed) / 1.5f, theRB.velocity.y);
+            //}
 
             // Makes the player double jump if enabled.
 

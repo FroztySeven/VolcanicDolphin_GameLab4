@@ -14,7 +14,11 @@ public class DeathTrigger : MonoBehaviour
         key = GameObject.Find("PickupKey");
         nottStartPosition = nott.transform.position;
         dagrStartPosition = dagr.transform.position;
-        keyStartPosition = key.transform.position;
+
+        if (key != null)
+        {
+            keyStartPosition = key.transform.position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

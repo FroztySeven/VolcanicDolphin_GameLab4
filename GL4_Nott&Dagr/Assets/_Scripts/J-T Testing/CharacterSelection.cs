@@ -205,6 +205,16 @@ public class CharacterSelection : MonoBehaviour
         SceneManager.LoadScene("Prototype Level");
     }
 
+    public void LevelSeven()
+    {
+        SceneManager.LoadScene("Prefab Testing Level");
+    }
+
+    public void LevelEight()
+    {
+        SceneManager.LoadScene("Prototype Bubble Test");
+    }
+
     public void HowToPlay()
     {
         howToPlay.SetActive(true);

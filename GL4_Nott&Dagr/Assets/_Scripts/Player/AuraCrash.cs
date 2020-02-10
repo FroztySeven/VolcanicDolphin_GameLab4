@@ -37,7 +37,7 @@ public class AuraCrash : MonoBehaviour
                     {
                         if (Input.GetButton("AuraPushP1"))
                         {
-                            nottRB.AddForce(crashForce * (-auraPushForce * 3), ForceMode2D.Impulse); //change this when i fix the bug
+                            nottRB.AddForce(crashForce * (auraPushForce), ForceMode2D.Impulse); //change this when i fix the bug
                             Debug.Log("AuraPushP2");
                         }
                     }
@@ -54,7 +54,8 @@ public class AuraCrash : MonoBehaviour
 
                 if (crashForce.y > 0.01f)
                 {
-                    dagrRB.velocity *= -1.5f;
+                    dagrRB.velocity = Vector2.zero;
+                    dagrRB.AddForce(crashForce * auraPushForce, ForceMode2D.Impulse);
                 }
                 else
                 {
@@ -73,14 +74,15 @@ public class AuraCrash : MonoBehaviour
             {
                 if (Input.GetButton("AuraPushP1"))
                 {
-                    dagrRB.AddForce(crashForce * auraPushForce, ForceMode2D.Impulse);
+                    dagrRB.AddForce(crashForce * -auraPushForce * 3, ForceMode2D.Impulse);
                     Debug.Log("AuraPushP1");
                 }
             }
 
             if (crashForce.y > 0.01f) 
             { 
-                nottRB.velocity *= -1.5f;
+                nottRB.velocity = Vector2.zero;
+                nottRB.AddForce(crashForce * auraPushForce, ForceMode2D.Impulse);
             }
             else
             { 
