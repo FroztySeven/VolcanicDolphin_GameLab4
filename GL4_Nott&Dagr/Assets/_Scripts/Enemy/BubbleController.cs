@@ -22,7 +22,7 @@ public class BubbleController : MonoBehaviour
     {
         if (transform.GetChild(0).gameObject)
         {
-            if (collision.gameObject)
+            if (collision.gameObject.CompareTag("TM_Ground"))
             {
                 hasCollided = true;
             }
@@ -36,6 +36,10 @@ public class BubbleController : MonoBehaviour
         {
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
             {
+                if (bubbleMoveInt == 0)
+                {
+                    bubbleMoveInt = 1;
+                }
             }
         }
         
@@ -46,7 +50,7 @@ public class BubbleController : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = Color.yellow;
                 hasCollided = false;
 
-                bubbleMoveInt = 1;
+                bubbleMoveInt = 2;
             }
         }
     }
@@ -75,11 +79,17 @@ public class BubbleController : MonoBehaviour
     void Update()
     {
         if (!hasCollided)
-        {            
+        {
             if (bubbleMoveInt == 1)
+            {
+
+            }
+
+            else if (bubbleMoveInt == 2)
             {
                 transform.Translate(Vector2.up * Time.deltaTime, Space.World);
             }
+
             else if (bubbleMoveInt == 0)
             {
                 transform.Translate(Vector2.down * Time.deltaTime, Space.World);
