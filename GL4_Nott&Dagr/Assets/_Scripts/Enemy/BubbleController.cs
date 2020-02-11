@@ -5,18 +5,16 @@ using UnityEngine;
 
 public class BubbleController : MonoBehaviour
 {
-    
-    public int speed = 12;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Change the bubble move speed")]
+    public float speed = 1.5f;
+
+    [Header("Bubble tile ground collision detector")]
+    public bool hasCollided;
 
     // Update is called once per frame
+    [HideInInspector]
     public int bubbleMoveInt = 0;
-    public bool hasCollided;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -87,12 +85,12 @@ public class BubbleController : MonoBehaviour
 
             else if (bubbleMoveInt == 2)
             {
-                transform.Translate(Vector2.up * Time.deltaTime, Space.World);
+                transform.Translate(Vector2.up * speed * Time.deltaTime, Space.World);
             }
 
             else if (bubbleMoveInt == 0)
             {
-                transform.Translate(Vector2.down * Time.deltaTime, Space.World);
+                transform.Translate(Vector2.down * speed * Time.deltaTime, Space.World);
             }
         }
     }
