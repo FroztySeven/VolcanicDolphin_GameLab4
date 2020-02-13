@@ -24,7 +24,8 @@ public class PlayerMovementTest : MonoBehaviour
     public bool canWallJump;
     public bool canDoubleJump;
 
-    private int doubleJumpCounter = 0;
+    [HideInInspector]
+    public int doubleJumpCounter = 0;
 
     [HideInInspector]
     public bool canMove = true;
@@ -38,7 +39,7 @@ public class PlayerMovementTest : MonoBehaviour
     public float ceilingRadius;
     public Vector2 wallSize;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isOnLadder;
 
 
@@ -157,10 +158,13 @@ public class PlayerMovementTest : MonoBehaviour
             if (isOnLadder)
             {
                 moveInput.y = Input.GetAxisRaw("VerticalP" + playerId);
-
+                moveInput.Normalize();
                 theRB.velocity = new Vector2(moveInput.x * movementSpeed, moveInput.y * movementSpeed);
             }
-
+            else
+            {
+                moveInput.y = 0;
+            }
         }
 
         // If player is on the wall, slide down.
