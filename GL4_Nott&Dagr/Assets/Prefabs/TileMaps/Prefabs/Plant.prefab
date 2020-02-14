@@ -104,8 +104,11 @@ MonoBehaviour:
   - {fileID: 8842545845584310016, guid: 717ea6b69267d854d8c1b7ad7c221ade, type: 3}
   - {fileID: -8731010836894537301, guid: 717ea6b69267d854d8c1b7ad7c221ade, type: 3}
   - {fileID: 2902996267936147768, guid: 717ea6b69267d854d8c1b7ad7c221ade, type: 3}
+  plantPrefab: {fileID: 3984886533294057955, guid: 7f40fedd902902340a34d6538adf66e5,
+    type: 3}
+  plantList: []
   growHeight: 0
-  growSpeed: 0
+  growSpeed: 0.1
 --- !u!61 &612407995938018158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -116,7 +119,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

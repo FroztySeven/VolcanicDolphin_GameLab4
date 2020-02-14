@@ -6,13 +6,29 @@ public class WaterPit : MonoBehaviour
 {
     public float freezeSpeed;
 
+    public int waterLength;
+
+    public GameObject waterPrefab;
+
     public List<SpriteRenderer> waterTiles;
 
     private void Start()
     {
-        for (int i = 0; i < waterTiles.Count; i++)
+        //for (int i = 0; i < waterTiles.Count; i++)
+        //{
+        //    waterTiles[i].GetComponent<Water>().waterId = i;
+        //}
+
+        GetComponent<SpriteRenderer>().sprite = null;
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        for (int i = 0; i < waterLength; i++)
         {
-            waterTiles[i].GetComponent<Water>().waterId = i;
+            GameObject water = Instantiate(waterPrefab, transform.position + new Vector3(i, 0f, 0f), transform.rotation);
+            water.GetComponent<Water>().waterId = i;
+            water.transform.parent = gameObject.transform;
+            waterTiles.Add(water.GetComponent<SpriteRenderer>());
+
         }
     }
 

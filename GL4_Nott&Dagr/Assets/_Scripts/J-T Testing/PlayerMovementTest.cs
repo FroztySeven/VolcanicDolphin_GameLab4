@@ -17,7 +17,7 @@ public class PlayerMovementTest : MonoBehaviour
 
     public float movementSpeed;
     public float jumpForce;
-    private Vector2 moveInput;
+    public Vector2 moveInput;
 
     public Rigidbody2D theRB;
 

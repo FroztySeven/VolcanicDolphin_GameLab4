@@ -512,8 +512,6 @@ GameObject:
   - component: {fileID: 7788640642130819353}
   - component: {fileID: 7788640642130820838}
   - component: {fileID: 7788640642130820839}
-  - component: {fileID: 6781432}
-  - component: {fileID: 1533157058}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -559,6 +557,7 @@ MonoBehaviour:
   singlePlayer: 1
   movementSpeed: 10
   jumpForce: 750
+  moveInput: {x: 0, y: 0}
   theRB: {fileID: 7788640642130820838}
   canWallJump: 0
   canDoubleJump: 0
@@ -611,71 +610,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.3}
   serializedVersion: 2
   m_Radius: 0.2
---- !u!61 &6781432
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7788640642130820836}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.2}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.8}
-  m_EdgeRadius: 0
---- !u!114 &1533157058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7788640642130820836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f9cf16d1fdd2143ae04c84ede5d312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waterFreezeSpeed: 0.5
-  ladderGrowAmount: 11
-  frozenWaterTile: {fileID: 11400000, guid: f836c178fcf89a7488c3f6480e6aaca2, type: 2}
-  frozenWaterEndTile: {fileID: 11400000, guid: 2e40610da963571428cc7f73e5c2f48d, type: 2}
-  frozenMovingWater: {fileID: 11400000, guid: bf01177b252532e419a604da0572fff7, type: 2}
-  waterTile: {fileID: 11400000, guid: a6d41a8da7bf79b43af3e9aa44b0ef61, type: 2}
-  waterEndTile: {fileID: 11400000, guid: e411a549891da124a80821f547129d03, type: 2}
-  movingWater: {fileID: 11400000, guid: 01e37cf428167ac4ead9f6f0369982ac, type: 2}
-  standingOnTile: {fileID: 0}
-  roofTile: {fileID: 11400000, guid: a0de2b2a40a195747b4cc27dacdd59e7, type: 2}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  groundAboveTile: {fileID: 0}
-  groundBelowTile: {fileID: 0}
-  groundLeftTile: {fileID: 0}
-  groundRightTile: {fileID: 0}
-  ladderBottom: {fileID: 11400000, guid: e9ffd9f7be3c7f041b938cb846e7dde0, type: 2}
-  ladderMiddle: {fileID: 11400000, guid: 2c837beeb66df9142bc428feb47b524c, type: 2}
-  ladderTop: {fileID: 11400000, guid: 9cdb985cbd472f6419565054e34efdc2, type: 2}
-  frozenLadderBottom: {fileID: 11400000, guid: 219dffe837a72264bbd04794a8514849, type: 2}
-  frozenLadderMiddle: {fileID: 11400000, guid: 202401e2b4941bb40b6488937eb20b8a, type: 2}
-  frozenLadderTop: {fileID: 11400000, guid: 274ac77f83c2a634c9c55b6622332e29, type: 2}
-  waterMap: {fileID: 0}
-  groundMap: {fileID: 0}
-  typeOfGround:
-    serializedVersion: 2
-    m_Bits: 1024
-  hangFromCell: {x: 0, y: 0, z: 0}
-  hangFromCellSet: 0
-  growingLadder: 0
