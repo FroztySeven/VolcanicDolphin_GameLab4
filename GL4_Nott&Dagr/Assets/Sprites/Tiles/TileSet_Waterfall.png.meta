@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 717ea6b69267d854d8c1b7ad7c221ade
+guid: 937967ba5d3bb5e4ba37f50646f0ac10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1908218280221304381
-    second: TileSet_PlantLadder_0
+      213: -3575728282143440750
+    second: TileSet_Waterfall_0
   - first:
-      213: -812554684753341333
-    second: TileSet_PlantLadder_1
+      213: 6940679944089914042
+    second: TileSet_Waterfall_1
   - first:
-      213: -7758333273548926523
-    second: TileSet_PlantLadder_2
+      213: -6999388256862065405
+    second: TileSet_Waterfall_2
   - first:
-      213: -108436332872558592
-    second: TileSet_PlantLadder_3
+      213: 9217589322273120220
+    second: TileSet_Waterfall_3
   - first:
-      213: 8842545845584310016
-    second: TileSet_PlantLadder_4
-  - first:
-      213: -8731010836894537301
-    second: TileSet_PlantLadder_5
-  - first:
-      213: 2902996267936147768
-    second: TileSet_PlantLadder_6
-  - first:
-      213: 3989487969668133173
-    second: TileSet_PlantLadder_7
+      213: 46151800203972832
+    second: TileSet_Waterfall_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -71,7 +62,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -134,11 +125,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileSet_PlantLadder_0
+      name: TileSet_Waterfall_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -148,14 +139,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c990859595a485e0800000000000000
-      internalID: -1908218280221304381
+      spriteID: 290c5898216706ec0800000000000000
+      internalID: -3575728282143440750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet_PlantLadder_1
+      name: TileSet_Waterfall_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba4827c2af325060800000000000000
+      internalID: 6940679944089914042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet_Waterfall_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d22b8f67d2dde90800000000000000
+      internalID: -6999388256862065405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet_Waterfall_3
       rect:
         serializedVersion: 2
         x: 32
@@ -169,77 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6492beb1d939b4f0800000000000000
-      internalID: -812554684753341333
+      spriteID: cdfd587d6a47bef70800000000000000
+      internalID: 9217589322273120220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet_PlantLadder_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c1d50d3efcd45490800000000000000
-      internalID: -7758333273548926523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSet_PlantLadder_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0089262dab1ce7ef0800000000000000
-      internalID: -108436332872558592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSet_PlantLadder_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00fa824c89807ba70800000000000000
-      internalID: 8842545845584310016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSet_PlantLadder_5
+      name: TileSet_Waterfall_4
       rect:
         serializedVersion: 2
         x: 32
@@ -253,50 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba9a0d817e735d680800000000000000
-      internalID: -8731010836894537301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSet_PlantLadder_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8396e9699b3894820800000000000000
-      internalID: 2902996267936147768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSet_PlantLadder_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53173c3db228d5730800000000000000
-      internalID: 3989487969668133173
+      spriteID: 0e017e851d6f3a000800000000000000
+      internalID: 46151800203972832
       vertices: []
       indices: 
       edges: []
