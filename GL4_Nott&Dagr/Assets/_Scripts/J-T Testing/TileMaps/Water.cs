@@ -33,29 +33,33 @@ public class Water : MonoBehaviour
     {
         theSR = GetComponent<SpriteRenderer>();
         waterPit = GetComponentInParent<WaterPit>();
+        waterPit.animationFrames = animatedWater.Length;
     }
 
     private void Update()
     {
         if (!isFrozen)
         {
-            if (spriteTimer < 1)
-            {
-                spriteTimer += Time.deltaTime * animationRate;
-            }
-            if (spriteTimer >= 1)
-            {
-                spriteNumber++;
-                spriteTimer = 0;
-            }
-            if (spriteNumber == animatedWater.Length)
-            {
-                spriteNumber = 0;
-            }
+            //if (spriteTimer < 1)
+            //{
+            //    spriteTimer += Time.deltaTime * animationRate;
+            //}
+            //if (spriteTimer >= 1)
+            //{
+            //    spriteNumber++;
+            //    spriteTimer = 0;
+            //}
+            //if (spriteNumber == animatedWater.Length)
+            //{
+            //    spriteNumber = 0;
+            //}
 
             gameObject.layer = 10;
             theSR.color = Color.white;
-            theSR.sprite = animatedWater[spriteNumber];
+            theSR.sprite = animatedWater[waterPit.spriteNumber];
+            unfreezeNumber = 0;
+            unfreezeTimer = 0;
+            unfreeze = false;
         }
 
         if (isFrozen)

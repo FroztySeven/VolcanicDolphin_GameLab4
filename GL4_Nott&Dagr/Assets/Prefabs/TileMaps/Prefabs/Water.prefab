@@ -124,6 +124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezeSpeed: 0.1
   waterLength: 0
+  animationRate: 15
   waterPrefab: {fileID: 1290980568863465763, guid: 711d73c7fa15ba0408d2d490003c9439,
     type: 3}
   waterTiles: []
+  spriteNumber: 0
+  animationFrames: 0

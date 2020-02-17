@@ -8,9 +8,17 @@ public class WaterPit : MonoBehaviour
 
     public int waterLength;
 
+    public float animationRate;
+
     public GameObject waterPrefab;
 
     public List<SpriteRenderer> waterTiles;
+
+    private float spriteTimer = 0;
+    [HideInInspector]
+    public int spriteNumber = 0;
+    [HideInInspector]
+    public int animationFrames;
 
     private void Start()
     {
@@ -29,6 +37,23 @@ public class WaterPit : MonoBehaviour
             water.transform.parent = gameObject.transform;
             waterTiles.Add(water.GetComponent<SpriteRenderer>());
 
+        }
+    }
+
+    private void Update()
+    {
+        if (spriteTimer < 1)
+        {
+            spriteTimer += Time.deltaTime * animationRate;
+        }
+        if (spriteTimer >= 1)
+        {
+            spriteNumber++;
+            spriteTimer = 0;
+        }
+        if (spriteNumber == animationFrames)
+        {
+            spriteNumber = 0;
         }
     }
 
