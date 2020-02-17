@@ -31653,6 +31653,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1059402136, guid: ca4a7389f986bd548b43afae2f58f96d, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 2071515846}
     - target: {fileID: 4259353246531042465, guid: ca4a7389f986bd548b43afae2f58f96d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31708,41 +31712,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4259353246531042467, guid: ca4a7389f986bd548b43afae2f58f96d,
-        type: 3}
-      propertyPath: door
-      value: 
-      objectReference: {fileID: 2071515846}
     - target: {fileID: 4259353246531042468, guid: ca4a7389f986bd548b43afae2f58f96d,
         type: 3}
       propertyPath: m_Name
       value: PlaceKeyHereToOpenDoor
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4259353246531042467, guid: ca4a7389f986bd548b43afae2f58f96d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4a7389f986bd548b43afae2f58f96d, type: 3}
---- !u!1 &1059402135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4259353246531042468, guid: ca4a7389f986bd548b43afae2f58f96d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1059402134}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1059402136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059402135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa5153341536cc34fa309994080a51e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openDoorSFX: event:/SFX/Objects/DoorOpened
-  closedDoor: {fileID: 21300000, guid: d11251fe9dbad0546a0569c857c2182b, type: 3}
-  openDoor: {fileID: 21300000, guid: ad7e09b0bf467734983e79ca7d5011b6, type: 3}
-  door: {fileID: 2071515846}
 --- !u!1 &1148201469
 GameObject:
   m_ObjectHideFlags: 0
@@ -31845,17 +31821,17 @@ PrefabInstance:
     - target: {fileID: 3246328184645624037, guid: 5afa9931a73fc484391ea2a1b132d3ab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.03
+      value: -13.872995
       objectReference: {fileID: 0}
     - target: {fileID: 3246328184645624037, guid: 5afa9931a73fc484391ea2a1b132d3ab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: -8.4949875
       objectReference: {fileID: 0}
     - target: {fileID: 3246328184645624037, guid: 5afa9931a73fc484391ea2a1b132d3ab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.02
+      value: -6.910158
       objectReference: {fileID: 0}
     - target: {fileID: 3246328184645624037, guid: 5afa9931a73fc484391ea2a1b132d3ab,
         type: 3}
@@ -32293,12 +32269,12 @@ PrefabInstance:
     - target: {fileID: 2829471752649276284, guid: 967fc011f3ce1f546abd15d5a27e600c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.039886
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2829471752649276284, guid: 967fc011f3ce1f546abd15d5a27e600c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.311
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2829471752649276284, guid: 967fc011f3ce1f546abd15d5a27e600c,
         type: 3}
@@ -33434,8 +33410,6 @@ MonoBehaviour:
   isIceCubeExisting: 1
   iceCube: {fileID: 3183076507077259259}
   pickupKey: {fileID: 3183076506177368669}
-  water: {fileID: 11400000, guid: 01e37cf428167ac4ead9f6f0369982ac, type: 2}
-  frozenWater: {fileID: 11400000, guid: bf01177b252532e419a604da0572fff7, type: 2}
 --- !u!61 &3183076507077259262
 BoxCollider2D:
   m_ObjectHideFlags: 0

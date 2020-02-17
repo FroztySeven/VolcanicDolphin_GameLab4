@@ -177,27 +177,27 @@ public class CharacterSelection : MonoBehaviour
 
     public void LevelOne()
     {
-        SceneManager.LoadScene("Camera Static Size 5");
+        SceneManager.LoadScene("Level 01");
     }
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene("Camera Static Size 10");
+        SceneManager.LoadScene("Level 02");
     }
 
     public void LevelThree()
     {
-        SceneManager.LoadScene("Camera Static Size 15");
+        SceneManager.LoadScene("PlatformShowcase");
     }
 
     public void LevelFour()
     {
-        SceneManager.LoadScene("Camera Zoom Test");
+        SceneManager.LoadScene("Remi_Horizontal_02");
     }
 
     public void LevelFive()
     {
-        SceneManager.LoadScene("Camera Split Screen Test");
+        SceneManager.LoadScene("Remi_Vertical_02");
     }
 
     public void LevelSix()
@@ -213,6 +213,11 @@ public class CharacterSelection : MonoBehaviour
     public void LevelEight()
     {
         SceneManager.LoadScene("Prototype Bubble Test");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
     public void HowToPlay()

@@ -16,35 +16,6 @@ public class AudioIceCubeMelt : MonoBehaviour
     public GameObject iceCube;
     public GameObject pickupKey;
 
-    private Tilemap waterMap;
-
-    public TileBase water, frozenWater;
-
-    private Vector3Int currentCell;
-
-    private void Awake()
-    {
-        waterMap = GameObject.Find("TM_Water").GetComponent<Tilemap>();
-    }
-
-    private void Update()
-    {
-        currentCell = waterMap.WorldToCell(transform.position);
-        currentCell.y -= 1;
-
-        TileBase current = waterMap.GetTile(currentCell);
-
-        if (current == water)
-        {
-            waterMap.gameObject.layer = 10;
-        }
-
-        if (current == frozenWater)
-        {
-            waterMap.gameObject.layer = default;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         // 

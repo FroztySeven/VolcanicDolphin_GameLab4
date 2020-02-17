@@ -6,6 +6,7 @@ public class Water : MonoBehaviour
 {
     public Sprite[] animatedWater;
     public Sprite frozenWater;
+    public Sprite crackingWater;
 
     public float animationRate;
     public int unfreezeDuration;
@@ -66,7 +67,6 @@ public class Water : MonoBehaviour
         {
             gameObject.layer = default;
             theSR.sprite = frozenWater;
-            theSR.color = Color.blue;
 
             if (unfreeze)
             {
@@ -83,7 +83,7 @@ public class Water : MonoBehaviour
                 }
                 if (unfreezeNumber %2 != 0)
                 {
-                    theSR.color = Color.red;
+                    theSR.sprite = crackingWater;
                 }
                 if (unfreezeNumber == unfreezeDuration * 2)
                 {

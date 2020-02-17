@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4259353246531042465}
   - component: {fileID: 4259353246531042466}
-  - component: {fileID: 4259353246531042467}
+  - component: {fileID: 1059402136}
   m_Layer: 0
   m_Name: PlaceKeyHereToOpenDoor
   m_TagString: Untagged
@@ -140,7 +140,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &4259353246531042467
+--- !u!114 &1059402136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,9 +149,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4259353246531042468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeccfb5cca221d941bf59603327b1e6a, type: 3}
+  m_Script: {fileID: 11500000, guid: fa5153341536cc34fa309994080a51e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closedDoor: {fileID: 21300000, guid: d11251fe9dbad0546a0569c857c2182b, type: 3}
-  openDoor: {fileID: 21300000, guid: ad7e09b0bf467734983e79ca7d5011b6, type: 3}
+  openDoorSFX: event:/SFX/Objects/DoorOpened
+  closedDoor: {fileID: 2943947200571382430, guid: 9f3950c8d8f424946b25801437e3c95f,
+    type: 3}
+  openDoor: {fileID: 235826012787857229, guid: 9f3950c8d8f424946b25801437e3c95f, type: 3}
   door: {fileID: 0}

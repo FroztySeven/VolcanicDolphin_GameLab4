@@ -14,9 +14,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/J-T Testing/Prefab Testing Level.unity
     guid: ea70ae93baa16744da2163a2c9e57065
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Remi/Prototype Bubble Test.unity
     guid: 1325df85ed2811b45b1a939b2df66359
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Level Concepts/Level 01.unity
+    guid: c3234c87c731e71498058ce052e90b2d
+  - enabled: 1
+    path: Assets/Scenes/J-T Testing/Level Concepts/Level 02.unity
+    guid: 235d2a88fb2ebd54494e4fd38e6a9ac9
+  - enabled: 1
+    path: Assets/Scenes/Remi/Week_7/Remi_Horizontal_02.unity
+    guid: 2379706ed7299bc41b649d1830adc46e
+  - enabled: 1
+    path: Assets/Scenes/Remi/Week_7/Remi_Vertical_02.unity
+    guid: ab08250717be98b478a0e4a2ca7b30af
+  - enabled: 1
+    path: Assets/Scenes/Sindre Test/PlatformShowcase.unity
+    guid: 785c59477c94c2d4a8bdd5efee8a55ca
   - enabled: 0
     path: Assets/Scenes/J-T Testing/Camera Tests/Camera Split Screen Test.unity
     guid: 92ade5d34560f664bb40c2c2155e325d
