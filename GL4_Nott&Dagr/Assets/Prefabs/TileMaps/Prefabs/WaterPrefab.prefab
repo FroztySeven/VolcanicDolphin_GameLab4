@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatedWater:
-  - {fileID: 3797604072356328135, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
-  frozenWater: {fileID: -5566408235832919808, guid: fe77b43517e2784429fcd3c25117e3c7,
+  - {fileID: 3797604072356328135, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  frozenWater: {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66,
     type: 3}
   animationRate: 15
   unfreezeDuration: 3
