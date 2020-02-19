@@ -98,6 +98,7 @@ MonoBehaviour:
   bubbleMoveInt: 0
   currentBubble: {fileID: 7560626662668031535}
   movePathChild: {fileID: 7560626662974645822}
+  moveBubble: 0
 --- !u!212 &7560626662668031534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7560626662668031541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b81bfd88cde02b340815c56220171c21, type: 2}
   m_CullingMode: 0
