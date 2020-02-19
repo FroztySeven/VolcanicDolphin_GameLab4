@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4259353244909238846}
   - component: {fileID: 4259353244909238845}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4259353246531042465}
   - component: {fileID: 4259353246531042466}
   - component: {fileID: 1059402136}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlaceKeyHereToOpenDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
