@@ -181,13 +181,22 @@ public class PlayerMovementTest : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button6))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button7))
         {
             SceneManager.LoadScene("Character Selection");
         }
-        else if (Input.GetKeyDown(KeyCode.Joystick2Button6))
+        else if (Input.GetKeyDown(KeyCode.Joystick2Button7))
         {
             SceneManager.LoadScene("Character Selection");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button6))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (Input.GetKeyDown(KeyCode.Joystick2Button6))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (singlePlayer)

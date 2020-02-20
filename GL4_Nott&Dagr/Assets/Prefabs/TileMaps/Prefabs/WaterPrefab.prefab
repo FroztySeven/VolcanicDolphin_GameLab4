@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8088590116665072626}
   - component: {fileID: 724314853633595633}
   m_Layer: 10
-  m_Name: Water
+  m_Name: WaterPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290980568863465763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 9086412997854842224, guid: 10ffdad787a0fbf4296aa187f0aa8175,
+  m_Sprite: {fileID: 3797604072356328135, guid: 6f698868fe5ebdb428c7f19878d40b66,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,16 +97,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatedWater:
-  - {fileID: 9086412997854842224, guid: 10ffdad787a0fbf4296aa187f0aa8175, type: 3}
-  - {fileID: -608136768860886529, guid: 10ffdad787a0fbf4296aa187f0aa8175, type: 3}
-  - {fileID: -6597065554352715885, guid: 10ffdad787a0fbf4296aa187f0aa8175, type: 3}
-  - {fileID: -2461229197528364191, guid: 10ffdad787a0fbf4296aa187f0aa8175, type: 3}
-  - {fileID: 5272852847643762338, guid: 10ffdad787a0fbf4296aa187f0aa8175, type: 3}
-  frozenWater: {fileID: 21300000, guid: 50b01ad5c1769f14eb1054482e7e6496, type: 3}
+  - {fileID: 3797604072356328135, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  frozenWater: {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66,
+    type: 3}
+  crackingWater: {fileID: 3628287683414317839, guid: 6f698868fe5ebdb428c7f19878d40b66,
+    type: 3}
   animationRate: 15
-  unfreezeDuration: 3
+  unfreezeDuration: 6
   isFrozen: 0
   unfreeze: 0
+  unfreezeTimer: 0
+  unfreezeNumber: 0
   waterId: 0
 --- !u!61 &724314853633595633
 BoxCollider2D:

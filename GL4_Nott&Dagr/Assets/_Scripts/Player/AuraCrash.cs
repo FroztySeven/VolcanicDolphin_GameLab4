@@ -59,7 +59,7 @@ public class AuraCrash : MonoBehaviour
                 }
                 else
                 {
-                    dagr.GetComponent<PlayerMovementTest>().enabled = false;
+                    dagr.GetComponent<PlayerMovementTest>().canMove = false;
                     dagrRB.velocity *= -3;
                     StartCoroutine(turnOnMovement());
                 }
@@ -86,7 +86,7 @@ public class AuraCrash : MonoBehaviour
             }
             else
             { 
-                nott.GetComponent<PlayerMovementTest>().enabled = false;
+                nott.GetComponent<PlayerMovementTest>().canMove = false;
                 nottRB.velocity *= -3;
                 StartCoroutine(turnOnMovement());
             }
@@ -96,8 +96,8 @@ public class AuraCrash : MonoBehaviour
     private IEnumerator turnOnMovement()
     {
         yield return new WaitForSeconds(0.10f);
-        dagr.GetComponent<PlayerMovementTest>().enabled = true;
-        nott.GetComponent<PlayerMovementTest>().enabled = true;
+        dagr.GetComponent<PlayerMovementTest>().canMove = true;
+        nott.GetComponent<PlayerMovementTest>().canMove = true;
     }
     
 }

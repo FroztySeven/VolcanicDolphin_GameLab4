@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4259353244909238846}
   - component: {fileID: 4259353244909238845}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.15, y: 1.36}
+  m_Size: {x: 1, y: 1.1826087}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -91,8 +91,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4259353246531042465}
   - component: {fileID: 4259353246531042466}
-  - component: {fileID: 4259353246531042467}
-  m_Layer: 0
+  - component: {fileID: 1059402136}
+  m_Layer: 11
   m_Name: PlaceKeyHereToOpenDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4259353246531042468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.58, y: -8.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4259353244909238846}
@@ -138,9 +138,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4259353246531042467
+--- !u!114 &1059402136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,9 +149,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4259353246531042468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeccfb5cca221d941bf59603327b1e6a, type: 3}
+  m_Script: {fileID: 11500000, guid: fa5153341536cc34fa309994080a51e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closedDoor: {fileID: 21300000, guid: d11251fe9dbad0546a0569c857c2182b, type: 3}
-  openDoor: {fileID: 21300000, guid: ad7e09b0bf467734983e79ca7d5011b6, type: 3}
+  openDoorSFX: event:/SFX/Objects/DoorOpened
+  closedDoor: {fileID: 2943947200571382430, guid: 9f3950c8d8f424946b25801437e3c95f,
+    type: 3}
+  openDoor: {fileID: 235826012787857229, guid: 9f3950c8d8f424946b25801437e3c95f, type: 3}
   door: {fileID: 0}
