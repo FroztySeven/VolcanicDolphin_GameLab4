@@ -12,7 +12,8 @@ public class AudioVolumeController : MonoBehaviour
     FMOD.Studio.Bus sfxMaster;
 
     //--------------------------------------------------------------------------------------------------------//
-
+   
+    FMOD.Studio.Bus bubbleEnterExitMaster;
     FMOD.Studio.Bus openDoorMaster;
     FMOD.Studio.Bus iceFreezeMaster;
     FMOD.Studio.Bus iceMeltMaster;
@@ -50,6 +51,10 @@ public class AudioVolumeController : MonoBehaviour
     [Range(-80f, 20f)]
     public float openDoorVolume;
 
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float bubbleEnterExitVolume;
+
     //--------------------------------------------------------------------------------------------------------//
 
     void Start()
@@ -69,6 +74,7 @@ public class AudioVolumeController : MonoBehaviour
 
         //Objects
 
+        bubbleEnterExitMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Bubbles/BubbleEnterExit");
         openDoorMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/DoorOpen");
     }
 
@@ -86,6 +92,7 @@ public class AudioVolumeController : MonoBehaviour
         iceMeltMaster.setVolume(DecibelToLinear(iceMeltVolume));
 
         //Objects
+        bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
         openDoorMaster.setVolume(DecibelToLinear(openDoorVolume));
     }
 

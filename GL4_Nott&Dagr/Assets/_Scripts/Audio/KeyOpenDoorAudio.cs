@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioKeyOpenDoor : MonoBehaviour
+public class KeyOpenDoorAudio : MonoBehaviour
 {
     [FMODUnity.EventRef]
     public string openDoorSFX;

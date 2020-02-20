@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class AudioIceCubeMelt : MonoBehaviour
+public class IceCubeMeltAudio : MonoBehaviour
 {
     [FMODUnity.EventRef]
     public string iceMeltSFX;
