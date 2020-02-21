@@ -11,6 +11,8 @@ TagManager:
   - Key
   - TM_Water
   - TM_Ground
+  - DagrAudioTrigger
+  - NottAudioTrigger
   layers:
   - Default
   - TransparentFX
