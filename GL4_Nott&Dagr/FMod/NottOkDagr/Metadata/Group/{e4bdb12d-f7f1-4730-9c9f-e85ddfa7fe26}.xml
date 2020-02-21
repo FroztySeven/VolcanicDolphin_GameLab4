@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{e4bdb12d-f7f1-4730-9c9f-e85ddfa7fe26}">
+		<property name="name">
+			<value>Trampoline</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{bb0eea69-8afc-4837-954c-5292af4e8917}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{951687aa-9456-4131-ba44-6e968d5a43cb}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5a56a70e-4a55-4bb1-ba5e-b29879268c64}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{bb0eea69-8afc-4837-954c-5292af4e8917}">
+		<relationship name="effects">
+			<destination>{cbcbfab9-48ab-4bc4-a14e-6d8dfa53453c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{951687aa-9456-4131-ba44-6e968d5a43cb}" />
+	<object class="MixerBusFader" id="{cbcbfab9-48ab-4bc4-a14e-6d8dfa53453c}" />
+</objects>

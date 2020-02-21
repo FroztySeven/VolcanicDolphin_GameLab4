@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{26a60797-ff8a-4def-9885-4e16fe7b9755}">
+		<property name="name">
+			<value>GrassFS</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{1cb1531a-eb2c-4170-80d6-0d0d765112cd}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{2377af51-3fb2-44fe-8962-c590b84676aa}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{617c546c-fafc-449e-86f0-f6ac9a1088a1}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{1cb1531a-eb2c-4170-80d6-0d0d765112cd}">
+		<relationship name="effects">
+			<destination>{6a008455-3d8e-402e-a886-e952a3d30e7b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{2377af51-3fb2-44fe-8962-c590b84676aa}" />
+	<object class="MixerBusFader" id="{6a008455-3d8e-402e-a886-e952a3d30e7b}" />
+</objects>

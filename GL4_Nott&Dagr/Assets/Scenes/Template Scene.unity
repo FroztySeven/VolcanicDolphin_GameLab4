@@ -223,6 +223,31 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 503871309094504160, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 503871309094504160, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 794525188990265904, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173367033676266929, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173367033676266929, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3498397378241842543, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_IsActive
@@ -263,6 +288,16 @@ PrefabInstance:
       propertyPath: dagr
       value: 
       objectReference: {fileID: 7788640640931986714}
+    - target: {fileID: 5247835755004988979, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247835755004988979, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7339977784284609012, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_Sprite
@@ -639,11 +674,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 503871309094504160, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173367033676266929, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3882482632242313916, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: nott
       value: 
       objectReference: {fileID: 882120021}
+    - target: {fileID: 5247835755004988979, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7788640640931986716, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: nott
