@@ -12,7 +12,10 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("Can The Enemy Patrol?")] public bool edgeDetection = true;
 
-    [Header("Set A Transformation Sprite")]
+    [Header("Can Dagr Unfreeze?")] public bool canUnfreeze = false;
+
+    [Header("Set Transformation Sprites")]
+    public Sprite defaultSprite;
     public Sprite transformSprite;
 
 
