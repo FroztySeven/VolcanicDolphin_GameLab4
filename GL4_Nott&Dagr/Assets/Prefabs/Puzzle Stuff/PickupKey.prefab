@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8043127027081489590}
   - component: {fileID: 8043127027081489591}
   - component: {fileID: 4764111515644580758}
-  - component: {fileID: 7028470140696078210}
+  - component: {fileID: 1497996863633061770}
   m_Layer: 9
   m_Name: key_01
   m_TagString: Key
@@ -106,7 +106,7 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
---- !u!58 &7028470140696078210
+--- !u!58 &1497996863633061770
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
