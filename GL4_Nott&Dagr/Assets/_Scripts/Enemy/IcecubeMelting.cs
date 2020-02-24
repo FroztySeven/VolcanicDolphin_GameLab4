@@ -26,6 +26,9 @@ public class IcecubeMelting : MonoBehaviour
                     Destroy(transform.Find("key_01").GetComponent<BoxCollider2D>());
                     GetComponent<Rigidbody2D>().mass = 5f;
                     /*Destroy(transform.Find("key_01").GetComponent<Rigidbody2D>());*/
+
+                    // For Audio   
+                    gameObject.transform.Find("key_01").GetComponent<CircleCollider2D>().enabled = false;
                 }
             }
         }
@@ -45,6 +48,9 @@ public class IcecubeMelting : MonoBehaviour
                     GetComponent<Rigidbody2D>().mass = 1110f;
                     GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     /*gameObject.transform.Find("key_01").gameObject.AddComponent<Rigidbody2D>();*/
+
+                    // For Audio   
+                    gameObject.transform.Find("key_01").GetComponent<CircleCollider2D>().enabled = true;
                 }
             }
         }
