@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 5698310588893922116}
   - component: {fileID: 8606132154544975252}
   m_Layer: 9
-  m_Name: New Sprite
+  m_Name: ShatteredWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 5698310589044982951}
   - component: {fileID: 3243720079878790851}
   m_Layer: 9
-  m_Name: New Sprite (2)
+  m_Name: ShatteredWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 5698310589504625162}
   - component: {fileID: 628099575346763710}
   m_Layer: 9
-  m_Name: New Sprite (3)
+  m_Name: ShatteredWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 5698310589890050279}
   - component: {fileID: 6074055353880304190}
   m_Layer: 9
-  m_Name: New Sprite (1)
+  m_Name: ShatteredWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

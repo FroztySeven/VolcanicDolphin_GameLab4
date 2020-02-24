@@ -8,7 +8,11 @@ public class Trampoline : MonoBehaviour
 
     public WhoCanJump setJumper;
 
+    public int trampolineLength;
+
     public float jumpForce;
+
+    public Sprite singleTile, leftEnd, middle, rightEnd;
 
     private Color nightColor, dayColor, bothColor;
 
@@ -16,10 +20,54 @@ public class Trampoline : MonoBehaviour
 
     private float playerJumpForce;
 
-    private int startLayer; 
+    private int startLayer;
+
+    private BoxCollider2D theBC;
 
     private void Start()
     {
+        Debug.Log(trampolineLength);
+        theBC = GetComponent<BoxCollider2D>();
+
+        theBC.size = new Vector2(trampolineLength, 1f);
+
+        if (trampolineLength % 2 == 0)
+        {
+            theBC.offset = new Vector2((trampolineLength / 2) - 0.5f, 0f);
+        }
+        else
+        {
+            theBC.offset = new Vector2((trampolineLength / 2), 0f);
+        }
+
+        if (trampolineLength == 1)
+        {
+            GetComponent<SpriteRenderer>().sprite = singleTile;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = null;
+
+            for (int i = 0; i < trampolineLength; i++)
+            {
+                GameObject sprite = new GameObject("TrampolineSprite");
+                sprite.transform.parent = transform;
+                sprite.transform.position = transform.position + new Vector3(i, 0f, 0f);
+                sprite.AddComponent<SpriteRenderer>().sprite = middle;
+                //sprite.transform.parent = transform;
+
+                if (i == 0)
+                {
+                    sprite.GetComponent<SpriteRenderer>().sprite = leftEnd;
+                }
+
+                if (i == trampolineLength - 1)
+                {
+                    sprite.GetComponent<SpriteRenderer>().sprite = rightEnd;
+                }
+            }
+        }
+
         theSR = GetComponentInChildren<SpriteRenderer>();
         nightColor = Color.blue;
         dayColor = Color.yellow;
@@ -29,18 +77,18 @@ public class Trampoline : MonoBehaviour
 
         startLayer = gameObject.layer;
 
-        if (setJumper.ToString() == "Both")
-        {
-            theSR.color = bothColor;
-        }
-        if (setJumper.ToString() == "Night")
-        {
-            theSR.color = nightColor;
-        }
-        if (setJumper.ToString() == "Day")
-        {
-            theSR.color = dayColor;
-        }
+        //if (setJumper.ToString() == "Both")
+        //{
+        //    theSR.color = bothColor;
+        //}
+        //if (setJumper.ToString() == "Night")
+        //{
+        //    theSR.color = nightColor;
+        //}
+        //if (setJumper.ToString() == "Day")
+        //{
+        //    theSR.color = dayColor;
+        //}
     }
 
     //private void OnTriggerEnter2D(Collider2D other)
