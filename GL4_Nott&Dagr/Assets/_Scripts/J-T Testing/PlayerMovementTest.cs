@@ -123,20 +123,19 @@ public class PlayerMovementTest : MonoBehaviour
 
     private void Update()
     {
+        moveInput.x = Input.GetAxisRaw("HorizontalP" + playerId);
+        moveInput.Normalize();
+
+        if (isGrounded && Input.GetButtonDown("JumpP" + playerId))
+        {
+            theRB.AddForce(new Vector2(0f, jumpForce));
+            Debug.Log("Player" + playerId + " is Jumping!");
+            doubleJumpCounter++;
+        }
+
         if (canMove)
         {
-            moveInput.x = Input.GetAxisRaw("HorizontalP" + playerId);
-
-            moveInput.Normalize();
-
             theRB.velocity = new Vector2(moveInput.x * movementSpeed, theRB.velocity.y);
-
-            if (isGrounded && Input.GetButtonDown("JumpP" + playerId))
-            {
-                theRB.AddForce(new Vector2(0f, jumpForce));
-                Debug.Log("Player" + playerId + " is Jumping!");
-                doubleJumpCounter++;
-            }
 
             // Movement while in air.
 
