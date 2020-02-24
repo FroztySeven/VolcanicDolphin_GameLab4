@@ -50,7 +50,7 @@ public class BubbleController : MonoBehaviour
 
     private void Start()
     {
-        childCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
+        //childCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
         
         _parentScript = GetComponentInParent(typeof(BubblePath));
         _player1 = GameObject.Find("Player1");
@@ -130,15 +130,15 @@ public class BubbleController : MonoBehaviour
             }
         }
 
-        // bubbleMoveInt == 1 is set to player "Night" and will freeze the bubble to place
-        if (bubbleMoveInt > 0)
-        {
-            childCollider.enabled = true;
-        }
-        else
-        {
-            childCollider.enabled = false;
-        }
+        //// bubbleMoveInt == 1 is set to player "Night" and will freeze the bubble to place
+        //if (bubbleMoveInt > 0)
+        //{
+        //    childCollider.enabled = true;
+        //}
+        //else
+        //{
+        //    childCollider.enabled = false;
+        //}
 
         // Bubble starts moving when player "Day" is inside
         if (bubbleMoveInt == 2)
