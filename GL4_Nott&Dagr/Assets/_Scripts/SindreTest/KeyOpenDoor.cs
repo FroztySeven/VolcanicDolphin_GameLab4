@@ -16,7 +16,8 @@ public class KeyOpenDoor : MonoBehaviour
         {
             door.GetComponent<SpriteRenderer>().sprite = openDoor;
             door.GetComponent<BoxCollider2D>().enabled = true;
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
+            Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
     

@@ -9,42 +9,39 @@ EditorBuildSettings:
     path: Assets/Scenes/J-T Testing/Character Selection.unity
     guid: 889ec1b1778506c4dabf03d09228a782
   - enabled: 1
-    path: Assets/Scenes/J-T Testing/Prototype Level.unity
-    guid: c0138373aa74cbf44ac5fda4817f879f
+    path: Assets/Scenes/Completed Levels/Gunnar - Level 01.unity
+    guid: 2a55f41774911e8408689ed13f87a62e
   - enabled: 1
-    path: Assets/Scenes/J-T Testing/Prefab Testing Level.unity
-    guid: ea70ae93baa16744da2163a2c9e57065
-  - enabled: 0
-    path: Assets/Scenes/Remi/Prototype Bubble Test.unity
-    guid: 1325df85ed2811b45b1a939b2df66359
+    path: Assets/Scenes/Completed Levels/Gunnar - Level 02.unity
+    guid: 8385f7a7f800515438ce9e26d2fdeee0
   - enabled: 1
-    path: Assets/Scenes/J-T Testing/Level Concepts/Level 01.unity
-    guid: c3234c87c731e71498058ce052e90b2d
+    path: Assets/Scenes/Completed Levels/J-T Level 01.unity
+    guid: a2db50c356d964347b016fbc7b9e8ab5
   - enabled: 1
-    path: Assets/Scenes/J-T Testing/Level Concepts/Level 02.unity
-    guid: 235d2a88fb2ebd54494e4fd38e6a9ac9
+    path: Assets/Scenes/Completed Levels/J-T Level 02.unity
+    guid: f843e659a57c1f546b26454c23791603
   - enabled: 1
-    path: Assets/Scenes/Remi/Week_7/Remi_Horizontal_02.unity
-    guid: 2379706ed7299bc41b649d1830adc46e
+    path: Assets/Scenes/Completed Levels/J-T Level 03.unity
+    guid: b7baeaf9d5b21a546bde5c3524ea1572
   - enabled: 1
-    path: Assets/Scenes/Remi/Week_7/Remi_Vertical_02.unity
-    guid: ab08250717be98b478a0e4a2ca7b30af
+    path: Assets/Scenes/Completed Levels/Jane Level 01.unity
+    guid: 4512343d3f107a242a184e6f61113e20
   - enabled: 1
-    path: Assets/Scenes/Sindre Test/PlatformShowcase.unity
-    guid: 785c59477c94c2d4a8bdd5efee8a55ca
-  - enabled: 0
-    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Split Screen Test.unity
-    guid: 92ade5d34560f664bb40c2c2155e325d
-  - enabled: 0
-    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Static Size 5.unity
-    guid: 49580d731dc38cc43b5b3628406a90a5
-  - enabled: 0
-    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Static Size 10.unity
-    guid: f363b3c8a29222748baffd7d1454afad
-  - enabled: 0
-    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Static Size 15.unity
-    guid: 79745c01e7c4ed44b85f2806ff99d3f0
-  - enabled: 0
-    path: Assets/Scenes/J-T Testing/Camera Tests/Camera Zoom Test.unity
-    guid: e3a5e439f28b74e4a81b5b45fd929a16
+    path: Assets/Scenes/Completed Levels/Remi Level 01.unity
+    guid: c0777dd1c0d43c843904a4a65d906be5
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Remi Level 02.unity
+    guid: 767514c42ce82b74fa52373c32d516a1
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Sindre Level 01.unity
+    guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Sindre Level 02.unity
+    guid: 20d555554340f1346b53bd57a9b3fa79
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Sindre Level 03.unity
+    guid: d66dcfc6458839c488935f230584bb48
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Sindre Level 04.unity
+    guid: a149dd64f6a96764eaf4caa8f1b2d4f9
   m_configObjects: {}

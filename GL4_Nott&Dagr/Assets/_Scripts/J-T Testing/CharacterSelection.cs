@@ -177,42 +177,72 @@ public class CharacterSelection : MonoBehaviour
 
     public void LevelOne()
     {
-        SceneManager.LoadScene("Level 01");
+        SceneManager.LoadScene("J-T Level 01");
     }
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene("Level 02");
+        SceneManager.LoadScene("J-T Level 02");
     }
 
     public void LevelThree()
     {
-        SceneManager.LoadScene("PlatformShowcase");
+        SceneManager.LoadScene("J-T Level 03");
     }
 
     public void LevelFour()
     {
-        SceneManager.LoadScene("Remi_Horizontal_02");
+        SceneManager.LoadScene("Jane Level 01");
     }
 
     public void LevelFive()
     {
-        SceneManager.LoadScene("Remi_Vertical_02");
+        SceneManager.LoadScene("Remi Level 01");
     }
 
     public void LevelSix()
     {
-        SceneManager.LoadScene("Prototype Level");
+        SceneManager.LoadScene("Remi Level 02");
     }
 
     public void LevelSeven()
     {
-        SceneManager.LoadScene("Prefab Testing Level");
+        SceneManager.LoadScene("Sindre Level 01");
     }
 
     public void LevelEight()
     {
-        SceneManager.LoadScene("Prototype Bubble Test");
+        SceneManager.LoadScene("Sindre Level 02");
+    }
+
+    public void LevelNine()
+    {
+        SceneManager.LoadScene("Sindre Level 03");
+
+    }
+
+    public void LevelTen()
+    {
+        SceneManager.LoadScene("Sindre Level 04");
+
+    }
+
+    public void LevelEleven()
+    {
+        SceneManager.LoadScene("Gunnar - Level 01");
+
+    }
+
+    public void LevelTwelve()
+    {
+        SceneManager.LoadScene("Gunnar - Level 02");
+
+    }
+
+    public void LevelThirteen()
+    {
+        SceneManager.LoadScene("");
+
     }
 
     public void ExitGame()
