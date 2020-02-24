@@ -141,23 +141,29 @@ public class Disappearing : MonoBehaviour
     {
         if (startDisappeared)
         {
-            foreach (Transform child in gameObject.transform)
+            if (!nottInsideTrigger || !dagrInsideTrigger)
             {
-                child.GetComponentInChildren<Renderer>().enabled = false;
-                if (child.GetComponentInChildren<BoxCollider2D>())
+                foreach (Transform child in gameObject.transform)
                 {
-                    child.GetComponentInChildren<BoxCollider2D>().enabled = false;
+                    child.GetComponentInChildren<Renderer>().enabled = false;
+                    if (child.GetComponentInChildren<BoxCollider2D>())
+                    {
+                        child.GetComponentInChildren<BoxCollider2D>().enabled = false;
+                    }
                 }
             }
         }
         else
         {
-            foreach (Transform child in gameObject.transform)
+            if (!nottInsideTrigger || !dagrInsideTrigger)
             {
-                child.GetComponentInChildren<Renderer>().enabled = true;
-                if (child.GetComponentInChildren<BoxCollider2D>())
+                foreach (Transform child in gameObject.transform)
                 {
-                    child.GetComponentInChildren<BoxCollider2D>().enabled = true;
+                    child.GetComponentInChildren<Renderer>().enabled = true;
+                    if (child.GetComponentInChildren<BoxCollider2D>())
+                    {
+                        child.GetComponentInChildren<BoxCollider2D>().enabled = true;
+                    }
                 }
             }
         }
