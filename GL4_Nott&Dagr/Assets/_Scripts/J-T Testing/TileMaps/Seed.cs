@@ -4,12 +4,46 @@ using UnityEngine;
 
 public class Seed : MonoBehaviour
 {
+
+    public Color frozenColor;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            GetComponent<Rigidbody2D>().isKinematic = false;
-            GetComponent<BoxCollider2D>().isTrigger = false;
+            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            {
+                GetComponent<Rigidbody2D>().isKinematic = false;
+                GetComponent<Rigidbody2D>().mass = 10;
+                GetComponent<BoxCollider2D>().isTrigger = false;
+                GetComponent<SpriteRenderer>().color = Color.white;
+            }
+
+            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            {
+                GetComponent<Rigidbody2D>().isKinematic = false;
+                GetComponent<Rigidbody2D>().mass = 1000;
+                GetComponent<BoxCollider2D>().isTrigger = false;
+                GetComponent<SpriteRenderer>().color = frozenColor;
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            {
+                GetComponent<Rigidbody2D>().mass = 10;
+                GetComponent<SpriteRenderer>().color = Color.white;
+            }
+
+            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            {
+                GetComponent<Rigidbody2D>().mass = 1000;
+                GetComponent<SpriteRenderer>().color = frozenColor;
+            }
         }
     }
 }
