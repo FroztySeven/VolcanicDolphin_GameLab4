@@ -29,6 +29,7 @@ public class SplitScreen : MonoBehaviour {
 		camera1 = Camera.main.gameObject;
 		camera2 = new GameObject ();
 		camera2.AddComponent<Camera> ();
+        camera2.AddComponent<FMODUnity.StudioListener>();
         camera2.GetComponent<Camera>().orthographic = true;
         camera2.GetComponent<Camera>().orthographicSize = camera1.GetComponent<Camera>().orthographicSize;
 		//Setting up the culling mask of camera2 to ignore the layer "TransparentFX" as to avoid rendering the split and splitter on both cameras.
