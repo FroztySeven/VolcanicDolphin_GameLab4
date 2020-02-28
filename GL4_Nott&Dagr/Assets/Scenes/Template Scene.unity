@@ -238,6 +238,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1606246600326026496, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2173367033676266929, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_Offset.x
@@ -247,6 +252,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226724931728785203, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioTriggerDagr
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226724931728785203, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226724931728785203, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_TagString
+      value: DagrAudioTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3498397378241842543, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
@@ -298,6 +318,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5529784277425305667, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956338106893153571, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7339977784284609012, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_Sprite
@@ -337,6 +367,11 @@ PrefabInstance:
     - target: {fileID: 7339977784284609012, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542759280437265793, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7779846750098210842, guid: c2f959fe761f0d14f975e220ddb38c5b,
@@ -688,6 +723,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226724931728785203, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioTriggerDagr
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226724931728785203, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_TagString
+      value: DagrAudioTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3882482632242313916, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
