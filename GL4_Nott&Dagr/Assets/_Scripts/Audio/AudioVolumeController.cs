@@ -5,26 +5,26 @@ using UnityEngine;
 public class AudioVolumeController : MonoBehaviour
 {
     //... this is to control the volume, it is an in-game mixer of sorts, it was easier to control the volume this way rather than through 
-    //... fmod mixer, these can be tweaked while testing the game, make as many sliders as needed to either control a group volume or to control single
+    //... FMod mixer, these can be tweaked while testing the game, make as many sliders as needed to either control a group volume or to control single
     //... bus volume. Group similar audio assets together such as  Player or Environment and place them in an alphabetical order.
 
     // Main Masters
-    FMOD.Studio.Bus musicMaster;
-    FMOD.Studio.Bus sfxMaster;
+    private FMOD.Studio.Bus _musicMaster;
+    private FMOD.Studio.Bus _sfxMaster;
 
     // Environment SFX
-    FMOD.Studio.Bus iceFreezeMaster;
-    FMOD.Studio.Bus iceMeltMaster;
+    private FMOD.Studio.Bus _iceFreezeMaster;
+    private FMOD.Studio.Bus _iceMeltMaster;
 
     // Objects
-    FMOD.Studio.Bus bubbleEnterExitMaster;
-    FMOD.Studio.Bus openDoorMaster;
-    FMOD.Studio.Bus trampolineMaster;
+    private FMOD.Studio.Bus _bubbleEnterExitMaster;
+    private FMOD.Studio.Bus _openDoorMaster;
+    private FMOD.Studio.Bus _trampolineMaster;
 
     // Players SFX
     // Footsteps
-    FMOD.Studio.Bus grassFSMaster;
-    FMOD.Studio.Bus snowFSMaster;
+    private FMOD.Studio.Bus _grassFsMaster;
+    private FMOD.Studio.Bus _snowFsMaster;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -76,72 +76,72 @@ public class AudioVolumeController : MonoBehaviour
 
     [SerializeField]
     [Range(-80f, 20f)]
-    public float grassFSVolume;
+    public float grassFsVolume;
 
     [SerializeField]
     [Range(-80f, 20f)]
-    public float snowFSVolume;
+    public float snowFsVolume;
 
 
     //--------------------------------------------------------------------------------------------------------//
 
-    void Start()
+    private void Start()
     {
-        //... these look for the bus channels in the fmod mixer, the pathways need to be exact. 
+        //... these look for the bus channels in the FMod mixer, the pathways need to be exact. 
         //... Pathways should be located in the FMod Bus window, 
         //... right click on the bus you want and copy the path name and add it.
 
         // Main Masters
-        musicMaster = FMODUnity.RuntimeManager.GetBus("bus:/Music");
-        sfxMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+        _musicMaster = FMODUnity.RuntimeManager.GetBus("bus:/Music");
+        _sfxMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
 
         // Environment
-        iceFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceFreeze");
-        iceMeltMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceMelt");
+        _iceFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceFreeze");
+        _iceMeltMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceMelt");
 
 
         // Objects
-        bubbleEnterExitMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Bubbles/BubbleEnterExit");
-        openDoorMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/DoorOpen");
-        trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
+        _bubbleEnterExitMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Bubbles/BubbleEnterExit");
+        _openDoorMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/DoorOpen");
+        _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
 
 
         // Players SFX
         // Footsteps
-        grassFSMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/GrassFS");
-        snowFSMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/SnowFS");
+        _grassFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/GrassFS");
+        _snowFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/SnowFS");
 
     }
 
-    void Update()
+    private void Update()
     {
         //... these change the values of the volume sliders.
 
         // Main Masters
-        musicMaster.setVolume(DecibelToLinear(musicMasterVolume));
-        sfxMaster.setVolume(DecibelToLinear(sfxMasterVolume));
+        _musicMaster.setVolume(DecibelToLinear(musicMasterVolume));
+        _sfxMaster.setVolume(DecibelToLinear(sfxMasterVolume));
 
         // Environment
-        iceFreezeMaster.setVolume(DecibelToLinear(iceFreezeVolume));
-        iceMeltMaster.setVolume(DecibelToLinear(iceMeltVolume));
+        _iceFreezeMaster.setVolume(DecibelToLinear(iceFreezeVolume));
+        _iceMeltMaster.setVolume(DecibelToLinear(iceMeltVolume));
 
         // Objects
-        bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
-        openDoorMaster.setVolume(DecibelToLinear(openDoorVolume));
-        trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));
+        _bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
+        _openDoorMaster.setVolume(DecibelToLinear(openDoorVolume));
+        _trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));
 
         // Players
         // Footsteps
-        grassFSMaster.setVolume(DecibelToLinear(grassFSVolume));
-        snowFSMaster.setVolume(DecibelToLinear(snowFSVolume));
+        _grassFsMaster.setVolume(DecibelToLinear(grassFsVolume));
+        _snowFsMaster.setVolume(DecibelToLinear(snowFsVolume));
     }
 
     //--------------------------------------------------------------------------------------------------------//
 
     //... this is so the float value is more like audio dB value.
-    private float DecibelToLinear(float dB) 
+    private static float DecibelToLinear(float dB) 
     {
-        float linear = Mathf.Pow(10.0f, dB / 20f);
+        var linear = Mathf.Pow(10.0f, dB / 20f);
         return linear;
     }
 
