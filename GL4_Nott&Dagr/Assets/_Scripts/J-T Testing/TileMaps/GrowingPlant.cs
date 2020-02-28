@@ -22,7 +22,7 @@ public class GrowingPlant : MonoBehaviour
         {
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
-                Debug.Log("Something hit me!");
+                //Debug.Log("Something hit me!");
                 StartCoroutine(PlantGrow());
                 gameObject.GetComponent<SpriteRenderer>().sprite = null;
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;

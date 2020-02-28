@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 3979160979117169262}
   - component: {fileID: 6765205851375799968}
   - component: {fileID: 3882482632242313916}
+  - component: {fileID: 672616827}
   m_Layer: 12
   m_Name: NottAura
   m_TagString: NottAura
@@ -227,7 +228,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3498397378241842543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -261,6 +262,22 @@ MonoBehaviour:
   nott: {fileID: 0}
   dagr: {fileID: 7788640642130820836}
   auraPushForce: 10
+--- !u!58 &672616827
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498397378241842543}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.8}
+  serializedVersion: 2
+  m_Radius: 0.8
 --- !u!1 &3600262629136989022
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +371,7 @@ GameObject:
   - component: {fileID: 7339977784284609012}
   - component: {fileID: 7788640640931986717}
   - component: {fileID: 7788640640931986716}
+  - component: {fileID: 1460293679}
   m_Layer: 12
   m_Name: DagrAura
   m_TagString: DagrAura
@@ -432,7 +450,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3846428973273867091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -466,6 +484,22 @@ MonoBehaviour:
   nott: {fileID: 0}
   dagr: {fileID: 7788640642130820836}
   auraPushForce: 10
+--- !u!58 &1460293679
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3846428973273867091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.8}
+  serializedVersion: 2
+  m_Radius: 0.8
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0

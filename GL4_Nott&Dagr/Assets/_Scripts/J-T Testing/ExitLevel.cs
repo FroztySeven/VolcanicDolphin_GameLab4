@@ -25,11 +25,13 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
             {
                 nightEnter = true;
+                other.transform.Find("NottAura").GetComponent<CircleCollider2D>().enabled = false;
             }
 
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
                 dayEnter = true;
+                other.transform.Find("DagrAura").GetComponent<CircleCollider2D>().enabled = false;
             }
         }
     }
@@ -41,11 +43,13 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
             {
                 nightEnter = false;
+                other.transform.Find("NottAura").GetComponent<CircleCollider2D>().enabled = true;
             }
 
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
                 dayEnter = false;
+                other.transform.Find("DagrAura").GetComponent<CircleCollider2D>().enabled = true;
             }
         }
     }

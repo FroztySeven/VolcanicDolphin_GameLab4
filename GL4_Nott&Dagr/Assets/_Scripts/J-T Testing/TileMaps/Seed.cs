@@ -15,7 +15,7 @@ public class Seed : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().isKinematic = false;
                 GetComponent<Rigidbody2D>().mass = 10;
-                GetComponent<BoxCollider2D>().isTrigger = false;
+                GetComponent<CircleCollider2D>().isTrigger = false;
                 GetComponent<SpriteRenderer>().color = Color.white;
             }
 
@@ -23,7 +23,7 @@ public class Seed : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().isKinematic = false;
                 GetComponent<Rigidbody2D>().mass = 1000;
-                GetComponent<BoxCollider2D>().isTrigger = false;
+                GetComponent<CircleCollider2D>().isTrigger = false;
                 GetComponent<SpriteRenderer>().color = frozenColor;
             }
         }

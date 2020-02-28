@@ -21,7 +21,7 @@ public class AuraCrash : MonoBehaviour
         nottRB = nott.GetComponent<Rigidbody2D>();
         dagrRB = dagr.GetComponent<Rigidbody2D>();
         connectedControllers = Input.GetJoystickNames();
-        Debug.Log(connectedControllers.Length + "  Controllers");
+        //Debug.Log(connectedControllers.Length + "  Controllers");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

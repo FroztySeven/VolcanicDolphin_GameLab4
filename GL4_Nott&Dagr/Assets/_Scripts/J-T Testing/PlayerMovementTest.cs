@@ -129,7 +129,7 @@ public class PlayerMovementTest : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("JumpP" + playerId))
         {
             theRB.AddForce(new Vector2(0f, jumpForce));
-            Debug.Log("Player" + playerId + " is Jumping!");
+            //Debug.Log("Player" + playerId + " is Jumping!");
             doubleJumpCounter++;
         }
 
@@ -150,7 +150,7 @@ public class PlayerMovementTest : MonoBehaviour
             {
                 theRB.velocity = Vector2.zero;
                 theRB.AddForce(new Vector2(0f, jumpForce));
-                Debug.Log("Player" + playerId + " is Double Jumping!");
+                //Debug.Log("Player" + playerId + " is Double Jumping!");
                 doubleJumpCounter = 0;
             }
 

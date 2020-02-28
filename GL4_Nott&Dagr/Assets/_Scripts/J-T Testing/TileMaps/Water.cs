@@ -30,6 +30,8 @@ public class Water : MonoBehaviour
 
     private WaterPit waterPit;
 
+    public GameObject night;
+
     private void Start()
     {
         theSR = GetComponent<SpriteRenderer>();
@@ -117,6 +119,11 @@ public class Water : MonoBehaviour
         unfreezeTimer = 0;
         unfreeze = false;
         isFrozen = false;
+
+        if (night != null)
+        {
+            night.transform.position += new Vector3(0f, 0.01f, 0f);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -125,6 +132,7 @@ public class Water : MonoBehaviour
         {
             if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
             {
+                night = other.gameObject;
                 if (!isFrozen)
                 {
                     waterPit.FreezeWater(waterId, true);
@@ -137,6 +145,17 @@ public class Water : MonoBehaviour
                 {
                     unfreeze = true;
                 }
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            {
+                night = null;
             }
         }
     }
