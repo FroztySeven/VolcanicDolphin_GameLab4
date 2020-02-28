@@ -38,7 +38,7 @@ public class AuraCrash : MonoBehaviour
                         if (Input.GetButton("AuraPushP1"))
                         {
                             nottRB.AddForce(crashForce * (auraPushForce), ForceMode2D.Impulse); //change this when i fix the bug
-                            Debug.Log("AuraPushP2");
+                            //Debug.Log("AuraPushP2");
                         }
                     }
 
@@ -75,7 +75,7 @@ public class AuraCrash : MonoBehaviour
                 if (Input.GetButton("AuraPushP1"))
                 {
                     dagrRB.AddForce(crashForce * -auraPushForce * 3, ForceMode2D.Impulse);
-                    Debug.Log("AuraPushP1");
+                    //Debug.Log("AuraPushP1");
                 }
             }
 

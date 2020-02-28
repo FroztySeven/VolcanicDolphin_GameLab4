@@ -26,7 +26,7 @@ public class Trampoline : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(trampolineLength);
+        //Debug.Log(trampolineLength);
         theBC = GetComponent<BoxCollider2D>();
 
         theBC.size = new Vector2(trampolineLength, 1f);
