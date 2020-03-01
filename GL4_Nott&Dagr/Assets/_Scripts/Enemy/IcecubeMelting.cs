@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 public class IcecubeMelting : MonoBehaviour
 {
     public bool isIceCubeExisting = true;
+    public int cubeMass;
     public GameObject iceCube;
     public GameObject pickupKey;
 
@@ -24,7 +25,7 @@ public class IcecubeMelting : MonoBehaviour
                     isIceCubeExisting = true;
 
                     Destroy(transform.Find("key_01").GetComponent<BoxCollider2D>());
-                    GetComponent<Rigidbody2D>().mass = 5f;
+                    GetComponent<Rigidbody2D>().mass = cubeMass;
                     /*Destroy(transform.Find("key_01").GetComponent<Rigidbody2D>());*/
 
                     // For Audio   

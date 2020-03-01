@@ -144,6 +144,6 @@ public class AudioVolumeController : MonoBehaviour
         var linear = Mathf.Pow(10.0f, dB / 20f);
         return linear;
     }
-
+    
     //--------------------------------------------------------------------------------------------------------//
 }

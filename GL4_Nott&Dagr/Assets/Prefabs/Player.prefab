@@ -101,8 +101,8 @@ GameObject:
   - component: {fileID: 4175540453729784279}
   - component: {fileID: 6956338106893153571}
   m_Layer: 11
-  m_Name: AudioTrigger
-  m_TagString: NottAudioTrigger
+  m_Name: AudioTriggerDagr
+  m_TagString: DagrAudioTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,6 +500,53 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.8}
   serializedVersion: 2
   m_Radius: 0.8
+--- !u!1 &6746168327507794199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8536230631779655350}
+  - component: {fileID: 4904722437726578150}
+  m_Layer: 11
+  m_Name: AudioTriggerNott
+  m_TagString: NottAudioTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8536230631779655350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746168327507794199}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7788640642130819352}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4904722437726578150
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746168327507794199}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.37}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +666,7 @@ Transform:
   - {fileID: 1905536795}
   - {fileID: 2011920407}
   - {fileID: 4175540453729784279}
+  - {fileID: 8536230631779655350}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
