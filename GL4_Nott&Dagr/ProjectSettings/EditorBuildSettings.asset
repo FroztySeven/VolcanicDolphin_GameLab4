@@ -9,39 +9,57 @@ EditorBuildSettings:
     path: Assets/Scenes/J-T Testing/Character Selection.unity
     guid: 889ec1b1778506c4dabf03d09228a782
   - enabled: 1
+    path: Assets/Scenes/Completed Levels/Prologue/Prologue Level 01.unity
+    guid: 5057ddf96b29dfa4d942e7fe73ab6d90
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Prologue/Prologue Level 02.unity
+    guid: c8594adf665020b488d523a92d5ab66e
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Prologue/Prologue Level 03.unity
+    guid: 167270f67eeab0844852414c344b7854
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Prologue/Prologue Level 04.unity
+    guid: 1d20f474baceeca4c9a032959b8668dc
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Gunnar - Level 03.unity
+    guid: 0438530211d26ca40827d1ea333aaed7
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Burny-burny Swing-Swing.unity
+    guid: c28346b2f1bda3b44aafe9b6daaa03c5
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Gunnar - Level 01.unity
     guid: 2a55f41774911e8408689ed13f87a62e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Gunnar - Level 02.unity
     guid: 8385f7a7f800515438ce9e26d2fdeee0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/J-T Level 01.unity
     guid: a2db50c356d964347b016fbc7b9e8ab5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/J-T Level 02.unity
     guid: f843e659a57c1f546b26454c23791603
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/J-T Level 03.unity
     guid: b7baeaf9d5b21a546bde5c3524ea1572
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Jane Level 01.unity
     guid: 4512343d3f107a242a184e6f61113e20
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Remi Level 01.unity
     guid: c0777dd1c0d43c843904a4a65d906be5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Remi Level 02.unity
     guid: 767514c42ce82b74fa52373c32d516a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Sindre Level 01.unity
     guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Sindre Level 02.unity
     guid: 20d555554340f1346b53bd57a9b3fa79
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Sindre Level 03.unity
     guid: d66dcfc6458839c488935f230584bb48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Completed Levels/Sindre Level 04.unity
     guid: a149dd64f6a96764eaf4caa8f1b2d4f9
   m_configObjects: {}

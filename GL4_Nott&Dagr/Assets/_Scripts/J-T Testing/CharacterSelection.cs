@@ -177,32 +177,32 @@ public class CharacterSelection : MonoBehaviour
 
     public void LevelOne()
     {
-        SceneManager.LoadScene("J-T Level 01");
+        SceneManager.LoadScene("Prologue Level 01");
     }
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene("J-T Level 02");
+        SceneManager.LoadScene("Prologue Level 02");
     }
 
     public void LevelThree()
     {
-        SceneManager.LoadScene("J-T Level 03");
+        SceneManager.LoadScene("Prologue Level 03");
     }
 
     public void LevelFour()
     {
-        SceneManager.LoadScene("Jane Level 01");
+        SceneManager.LoadScene("Prologue Level 04");
     }
 
     public void LevelFive()
     {
-        SceneManager.LoadScene("Remi Level 01");
+        SceneManager.LoadScene("Gunnar - Level 03");
     }
 
     public void LevelSix()
     {
-        SceneManager.LoadScene("Remi Level 02");
+        SceneManager.LoadScene("Burny-burny Swing-Swing");
     }
 
     public void LevelSeven()
