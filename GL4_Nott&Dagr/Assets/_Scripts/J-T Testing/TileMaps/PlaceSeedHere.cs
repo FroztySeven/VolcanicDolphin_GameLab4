@@ -12,7 +12,7 @@ public class PlaceSeedHere : MonoBehaviour
     {
         if (other.name == "Seed")
         {
-            GameObject newPlant = Instantiate(plant, transform.position, transform.rotation);
+            GameObject newPlant = Instantiate(plant, transform.position + new Vector3(0f, 0.5f, 0f), transform.rotation);
             newPlant.GetComponent<GrowingPlant>().growHeight = growHeight;
             Destroy(other.gameObject);
             Destroy(gameObject);

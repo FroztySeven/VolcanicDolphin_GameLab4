@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finished: {fileID: 1263867}
+  closedDoor: {fileID: 2943947200571382430, guid: 9f3950c8d8f424946b25801437e3c95f,
+    type: 3}
+  openDoor: {fileID: 235826012787857229, guid: 9f3950c8d8f424946b25801437e3c95f, type: 3}
 --- !u!1001 &5585166739457290228
 PrefabInstance:
   m_ObjectHideFlags: 0

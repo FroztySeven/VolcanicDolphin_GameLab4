@@ -6,17 +6,21 @@ using UnityEngine;
 
 public class KeyOpenDoor : MonoBehaviour
 {
-    public Sprite closedDoor, openDoor;
-    public GameObject door;
-    
+    private GameObject door;
+
+    private void Start()
+    {
+        if (GameObject.Find("Door"))
+        {
+            door = GameObject.Find("Door");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Key"))
         {
-            door.GetComponent<SpriteRenderer>().sprite = openDoor;
-            door.GetComponent<BoxCollider2D>().enabled = true;
-            //other.gameObject.SetActive(false);
+            door.GetComponent<ExitLevel>().DoorOpen();
             Destroy(other.gameObject.transform.parent.gameObject);
         }
     }

@@ -12,8 +12,12 @@ public class ExitLevel : MonoBehaviour
 
     private GameObject night, day;
 
+    public Sprite closedDoor, openDoor;
+
     private void Start()
     {
+        name = "Door";
+        GetComponent<SpriteRenderer>().sprite = closedDoor;
         night = GameObject.Find("Player2");
         day = GameObject.Find("Player1");
     }
@@ -78,5 +82,11 @@ public class ExitLevel : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("Character Selection");
+    }
+
+    public void DoorOpen()
+    {
+        GetComponent<SpriteRenderer>().sprite = openDoor;
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 }
