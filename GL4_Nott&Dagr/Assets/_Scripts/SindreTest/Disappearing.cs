@@ -87,6 +87,14 @@ public class Disappearing : MonoBehaviour
                 }
             }
 
+            if (disappearBehindDagr && disappearBehindNott)
+            {
+                foreach (Transform child in gameObject.transform) 
+                { 
+                    child.transform.gameObject.SetActive(false);
+                }
+            }
+
             if (startDisappeared) //platform start disappeared
             {
                 if (turnOnByNott) 
