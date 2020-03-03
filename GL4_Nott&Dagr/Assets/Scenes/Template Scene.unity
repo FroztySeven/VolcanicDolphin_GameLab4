@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1141244599, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e672f0e01a08e24cbff7f7a95121bb3,
+        type: 3}
     - target: {fileID: 1533157058, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -407,7 +412,7 @@ PrefabInstance:
     - target: {fileID: 7788640641283361656, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7788640641283361658, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
@@ -428,7 +433,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d2cac119167595d47ab1b5bc5967537d,
+      objectReference: {fileID: 21300000, guid: 6dde91f640ed9d1438fdfb88855c403c,
         type: 3}
     - target: {fileID: 7788640641283361658, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
@@ -524,6 +529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: whatIsGround.m_Bits
       value: 1847
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788640642130819353, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: canDoubleJump
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7788640642130820836, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}

@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 public class IcecubeMelting : MonoBehaviour
 {
     public bool isIceCubeExisting = true;
-    public int cubeMass;
+    public int cubeMass = 5;
     public GameObject iceCube;
     public GameObject pickupKey;
 

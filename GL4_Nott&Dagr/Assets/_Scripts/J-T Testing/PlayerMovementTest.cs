@@ -140,7 +140,7 @@ public class PlayerMovementTest : MonoBehaviour
         {
             if (auraBounce)
             {
-                theRB.velocity = new Vector2(theRB.velocity.x + (moveInput.x * movementSpeed * Time.deltaTime), theRB.velocity.y);
+                theRB.velocity = new Vector2(theRB.velocity.x + (moveInput.x * movementSpeed * 2 * Time.deltaTime), theRB.velocity.y);
             }
             else
             {

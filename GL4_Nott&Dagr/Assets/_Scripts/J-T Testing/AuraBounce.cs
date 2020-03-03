@@ -1,29 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class AuraBounce : MonoBehaviour
 {
-
     private PlayerMovementTest player;
 
-    //[HideInInspector]
-    public Rigidbody2D playerRB;
-
-    private int playerId;
-
-    private int layer;
     private float auraBounceTimer;
     private bool auraBounce;
 
     private void Start()
     {
         player = GetComponentInParent<PlayerMovementTest>();
-        playerRB = GetComponentInParent<Rigidbody2D>();
-
-        playerId = player.playerId;
-
-        layer = gameObject.layer;
     }
 
     private void Update()
@@ -41,17 +28,64 @@ public class AuraBounce : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject.layer == layer)
+    //    {
+    //        //float angle = Quaternion.Angle(other.transform.rotation, GetComponent<Collider2D>().transform.rotation);
+    //        Vector3 angle = other.transform.position - GetComponent<Collider2D>().transform.position;
+    //        //angle.y = Mathf.Rad2Deg;
+    //        //angle = Mathf.Rad2Deg;
+    //        Debug.Log("Angle P: " + playerId + " " + angle.y);
+    //        //other.GetComponent<AuraBounce>().player.canMove = false;
+    //        Vector2 bounceDirection = other.transform.position - GetComponent<Collider2D>().transform.position;
+    //        if (angle.y > 1.4f)
+    //        {
+    //            other.GetComponent<AuraBounce>().playerRB.AddForce(bounceDirection * 500, ForceMode2D.Force);
+    //        }
+    //        else
+    //        {
+    //            other.GetComponent<AuraBounce>().playerRB.AddForce(bounceDirection * 1000, ForceMode2D.Force);
+    //        }
+
+    //        AuraBounceTimer(other.gameObject);
+    //        //StartCoroutine(EnableMovement(other.gameObject));
+    //    }
+    //}
+
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    Debug.Log("Boom!");
+    //    //if (other.gameObject.layer == layer)
+    //    //{
+    //        Vector3 normal = other.contacts[0].normal;
+
+    //    //Debug.Log(other.gameObject.GetComponentInChildren<AuraBounce>());
+    //        Vector3 vel = other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.velocity;
+    //        //float angle = Quaternion.Angle(other.transform.rotation, GetComponent<Collider2D>().transform.rotation);
+    //        //Vector3 angle = other.transform.position - GetComponent<Collider2D>().transform.position;
+    //        //angle.y = Mathf.Rad2Deg;
+    //        //angle = Mathf.Rad2Deg;
+    //        Debug.Log("Angle P" + playerId + ": " + Vector3.Angle(vel, -normal));
+    //        //other.GetComponent<AuraBounce>().player.canMove = false;
+    //        Vector2 bounceDirection = other.transform.position - GetComponent<Collider2D>().transform.position;
+    //        if (Vector3.Angle(other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.velocity, -normal) > 1.4f)
+    //        {
+    //            other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.AddForce(bounceDirection * 20, ForceMode2D.Impulse);
+    //        }
+    //        else
+    //        {
+    //            other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.AddForce(bounceDirection * 10, ForceMode2D.Impulse);
+    //        }
+
+    //        AuraBounceTimer(other.gameObject);
+    //        //StartCoroutine(EnableMovement(other.gameObject));
+    //   // }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.layer == layer)
-        {
-            Debug.Log("Player " + other.GetComponent<AuraBounce>().playerId + " hit me!");
-            //other.GetComponent<AuraBounce>().player.canMove = false;
-            Vector2 bounceDirection = other.transform.position - transform.position;
-            AuraBounceTimer(other.gameObject);
-            other.GetComponent<AuraBounce>().playerRB.AddForce(bounceDirection * 500, ForceMode2D.Force);
-            //StartCoroutine(EnableMovement(other.gameObject));
-        }
+        AuraBounceTimer(other.gameObject.GetComponentInChildren<AuraBounce>().gameObject);
     }
 
     private void AuraBounceTimer(GameObject player)

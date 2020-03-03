@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIceCubeExisting: 1
-  cubeMass: 0
+  cubeMass: 5
   iceCube: {fileID: 8043127028316500238}
   pickupKey: {fileID: 8043127027081489576}
 --- !u!50 &8043127028316500237
