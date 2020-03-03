@@ -8,6 +8,8 @@ public class ShatterWall : MonoBehaviour
 
     public GameObject wallPrefab;
 
+    public Sprite[] brokenWalls;
+
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = null;
@@ -16,6 +18,8 @@ public class ShatterWall : MonoBehaviour
         for (int i = 0; i < wallHeight; i++)
         {
             GameObject wall = Instantiate(wallPrefab, transform.position + new Vector3(0f, i, 0f), transform.rotation);
+            int randomNumber = Random.Range(0, brokenWalls.Length);
+            wall.GetComponent<SpriteRenderer>().sprite = brokenWalls[randomNumber];
         }
     }
 }
