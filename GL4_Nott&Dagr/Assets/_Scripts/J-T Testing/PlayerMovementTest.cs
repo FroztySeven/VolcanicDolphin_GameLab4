@@ -29,7 +29,8 @@ public class PlayerMovementTest : MonoBehaviour
 
     [HideInInspector]
     public bool canMove = true;
-    private bool isGrounded;
+    [HideInInspector]
+    public bool isGrounded;
     private bool isOnWall;
 
     [SerializeField]
@@ -41,6 +42,8 @@ public class PlayerMovementTest : MonoBehaviour
 
     //[HideInInspector]
     public bool isOnLadder;
+
+    public bool auraBounce;
 
 
     public Transform groundCheck, ceilingCheck, wallCheck;
@@ -135,7 +138,14 @@ public class PlayerMovementTest : MonoBehaviour
 
         if (canMove)
         {
-            theRB.velocity = new Vector2(moveInput.x * movementSpeed, theRB.velocity.y);
+            if (auraBounce)
+            {
+                theRB.velocity = new Vector2(theRB.velocity.x + (moveInput.x * movementSpeed * Time.deltaTime), theRB.velocity.y);
+            }
+            else
+            {
+                theRB.velocity = new Vector2(moveInput.x * movementSpeed, theRB.velocity.y);
+            }
 
             // Movement while in air.
 
