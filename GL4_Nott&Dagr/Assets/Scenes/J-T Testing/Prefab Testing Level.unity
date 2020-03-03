@@ -8852,6 +8852,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5352661376661720862, guid: 485b9137f550cf94b842ba83ce37f240,
+        type: 3}
+      propertyPath: gemColour
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5352661376661720863, guid: 485b9137f550cf94b842ba83ce37f240,
         type: 3}
       propertyPath: m_Name
