@@ -125,3 +125,9 @@ MonoBehaviour:
   wallHeight: 0
   wallPrefab: {fileID: 5698310588864667638, guid: b3400ac942178374ab31ba1ba01450f2,
     type: 3}
+  brokenWalls:
+  - {fileID: 473828651731206975, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: 1473523552303590966, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -2040633346717465360, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: 8905864480088934866, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -665307235912116058, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
