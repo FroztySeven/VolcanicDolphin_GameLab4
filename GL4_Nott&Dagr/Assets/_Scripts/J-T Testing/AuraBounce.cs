@@ -3,18 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 public class AuraBounce : MonoBehaviour
 {
+    [Range(1, 20)]
+    public float auraMovementSpeed = 5;
+
     private PlayerMovementTest player;
 
     private float auraBounceTimer;
     private bool auraBounce;
+    private int playerId;
+
+    private Vector2 moveInput;
+    private CapsuleCollider2D col;
+    private Vector2 colSize, colOffset;
 
     private void Start()
     {
         player = GetComponentInParent<PlayerMovementTest>();
+        col = GetComponent<CapsuleCollider2D>();
+        colSize = col.size;
+        colOffset = col.offset;
     }
 
     private void Update()
     {
+        playerId = player.playerId;
+        moveInput.x = Input.GetAxisRaw("RStickHorizontalP" + playerId);
+        moveInput.y = Input.GetAxisRaw("RStickVerticalP" + playerId);
+        moveInput.Normalize();
+
+        //Debug.Log(moveInput);
+
         if (auraBounce)
         {
             auraBounceTimer += Time.deltaTime;
@@ -26,62 +44,81 @@ public class AuraBounce : MonoBehaviour
                 player.auraBounce = false;
             }
         }
+
+        if (moveInput.x != 0 && moveInput.y == 0 && col.offset.y == colOffset.y)
+        {
+            col.direction = CapsuleDirection2D.Horizontal;
+
+            if (moveInput.x > 0 && col.offset.x >= colOffset.x)
+            {
+                col.size = col.size + new Vector2(moveInput.x * Time.deltaTime * auraMovementSpeed, 0f);
+                col.offset = col.offset + (new Vector2(moveInput.x * Time.deltaTime * auraMovementSpeed, 0f) / 2);
+            }
+
+            if (moveInput.x > 0 && col.offset.x <= colOffset.x)
+            {
+                col.size = new Vector2(Mathf.MoveTowards(col.size.x, colSize.x, Time.deltaTime * auraMovementSpeed), colSize.y);
+                col.offset = new Vector2(Mathf.MoveTowards(col.offset.x, colOffset.x, (Time.deltaTime * auraMovementSpeed) / 2), colOffset.y);
+            }
+
+            if (moveInput.x < 0 && col.offset.x <= colOffset.x)
+            {
+                col.size = col.size + new Vector2(-moveInput.x * Time.deltaTime * auraMovementSpeed, 0f);
+                col.offset = col.offset + (new Vector2(moveInput.x * Time.deltaTime * auraMovementSpeed, 0f) / 2);
+            }
+
+            if (moveInput.x < 0 && col.offset.x >= colOffset.x)
+            {
+                col.size = new Vector2(Mathf.MoveTowards(col.size.x, colSize.x, Time.deltaTime * auraMovementSpeed), colSize.y);
+                col.offset = new Vector2(Mathf.MoveTowards(col.offset.x, colOffset.x, (Time.deltaTime * auraMovementSpeed) / 2), colOffset.y);
+            }
+        }
+        else if (moveInput.x != 0 && col.offset.y != colOffset.y)
+        {
+            col.size = new Vector2(colSize.x, Mathf.MoveTowards(col.size.y, colSize.y, Time.deltaTime * auraMovementSpeed));
+            col.offset = new Vector2(colOffset.x, Mathf.MoveTowards(col.offset.y, colOffset.y, (Time.deltaTime * auraMovementSpeed) / 2));
+        }
+
+        if (moveInput.y != 0 && moveInput.x == 0 && col.offset.x == colOffset.x)
+        {
+            col.direction = CapsuleDirection2D.Vertical;
+
+            if (moveInput.y > 0 && col.offset.y >= colOffset.y)
+            {
+                col.size = col.size + new Vector2(0f, moveInput.y * Time.deltaTime * auraMovementSpeed);
+                col.offset = col.offset + (new Vector2(0f, moveInput.y * Time.deltaTime * auraMovementSpeed) / 2);
+            }
+
+            if (moveInput.y > 0 && col.offset.y <= colOffset.y)
+            {
+                col.size = new Vector2(colSize.x, Mathf.MoveTowards(col.size.y, colSize.y, Time.deltaTime * auraMovementSpeed));
+                col.offset = new Vector2(colOffset.x, Mathf.MoveTowards(col.offset.y, colOffset.y, (Time.deltaTime * auraMovementSpeed) / 2));
+            }
+
+            if (moveInput.y < 0 && col.offset.y <= colOffset.y)
+            {
+                col.size = col.size + new Vector2(0f, -moveInput.y * Time.deltaTime * auraMovementSpeed);
+                col.offset = col.offset + (new Vector2(0f, moveInput.y * Time.deltaTime * auraMovementSpeed) / 2);
+            }
+
+            if (moveInput.y < 0 && col.offset.y >= colOffset.y)
+            {
+                col.size = new Vector2(colSize.x, Mathf.MoveTowards(col.size.y, colSize.y, Time.deltaTime * auraMovementSpeed));
+                col.offset = new Vector2(colOffset.x, Mathf.MoveTowards(col.offset.y, colOffset.y, (Time.deltaTime * auraMovementSpeed) / 2));
+            }
+        }
+        else if (moveInput.y != 0 && col.offset.x != colOffset.x)
+        {
+            col.size = new Vector2(Mathf.MoveTowards(col.size.x, colSize.x, Time.deltaTime * auraMovementSpeed), colSize.y);
+            col.offset = new Vector2(Mathf.MoveTowards(col.offset.x, colOffset.x, (Time.deltaTime * auraMovementSpeed) / 2), colOffset.y);
+        }
+
+        if (moveInput.x == 0 && moveInput.y == 0)
+        {
+            col.size = new Vector2(Mathf.MoveTowards(col.size.x, colSize.x, Time.deltaTime * auraMovementSpeed), Mathf.MoveTowards(col.size.y, colSize.y, Time.deltaTime * auraMovementSpeed));
+            col.offset = new Vector2(Mathf.MoveTowards(col.offset.x, colOffset.x, (Time.deltaTime * auraMovementSpeed) / 2), Mathf.MoveTowards(col.offset.y, colOffset.y, (Time.deltaTime * auraMovementSpeed) / 2));
+        }
     }
-
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.layer == layer)
-    //    {
-    //        //float angle = Quaternion.Angle(other.transform.rotation, GetComponent<Collider2D>().transform.rotation);
-    //        Vector3 angle = other.transform.position - GetComponent<Collider2D>().transform.position;
-    //        //angle.y = Mathf.Rad2Deg;
-    //        //angle = Mathf.Rad2Deg;
-    //        Debug.Log("Angle P: " + playerId + " " + angle.y);
-    //        //other.GetComponent<AuraBounce>().player.canMove = false;
-    //        Vector2 bounceDirection = other.transform.position - GetComponent<Collider2D>().transform.position;
-    //        if (angle.y > 1.4f)
-    //        {
-    //            other.GetComponent<AuraBounce>().playerRB.AddForce(bounceDirection * 500, ForceMode2D.Force);
-    //        }
-    //        else
-    //        {
-    //            other.GetComponent<AuraBounce>().playerRB.AddForce(bounceDirection * 1000, ForceMode2D.Force);
-    //        }
-
-    //        AuraBounceTimer(other.gameObject);
-    //        //StartCoroutine(EnableMovement(other.gameObject));
-    //    }
-    //}
-
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    Debug.Log("Boom!");
-    //    //if (other.gameObject.layer == layer)
-    //    //{
-    //        Vector3 normal = other.contacts[0].normal;
-
-    //    //Debug.Log(other.gameObject.GetComponentInChildren<AuraBounce>());
-    //        Vector3 vel = other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.velocity;
-    //        //float angle = Quaternion.Angle(other.transform.rotation, GetComponent<Collider2D>().transform.rotation);
-    //        //Vector3 angle = other.transform.position - GetComponent<Collider2D>().transform.position;
-    //        //angle.y = Mathf.Rad2Deg;
-    //        //angle = Mathf.Rad2Deg;
-    //        Debug.Log("Angle P" + playerId + ": " + Vector3.Angle(vel, -normal));
-    //        //other.GetComponent<AuraBounce>().player.canMove = false;
-    //        Vector2 bounceDirection = other.transform.position - GetComponent<Collider2D>().transform.position;
-    //        if (Vector3.Angle(other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.velocity, -normal) > 1.4f)
-    //        {
-    //            other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.AddForce(bounceDirection * 20, ForceMode2D.Impulse);
-    //        }
-    //        else
-    //        {
-    //            other.gameObject.GetComponentInChildren<AuraBounce>().playerRB.AddForce(bounceDirection * 10, ForceMode2D.Impulse);
-    //        }
-
-    //        AuraBounceTimer(other.gameObject);
-    //        //StartCoroutine(EnableMovement(other.gameObject));
-    //   // }
-    //}
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -93,13 +130,4 @@ public class AuraBounce : MonoBehaviour
         player.GetComponent<AuraBounce>().player.auraBounce = true;
         player.GetComponent<AuraBounce>().auraBounce = true;
     }
-
-    //private IEnumerator EnableMovement(GameObject player)
-    //{
-    //    yield return new WaitForSeconds(0.1f);
-    //    if (player.GetComponent<AuraBounce>().player.isGrounded)
-    //    {
-    //        player.GetComponent<AuraBounce>().player.canMove = true;
-    //    }
-    //}
 }
