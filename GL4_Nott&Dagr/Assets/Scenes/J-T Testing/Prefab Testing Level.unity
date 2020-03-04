@@ -128,10 +128,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -203,10 +213,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -278,10 +298,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -347,10 +377,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -416,10 +456,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -485,10 +535,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -649,10 +709,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -766,10 +836,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -841,10 +921,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -922,10 +1012,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -991,10 +1091,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1060,10 +1170,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1129,10 +1249,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1198,10 +1328,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1273,10 +1413,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1427,10 +1577,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1496,10 +1656,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1577,10 +1747,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1646,10 +1826,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1715,10 +1905,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -1964,10 +2164,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2039,10 +2249,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2114,10 +2334,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2183,10 +2413,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2252,10 +2492,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2321,10 +2571,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2477,10 +2737,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2552,10 +2822,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2621,10 +2901,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2690,10 +2980,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2759,10 +3059,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -2921,6 +3231,14 @@ PrefabInstance:
     - target: {fileID: 1141244596, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141244597, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
+      propertyPath: auraRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141244598, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1141244599, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
       propertyPath: m_Sprite
@@ -3174,6 +3492,28 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
+--- !u!1 &882120021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1141244595, guid: c2f959fe761f0d14f975e220ddb38c5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 882120020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &882120022
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882120021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 62b426dd5e2e41e4dadbb905dcda3475, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.8}
+  m_Size: {x: 1.6, y: 1.6}
+  m_Direction: 1
 --- !u!1001 &933556711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3181,10 +3521,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -3250,10 +3600,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -3393,10 +3753,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -3518,10 +3888,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -3587,10 +3967,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -3656,10 +4046,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -3725,10 +4125,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -4067,10 +4477,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -4208,10 +4628,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -4277,10 +4707,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -6386,10 +6826,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -6455,10 +6905,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -6530,10 +6990,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -6599,10 +7069,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -6674,10 +7154,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -6897,10 +7387,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -6966,10 +7466,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7047,10 +7557,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7221,10 +7741,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7290,10 +7820,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7359,10 +7899,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7440,10 +7990,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7594,10 +8154,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7830,10 +8400,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -7990,10 +8570,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8059,10 +8649,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8128,10 +8728,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8203,10 +8813,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8302,10 +8922,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8460,10 +9090,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8535,10 +9175,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8604,10 +9254,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8673,10 +9333,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 158544001}
     m_Modifications:
+    - target: {fileID: 2458718479460015469, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
       propertyPath: m_Name
       value: IceCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458718479460015471, guid: e7e8862b2d6597a44b3bd95ac83be44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2458718479460015475, guid: e7e8862b2d6597a44b3bd95ac83be44c,
         type: 3}
@@ -8895,6 +9565,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1141244597, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
+      propertyPath: auraRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141244598, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3882482632242313916, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: nott
@@ -8967,3 +9645,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
+--- !u!1 &7788640640931986714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1141244595, guid: c2f959fe761f0d14f975e220ddb38c5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7788640640931986713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &7788640640931986715
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788640640931986714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 62b426dd5e2e41e4dadbb905dcda3475, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.8}
+  m_Size: {x: 1.6, y: 1.6}
+  m_Direction: 1
