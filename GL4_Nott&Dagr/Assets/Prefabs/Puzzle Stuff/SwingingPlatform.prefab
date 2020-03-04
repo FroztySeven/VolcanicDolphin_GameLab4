@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5976961321162636507}
   - component: {fileID: 4444990596833881179}
-  - component: {fileID: 1206442609507018492}
   m_Layer: 0
   m_Name: Platform01
   m_TagString: Untagged
@@ -83,32 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1206442609507018492
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636885680124541163}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1216568318863688197
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4158355482781887844}
   - component: {fileID: 1842730542476236279}
-  - component: {fileID: 5065955346141742584}
   m_Layer: 0
   m_Name: Platform03
   m_TagString: Untagged
@@ -192,32 +164,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5065955346141742584
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216568318863688197}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1797538635512672153
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +539,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.37666664}
+  m_ConnectedAnchor: {x: 0, y: -0.37666667}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -849,7 +795,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.31999993, y: 1.4824672}
+  m_ConnectedAnchor: {x: 2.3, y: 3.71}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -977,7 +923,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.46333337}
+  m_ConnectedAnchor: {x: -0.000000014901161, y: -0.46333337}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1012,7 +958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5449638983156952650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.62, y: -2.2275329, z: -7.4773436}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5495116814582826179}
@@ -1065,7 +1011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa0649195e696a4da0f906089ab587b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 6613142253926919746}
 --- !u!1 &6613142253926919746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1023,8 @@ GameObject:
   - component: {fileID: 8963931082431840168}
   - component: {fileID: 2256596731449768558}
   - component: {fileID: 4415905920873732343}
+  - component: {fileID: 288656993110022680}
+  - component: {fileID: 7285908152081529432}
   m_Layer: 0
   m_Name: PlatformSpirtes
   m_TagString: Untagged
@@ -1138,7 +1085,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.20000005, y: -0.56999993}
-  m_ConnectedAnchor: {x: 0, y: -0.30000004}
+  m_ConnectedAnchor: {x: 0, y: -0.29999995}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1162,7 +1109,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 2.3, y: -0.56999993}
-  m_ConnectedAnchor: {x: 0, y: -0.30000004}
+  m_ConnectedAnchor: {x: 0, y: -0.29999995}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1171,6 +1118,51 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!251 &288656993110022680
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613142253926919746}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 28471
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 228.4
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!61 &7285908152081529432
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613142253926919746}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.25, y: -1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &7073650116516102245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1282,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.37666664}
+  m_ConnectedAnchor: {x: 0.000000014901161, y: -0.37666667}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1309,7 +1301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2252189544592755506}
   - component: {fileID: 7551803018386380379}
-  - component: {fileID: 6744363244073983272}
   m_Layer: 0
   m_Name: Platform02
   m_TagString: Untagged
@@ -1382,32 +1373,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6744363244073983272
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8321222668352619133}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &9208165893181711157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1492,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -2.4199998, y: 1.4824672}
+  m_ConnectedAnchor: {x: 0.20000005, y: 3.71}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

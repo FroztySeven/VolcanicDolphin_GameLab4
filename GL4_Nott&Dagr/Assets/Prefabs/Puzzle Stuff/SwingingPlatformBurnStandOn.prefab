@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7255593460988828813}
   - component: {fileID: 6483345930667234141}
   - component: {fileID: 6483345930667234140}
+  - component: {fileID: 2799512857546084852}
   m_Layer: 0
   m_Name: PlatformSpirtes
   m_TagString: Untagged
@@ -118,7 +119,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 1.28, y: -1}
   m_SpriteTilingProperty:
@@ -145,6 +146,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa0649195e696a4da0f906089ab587b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!251 &2799512857546084852
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162095578189883960}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 28471
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 228.4
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1321939593329322544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1251,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -6.7, y: 0.42000008}
+  m_ConnectedAnchor: {x: 9.3, y: 2.42}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1359,7 +1379,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -8.8, y: 0.4699998}
+  m_ConnectedAnchor: {x: 7.2, y: 2.4699998}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
