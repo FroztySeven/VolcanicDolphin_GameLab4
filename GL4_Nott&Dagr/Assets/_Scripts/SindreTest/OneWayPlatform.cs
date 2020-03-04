@@ -26,6 +26,10 @@ public class OneWayPlatform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _startJumpforce = other.GetComponent<PlayerMovementTest>().jumpForce;
+            if (_startJumpforce <= 0)
+            {
+                _startJumpforce = 750;
+            }
         }
     }
 
