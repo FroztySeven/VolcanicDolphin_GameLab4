@@ -94,7 +94,7 @@ public class ExitLevel : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Character Selection");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void DoorOpen()
