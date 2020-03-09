@@ -197,51 +197,81 @@ public class CharacterSelection : MonoBehaviour
 
     public void LevelFive()
     {
-        SceneManager.LoadScene("Gunnar - Level 03");
+        SceneManager.LoadScene("Burny-burny Swing-Swing");
     }
 
     public void LevelSix()
     {
-        SceneManager.LoadScene("Burny-burny Swing-Swing");
+        SceneManager.LoadScene("Gunnar - Level 03");
     }
 
     public void LevelSeven()
     {
-        SceneManager.LoadScene("Sindre Level 01");
+        SceneManager.LoadScene("J-T Level 01");
     }
 
     public void LevelEight()
     {
-        SceneManager.LoadScene("Sindre Level 02");
+        SceneManager.LoadScene("J-T Level 02");
     }
 
     public void LevelNine()
     {
-        SceneManager.LoadScene("Sindre Level 03");
+        SceneManager.LoadScene("J-T Level 03");
 
     }
 
     public void LevelTen()
     {
-        SceneManager.LoadScene("Sindre Level 04");
+        SceneManager.LoadScene("Jane Level 01");
 
     }
 
     public void LevelEleven()
     {
-        SceneManager.LoadScene("Gunnar - Level 01");
+        SceneManager.LoadScene("Remi Level 01");
 
     }
 
     public void LevelTwelve()
     {
-        SceneManager.LoadScene("Gunnar - Level 02");
+        SceneManager.LoadScene("Remi Level 02");
 
     }
 
     public void LevelThirteen()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Sindre Level 01");
+
+    }
+
+    public void LevelFourteen()
+    {
+        SceneManager.LoadScene("Sindre Level 02");
+
+    }
+
+    public void LevelFifteen()
+    {
+        SceneManager.LoadScene("Sindre Level 03");
+
+    }
+
+    public void LevelSixteen()
+    {
+        SceneManager.LoadScene("Sindre Level 04");
+
+    }
+
+    public void LevelSeventeen()
+    {
+        SceneManager.LoadScene("Gunnar - Level 01");
+
+    }
+
+    public void LevelEighteen()
+    {
+        SceneManager.LoadScene("Gunnar - Level 02");
 
     }
 
