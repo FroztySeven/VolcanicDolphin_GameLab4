@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{fdb826ab-92e6-4f76-846b-f048e0d5bea3}">
+		<property name="name">
+			<value>StoneNoises</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{e993931c-14f3-4833-9171-7e1fdbede264}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{85fecf44-4a5a-450d-8af8-40521d1d004a}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5a56a70e-4a55-4bb1-ba5e-b29879268c64}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{e993931c-14f3-4833-9171-7e1fdbede264}">
+		<relationship name="effects">
+			<destination>{80766951-6ed8-4377-a2b0-c17914400968}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{85fecf44-4a5a-450d-8af8-40521d1d004a}" />
+	<object class="MixerBusFader" id="{80766951-6ed8-4377-a2b0-c17914400968}" />
+</objects>

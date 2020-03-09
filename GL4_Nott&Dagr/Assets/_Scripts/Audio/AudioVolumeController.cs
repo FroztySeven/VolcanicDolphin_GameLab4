@@ -18,6 +18,7 @@ public class AudioVolumeController : MonoBehaviour
 
     // Objects
     private FMOD.Studio.Bus _bubbleEnterExitMaster;
+    private FMOD.Studio.Bus _stoneNoisesMaster;
     private FMOD.Studio.Bus _openDoorMaster;
     private FMOD.Studio.Bus _trampolineMaster;
 
@@ -63,6 +64,10 @@ public class AudioVolumeController : MonoBehaviour
     [SerializeField]
     [Range(-80f, 20f)]
     public float openDoorVolume;
+    
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float stoneNoisesVolume;
 
     [SerializeField]
     [Range(-80f, 20f)]
@@ -103,6 +108,7 @@ public class AudioVolumeController : MonoBehaviour
         // Objects
         _bubbleEnterExitMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Bubbles/BubbleEnterExit");
         _openDoorMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/DoorOpen");
+        _stoneNoisesMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/StoneNoises");
         _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
 
 
@@ -128,6 +134,7 @@ public class AudioVolumeController : MonoBehaviour
         // Objects
         _bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
         _openDoorMaster.setVolume(DecibelToLinear(openDoorVolume));
+        _stoneNoisesMaster.setVolume(DecibelToLinear(stoneNoisesVolume));
         _trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));
 
         // Players
