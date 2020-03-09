@@ -19,9 +19,9 @@ public class CharacterSelection : MonoBehaviour
 
     public Vector2 moveInput;
 
-    private bool changedLocation = false;
-    private bool characterSelected = false;
-    private bool playersSelected = true;
+    [HideInInspector] public bool changedLocation = false;
+    [HideInInspector] public bool characterSelected = false;
+    [HideInInspector] public bool playersSelected = true;
 
     //private void Start()
     //{

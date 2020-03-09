@@ -15,15 +15,15 @@ public class CharacterStoredInfo : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("Character Selection");
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.R))
+    //    {
+    //        SceneManager.LoadScene("Character Selection");
+    //    }
+    //}
 }
