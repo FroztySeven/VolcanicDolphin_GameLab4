@@ -130,10 +130,11 @@ public class CharacterSelection : MonoBehaviour
             {
                 P1.GetComponent<CharacterSelection>().playersSelected = true;
                 P2.GetComponent<CharacterSelection>().playersSelected = true;
-                levelSelect.SetActive(true);
-                EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-                es.SetSelectedGameObject(null);
-                es.SetSelectedGameObject(levelSelectFirstButton);
+                SceneManager.LoadScene("Chapters&Levels");
+                //levelSelect.SetActive(true);
+                //EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+                //es.SetSelectedGameObject(null);
+                //es.SetSelectedGameObject(levelSelectFirstButton);
                 //pressAToPlay.SetActive(true);
                 //selectedCounter++;
             }
