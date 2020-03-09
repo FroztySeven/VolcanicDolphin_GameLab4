@@ -124,6 +124,7 @@ public class PlayerMovementTest : MonoBehaviour
         }
     }
 
+    private int currentlevelindex;
     private void Update()
     {
         moveInput.x = Input.GetAxisRaw("HorizontalP" + playerId);
@@ -192,11 +193,19 @@ public class PlayerMovementTest : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button7))
         {
-            SceneManager.LoadScene("Character Selection");
+            currentlevelindex = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("SavedPrefs", currentlevelindex);
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene("MainMenu");
         }
         else if (Input.GetKeyDown(KeyCode.Joystick2Button7))
         {
-            SceneManager.LoadScene("Character Selection");
+            currentlevelindex = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("SavedPrefs", currentlevelindex);
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene("MainMenu");
         }
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button6))

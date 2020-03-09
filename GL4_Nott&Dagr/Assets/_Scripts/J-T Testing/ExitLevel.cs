@@ -14,12 +14,16 @@ public class ExitLevel : MonoBehaviour
 
     public Sprite closedDoor, openDoor;
 
+    private int nextSceneLoad;
+
     private void Start()
     {
         name = "Door";
         GetComponent<SpriteRenderer>().sprite = closedDoor;
         night = GameObject.Find("Player2");
         day = GameObject.Find("Player1");
+
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -76,6 +80,15 @@ public class ExitLevel : MonoBehaviour
             nightEnter = false;
             dayEnter = false;
             levelFinished = false;
+
+
+            //Move to next level
+            SceneManager.LoadScene(nextSceneLoad);
+            //Setting Int for Index
+            if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
+            {
+                PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
+            }
         }
     }
 
