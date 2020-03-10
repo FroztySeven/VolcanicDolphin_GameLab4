@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_PortalShaderRed
+  m_Shader: {fileID: -6465566751694194690, guid: cb8eec30d391efc4b913d6597d80f8d5,
+    type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_40BFD02:
+        m_Texture: {fileID: 2800000, guid: 1fb6a3d2dbcfa514487ce228495aeeb1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_4CD866D6: 5
+    - Vector1_CF56137: 1
+    - Vector1_D85C2228: 5
+    m_Colors:
+    - Color_3F4B318E: {r: 2.996078, g: 0, b: 0.1254902, a: 0}
+    - Color_674DE328: {r: 0, g: 0, b: 0, a: 0}

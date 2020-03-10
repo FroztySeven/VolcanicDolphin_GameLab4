@@ -81,35 +81,74 @@ public class SplitScreen : MonoBehaviour {
 		Vector3 midPoint = new Vector3 ((player1.position.x + player2.position.x) / 2, (player1.position.y + player2.position.y) / 2, (player1.position.z + player2.position.z) / 2); 
 
 		//Waits for the two cameras to split and then calcuates a midpoint relevant to the difference in position between the two cameras.
-		if (distance > splitDistance) {
-			Vector3 offset = midPoint - player1.position; 
-			offset.x = Mathf.Clamp(offset.x,-splitDistance/2,splitDistance/2);
-            offset.y = Mathf.Clamp(offset.y,-splitDistance/2,splitDistance/2);
-			offset.z = Mathf.Clamp(offset.z,-splitDistance/2,splitDistance/2);
-			midPoint = player1.position + offset;
+        if (yDistance > splitDistance / 2 || yDistance < -splitDistance / 2)
+        {
+            Debug.Log("Y Distance!");
+            Vector3 offset = midPoint - player1.position;
+            offset.x = Mathf.Clamp(offset.x, -splitDistance / 2, splitDistance / 2);
+            offset.y = Mathf.Clamp(offset.y, -splitDistance / 4, splitDistance / 4);
+            offset.z = Mathf.Clamp(offset.z, -splitDistance / 2, splitDistance / 2);
+            midPoint = player1.position + offset;
 
-			Vector3 offset2 = midPoint - player2.position; 
-			offset2.x = Mathf.Clamp(offset.x,-splitDistance/2,splitDistance/2);
-            offset2.y = Mathf.Clamp(offset.y,-splitDistance/2,splitDistance/2);
-			offset2.z = Mathf.Clamp(offset.z,-splitDistance/2,splitDistance/2);
-			Vector3 midPoint2 = player2.position - offset2;
+            Vector3 offset2 = midPoint - player2.position;
+            offset2.x = Mathf.Clamp(offset.x, -splitDistance / 2, splitDistance / 2);
+            offset2.y = Mathf.Clamp(offset.y, -splitDistance / 4, splitDistance / 4);
+            offset2.z = Mathf.Clamp(offset.z, -splitDistance / 2, splitDistance / 2);
+            Vector3 midPoint2 = player2.position - offset2;
 
-			//Sets the splitter and camera to active and sets the second camera position as to avoid lerping continuity errors.
-			if (splitter.activeSelf == false) {
-				splitter.SetActive (true);
-				camera2.SetActive (true);
+            //Sets the splitter and camera to active and sets the second camera position as to avoid lerping continuity errors.
+            if (splitter.activeSelf == false)
+            {
+                splitter.SetActive(true);
+                camera2.SetActive(true);
 
-				camera2.transform.position = camera1.transform.position;
-				camera2.transform.rotation = camera1.transform.rotation;
+                camera2.transform.position = camera1.transform.position;
+                camera2.transform.rotation = camera1.transform.rotation;
 
-			} else {
-				//Lerps the second cameras position and rotation to that of the second midpoint, so relative to the second player.
-				camera2.transform.position = Vector3.Lerp(camera2.transform.position,midPoint2 + new Vector3(0,0,-5),Time.deltaTime*5);
+            }
+            else
+            {
+                //Lerps the second cameras position and rotation to that of the second midpoint, so relative to the second player.
+                camera2.transform.position = Vector3.Lerp(camera2.transform.position, midPoint2 + new Vector3(0, 0, -5), Time.deltaTime * 5);
                 //Quaternion newRot2 = Quaternion.LookRotation(midPoint2 - camera2.transform.position);
                 //camera2.transform.rotation = Quaternion.Lerp(camera2.transform.rotation, newRot2, Time.deltaTime * 5);
             }
+        }
+		else if (distance > splitDistance)
+        {
+            Debug.Log("X Distance!!");
+            Vector3 offset = midPoint - player1.position;
+            offset.x = Mathf.Clamp(offset.x, -splitDistance / 2, splitDistance / 2);
+            offset.y = Mathf.Clamp(offset.y, -splitDistance / 2, splitDistance / 2);
+            offset.z = Mathf.Clamp(offset.z, -splitDistance / 2, splitDistance / 2);
+            midPoint = player1.position + offset;
 
-		} else {
+            Vector3 offset2 = midPoint - player2.position;
+            offset2.x = Mathf.Clamp(offset.x, -splitDistance / 2, splitDistance / 2);
+            offset2.y = Mathf.Clamp(offset.y, -splitDistance / 2, splitDistance / 2);
+            offset2.z = Mathf.Clamp(offset.z, -splitDistance / 2, splitDistance / 2);
+            Vector3 midPoint2 = player2.position - offset2;
+
+            //Sets the splitter and camera to active and sets the second camera position as to avoid lerping continuity errors.
+            if (splitter.activeSelf == false)
+            {
+                splitter.SetActive(true);
+                camera2.SetActive(true);
+
+                camera2.transform.position = camera1.transform.position;
+                camera2.transform.rotation = camera1.transform.rotation;
+
+            }
+            else
+            {
+                //Lerps the second cameras position and rotation to that of the second midpoint, so relative to the second player.
+                camera2.transform.position = Vector3.Lerp(camera2.transform.position, midPoint2 + new Vector3(0, 0, -5), Time.deltaTime * 5);
+                //Quaternion newRot2 = Quaternion.LookRotation(midPoint2 - camera2.transform.position);
+                //camera2.transform.rotation = Quaternion.Lerp(camera2.transform.rotation, newRot2, Time.deltaTime * 5);
+            }
+        }
+        else
+        {
 			//Deactivates the splitter and camera once the distance is less than the splitting distance (assuming it was at one point).
 			if (splitter.activeSelf)
 				splitter.SetActive (false);
