@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5489288177208422982}
   - component: {fileID: 5489288177208422983}
   - component: {fileID: 5489288177208422976}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FreezeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5489288177253667753}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: GroundRay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 5489288179299212899}
   - component: {fileID: 5489288179299212828}
   - component: {fileID: 5489288179299212831}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   groundDetection: {fileID: 5489288177253667753}
   edgeDetection: 1
   canUnfreeze: 0
-  defaultSprite: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 1e99c69b15855f7478a296eb0489b722, type: 3}
   transformSprite: {fileID: 21300000, guid: 4a0ba7a06f8827e41978aa3566e43565, type: 3}
 --- !u!61 &5489288179299212828
 BoxCollider2D:
