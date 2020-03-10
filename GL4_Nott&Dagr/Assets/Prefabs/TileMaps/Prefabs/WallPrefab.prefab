@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 5698310589504625163}
   - component: {fileID: 5698310589504625162}
   - component: {fileID: 628099575346763710}
-  - component: {fileID: 3333214218654980506}
+  - component: {fileID: 2165051491404966031}
   m_Layer: 9
   m_Name: ShatteredWall
   m_TagString: Untagged
@@ -514,7 +514,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
---- !u!114 &3333214218654980506
+--- !u!114 &2165051491404966031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
