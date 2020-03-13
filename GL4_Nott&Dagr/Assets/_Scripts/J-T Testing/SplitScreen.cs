@@ -83,7 +83,7 @@ public class SplitScreen : MonoBehaviour {
 		//Waits for the two cameras to split and then calcuates a midpoint relevant to the difference in position between the two cameras.
         if (yDistance > splitDistance / 2 || yDistance < -splitDistance / 2)
         {
-            Debug.Log("Y Distance!");
+            //Debug.Log("Y Distance!");
             Vector3 offset = midPoint - player1.position;
             offset.x = Mathf.Clamp(offset.x, -splitDistance / 2, splitDistance / 2);
             offset.y = Mathf.Clamp(offset.y, -splitDistance / 4, splitDistance / 4);
@@ -116,7 +116,7 @@ public class SplitScreen : MonoBehaviour {
         }
 		else if (distance > splitDistance)
         {
-            Debug.Log("X Distance!!");
+            //Debug.Log("X Distance!");
             Vector3 offset = midPoint - player1.position;
             offset.x = Mathf.Clamp(offset.x, -splitDistance / 2, splitDistance / 2);
             offset.y = Mathf.Clamp(offset.y, -splitDistance / 2, splitDistance / 2);

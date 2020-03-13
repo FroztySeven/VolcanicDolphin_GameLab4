@@ -36,7 +36,11 @@ Material:
     - Vector1_6F6F7E5B: 0.1
     - Vector1_8641B3B3: 0.1
     - Vector1_F1C476B8: 0.1
+    - _Height: 0.1
+    - _Width: 0.1
     m_Colors:
     - Color_DB3DF26: {r: 1.2641509, g: 0.99477494, b: 0.42337132, a: 0.5372549}
     - Vector2_F170C6E7: {r: 0, g: 0, b: 0, a: 0}
     - Vector3_D276D38A: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1.9476441, g: 1.9476441, b: 1.9476441, a: 0.6156863}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
