@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovementTest : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class PlayerMovementTest : MonoBehaviour
     public float groundedRadius;
     public float ceilingRadius;
     public Vector2 wallSize;
+
+    [HideInInspector]
+    public Sprite currentSprite;
 
     //[HideInInspector]
     public bool isOnLadder;
@@ -94,6 +98,7 @@ public class PlayerMovementTest : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = false;
+        currentSprite = null;
         isOnWall = false;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
@@ -102,6 +107,10 @@ public class PlayerMovementTest : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 isGrounded = true;
+                Vector3Int currentCell = colliders[i].GetComponent<Tilemap>().WorldToCell(transform.position);
+                currentCell.y -= 1;
+
+                currentSprite = colliders[i].GetComponent<Tilemap>().GetSprite(currentCell);
             }
         }
 
