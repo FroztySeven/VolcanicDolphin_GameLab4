@@ -74,7 +74,7 @@ public class ExitLevel : MonoBehaviour
             day.GetComponent<PlayerMovementTest>().theRB.velocity = new Vector2(0f, -10f);
             //levelFinished = true;
             playerPixelate = true;
-            Invoke("LevelFinished", 4f);
+            Invoke("LevelFinished", 5f);
             StartCoroutine(instantiateLoadingScreen());
         }
 
@@ -110,7 +110,7 @@ public class ExitLevel : MonoBehaviour
     {
         portalSwirl.SetActive(true);
         portalParticle.Play();
-        GetComponent<BoxCollider2D>().enabled = true;
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 
     private void LevelFinished()
