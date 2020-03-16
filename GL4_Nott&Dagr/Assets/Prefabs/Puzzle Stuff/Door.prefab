@@ -126,6 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finished: {fileID: 1263867}
   portalSwirl: {fileID: 9066563365499986742}
+  loadingScreen: {fileID: 1963211976349138334, guid: c985b9bf95000804bb74b9bcb8bf9aa2,
+    type: 3}
   portalParticle: {fileID: 5858022684360618215}
   playerPixelate: 0
 --- !u!1001 &1450207483030042002

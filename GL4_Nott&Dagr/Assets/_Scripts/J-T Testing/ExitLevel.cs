@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class ExitLevel : MonoBehaviour
 {
-    public GameObject finished, portalSwirl;
+    public GameObject finished, portalSwirl, loadingScreen;
 
     public ParticleSystem portalParticle;
 
-    private bool nightEnter, dayEnter, levelFinished;
+    private bool nightEnter, dayEnter, levelFinished, loadingScreenIsActive;
     [HideInInspector]
     public bool playerPixelate;
 
-    private GameObject night, day;
+    private GameObject night, day, tempLoadingScreen;
 
     private int nextSceneLoad;
 
@@ -75,11 +75,12 @@ public class ExitLevel : MonoBehaviour
             //levelFinished = true;
             playerPixelate = true;
             Invoke("LevelFinished", 4f);
+            StartCoroutine(instantiateLoadingScreen());
         }
 
         if (levelFinished)
         {
-            finished.SetActive(true);
+            //finished.SetActive(true);
             EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
             es.SetSelectedGameObject(null);
             es.SetSelectedGameObject(es.firstSelectedGameObject);
@@ -91,12 +92,12 @@ public class ExitLevel : MonoBehaviour
 
 
             //Move to next level
-            SceneManager.LoadScene(nextSceneLoad);
+            // SceneManager.LoadScene(nextSceneLoad);
             //Setting Int for Index
-            if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
-            {
-                PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
-            }
+            // if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
+            // {
+            //     PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
+            // }
         }
     }
 
@@ -116,5 +117,28 @@ public class ExitLevel : MonoBehaviour
     {
         levelFinished = true;
         playerPixelate = false;
+    }
+
+    private IEnumerator instantiateLoadingScreen()
+    {
+        yield return new WaitForSeconds(4);
+        if (!loadingScreenIsActive)
+        {
+            tempLoadingScreen = Instantiate(loadingScreen);
+            StartCoroutine(nextLevel());
+            loadingScreenIsActive = true;
+        }
+        
+    }
+    
+    private IEnumerator nextLevel()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(nextSceneLoad);
+        //Setting Int for Index
+        if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
+        {
+            PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
+        }
     }
 }
