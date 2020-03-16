@@ -13,6 +13,8 @@ TagManager:
   - TM_Ground
   - DagrAudioTrigger
   - NottAudioTrigger
+  - GroundDetector
+  - Plant
   layers:
   - Default
   - TransparentFX
@@ -30,7 +32,7 @@ TagManager:
   - Ignore All But Ground
   - Enemy
   - Plant
-  - 
+  - AudioLayer
   - 
   - 
   - 

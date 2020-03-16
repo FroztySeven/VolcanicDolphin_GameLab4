@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,11 +10,13 @@ public class AudioPlayerController : MonoBehaviour
 
     //--------------------------------------------------------------------------//
 
-    public Rigidbody playerRigidbody;
+    public Rigidbody2D playerRigidbody;
 
     public float walkingSpeed;
 
-    public bool isGrounded, isWalking, isFalling, isGrass, isSnow;
+    public bool isGrounded, isWalking, isClimbing, isFalling, onPlant, isDagr, isNott, isGrass, isSnow, isStone;
+
+    
 
     //--------------------------------------------------------------------------//
 
@@ -42,46 +45,120 @@ public class AudioPlayerController : MonoBehaviour
     {
         InvokeRepeating("CallFootsteps", 0, walkingSpeed);
 
-        playerRigidbody = GetComponent<Rigidbody>();
+        if (this.gameObject == GameObject.Find("AudioTriggerNott"))
+        {
+            playerRigidbody = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
+            isNott = true;
+            isDagr = false;
+        }
+        else if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
+        {
+            playerRigidbody = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
+            isNott = false;
+            isDagr = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Checks if player is falling.
+        // Checks if players is falling.
         //--------------------------------// 
         if (playerRigidbody.velocity.y <= -3.5f)
         {
             isFalling = true;
         }
+        if (playerRigidbody.velocity.y >= -3.5f)
+        {
+            isFalling = false;
+        }
+
+        if (onPlant == true && isClimbing == true)
+        {
+            isFalling = false;
+        }
+        /*
         if (isGrounded == true)
         {
             isFalling = false;
         }
+        */
         //--------------------------------//
 
+        if (isFalling == true && isGrounded == true)
+        {
+            Debug.Log("I Fell");
+        }
 
         // Get confirmation that players are walking and stops from walking in air sounds.
         //--------------------------------//
-        if (isGrounded == true & playerRigidbody == true)
+        if (isGrounded == true && isNott == true)
         {
-            if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
+            if (Input.GetAxisRaw("HorizontalP1") >= 0.01f || Input.GetAxisRaw("HorizontalP1") <= -0.01f)
             {
                 isWalking = true;
             }
-            else if (Input.GetAxis("Vertical") == 0f || Input.GetAxis("Horizontal") == 0f)
+            else if (Input.GetAxisRaw("HorizontalP1") <= 0.01f || Input.GetAxisRaw("HorizontalP1") >= -0.01f)
             {
                 isWalking = false;
             }
         }
 
-        if (isGrounded == false & playerRigidbody == true)
+        if (onPlant == true && isNott == true)
         {
-            if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
+            if (Input.GetAxisRaw("VerticalP1") >= 0.01f || Input.GetAxisRaw("VerticalP1") <= -0.01f)
+            {
+                isClimbing = true;
+            }
+            else if (Input.GetAxisRaw("VerticalP1") <= 0.01f || Input.GetAxisRaw("VerticalP1") >= -0.01f)
+            {
+                isClimbing = false;
+            }
+        }
+
+        if (isGrounded == true && isDagr == true)
+        {
+            if (Input.GetAxisRaw("HorizontalP1") >= 0.01f || Input.GetAxisRaw("HorizontalP1") <= -0.01f)
+            {
+                isWalking = true;
+            }
+            else if (Input.GetAxisRaw("HorizontalP1") <= 0.01f || Input.GetAxisRaw("HorizontalP1") >= -0.01f)
             {
                 isWalking = false;
             }
-            else if (Input.GetAxis("Vertical") == 0f || Input.GetAxis("Horizontal") == 0f)
+        }
+
+        if (onPlant == true && isDagr == true)
+        {
+            if (Input.GetAxisRaw("VerticalP1") >= 0.01f || Input.GetAxisRaw("VerticalP1") <= -0.01f)
+            {
+                isClimbing = true;
+            }
+            else if (Input.GetAxisRaw("VerticalP1") <= 0.01f || Input.GetAxisRaw("VerticalP1") >= -0.01f)
+            {
+                isClimbing = false;
+            }
+        }
+
+        if (isGrounded == false && isNott == true)
+        {
+            if (Input.GetAxis("VerticalP1") >= 0.01f || Input.GetAxis("HorizontalP1") >= 0.01f || Input.GetAxis("VerticalP1") <= -0.01f || Input.GetAxis("HorizontalP1") <= -0.01f)
+            {
+                isWalking = false;
+            }
+            else if (Input.GetAxis("VerticalP1") == 0f || Input.GetAxis("HorizontalP1") == 0f)
+            {
+                isWalking = false;
+            }
+        }
+
+        if (isGrounded == false && isDagr == true)
+        {
+            if (Input.GetAxis("VerticalP1") >= 0.01f || Input.GetAxis("HorizontalP1") >= 0.01f || Input.GetAxis("VerticalP1") <= -0.01f || Input.GetAxis("HorizontalP1") <= -0.01f)
+            {
+                isWalking = false;
+            }
+            else if (Input.GetAxis("VerticalP1") == 0f || Input.GetAxis("HorizontalP1") == 0f)
             {
                 isWalking = false;
             }
@@ -97,12 +174,12 @@ public class AudioPlayerController : MonoBehaviour
         {
             if (isGrounded == true)
             {
-                if (isGrass == true & GameObject.Find("Player1") == true)
+                if (isGrass == true)
                 {
                     FMODUnity.RuntimeManager.PlayOneShot(footstepGrass);
                 }
 
-                if (isSnow == true & GameObject.Find("Player2") == true)
+                if (isStone == true)
                 {
                     FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);
                 }
@@ -111,18 +188,57 @@ public class AudioPlayerController : MonoBehaviour
            
     }
 
-    // Plays the landing from a jump FMod events.
-    //--------------------------------//
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (isGrass == true & GameObject.Find("Player1") == true)
+        if (other.gameObject.CompareTag("Plant"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot(landOnGrass, GetComponent<Transform>().position);
+            //Debug.Log("On Plant");
+            onPlant = true;
         }
 
-        if (isSnow == true & GameObject.Find("Player2") == true)
+        if (other.gameObject.CompareTag("GroundDetector"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot(landOnSnow, GetComponent<Transform>().position);
+            //Debug.Log("On Ground");
+            isGrounded = true;
+        }
+
+        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isGrass == true)
+        {
+            //Debug.Log("On Grass");
+            isGrass = true;
+        }
+
+        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isStone == true)
+        {
+            //Debug.Log("On Stone");
+            isStone = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Plant"))
+        {
+            //Debug.Log("Off Plant");
+            onPlant = false;
+        }
+
+        if (other.gameObject.CompareTag("GroundDetector"))
+        {
+            //Debug.Log("Off Ground");
+            isGrounded = false;
+        }
+
+        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isGrass == true)
+        {
+            //Debug.Log("Off Grass");
+            isGrass = false;
+        }
+
+        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isStone == true)
+        {
+            //Debug.Log("Off Stone");
+            isStone = false;
         }
     }
 }

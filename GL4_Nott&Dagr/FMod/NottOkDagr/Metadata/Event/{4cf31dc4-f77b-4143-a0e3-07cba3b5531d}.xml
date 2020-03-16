@@ -121,6 +121,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{4406fd6e-9bfe-4ea4-b278-b077bf7de21c}">
+		<property name="volume">
+			<value>-6.5</value>
+		</property>
 		<property name="name">
 			<value>Snow_Footsteps</value>
 		</property>
@@ -155,6 +158,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{5aafb4e6-9c85-404e-8c0d-3f456e25d479}">
+		<property name="volume">
+			<value>-14.5</value>
+		</property>
 		<property name="name">
 			<value>IceCrack_Footsteps</value>
 		</property>

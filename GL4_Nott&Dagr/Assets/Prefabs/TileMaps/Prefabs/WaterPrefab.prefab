@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2586503697292977870}
   - component: {fileID: 8088590116665072626}
   - component: {fileID: 724314853633595633}
+  - component: {fileID: 5598350578261796997}
   m_Layer: 10
   m_Name: WaterPrefab
   m_TagString: Untagged
@@ -136,3 +137,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5598350578261796997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290980568863465763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bdd53b5ae0311348918d574816ddcff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterSprite: {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32,
+    type: 3}
+  frozenSprite: {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32,
+    type: 3}
+  typeOfSprite: 0
+  isWater: 0
+  isFrozen: 0
+  waterFreezes: event:/SFX/Enviroment/WaterFreeze
