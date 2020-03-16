@@ -41,10 +41,10 @@ public class PlayerMovementTest : MonoBehaviour
     public float ceilingRadius;
     public Vector2 wallSize;
 
-    //[HideInInspector]
+    [HideInInspector]
     public Sprite currentSprite;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool isOnLadder;
 
     public bool auraBounce;

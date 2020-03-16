@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AudioPlayerController : MonoBehaviour
@@ -9,34 +10,33 @@ public class AudioPlayerController : MonoBehaviour
     //... it can use the terrain data to see what type of ground the player is standing on, to get the right type of footsteps sounds.
 
     //--------------------------------------------------------------------------//
+    public PlayerMovementTest _pmt;
+    public AudioPlayerDeciderController _apdc;
 
-    public Rigidbody2D playerRigidbody;
+    public Rigidbody2D playerRB;
+
+    public Sprite onSprite;
+    public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
+
+    private int  plant, dirt, grass, ice, snow, stone, water, wood;
 
     public float walkingSpeed;
 
-    public bool isGrounded, isWalking, isClimbing, isFalling, onPlant, isDagr, isNott, isGrass, isSnow, isStone;
-
-    
+    public bool isDagr, isNott, isGrounded, isMoving, isClimbing, isFalling, onPlant, isDirt, isGrass, isIce, isSnow, isStone, isWater, isWood;
 
     //--------------------------------------------------------------------------//
 
-    // Example
+    //... find the path to the fmod event.
 
     [Header("  Footsteps ")]
 
-    [FMODUnity.EventRef]                //... find the path to the fmod event.
-    public string footstepGrass;
-
     [FMODUnity.EventRef]                
-    public string footstepSnow;
+    public string footsteps;
 
     [Header(" Jump Landings ")]
 
     [FMODUnity.EventRef]
-    public string landOnGrass;
-
-    [FMODUnity.EventRef]
-    public string landOnSnow;
+    public string jumpLands;
 
     //--------------------------------------------------------------------------//
 
@@ -45,200 +45,368 @@ public class AudioPlayerController : MonoBehaviour
     {
         InvokeRepeating("CallFootsteps", 0, walkingSpeed);
 
+        if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
+        {
+            playerRB = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
+            _pmt = GameObject.Find("Player1").GetComponent<PlayerMovementTest>();
+            _apdc = GameObject.Find("Player1").GetComponent<AudioPlayerDeciderController>();
+            isDagr = _apdc.isDagr;
+            isNott = _apdc.isNott;
+            
+        }
+
         if (this.gameObject == GameObject.Find("AudioTriggerNott"))
         {
-            playerRigidbody = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
-            isNott = true;
-            isDagr = false;
-        }
-        else if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
-        {
-            playerRigidbody = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
-            isNott = false;
-            isDagr = true;
+            playerRB = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
+            _pmt = GameObject.Find("Player2").GetComponent<PlayerMovementTest>();
+            _apdc = GameObject.Find("Player2").GetComponent<AudioPlayerDeciderController>();
+            isDagr = _apdc.isDagr;
+            isNott = _apdc.isNott;
+            
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Checks if players is falling.
+        //-----------Dagr----------//
+
+        if (isDagr == true && isNott == false)
+        {
+            onSprite = _pmt.currentSprite;
+            isGrounded = _pmt.isGrounded;
+            //isMoving = _pmt.canMove;
+            isClimbing = _pmt.isOnLadder;
+
+            // Checks falling.
+            if (playerRB.velocity.y <= -3.5f)
+            {
+                isFalling = true;
+            }
+            if (playerRB.velocity.y >= -3.5f)
+            {
+                isFalling = false;
+            }
+
+            if (onPlant == true && isClimbing == true)
+            {
+                isFalling = false;
+            }
+            if (isFalling == true)
+            {
+                isMoving = false;
+            }
+            else
+            {
+                isMoving = _pmt.canMove;
+            }
+
+            // Check type of ground
+            if (isGrounded == false)
+            {
+                isDirt = false;
+                isGrass = false;
+                isIce = false;
+                isSnow = false;
+                isStone = false;
+                isWater = false;
+                isWood = false;
+            }
+
+            for (int i = 0; i <= dirtSprites.Length -1; i++)
+            {
+                if (onSprite == dirtSprites[i])
+                {
+                    isDirt = true;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+            for (int i = 0; i <= grassSprites.Length -1; i++)
+            {
+                if (onSprite == grassSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = true;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+            for (int i = 0; i <= iceSprites.Length - 1; i++)
+            {
+                if (onSprite == iceSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = true;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+
+            for (int i = 0; i <= snowSprites.Length - 1; i++)
+            {
+                if (onSprite == snowSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = true;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+            
+            for (int i = 0; i <= stoneSprites.Length - 1; i++)
+            {
+                if (onSprite == stoneSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = true;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+
+            for (int i = 0; i <= waterSprites.Length - 1; i++)
+            {
+                if (onSprite == waterSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = true;
+                    isWood = false;
+                }
+            }
+
+
+            for (int i = 0; i <= grassSprites.Length - 1; i++)
+            {
+                if (onSprite == woodSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = true;
+                }
+            }
+            
+        }
+        //--------------------------------//
+
+
+
+        //-----------Nótt----------//
+        if (isDagr == false && isNott == true)
+        {
+            onSprite = _pmt.currentSprite;
+            isGrounded = _pmt.isGrounded;
+            //isMoving = _pmt.canMove;
+            isClimbing = _pmt.isOnLadder;
+
+            // Checks if players is falling.
+            if (playerRB.velocity.y <= -3.5f)
+            {
+                isFalling = true;
+            }
+            if (playerRB.velocity.y >= -3.5f)
+            {
+                isFalling = false;
+            }
+
+            if (onPlant == true && isClimbing == true)
+            {
+                isFalling = false;
+            }
+
+            if (isFalling == true)
+            {
+                isMoving = false;
+            }
+            else
+            {
+                isMoving = _pmt.canMove;
+            }
+
+            // Check type of ground
+            if (isGrounded == false)
+            {
+                isDirt = false;
+                isGrass = false;
+                isIce = false;
+                isSnow = false;
+                isStone = false;
+                isWater = false;
+                isWood = false;
+            }
+
+            for (int i = 0; i <= dirtSprites.Length - 1; i++)
+            {
+                if (onSprite == dirtSprites[i])
+                {
+                    isDirt = true;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+            for (int i = 0; i <= grassSprites.Length - 1; i++)
+            {
+                if (onSprite == grassSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = true;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+            for (int i = 0; i <= iceSprites.Length - 1; i++)
+            {
+                if (onSprite == iceSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = true;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+
+            for (int i = 0; i <= snowSprites.Length - 1; i++)
+            {
+                if (onSprite == snowSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = true;
+                    isStone = false;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+            for (int i = 0; i <= stoneSprites.Length - 1; i++)
+            {
+                if (onSprite == stoneSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = true;
+                    isWater = false;
+                    isWood = false;
+                }
+            }
+
+
+            for (int i = 0; i <= waterSprites.Length - 1; i++)
+            {
+                if (onSprite == waterSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = true;
+                    isWood = false;
+                }
+            }
+
+
+            for (int i = 0; i <= grassSprites.Length - 1; i++)
+            {
+                if (onSprite == woodSprites[i])
+                {
+                    isDirt = false;
+                    isGrass = false;
+                    isIce = false;
+                    isSnow = false;
+                    isStone = false;
+                    isWater = false;
+                    isWood = true;
+                }
+            }
+        }
+
         //--------------------------------// 
-        if (playerRigidbody.velocity.y <= -3.5f)
-        {
-            isFalling = true;
-        }
-        if (playerRigidbody.velocity.y >= -3.5f)
-        {
-            isFalling = false;
-        }
-
-        if (onPlant == true && isClimbing == true)
-        {
-            isFalling = false;
-        }
-        /*
-        if (isGrounded == true)
-        {
-            isFalling = false;
-        }
-        */
-        //--------------------------------//
-
-        if (isFalling == true && isGrounded == true)
-        {
-            Debug.Log("I Fell");
-        }
-
-        // Get confirmation that players are walking and stops from walking in air sounds.
-        //--------------------------------//
-        if (isGrounded == true && isNott == true)
-        {
-            if (Input.GetAxisRaw("HorizontalP1") >= 0.01f || Input.GetAxisRaw("HorizontalP1") <= -0.01f)
-            {
-                isWalking = true;
-            }
-            else if (Input.GetAxisRaw("HorizontalP1") <= 0.01f || Input.GetAxisRaw("HorizontalP1") >= -0.01f)
-            {
-                isWalking = false;
-            }
-        }
-
-        if (onPlant == true && isNott == true)
-        {
-            if (Input.GetAxisRaw("VerticalP1") >= 0.01f || Input.GetAxisRaw("VerticalP1") <= -0.01f)
-            {
-                isClimbing = true;
-            }
-            else if (Input.GetAxisRaw("VerticalP1") <= 0.01f || Input.GetAxisRaw("VerticalP1") >= -0.01f)
-            {
-                isClimbing = false;
-            }
-        }
-
-        if (isGrounded == true && isDagr == true)
-        {
-            if (Input.GetAxisRaw("HorizontalP1") >= 0.01f || Input.GetAxisRaw("HorizontalP1") <= -0.01f)
-            {
-                isWalking = true;
-            }
-            else if (Input.GetAxisRaw("HorizontalP1") <= 0.01f || Input.GetAxisRaw("HorizontalP1") >= -0.01f)
-            {
-                isWalking = false;
-            }
-        }
-
-        if (onPlant == true && isDagr == true)
-        {
-            if (Input.GetAxisRaw("VerticalP1") >= 0.01f || Input.GetAxisRaw("VerticalP1") <= -0.01f)
-            {
-                isClimbing = true;
-            }
-            else if (Input.GetAxisRaw("VerticalP1") <= 0.01f || Input.GetAxisRaw("VerticalP1") >= -0.01f)
-            {
-                isClimbing = false;
-            }
-        }
-
-        if (isGrounded == false && isNott == true)
-        {
-            if (Input.GetAxis("VerticalP1") >= 0.01f || Input.GetAxis("HorizontalP1") >= 0.01f || Input.GetAxis("VerticalP1") <= -0.01f || Input.GetAxis("HorizontalP1") <= -0.01f)
-            {
-                isWalking = false;
-            }
-            else if (Input.GetAxis("VerticalP1") == 0f || Input.GetAxis("HorizontalP1") == 0f)
-            {
-                isWalking = false;
-            }
-        }
-
-        if (isGrounded == false && isDagr == true)
-        {
-            if (Input.GetAxis("VerticalP1") >= 0.01f || Input.GetAxis("HorizontalP1") >= 0.01f || Input.GetAxis("VerticalP1") <= -0.01f || Input.GetAxis("HorizontalP1") <= -0.01f)
-            {
-                isWalking = false;
-            }
-            else if (Input.GetAxis("VerticalP1") == 0f || Input.GetAxis("HorizontalP1") == 0f)
-            {
-                isWalking = false;
-            }
-        }
-        //--------------------------------//
     }
 
     // Plays the footsteps FMod events.
     //--------------------------------// 
     void CallFootsteps()
     {
-        if (isWalking == true)
+        if (isMoving == true)
         {
             if (isGrounded == true)
             {
                 if (isGrass == true)
                 {
-                    FMODUnity.RuntimeManager.PlayOneShot(footstepGrass);
-                }
-
-                if (isStone == true)
-                {
-                    FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);
+                    FMODUnity.RuntimeManager.PlayOneShot(footsteps);
                 }
             }
         }
-           
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Plant"))
+        if (other.gameObject.CompareTag("Plant") && isDagr == true)
         {
-            //Debug.Log("On Plant");
             onPlant = true;
         }
 
-        if (other.gameObject.CompareTag("GroundDetector"))
+        if (other.gameObject.CompareTag("Plant") && isNott == true)
         {
-            //Debug.Log("On Ground");
-            isGrounded = true;
-        }
-
-        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isGrass == true)
-        {
-            //Debug.Log("On Grass");
-            isGrass = true;
-        }
-
-        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isStone == true)
-        {
-            //Debug.Log("On Stone");
-            isStone = true;
+            onPlant = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Plant"))
+        if (other.gameObject.CompareTag("Plant") && isDagr == true)
         {
-            //Debug.Log("Off Plant");
             onPlant = false;
         }
 
-        if (other.gameObject.CompareTag("GroundDetector"))
+        if (other.gameObject.CompareTag("Plant") && isNott == true)
         {
-            //Debug.Log("Off Ground");
-            isGrounded = false;
-        }
-
-        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isGrass == true)
-        {
-            //Debug.Log("Off Grass");
-            isGrass = false;
-        }
-
-        if (other.gameObject.CompareTag("GroundDetector") && other.gameObject.GetComponent<AudioGroundController>().isStone == true)
-        {
-            //Debug.Log("Off Stone");
-            isStone = false;
+            onPlant = false;
         }
     }
 }

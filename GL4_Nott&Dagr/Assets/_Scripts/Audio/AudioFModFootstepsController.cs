@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioGroundController : MonoBehaviour
+public class AudioFModFootstepsController : MonoBehaviour
 {
-    public bool isGrass, isWater, isSnow, isStone, isDirt;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +15,4 @@ public class AudioGroundController : MonoBehaviour
     {
         
     }
-
-
 }

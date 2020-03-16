@@ -18,9 +18,9 @@ public class PlayerPixelate : MonoBehaviour
     {
         exit = GameObject.Find("Door").GetComponent<ExitLevel>();
         material = GetComponent<SpriteRenderer>().material;
-        pixelateAmountTarget = 1;
+        pixelateAmountTarget = 1.01f;
         pixelateAmount = 0;
-        pixelateSpeed = 1;
+        pixelateSpeed = 1f;
     }
 
     private void Update()
@@ -37,7 +37,7 @@ public class PlayerPixelate : MonoBehaviour
             //{
             //    pixelateSpeed = 0.5f;
             //}
-            if (pixelateAmount > 0.95f)
+            if (pixelateAmount > 1f)
             {
                 GetComponent<SpriteRenderer>().enabled = false;
             }

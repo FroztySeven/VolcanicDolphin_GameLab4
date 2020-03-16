@@ -158,7 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0337fc47f8114646b582e528de097fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pixelateSpeed: 2
 --- !u!1 &1905536794
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,13 +228,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4175540453729784279}
   - component: {fileID: 6956338106893153571}
-  m_Layer: 11
+  - component: {fileID: 3573658197320562319}
+  m_Layer: 16
   m_Name: AudioTriggerDagr
   m_TagString: DagrAudioTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4175540453729784279
 Transform:
   m_ObjectHideFlags: 0
@@ -263,9 +263,100 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.37}
+  m_Offset: {x: 0, y: -0.3}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
+--- !u!114 &3573658197320562319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226724931728785203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86873bfe8723e2242bb093327f96d359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pmt: {fileID: 0}
+  _apdc: {fileID: 0}
+  playerRB: {fileID: 0}
+  onSprite: {fileID: 0}
+  dirtSprites:
+  - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -5689910174599873153, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -797257590610487928, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -6293375234738786701, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  grassSprites:
+  - {fileID: -6584357579700156119, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -7571674119313297283, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -187504290313515785, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  iceSprites:
+  - {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: 5577597775912786404, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: -5566408235832919808, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
+  - {fileID: 3628287683414317839, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
+  - {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  - {fileID: 3628287683414317839, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  - {fileID: 21300000, guid: 9cb8fd6638fd0c24b8abf6a666cd1655, type: 3}
+  - {fileID: 21300000, guid: 76c35b1d5fa903e478ba6526ac563ef0, type: 3}
+  snowSprites: []
+  stoneSprites:
+  - {fileID: 2450743599743717073, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: 4736211930712179348, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: 7005710032466896651, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: -6287571772799795191, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: 21300000, guid: 0ccb8853d445ad9459bc544e3269cd6b, type: 3}
+  - {fileID: 473828651731206975, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: 1473523552303590966, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -2040633346717465360, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: 8905864480088934866, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -665307235912116058, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -4535960656615889786, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 7356167872074147940, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: -3231753227298316379, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 3508156494715873591, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: -861773855351163404, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 209411970382722437, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 9207845041146370889, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 7351669004365529915, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 9092761682225972370, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 917096612199942432, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 5223797795631498514, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: 8126516373677541744, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: -2169990559531554300, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: -614763065642820577, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: 848318952599069012, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: 6114396951317672960, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  waterSprites:
+  - {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: 3797604072356328135, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
+  - {fileID: 3797604072356328135, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  - {fileID: 21300000, guid: 9f02f36afb0ac5d49994f86e58403318, type: 3}
+  woodSprites:
+  - {fileID: 1296290342609715161, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 8576540855881237019, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 7801348269709663439, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  walkingSpeed: 0
+  isDagr: 0
+  isNott: 0
+  isGrounded: 0
+  isMoving: 0
+  isClimbing: 0
+  isFalling: 0
+  onPlant: 0
+  isDirt: 0
+  isGrass: 0
+  isIce: 0
+  isSnow: 0
+  isStone: 0
+  isWater: 0
+  isWood: 0
+  footsteps: 
+  jumpLands: 
 --- !u!1 &6746168327507794199
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +367,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8536230631779655350}
   - component: {fileID: 4904722437726578150}
-  m_Layer: 11
+  - component: {fileID: 5565238782969263064}
+  m_Layer: 16
   m_Name: AudioTriggerNott
   m_TagString: NottAudioTrigger
   m_Icon: {fileID: 0}
@@ -310,9 +402,100 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.37}
+  m_Offset: {x: 0, y: -0.3}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
+--- !u!114 &5565238782969263064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746168327507794199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86873bfe8723e2242bb093327f96d359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pmt: {fileID: 0}
+  _apdc: {fileID: 0}
+  playerRB: {fileID: 0}
+  onSprite: {fileID: 0}
+  dirtSprites:
+  - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -5689910174599873153, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -797257590610487928, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -6293375234738786701, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  grassSprites:
+  - {fileID: -6584357579700156119, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -7571674119313297283, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: -187504290313515785, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  iceSprites:
+  - {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: 5577597775912786404, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: -5566408235832919808, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
+  - {fileID: 3628287683414317839, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
+  - {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  - {fileID: 3628287683414317839, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  - {fileID: 21300000, guid: 9cb8fd6638fd0c24b8abf6a666cd1655, type: 3}
+  - {fileID: 21300000, guid: 76c35b1d5fa903e478ba6526ac563ef0, type: 3}
+  snowSprites: []
+  stoneSprites:
+  - {fileID: 2450743599743717073, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: 4736211930712179348, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: 7005710032466896651, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: -6287571772799795191, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
+  - {fileID: 21300000, guid: 0ccb8853d445ad9459bc544e3269cd6b, type: 3}
+  - {fileID: 473828651731206975, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: 1473523552303590966, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -2040633346717465360, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: 8905864480088934866, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -665307235912116058, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
+  - {fileID: -4535960656615889786, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 7356167872074147940, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: -3231753227298316379, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 3508156494715873591, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: -861773855351163404, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 209411970382722437, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 9207845041146370889, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 7351669004365529915, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 9092761682225972370, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 917096612199942432, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
+  - {fileID: 5223797795631498514, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: 8126516373677541744, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: -2169990559531554300, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: -614763065642820577, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: 848318952599069012, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: 6114396951317672960, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  waterSprites:
+  - {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: 3797604072356328135, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
+  - {fileID: 3797604072356328135, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
+  - {fileID: 21300000, guid: 9f02f36afb0ac5d49994f86e58403318, type: 3}
+  woodSprites:
+  - {fileID: 1296290342609715161, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 8576540855881237019, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 7801348269709663439, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  walkingSpeed: 0
+  isDagr: 0
+  isNott: 0
+  isGrounded: 0
+  isMoving: 0
+  isClimbing: 0
+  isFalling: 0
+  onPlant: 0
+  isDirt: 0
+  isGrass: 0
+  isIce: 0
+  isSnow: 0
+  isStone: 0
+  isWater: 0
+  isWood: 0
+  footsteps: 
+  jumpLands: 
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0337fc47f8114646b582e528de097fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pixelateSpeed: 2
 --- !u!1 &7788640642130820836
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +603,7 @@ GameObject:
   - component: {fileID: 7788640642130820838}
   - component: {fileID: 7788640640931986718}
   - component: {fileID: 1890390277906901525}
+  - component: {fileID: 4904628375757518413}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -479,6 +662,7 @@ MonoBehaviour:
   groundedRadius: 0.15
   ceilingRadius: 0.05
   wallSize: {x: 0.4, y: 0.6}
+  currentSprite: {fileID: 0}
   isOnLadder: 0
   auraBounce: 0
   groundCheck: {fileID: 868335383}
@@ -539,3 +723,17 @@ MonoBehaviour:
   dayAura: {fileID: 21300000, guid: bfbb4ccddde147d4891445e6885087a8, type: 3}
   nightSprite: {fileID: 21300000, guid: 6dde91f640ed9d1438fdfb88855c403c, type: 3}
   daySprite: {fileID: 21300000, guid: d2cac119167595d47ab1b5bc5967537d, type: 3}
+--- !u!114 &4904628375757518413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788640642130820836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2872887425bc20b4c867c62b178b1fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDagr: 0
+  isNott: 0
