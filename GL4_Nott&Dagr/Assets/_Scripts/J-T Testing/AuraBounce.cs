@@ -30,6 +30,8 @@ public class AuraBounce : MonoBehaviour
     private Vector4 auraOffset;
 
     public Color auraColor;
+    public float colorIntensity;
+    private Color auraColorOutput;
 
     private void Start()
     {
@@ -47,7 +49,9 @@ public class AuraBounce : MonoBehaviour
             auraRangeStart = colSize.x;
             auraVisuals = transform.GetChild(0).gameObject;
             auraMat = auraVisuals.GetComponent<SpriteRenderer>().material;
-            auraMat.SetColor("_Color", auraColor);
+            colorIntensity += 1;
+            auraColorOutput = new Color(auraColor.r * colorIntensity, auraColor.g * colorIntensity, auraColor.b * colorIntensity, auraColor.a);
+            auraMat.SetColor("_Color", auraColorOutput);
             auraWidth = auraMat.GetFloat("_Width");
             auraHeight = auraMat.GetFloat("_Height");
             auraOffset = auraMat.GetVector("_Offset");

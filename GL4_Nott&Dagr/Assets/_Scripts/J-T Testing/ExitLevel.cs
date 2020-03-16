@@ -6,20 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class ExitLevel : MonoBehaviour
 {
-    public GameObject finished;
+    public GameObject finished, portalSwirl;
+
+    public ParticleSystem portalParticle;
 
     private bool nightEnter, dayEnter, levelFinished;
+    [HideInInspector]
+    public bool playerPixelate;
 
     private GameObject night, day;
-
-    public Sprite closedDoor, openDoor;
 
     private int nextSceneLoad;
 
     private void Start()
     {
         name = "Door";
-        GetComponent<SpriteRenderer>().sprite = closedDoor;
+        portalSwirl.SetActive(false);
         night = GameObject.Find("Player2");
         day = GameObject.Find("Player1");
 
@@ -66,7 +68,13 @@ public class ExitLevel : MonoBehaviour
     {
         if (nightEnter && dayEnter)
         {
-            levelFinished = true;
+            night.GetComponent<PlayerMovementTest>().canMove = false;
+            day.GetComponent<PlayerMovementTest>().canMove = false;
+            night.GetComponent<PlayerMovementTest>().theRB.velocity = new Vector2(0f, -10f);
+            day.GetComponent<PlayerMovementTest>().theRB.velocity = new Vector2(0f, -10f);
+            //levelFinished = true;
+            playerPixelate = true;
+            Invoke("LevelFinished", 4f);
         }
 
         if (levelFinished)
@@ -75,8 +83,8 @@ public class ExitLevel : MonoBehaviour
             EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
             es.SetSelectedGameObject(null);
             es.SetSelectedGameObject(es.firstSelectedGameObject);
-            night.GetComponent<PlayerMovementTest>().canMove = false;
-            day.GetComponent<PlayerMovementTest>().canMove = false;
+            //night.GetComponent<PlayerMovementTest>().canMove = false;
+            //day.GetComponent<PlayerMovementTest>().canMove = false;
             nightEnter = false;
             dayEnter = false;
             levelFinished = false;
@@ -99,7 +107,14 @@ public class ExitLevel : MonoBehaviour
 
     public void DoorOpen()
     {
-        GetComponent<SpriteRenderer>().sprite = openDoor;
+        portalSwirl.SetActive(true);
+        portalParticle.Play();
         GetComponent<BoxCollider2D>().enabled = true;
+    }
+
+    private void LevelFinished()
+    {
+        levelFinished = true;
+        playerPixelate = false;
     }
 }
