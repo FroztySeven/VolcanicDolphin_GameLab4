@@ -37,6 +37,7 @@ Material:
     - Vector1_8641B3B3: 0.1
     - Vector1_F1C476B8: 0.1
     - _Height: 0.1
+    - _PixelateAmount: 0
     - _Width: 0.1
     m_Colors:
     - Color_DB3DF26: {r: 1.2641509, g: 0.99477494, b: 0.42337132, a: 0.5372549}

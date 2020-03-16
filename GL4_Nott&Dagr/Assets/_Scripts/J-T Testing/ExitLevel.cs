@@ -6,20 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class ExitLevel : MonoBehaviour
 {
-    public GameObject finished;
+    public GameObject finished, portalSwirl, loadingScreen;
 
-    private bool nightEnter, dayEnter, levelFinished;
+    public ParticleSystem portalParticle;
 
-    private GameObject night, day;
+    private bool nightEnter, dayEnter, levelFinished, loadingScreenIsActive;
+    [HideInInspector]
+    public bool playerPixelate;
 
-    public Sprite closedDoor, openDoor;
+    private GameObject night, day, tempLoadingScreen;
 
     private int nextSceneLoad;
 
     private void Start()
     {
         name = "Door";
-        GetComponent<SpriteRenderer>().sprite = closedDoor;
+        portalSwirl.SetActive(false);
         night = GameObject.Find("Player2");
         day = GameObject.Find("Player1");
 
@@ -66,29 +68,36 @@ public class ExitLevel : MonoBehaviour
     {
         if (nightEnter && dayEnter)
         {
-            levelFinished = true;
+            night.GetComponent<PlayerMovementTest>().canMove = false;
+            day.GetComponent<PlayerMovementTest>().canMove = false;
+            night.GetComponent<PlayerMovementTest>().theRB.velocity = new Vector2(0f, -10f);
+            day.GetComponent<PlayerMovementTest>().theRB.velocity = new Vector2(0f, -10f);
+            //levelFinished = true;
+            playerPixelate = true;
+            Invoke("LevelFinished", 4f);
+            StartCoroutine(instantiateLoadingScreen());
         }
 
         if (levelFinished)
         {
-            finished.SetActive(true);
+            //finished.SetActive(true);
             EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
             es.SetSelectedGameObject(null);
             es.SetSelectedGameObject(es.firstSelectedGameObject);
-            night.GetComponent<PlayerMovementTest>().canMove = false;
-            day.GetComponent<PlayerMovementTest>().canMove = false;
+            //night.GetComponent<PlayerMovementTest>().canMove = false;
+            //day.GetComponent<PlayerMovementTest>().canMove = false;
             nightEnter = false;
             dayEnter = false;
             levelFinished = false;
 
 
             //Move to next level
-            SceneManager.LoadScene(nextSceneLoad);
+            // SceneManager.LoadScene(nextSceneLoad);
             //Setting Int for Index
-            if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
-            {
-                PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
-            }
+            // if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
+            // {
+            //     PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
+            // }
         }
     }
 
@@ -99,7 +108,37 @@ public class ExitLevel : MonoBehaviour
 
     public void DoorOpen()
     {
-        GetComponent<SpriteRenderer>().sprite = openDoor;
+        portalSwirl.SetActive(true);
+        portalParticle.Play();
         GetComponent<BoxCollider2D>().enabled = true;
+    }
+
+    private void LevelFinished()
+    {
+        levelFinished = true;
+        playerPixelate = false;
+    }
+
+    private IEnumerator instantiateLoadingScreen()
+    {
+        yield return new WaitForSeconds(4);
+        if (!loadingScreenIsActive)
+        {
+            tempLoadingScreen = Instantiate(loadingScreen);
+            StartCoroutine(nextLevel());
+            loadingScreenIsActive = true;
+        }
+        
+    }
+    
+    private IEnumerator nextLevel()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(nextSceneLoad);
+        //Setting Int for Index
+        if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
+        {
+            PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
+        }
     }
 }
