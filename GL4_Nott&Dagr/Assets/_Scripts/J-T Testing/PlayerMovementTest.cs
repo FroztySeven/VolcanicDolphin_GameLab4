@@ -41,7 +41,7 @@ public class PlayerMovementTest : MonoBehaviour
     public float ceilingRadius;
     public Vector2 wallSize;
 
-    [HideInInspector]
+    //[HideInInspector]
     public Sprite currentSprite;
 
     //[HideInInspector]
@@ -107,10 +107,19 @@ public class PlayerMovementTest : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 isGrounded = true;
-                Vector3Int currentCell = colliders[i].GetComponent<Tilemap>().WorldToCell(transform.position);
-                currentCell.y -= 1;
 
-                currentSprite = colliders[i].GetComponent<Tilemap>().GetSprite(currentCell);
+                if (colliders[i].GetComponent<Tilemap>())
+                {
+                    Vector3Int currentCell = colliders[i].GetComponent<Tilemap>().WorldToCell(transform.position);
+                    currentCell.y -= 1;
+
+                    currentSprite = colliders[i].GetComponent<Tilemap>().GetSprite(currentCell);
+                }
+
+                if (colliders[i].GetComponent<SpriteRenderer>())
+                {
+                    currentSprite = colliders[i].GetComponent<SpriteRenderer>().sprite;
+                }
             }
         }
 
