@@ -18,9 +18,13 @@ public class ExitLevel : MonoBehaviour
 
     private int nextSceneLoad;
 
-    private void Start()
+    private void Awake()
     {
         name = "Door";
+    }
+
+    private void Start()
+    {
         portalSwirl.SetActive(false);
         night = GameObject.Find("Player2");
         day = GameObject.Find("Player1");

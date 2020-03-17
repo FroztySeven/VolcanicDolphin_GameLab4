@@ -8,13 +8,36 @@ public class Gem : MonoBehaviour
 
     public Gems gemColour;
 
-    public Sprite[] gemSprites;
+    public Sprite[] gemFrozenSprites;
+    public Sprite[] gemUnfrozenSprites;
+
+    private Rigidbody2D theRB;
+    private CircleCollider2D theCC;
+
+    private Vector2 startOffset;
+    private Vector2 unfrozenOffset;
+
+    private float startRadius;
+    private float unfrozenRadius;
+
+    public bool isFrozen;
 
     private void Start()
     {
         name = "Gem";
 
-        GetComponent<SpriteRenderer>().sprite = gemSprites[(int)gemColour];
+        theRB = GetComponent<Rigidbody2D>();
+        theCC = GetComponent<CircleCollider2D>();
+
+        startOffset = theCC.offset;
+        startRadius = theCC.radius;
+
+        unfrozenOffset = new Vector2(0f, 0.2f);
+        unfrozenRadius = 0.2f;
+
+        isFrozen = true;
+
+        GetComponent<SpriteRenderer>().sprite = gemFrozenSprites[(int)gemColour];
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,16 +46,20 @@ public class Gem : MonoBehaviour
         {
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
             {
-                GetComponent<Rigidbody2D>().isKinematic = false;
-                GetComponent<Rigidbody2D>().mass = 10;
-                GetComponent<CircleCollider2D>().isTrigger = false;
+                theRB.isKinematic = false;
+                theRB.mass = 10;
+                theCC.isTrigger = false;
             }
 
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
-                GetComponent<Rigidbody2D>().isKinematic = false;
-                GetComponent<Rigidbody2D>().mass = 1000;
-                GetComponent<CircleCollider2D>().isTrigger = false;
+                theRB.isKinematic = false;
+                theRB.mass = 1000;
+                theCC.isTrigger = false;
+                theCC.offset = unfrozenOffset;
+                theCC.radius = unfrozenRadius;
+                isFrozen = false;
+                GetComponent<SpriteRenderer>().sprite = gemUnfrozenSprites[(int)gemColour];
             }
         }
     }
@@ -43,12 +70,20 @@ public class Gem : MonoBehaviour
         {
             if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
             {
-                GetComponent<Rigidbody2D>().mass = 10;
+                theRB.mass = 10;
+                theCC.offset = startOffset;
+                theCC.radius = startRadius;
+                isFrozen = true;
+                GetComponent<SpriteRenderer>().sprite = gemFrozenSprites[(int)gemColour];
             }
 
             if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
-                GetComponent<Rigidbody2D>().mass = 1000;
+                theRB.mass = 1000;
+                theCC.offset = unfrozenOffset;
+                theCC.radius = unfrozenRadius;
+                isFrozen = false;
+                GetComponent<SpriteRenderer>().sprite = gemUnfrozenSprites[(int)gemColour];
             }
         }
     }

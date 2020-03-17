@@ -11,7 +11,7 @@ public class DeathTrigger : MonoBehaviour
     {
         nott = GameObject.Find("Player2");
         dagr = GameObject.Find("Player1");
-        key = GameObject.Find("PickupKey");
+        key = GameObject.Find("Gem");
         seed = GameObject.Find("Seed");
         nottStartPosition = nott.transform.position;
         dagrStartPosition = dagr.transform.position;

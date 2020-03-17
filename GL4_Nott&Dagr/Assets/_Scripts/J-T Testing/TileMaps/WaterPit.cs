@@ -8,6 +8,8 @@ public class WaterPit : MonoBehaviour
 
     public int waterLength;
 
+    public bool isBehindWall = false;
+
     public bool isAnimated;
     public float animationRate;
 
@@ -46,6 +48,10 @@ public class WaterPit : MonoBehaviour
             water.transform.parent = gameObject.transform;
             waterTiles.Add(water.GetComponent<SpriteRenderer>());
 
+            if (isBehindWall && i == 0 || isBehindWall && i == waterLength - 1)
+            {
+                water.GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
     }
 

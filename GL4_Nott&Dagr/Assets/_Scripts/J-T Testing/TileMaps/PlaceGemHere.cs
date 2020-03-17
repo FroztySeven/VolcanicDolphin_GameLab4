@@ -12,28 +12,41 @@ public class PlaceGemHere : MonoBehaviour
 
     private int gemSelect;
 
-    //private GameObject door;
+    private GameObject door;
 
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = gemSprites[(int)gemColour];
 
-        //if (GameObject.Find("Door"))
-        //{
-        //    door = GameObject.Find("Door");
-        //}
+        if (GameObject.Find("Door"))
+        {
+            door = GameObject.Find("Door");
+        }
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.name == "Gem")
-    //    {
-    //        if (other.GetComponent<Gem>().gemColour.ToString() == gemColour.ToString())
-    //        {
-    //            GetComponent<SpriteRenderer>().color = Color.white;
-    //            door.GetComponent<ExitLevel>().DoorOpen();
-    //            Destroy(other.gameObject);
-    //        }
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "Gem")
+        {
+            if (other.GetComponent<Gem>().gemColour.ToString() == gemColour.ToString() && !other.GetComponent<Gem>().isFrozen)
+            {
+                GetComponent<SpriteRenderer>().color = Color.white;
+                door.GetComponent<ExitLevel>().DoorOpen();
+                Destroy(other.gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.name == "Gem")
+        {
+            if (other.GetComponent<Gem>().gemColour.ToString() == gemColour.ToString() && !other.GetComponent<Gem>().isFrozen)
+            {
+                GetComponent<SpriteRenderer>().color = Color.white;
+                door.GetComponent<ExitLevel>().DoorOpen();
+                Destroy(other.gameObject);
+            }
+        }
+    }
 }
