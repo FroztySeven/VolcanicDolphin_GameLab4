@@ -76,12 +76,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicMasterVolume: 0
   sfxMasterVolume: 0
-  iceFreezeVolume: -25
-  iceMeltVolume: -25
-  bubbleEnterExitVolume: -45
-  openDoorVolume: -25
+  iceFreezeVolume: 0
+  iceMeltVolume: 0
+  bubbleEnterExitVolume: 0
+  openDoorVolume: 0
   plantGrowVolume: 0
-  stoneNoisesVolume: -20
-  trampolineVolume: -20
+  stoneNoisesVolume: 0
+  trampolineVolume: 0
   grassFsVolume: 0
   snowFsVolume: 0

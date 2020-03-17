@@ -45,7 +45,7 @@ public class AudioWaterController : MonoBehaviour
     {
         if (other.gameObject == GameObject.FindGameObjectWithTag("NottAudioTrigger") && isWater == true)
         {
-            //Debug.Log("Hit Water");
+            // Debug.Log("Hit Water");
             CallWaterFreezes();
             isWater = false;
         }

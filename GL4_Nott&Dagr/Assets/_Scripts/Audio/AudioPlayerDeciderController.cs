@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioPlayerDeciderController : MonoBehaviour
 {
-    private GameObject player1, player2;
+    public GameObject player1, player2;
 
     public bool isDagr, isNott;
 

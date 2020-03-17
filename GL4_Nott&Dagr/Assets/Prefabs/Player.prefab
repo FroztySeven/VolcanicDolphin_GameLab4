@@ -328,6 +328,18 @@ MonoBehaviour:
   - {fileID: -614763065642820577, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
   - {fileID: 848318952599069012, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
   - {fileID: 6114396951317672960, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: -8040828221084179089, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -1404815679064755202, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -4246253566039219042, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 1288980138727279369, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 6364303167737679421, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 8586542341654311779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 3385886823159947779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 1407223280219923365, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -8262435821072252212, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -8222451255843406101, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
+  - {fileID: -6917439342773706681, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
+  - {fileID: 3741721485506131995, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
   waterSprites:
   - {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
   - {fileID: 3797604072356328135, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
@@ -340,23 +352,43 @@ MonoBehaviour:
   - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  walkingSpeed: 0
+  walkingSpeed: 0.23
   isDagr: 0
   isNott: 0
+  isSingle: 0
+  isCoop: 0
   isGrounded: 0
   isMoving: 0
+  isMovingDagr: 0
+  isMovingNott: 0
   isClimbing: 0
   isFalling: 0
+  hasLanded: 0
   onPlant: 0
   isDirt: 0
   isGrass: 0
   isIce: 0
+  isPlant: 0
   isSnow: 0
   isStone: 0
   isWater: 0
   isWood: 0
-  footsteps: 
-  jumpLands: 
+  footstepDirt: event:/SFX/Players/Footsteps/Footsteps_Dirt
+  footstepGrass: event:/SFX/Players/Footsteps/Footsteps_Grass
+  footstepIce: event:/SFX/Players/Footsteps/Footsteps_Ice
+  footstepPlant: event:/SFX/Players/Footsteps/Footsteps_Plant
+  footstepSnow: event:/SFX/Players/Footsteps/Footsteps_Snow
+  footstepStone: event:/SFX/Players/Footsteps/Footsteps_Stone
+  footstepWater: event:/SFX/Players/Footsteps/Footsteps_Water
+  footstepWood: event:/SFX/Players/Footsteps/Footsteps_Wood
+  jumpLandDirt: event:/SFX/Players/JumpLandings/Landings_Dirt
+  jumpLandGrass: event:/SFX/Players/JumpLandings/Landings_Grass
+  jumpLandIce: event:/SFX/Players/JumpLandings/Landings_Ice
+  jumpLandPlant: event:/SFX/Players/JumpLandings/Landings_Plant
+  jumpLandSnow: event:/SFX/Players/JumpLandings/Landings_Snow
+  jumpLandStone: event:/SFX/Players/JumpLandings/Landings_Stone
+  jumpLandWater: event:/SFX/Players/JumpLandings/Landings_Water
+  jumpLandWood: event:/SFX/Players/JumpLandings/Landings_Wood
 --- !u!1 &6746168327507794199
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +499,18 @@ MonoBehaviour:
   - {fileID: -614763065642820577, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
   - {fileID: 848318952599069012, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
   - {fileID: 6114396951317672960, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
+  - {fileID: -8040828221084179089, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -1404815679064755202, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -4246253566039219042, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 1288980138727279369, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 6364303167737679421, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 8586542341654311779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 3385886823159947779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: 1407223280219923365, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -8262435821072252212, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
+  - {fileID: -8222451255843406101, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
+  - {fileID: -6917439342773706681, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
+  - {fileID: 3741721485506131995, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
   waterSprites:
   - {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
   - {fileID: 3797604072356328135, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
@@ -479,23 +523,43 @@ MonoBehaviour:
   - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  walkingSpeed: 0
+  walkingSpeed: 0.23
   isDagr: 0
   isNott: 0
+  isSingle: 0
+  isCoop: 0
   isGrounded: 0
   isMoving: 0
+  isMovingDagr: 0
+  isMovingNott: 0
   isClimbing: 0
   isFalling: 0
+  hasLanded: 0
   onPlant: 0
   isDirt: 0
   isGrass: 0
   isIce: 0
+  isPlant: 0
   isSnow: 0
   isStone: 0
   isWater: 0
   isWood: 0
-  footsteps: 
-  jumpLands: 
+  footstepDirt: event:/SFX/Players/Footsteps/Footsteps_Dirt
+  footstepGrass: event:/SFX/Players/Footsteps/Footsteps_Grass
+  footstepIce: event:/SFX/Players/Footsteps/Footsteps_Ice
+  footstepPlant: event:/SFX/Players/Footsteps/Footsteps_Plant
+  footstepSnow: event:/SFX/Players/Footsteps/Footsteps_Snow
+  footstepStone: event:/SFX/Players/Footsteps/Footsteps_Stone
+  footstepWater: event:/SFX/Players/Footsteps/Footsteps_Water
+  footstepWood: event:/SFX/Players/Footsteps/Footsteps_Wood
+  jumpLandDirt: event:/SFX/Players/JumpLandings/Landings_Dirt
+  jumpLandGrass: event:/SFX/Players/JumpLandings/Landings_Grass
+  jumpLandIce: event:/SFX/Players/JumpLandings/Landings_Ice
+  jumpLandPlant: event:/SFX/Players/JumpLandings/Landings_Plant
+  jumpLandSnow: event:/SFX/Players/JumpLandings/Landings_Snow
+  jumpLandStone: event:/SFX/Players/JumpLandings/Landings_Stone
+  jumpLandWater: event:/SFX/Players/JumpLandings/Landings_Water
+  jumpLandWood: event:/SFX/Players/JumpLandings/Landings_Wood
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,5 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2872887425bc20b4c867c62b178b1fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: {fileID: 0}
+  player2: {fileID: 0}
   isDagr: 0
   isNott: 0
