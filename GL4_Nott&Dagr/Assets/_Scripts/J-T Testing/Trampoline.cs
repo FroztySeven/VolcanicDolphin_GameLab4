@@ -148,10 +148,10 @@ public class Trampoline : MonoBehaviour
             }
         }
 
-        if (other.gameObject.name == "PickupKey")
+        if (other.gameObject.name == "Gem")
         {
             //other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce * 5));
+            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce * 10));
         }
     }
 
