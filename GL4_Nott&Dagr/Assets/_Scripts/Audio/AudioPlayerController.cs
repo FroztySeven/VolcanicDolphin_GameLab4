@@ -14,9 +14,7 @@ public class AudioPlayerController : MonoBehaviour
     public PlayerMovementTest _pmt;
     [HideInInspector]
     public AudioPlayerDeciderController _apdc;
-    [HideInInspector]
-    public ExitLevel _el;
-    
+
     public Rigidbody2D playerRB;
 
 
@@ -92,8 +90,6 @@ public class AudioPlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _el = GameObject.Find("Door").GetComponent<ExitLevel>();
-
         InvokeRepeating("CallFootsteps", 0, walkingSpeed);
 
         if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
@@ -146,6 +142,32 @@ public class AudioPlayerController : MonoBehaviour
                     {
                         isMoving = false;
                     }
+                    
+                    if (isNott == true)
+                    {
+                        if (_pmt.moveInput.x > 0.1 && Input.GetButtonDown("SwapP1P2"))
+                        {
+                            isMoving = false;
+                        }
+
+                        if (_pmt.moveInput.x < -0.1 && Input.GetButtonDown("SwapP1P2"))
+                        {
+                            isMoving = false;
+                        }
+                    }
+                    else if (isDagr == true)
+                    {
+                        if (_pmt.moveInput.x > 0.1 && Input.GetButtonDown("SwapP1P2"))
+                        {
+                            isMoving = false;
+                        }
+
+                        if (_pmt.moveInput.x < -0.1 && Input.GetButtonDown("SwapP1P2"))
+                        {
+                            isMoving = false;
+                        }
+                    }
+                    
                 }
             }
 
@@ -713,7 +735,6 @@ public class AudioPlayerController : MonoBehaviour
         }
         
     }
-    
 
     void OnTriggerStay2D(Collider2D other)
     {

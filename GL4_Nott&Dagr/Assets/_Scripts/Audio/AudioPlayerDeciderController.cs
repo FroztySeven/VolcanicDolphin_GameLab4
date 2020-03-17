@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioPlayerDeciderController : MonoBehaviour
 {
+    public AudioPlayerController _apl;
+
     public GameObject player1, player2;
 
     public bool isDagr, isNott;
@@ -11,6 +14,8 @@ public class AudioPlayerDeciderController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
 
@@ -21,6 +26,8 @@ public class AudioPlayerDeciderController : MonoBehaviour
             isNott = false;
             player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(true);
             player1.transform.Find("AudioTriggerNott").gameObject.SetActive(false);
+
+            _apl = player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>();
         }
         else if (this.gameObject == player2)
         {
@@ -28,12 +35,46 @@ public class AudioPlayerDeciderController : MonoBehaviour
             isNott = true;
             player2.transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
             player2.transform.Find("AudioTriggerNott").gameObject.SetActive(true);
+
+            _apl = player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Door")
+        {
+            if (isDagr == true)
+            {
+                player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
+            }
+
+            if (isNott == true)
+            {
+                player2.transform.Find("AudioTriggerNott").gameObject.SetActive(false);
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Door")
+        {
+            if (isDagr == true)
+            {
+                player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(true);
+            }
+
+            if (isNott == true)
+            {
+                player2.transform.Find("AudioTriggerNott").gameObject.SetActive(true);
+            }
+        }
     }
 }
