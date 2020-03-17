@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1141244599}
   - component: {fileID: 1141244598}
   - component: {fileID: 1141244597}
-  - component: {fileID: 1878361484}
+  - component: {fileID: 7788640640931986715}
   m_Layer: 12
   m_Name: Aura
   m_TagString: Untagged
@@ -58,9 +58,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141244595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1755796625}
   m_Father: {fileID: 7788640642130819352}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eb367a754e1b18148a0cf14bd65b355a, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,15 +104,15 @@ SpriteRenderer:
   m_SortingLayerID: 437680993
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bfbb4ccddde147d4891445e6885087a8, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.42666668, y: 0.42666668}
+  m_Size: {x: 1.3333334, y: 2.6666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1141244598
@@ -121,7 +122,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141244595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 62b426dd5e2e41e4dadbb905dcda3475, type: 2}
   m_IsTrigger: 0
@@ -142,22 +143,123 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edd2eee7906ec547b30c3b322bb37d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMoveAura: 0
   auraMovementSpeed: 5
   auraRange: 2
-  auraColor: {r: 0, g: 0, b: 0, a: 0}
-  colorIntensity: 0
---- !u!114 &1878361484
-MonoBehaviour:
+  dayAuraColor: {r: 0.7264151, g: 0.6015163, b: 0.23642756, a: 0.6}
+  nightAuraColor: {r: 0.45698926, g: 0.6344086, b: 1, a: 0.6}
+  colorIntensity: 1
+--- !u!70 &7788640640931986715
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141244595}
   m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 62b426dd5e2e41e4dadbb905dcda3475, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.8}
+  m_Size: {x: 1.6, y: 1.6}
+  m_Direction: 1
+--- !u!1 &1755796624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755796625}
+  - component: {fileID: 1755796626}
+  - component: {fileID: 1755796627}
+  m_Layer: 12
+  m_Name: AuraShader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1755796625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755796624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1141244596}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1755796626
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755796624}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0e8cb0be0fc7d994b84bdec0424ce48c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 437680993
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b5cc2daa353d3aa4ea35336e7b4c186b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4, y: 4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1755796627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755796624}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0337fc47f8114646b582e528de097fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pixelating: 0
 --- !u!1 &1905536794
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,14 +330,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4175540453729784279}
   - component: {fileID: 6956338106893153571}
-  - component: {fileID: 3573658197320562319}
-  m_Layer: 16
+  m_Layer: 11
   m_Name: AudioTriggerDagr
   m_TagString: DagrAudioTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4175540453729784279
 Transform:
   m_ObjectHideFlags: 0
@@ -263,132 +364,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: -0.37}
   serializedVersion: 2
-  m_Radius: 0.4
---- !u!114 &3573658197320562319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3226724931728785203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86873bfe8723e2242bb093327f96d359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pmt: {fileID: 0}
-  _apdc: {fileID: 0}
-  playerRB: {fileID: 0}
-  onSprite: {fileID: 0}
-  dirtSprites:
-  - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -5689910174599873153, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -797257590610487928, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -6293375234738786701, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  grassSprites:
-  - {fileID: -6584357579700156119, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -7571674119313297283, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -187504290313515785, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  iceSprites:
-  - {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
-  - {fileID: 5577597775912786404, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
-  - {fileID: -5566408235832919808, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
-  - {fileID: 3628287683414317839, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
-  - {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
-  - {fileID: 3628287683414317839, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
-  - {fileID: 21300000, guid: 9cb8fd6638fd0c24b8abf6a666cd1655, type: 3}
-  - {fileID: 21300000, guid: 76c35b1d5fa903e478ba6526ac563ef0, type: 3}
-  snowSprites: []
-  stoneSprites:
-  - {fileID: 2450743599743717073, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: 4736211930712179348, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: 7005710032466896651, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: -6287571772799795191, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: 21300000, guid: 0ccb8853d445ad9459bc544e3269cd6b, type: 3}
-  - {fileID: 473828651731206975, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: 1473523552303590966, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: -2040633346717465360, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: 8905864480088934866, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: -665307235912116058, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: -4535960656615889786, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 7356167872074147940, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: -3231753227298316379, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 3508156494715873591, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: -861773855351163404, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 209411970382722437, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 9207845041146370889, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 7351669004365529915, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 9092761682225972370, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 917096612199942432, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 5223797795631498514, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: 8126516373677541744, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: -2169990559531554300, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: -614763065642820577, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: 848318952599069012, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: 6114396951317672960, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: -8040828221084179089, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -1404815679064755202, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -4246253566039219042, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 1288980138727279369, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 6364303167737679421, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 8586542341654311779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 3385886823159947779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 1407223280219923365, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -8262435821072252212, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -8222451255843406101, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
-  - {fileID: -6917439342773706681, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
-  - {fileID: 3741721485506131995, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
-  waterSprites:
-  - {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
-  - {fileID: 3797604072356328135, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
-  - {fileID: 3797604072356328135, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
-  - {fileID: 21300000, guid: 9f02f36afb0ac5d49994f86e58403318, type: 3}
-  woodSprites:
-  - {fileID: 1296290342609715161, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 8576540855881237019, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 7801348269709663439, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  walkingSpeed: 0.23
-  isDagr: 0
-  isNott: 0
-  isSingle: 0
-  isCoop: 0
-  isGrounded: 0
-  isMoving: 0
-  isMovingDagr: 0
-  isMovingNott: 0
-  isClimbing: 0
-  isFalling: 0
-  hasLanded: 0
-  onPlant: 0
-  isDirt: 0
-  isGrass: 0
-  isIce: 0
-  isPlant: 0
-  isSnow: 0
-  isStone: 0
-  isWater: 0
-  isWood: 0
-  footstepDirt: event:/SFX/Players/Footsteps/Footsteps_Dirt
-  footstepGrass: event:/SFX/Players/Footsteps/Footsteps_Grass
-  footstepIce: event:/SFX/Players/Footsteps/Footsteps_Ice
-  footstepPlant: event:/SFX/Players/Footsteps/Footsteps_Plant
-  footstepSnow: event:/SFX/Players/Footsteps/Footsteps_Snow
-  footstepStone: event:/SFX/Players/Footsteps/Footsteps_Stone
-  footstepWater: event:/SFX/Players/Footsteps/Footsteps_Water
-  footstepWood: event:/SFX/Players/Footsteps/Footsteps_Wood
-  jumpLandDirt: event:/SFX/Players/JumpLandings/Landings_Dirt
-  jumpLandGrass: event:/SFX/Players/JumpLandings/Landings_Grass
-  jumpLandIce: event:/SFX/Players/JumpLandings/Landings_Ice
-  jumpLandPlant: event:/SFX/Players/JumpLandings/Landings_Plant
-  jumpLandSnow: event:/SFX/Players/JumpLandings/Landings_Snow
-  jumpLandStone: event:/SFX/Players/JumpLandings/Landings_Stone
-  jumpLandWater: event:/SFX/Players/JumpLandings/Landings_Water
-  jumpLandWood: event:/SFX/Players/JumpLandings/Landings_Wood
+  m_Radius: 0.5
 --- !u!1 &6746168327507794199
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,8 +377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8536230631779655350}
   - component: {fileID: 4904722437726578150}
-  - component: {fileID: 5565238782969263064}
-  m_Layer: 16
+  m_Layer: 11
   m_Name: AudioTriggerNott
   m_TagString: NottAudioTrigger
   m_Icon: {fileID: 0}
@@ -434,132 +411,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: -0.37}
   serializedVersion: 2
-  m_Radius: 0.4
---- !u!114 &5565238782969263064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6746168327507794199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86873bfe8723e2242bb093327f96d359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pmt: {fileID: 0}
-  _apdc: {fileID: 0}
-  playerRB: {fileID: 0}
-  onSprite: {fileID: 0}
-  dirtSprites:
-  - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -5689910174599873153, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -797257590610487928, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -6293375234738786701, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  grassSprites:
-  - {fileID: -6584357579700156119, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -7571674119313297283, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  - {fileID: -187504290313515785, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-  iceSprites:
-  - {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
-  - {fileID: 5577597775912786404, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
-  - {fileID: -5566408235832919808, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
-  - {fileID: 3628287683414317839, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
-  - {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
-  - {fileID: 3628287683414317839, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
-  - {fileID: 21300000, guid: 9cb8fd6638fd0c24b8abf6a666cd1655, type: 3}
-  - {fileID: 21300000, guid: 76c35b1d5fa903e478ba6526ac563ef0, type: 3}
-  snowSprites: []
-  stoneSprites:
-  - {fileID: 2450743599743717073, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: 4736211930712179348, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: 7005710032466896651, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: -6287571772799795191, guid: 664bb7e3809dc96429061ac135b10db0, type: 3}
-  - {fileID: 21300000, guid: 0ccb8853d445ad9459bc544e3269cd6b, type: 3}
-  - {fileID: 473828651731206975, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: 1473523552303590966, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: -2040633346717465360, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: 8905864480088934866, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: -665307235912116058, guid: a1e1fd14cadedc74a90d303d60f77567, type: 3}
-  - {fileID: -4535960656615889786, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 7356167872074147940, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: -3231753227298316379, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 3508156494715873591, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: -861773855351163404, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 209411970382722437, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 9207845041146370889, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 7351669004365529915, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 9092761682225972370, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 917096612199942432, guid: 38a9e60adf20fca4783e5539a47624c8, type: 3}
-  - {fileID: 5223797795631498514, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: 8126516373677541744, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: -2169990559531554300, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: -614763065642820577, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: 848318952599069012, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: 6114396951317672960, guid: 28a4d5c41da073940add8bd05995eccd, type: 3}
-  - {fileID: -8040828221084179089, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -1404815679064755202, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -4246253566039219042, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 1288980138727279369, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 6364303167737679421, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 8586542341654311779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 3385886823159947779, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: 1407223280219923365, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -8262435821072252212, guid: ceed601fdd5f8114ea7ca830cd453d16, type: 3}
-  - {fileID: -8222451255843406101, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
-  - {fileID: -6917439342773706681, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
-  - {fileID: 3741721485506131995, guid: 6374001862aa2af4ea54d6396a147446, type: 3}
-  waterSprites:
-  - {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
-  - {fileID: 3797604072356328135, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
-  - {fileID: 3797604072356328135, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
-  - {fileID: 21300000, guid: 9f02f36afb0ac5d49994f86e58403318, type: 3}
-  woodSprites:
-  - {fileID: 1296290342609715161, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 8576540855881237019, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 7801348269709663439, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  walkingSpeed: 0.23
-  isDagr: 0
-  isNott: 0
-  isSingle: 0
-  isCoop: 0
-  isGrounded: 0
-  isMoving: 0
-  isMovingDagr: 0
-  isMovingNott: 0
-  isClimbing: 0
-  isFalling: 0
-  hasLanded: 0
-  onPlant: 0
-  isDirt: 0
-  isGrass: 0
-  isIce: 0
-  isPlant: 0
-  isSnow: 0
-  isStone: 0
-  isWater: 0
-  isWood: 0
-  footstepDirt: event:/SFX/Players/Footsteps/Footsteps_Dirt
-  footstepGrass: event:/SFX/Players/Footsteps/Footsteps_Grass
-  footstepIce: event:/SFX/Players/Footsteps/Footsteps_Ice
-  footstepPlant: event:/SFX/Players/Footsteps/Footsteps_Plant
-  footstepSnow: event:/SFX/Players/Footsteps/Footsteps_Snow
-  footstepStone: event:/SFX/Players/Footsteps/Footsteps_Stone
-  footstepWater: event:/SFX/Players/Footsteps/Footsteps_Water
-  footstepWood: event:/SFX/Players/Footsteps/Footsteps_Wood
-  jumpLandDirt: event:/SFX/Players/JumpLandings/Landings_Dirt
-  jumpLandGrass: event:/SFX/Players/JumpLandings/Landings_Grass
-  jumpLandIce: event:/SFX/Players/JumpLandings/Landings_Ice
-  jumpLandPlant: event:/SFX/Players/JumpLandings/Landings_Plant
-  jumpLandSnow: event:/SFX/Players/JumpLandings/Landings_Snow
-  jumpLandStone: event:/SFX/Players/JumpLandings/Landings_Stone
-  jumpLandWater: event:/SFX/Players/JumpLandings/Landings_Water
-  jumpLandWood: event:/SFX/Players/JumpLandings/Landings_Wood
+  m_Radius: 0.5
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +485,7 @@ SpriteRenderer:
   m_SortingLayerID: 437680993
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d2cac119167595d47ab1b5bc5967537d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cef352563c0509b49a26b03d4d6d4d3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -654,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0337fc47f8114646b582e528de097fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pixelating: 0
 --- !u!1 &7788640642130820836
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +522,6 @@ GameObject:
   - component: {fileID: 7788640642130820838}
   - component: {fileID: 7788640640931986718}
   - component: {fileID: 1890390277906901525}
-  - component: {fileID: 4904628375757518413}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -783,23 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSprite: {fileID: 7788640641283361658}
   auraSprite: {fileID: 1141244599}
-  nightAura: {fileID: 21300000, guid: 2e672f0e01a08e24cbff7f7a95121bb3, type: 3}
-  dayAura: {fileID: 21300000, guid: bfbb4ccddde147d4891445e6885087a8, type: 3}
-  nightSprite: {fileID: 21300000, guid: 6dde91f640ed9d1438fdfb88855c403c, type: 3}
-  daySprite: {fileID: 21300000, guid: d2cac119167595d47ab1b5bc5967537d, type: 3}
---- !u!114 &4904628375757518413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7788640642130820836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2872887425bc20b4c867c62b178b1fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  isDagr: 0
-  isNott: 0
+  nightAura: {fileID: 0}
+  dayAura: {fileID: 0}
+  nightSprite: {fileID: 21300000, guid: 0fc54536f473e2f4d981eae556fbcd83, type: 3}
+  daySprite: {fileID: 21300000, guid: cef352563c0509b49a26b03d4d6d4d3f, type: 3}

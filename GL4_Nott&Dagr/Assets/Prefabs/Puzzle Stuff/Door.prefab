@@ -563,7 +563,7 @@ Transform:
   m_GameObject: {fileID: 2829471752649276282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1263871}
   - {fileID: 9066563365499986737}
@@ -611,7 +611,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 83bfd04d84d979a489518982c8a393f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcab5af1401b1d24fa030536187582fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -629,15 +629,15 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2829471752649276282}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.125}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 1
 --- !u!114 &2071515847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5585166738181493725
 Transform:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ PrefabInstance:
     - target: {fileID: 2913347679905358077, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2913347679905358077, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
         type: 3}
@@ -880,6 +880,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913347679905358077, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913347679905358077, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed682f94adf5d4b82f6e3ce1392cdb, type: 3}

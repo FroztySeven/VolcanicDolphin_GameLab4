@@ -7,10 +7,14 @@ public class PlayerPixelate : MonoBehaviour
     private Material material;
 
     private float pixelateSpeed;
+    private float auraPixelateSpeed;
     private float pixelateAmount;
     private float pixelateAmountTarget;
 
-    private bool pixelating;
+    private bool isOnAura;
+
+    [HideInInspector]
+    public bool pixelating;
 
     private ExitLevel exit;
 
@@ -20,7 +24,14 @@ public class PlayerPixelate : MonoBehaviour
         material = GetComponent<SpriteRenderer>().material;
         pixelateAmountTarget = 1.01f;
         pixelateAmount = 0;
-        pixelateSpeed = 1f;
+        pixelateSpeed = 0.30f;
+        auraPixelateSpeed = pixelateSpeed / 2;
+
+        if (gameObject.name == "AuraShader")
+        {
+            isOnAura = true;
+            pixelateSpeed = auraPixelateSpeed;
+        }
     }
 
     private void Update()
@@ -29,7 +40,7 @@ public class PlayerPixelate : MonoBehaviour
 
         if (pixelating)
         {
-            pixelateAmount = Mathf.Lerp(pixelateAmount, pixelateAmountTarget, Time.deltaTime * pixelateSpeed);
+            pixelateAmount = Mathf.MoveTowards(pixelateAmount, pixelateAmountTarget, Time.deltaTime * pixelateSpeed);
 
             material.SetFloat("_PixelateAmount", pixelateAmount);
 
@@ -37,7 +48,11 @@ public class PlayerPixelate : MonoBehaviour
             //{
             //    pixelateSpeed = 0.5f;
             //}
-            if (pixelateAmount > 1f)
+            if (pixelateAmount > 1f && !isOnAura)
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
+            if (pixelateAmount > 0.5f && isOnAura)
             {
                 GetComponent<SpriteRenderer>().enabled = false;
             }

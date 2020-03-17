@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 public class AuraBounce : MonoBehaviour
 {
+    public bool canMoveAura;
+
     [Range(1, 20)]
     public float auraMovementSpeed = 5;
 
@@ -29,9 +31,16 @@ public class AuraBounce : MonoBehaviour
     private float auraWidth, auraHeight;
     private Vector4 auraOffset;
 
-    public Color auraColor;
+    public Color dayAuraColor;
+    public Color nightAuraColor;
     public float colorIntensity;
     private Color auraColorOutput;
+
+    private float pixelStart;
+    private float pixelTarget;
+    private float pixelAmount;
+
+    private PlayerPixelate pixelate;
 
     private void Start()
     {
@@ -43,26 +52,43 @@ public class AuraBounce : MonoBehaviour
 
         if (hasCapsuleCollider)
         {
+            pixelate = transform.GetChild(0).GetComponent< PlayerPixelate>();
             col = GetComponent<CapsuleCollider2D>();
             colSize = col.size;
             colOffset = col.offset;
             auraRangeStart = colSize.x;
             auraVisuals = transform.GetChild(0).gameObject;
             auraMat = auraVisuals.GetComponent<SpriteRenderer>().material;
-            colorIntensity += 1;
-            auraColorOutput = new Color(auraColor.r * colorIntensity, auraColor.g * colorIntensity, auraColor.b * colorIntensity, auraColor.a);
-            auraMat.SetColor("_Color", auraColorOutput);
             auraWidth = auraMat.GetFloat("_Width");
             auraHeight = auraMat.GetFloat("_Height");
             auraOffset = auraMat.GetVector("_Offset");
+            pixelStart = auraMat.GetFloat("_PixelateAmount");
+            pixelTarget = pixelStart * 2;
+            pixelAmount = pixelStart;
+
+            colorIntensity += 1;
+            if (player.setPlayer.ToString() == "Night")
+            {
+                auraColorOutput = new Color(nightAuraColor.r * colorIntensity, nightAuraColor.g * colorIntensity, nightAuraColor.b * colorIntensity, nightAuraColor.a);
+                auraMat.SetColor("_Color", auraColorOutput);
+            }
+
+            if (player.setPlayer.ToString() == "Day")
+            {
+                auraColorOutput = new Color(dayAuraColor.r * colorIntensity, dayAuraColor.g * colorIntensity, dayAuraColor.b * colorIntensity, dayAuraColor.a);
+                auraMat.SetColor("_Color", auraColorOutput);
+            }
         }
     }
 
     private void Update()
     {
         playerId = player.playerId;
-        moveInput.x = Input.GetAxisRaw("RStickHorizontalP" + playerId);
-        moveInput.y = Input.GetAxisRaw("RStickVerticalP" + playerId);
+        if (canMoveAura)
+        {
+            moveInput.x = Input.GetAxisRaw("RStickHorizontalP" + playerId);
+            moveInput.y = Input.GetAxisRaw("RStickVerticalP" + playerId);
+        }
         //moveInput.Normalize();
 
         //Debug.Log(moveInput);
@@ -81,6 +107,18 @@ public class AuraBounce : MonoBehaviour
 
         if (hasCapsuleCollider)
         {
+            if (!pixelate.pixelating)
+            {
+                pixelAmount = Mathf.MoveTowards(pixelAmount, pixelTarget, Time.deltaTime * 0.01f);
+                if (pixelAmount >= pixelTarget)
+                {
+                    pixelAmount = pixelStart;
+                }
+                auraMat.SetFloat("_PixelateAmount", pixelAmount);
+            }
+
+
+
             if (moveInput.x != 0 && moveInput.y == 0 && col.offset.y == colOffset.y && auraMat.GetVector("_Offset").y == auraOffset.y)
             {
                 col.direction = CapsuleDirection2D.Horizontal;
