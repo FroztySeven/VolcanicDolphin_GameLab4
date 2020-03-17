@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{a42edc69-42ab-4fa7-a30e-95cbd6e9d41f}">
+		<property name="name">
+			<value>WoodJL</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{008b6ee9-d8b7-48f6-9c9e-18e2ed1e06bf}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{0bc53bee-31e6-4e9a-a72c-ad89304d1987}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{b05a0dc7-fe33-461b-b546-e4be6dc62d00}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{008b6ee9-d8b7-48f6-9c9e-18e2ed1e06bf}">
+		<relationship name="effects">
+			<destination>{cbd9e878-2be2-4232-9986-ed2670a402dd}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{0bc53bee-31e6-4e9a-a72c-ad89304d1987}" />
+	<object class="MixerBusFader" id="{cbd9e878-2be2-4232-9986-ed2670a402dd}" />
+</objects>

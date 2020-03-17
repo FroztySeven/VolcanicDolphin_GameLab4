@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{5d49f12e-f601-4358-859b-5945f56aac79}">
+		<property name="name">
+			<value>IceFS</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{643890ad-438a-4c64-8d2f-5e05f9db5c43}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{23197da1-e57f-48c6-a173-58d8e021075c}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{617c546c-fafc-449e-86f0-f6ac9a1088a1}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{643890ad-438a-4c64-8d2f-5e05f9db5c43}">
+		<relationship name="effects">
+			<destination>{f6dfeb07-bbd6-4bd8-905e-ec9b743e26d9}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{23197da1-e57f-48c6-a173-58d8e021075c}" />
+	<object class="MixerBusFader" id="{f6dfeb07-bbd6-4bd8-905e-ec9b743e26d9}" />
+</objects>

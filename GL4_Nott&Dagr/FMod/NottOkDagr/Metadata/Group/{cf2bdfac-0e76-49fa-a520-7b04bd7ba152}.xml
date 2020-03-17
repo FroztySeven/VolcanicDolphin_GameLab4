@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{cf2bdfac-0e76-49fa-a520-7b04bd7ba152}">
+		<property name="name">
+			<value>StoneFS</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{599718e4-c1bd-4036-bffd-d9bf14f0ed7a}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{694dbaac-6133-47b1-9705-bc61a1d93201}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{617c546c-fafc-449e-86f0-f6ac9a1088a1}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{599718e4-c1bd-4036-bffd-d9bf14f0ed7a}">
+		<relationship name="effects">
+			<destination>{d8171b82-dcf5-4338-ab3e-80af813700e8}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{694dbaac-6133-47b1-9705-bc61a1d93201}" />
+	<object class="MixerBusFader" id="{d8171b82-dcf5-4338-ab3e-80af813700e8}" />
+</objects>

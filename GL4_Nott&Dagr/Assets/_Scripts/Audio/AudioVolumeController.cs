@@ -15,6 +15,7 @@ public class AudioVolumeController : MonoBehaviour
     // Environment SFX
     private FMOD.Studio.Bus _iceFreezeMaster;
     private FMOD.Studio.Bus _iceMeltMaster;
+    private FMOD.Studio.Bus _waterFreezeMaster;
 
     // Objects
     private FMOD.Studio.Bus _bubbleEnterExitMaster;
@@ -25,8 +26,24 @@ public class AudioVolumeController : MonoBehaviour
 
     // Players SFX
     // Footsteps
+    private FMOD.Studio.Bus _dirtFsMaster;
     private FMOD.Studio.Bus _grassFsMaster;
+    private FMOD.Studio.Bus _iceFsMaster;
+    private FMOD.Studio.Bus _plantFsMaster;
     private FMOD.Studio.Bus _snowFsMaster;
+    private FMOD.Studio.Bus _stoneFsMaster;
+    private FMOD.Studio.Bus _waterFsMaster;
+    private FMOD.Studio.Bus _woodFsMaster;
+
+    // Jump Landings
+    private FMOD.Studio.Bus _dirtJlMaster;
+    private FMOD.Studio.Bus _grassJlMaster;
+    private FMOD.Studio.Bus _iceJlMaster;
+    private FMOD.Studio.Bus _plantJlMaster;
+    private FMOD.Studio.Bus _snowJlMaster;
+    private FMOD.Studio.Bus _stoneJlMaster;
+    private FMOD.Studio.Bus _waterJlMaster;
+    private FMOD.Studio.Bus _woodJlMaster;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -53,6 +70,10 @@ public class AudioVolumeController : MonoBehaviour
     [SerializeField]
     [Range(-80f, 20f)]
     public float iceMeltVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float waterFreezeVolume;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -86,13 +107,69 @@ public class AudioVolumeController : MonoBehaviour
 
     [SerializeField]
     [Range(-80f, 20f)]
+    public float dirtFsVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
     public float grassFsVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float iceFsVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float plantFsVolume;
 
     [SerializeField]
     [Range(-80f, 20f)]
     public float snowFsVolume;
 
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float stoneFsVolume;
 
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float waterFsVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float woodFsVolume;
+
+    [Header("       Jump Landings SFX Controllers")]
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float dirtJlVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float grassJlVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float iceJlVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float plantJlVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float snowJlVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float stoneJlVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float waterJlVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float woodJlVolume;
     //--------------------------------------------------------------------------------------------------------//
 
     private void Start()
@@ -108,6 +185,7 @@ public class AudioVolumeController : MonoBehaviour
         // Environment
         _iceFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceFreeze");
         _iceMeltMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceMelt");
+        _waterFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/WaterFreeze");
 
 
         // Objects
@@ -120,8 +198,24 @@ public class AudioVolumeController : MonoBehaviour
 
         // Players SFX
         // Footsteps
+        _dirtFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/DirtFS");
         _grassFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/GrassFS");
+        _iceFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/IceFS");
+        _plantFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/PlantFS");
         _snowFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/SnowFS");
+        _stoneFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/StoneFS");
+        _waterFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/WaterFS");
+        _woodFsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps/WoodFS");
+
+        // Jump Landings
+        _dirtJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/DirtJL");
+        _grassJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/GrassJL");
+        _iceJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/IceJL");
+        _plantJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/PlantJL");
+        _snowJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/SnowJL");
+        _stoneJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/StoneJL");
+        _waterJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/WaterJL");
+        _woodJlMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Landings/WoodJL");
 
     }
 
@@ -136,6 +230,7 @@ public class AudioVolumeController : MonoBehaviour
         // Environment
         _iceFreezeMaster.setVolume(DecibelToLinear(iceFreezeVolume));
         _iceMeltMaster.setVolume(DecibelToLinear(iceMeltVolume));
+        _waterFreezeMaster.setVolume(DecibelToLinear(waterFreezeVolume));
 
         // Objects
         _bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
@@ -146,8 +241,24 @@ public class AudioVolumeController : MonoBehaviour
 
         // Players
         // Footsteps
+        _dirtFsMaster.setVolume(DecibelToLinear(dirtFsVolume));
         _grassFsMaster.setVolume(DecibelToLinear(grassFsVolume));
+        _iceFsMaster.setVolume(DecibelToLinear(iceFsVolume));
+        _plantFsMaster.setVolume(DecibelToLinear(plantFsVolume));
         _snowFsMaster.setVolume(DecibelToLinear(snowFsVolume));
+        _stoneFsMaster.setVolume(DecibelToLinear(stoneFsVolume));
+        _waterFsMaster.setVolume(DecibelToLinear(waterFsVolume));
+        _woodFsMaster.setVolume(DecibelToLinear(woodFsVolume));
+
+        // Jump Landings
+        _dirtJlMaster.setVolume(DecibelToLinear(dirtJlVolume));
+        _grassJlMaster.setVolume(DecibelToLinear(grassJlVolume));
+        _iceJlMaster.setVolume(DecibelToLinear(iceJlVolume));
+        _plantJlMaster.setVolume(DecibelToLinear(plantJlVolume));
+        _snowJlMaster.setVolume(DecibelToLinear(snowJlVolume));
+        _stoneJlMaster.setVolume(DecibelToLinear(stoneJlVolume));
+        _waterJlMaster.setVolume(DecibelToLinear(waterJlVolume));
+        _woodJlMaster.setVolume(DecibelToLinear(woodJlVolume));
     }
 
     //--------------------------------------------------------------------------------------------------------//

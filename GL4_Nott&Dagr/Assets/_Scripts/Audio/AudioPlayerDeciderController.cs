@@ -14,7 +14,7 @@ public class AudioPlayerDeciderController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
 
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
@@ -52,13 +52,50 @@ public class AudioPlayerDeciderController : MonoBehaviour
         {
             if (isDagr == true)
             {
-                player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
-                player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                //player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
+                //player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isGrounded =
+                    false;
+                player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().hasLanded =
+                    false;
             }
+
             if (isNott == true)
             {
+                //player2.transform.Find("AudioTriggerNott").gameObject.SetActive(false);
+                //player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isGrounded =
+                    false;
+                player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().hasLanded =
+                    false;
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Door")
+        {
+            if (isDagr == true)
+            {
+                player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving =
+                    false;
+                player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isGrounded =
+                    false;
+                player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().hasLanded =
+                    false;
+                player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
+            }
+
+            if (isNott == true)
+            {
+                player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving =
+                    false;
+                player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isGrounded =
+                    false;
+                player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().hasLanded =
+                    false;
                 player2.transform.Find("AudioTriggerNott").gameObject.SetActive(false);
-                player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
             }
         }
     }
@@ -66,7 +103,7 @@ public class AudioPlayerDeciderController : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.name == "Door")
-        {
+        { 
             if (isDagr == true)
             {
                 player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(true);
@@ -77,5 +114,6 @@ public class AudioPlayerDeciderController : MonoBehaviour
                 player2.transform.Find("AudioTriggerNott").gameObject.SetActive(true);
             }
         }
+        
     }
 }

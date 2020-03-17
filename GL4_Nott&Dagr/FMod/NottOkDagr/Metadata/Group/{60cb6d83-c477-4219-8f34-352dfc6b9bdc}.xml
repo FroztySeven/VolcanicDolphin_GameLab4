@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{60cb6d83-c477-4219-8f34-352dfc6b9bdc}">
+		<property name="name">
+			<value>SnowJL</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{73fdf667-3e24-43dd-962e-59cb5e1d7040}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{3b904d6a-2c34-407e-9b43-e67a07248d31}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{b05a0dc7-fe33-461b-b546-e4be6dc62d00}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{73fdf667-3e24-43dd-962e-59cb5e1d7040}">
+		<relationship name="effects">
+			<destination>{24366724-6a41-4ba2-9e64-5ebfbdfaed62}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{3b904d6a-2c34-407e-9b43-e67a07248d31}" />
+	<object class="MixerBusFader" id="{24366724-6a41-4ba2-9e64-5ebfbdfaed62}" />
+</objects>
