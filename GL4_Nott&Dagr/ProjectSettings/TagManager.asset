@@ -15,6 +15,7 @@ TagManager:
   - NottAudioTrigger
   - GroundDetector
   - Plant
+  - Gem
   layers:
   - Default
   - TransparentFX

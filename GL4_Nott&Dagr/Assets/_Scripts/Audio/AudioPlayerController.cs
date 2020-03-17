@@ -10,16 +10,16 @@ public class AudioPlayerController : MonoBehaviour
     //... it can use the terrain data to see what type of ground the player is standing on, to get the right type of footsteps sounds.
 
     //--------------------------------------------------------------------------//
-    [HideInInspector]
+    
     public PlayerMovementTest _pmt;
-    [HideInInspector]
+    
     public AudioPlayerDeciderController _apdc;
-    [HideInInspector]
+    
     public Rigidbody2D playerRB;
 
 
     public Sprite onSprite;
-    //[HideInInspector]
+   
     public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
 
     public float walkingSpeed;

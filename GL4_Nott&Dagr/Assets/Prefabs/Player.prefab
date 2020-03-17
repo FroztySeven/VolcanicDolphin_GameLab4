@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 4175540453729784279}
   - component: {fileID: 6956338106893153571}
   - component: {fileID: 4063242060904149685}
-  m_Layer: 11
+  m_Layer: 16
   m_Name: AudioTriggerDagr
   m_TagString: DagrAudioTrigger
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 8536230631779655350}
   - component: {fileID: 4904722437726578150}
   - component: {fileID: 7761431239408190174}
-  m_Layer: 11
+  m_Layer: 16
   m_Name: AudioTriggerNott
   m_TagString: NottAudioTrigger
   m_Icon: {fileID: 0}
