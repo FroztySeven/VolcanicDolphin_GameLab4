@@ -54,6 +54,7 @@ public class Gem : MonoBehaviour
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
                 theRB.isKinematic = false;
+                theRB.velocity = Vector2.zero;
                 theRB.mass = 1000;
                 theCC.isTrigger = false;
                 theCC.offset = unfrozenOffset;
@@ -79,6 +80,7 @@ public class Gem : MonoBehaviour
 
             if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
+                theRB.velocity = Vector2.zero;
                 theRB.mass = 1000;
                 theCC.offset = unfrozenOffset;
                 theCC.radius = unfrozenRadius;
