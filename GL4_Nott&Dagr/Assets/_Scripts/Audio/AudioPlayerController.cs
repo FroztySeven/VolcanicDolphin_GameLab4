@@ -14,13 +14,16 @@ public class AudioPlayerController : MonoBehaviour
     public PlayerMovementTest _pmt;
     
     public AudioPlayerDeciderController _apdc;
-    
+
     public Rigidbody2D playerRB;
 
+    public GameObject dagr, nott;
 
     public Sprite onSprite;
    
     public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
+
+    public int dgNr, ntNr;
 
     public float walkingSpeed;
    
@@ -90,6 +93,9 @@ public class AudioPlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dagr = GameObject.Find("Player1");
+        nott = GameObject.Find("Player2");
+
         InvokeRepeating("CallFootsteps", 0, walkingSpeed);
 
         if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
@@ -97,6 +103,7 @@ public class AudioPlayerController : MonoBehaviour
             playerRB = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
             _pmt = GameObject.Find("Player1").GetComponent<PlayerMovementTest>();
             _apdc = GameObject.Find("Player1").GetComponent<AudioPlayerDeciderController>();
+
             isDagr = _apdc.isDagr;
             isNott = _apdc.isNott;
             isSingle = _pmt.singlePlayer;
@@ -108,6 +115,7 @@ public class AudioPlayerController : MonoBehaviour
             playerRB = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
             _pmt = GameObject.Find("Player2").GetComponent<PlayerMovementTest>();
             _apdc = GameObject.Find("Player2").GetComponent<AudioPlayerDeciderController>();
+
             isDagr = _apdc.isDagr;
             isNott = _apdc.isNott;
             isSingle = _pmt.singlePlayer;
@@ -132,42 +140,53 @@ public class AudioPlayerController : MonoBehaviour
         {
             if (isSingle == true)
             {
-                if (_pmt.playerId == 1)
+                dgNr = _pmt.playerId;
+                ntNr = _pmt.playerId;
+
+                if (_pmt.playerId == 1 && dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().dgNr == 1)
                 {
                     if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
                     {
-                        isMoving = true;
+                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = true;
                     }
                     else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
                     {
-                        isMoving = false;
+                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
                     }
-                    
-                    if (isNott == true)
+                }
+                if (_pmt.playerId == 1 && dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().dgNr == 2)
+                {
+                    if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
                     {
-                        if (_pmt.moveInput.x > 0.1 && Input.GetButtonDown("SwapP1P2"))
-                        {
-                            isMoving = false;
-                        }
-
-                        if (_pmt.moveInput.x < -0.1 && Input.GetButtonDown("SwapP1P2"))
-                        {
-                            isMoving = false;
-                        }
+                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
                     }
-                    else if (isDagr == true)
+                    else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
                     {
-                        if (_pmt.moveInput.x > 0.1 && Input.GetButtonDown("SwapP1P2"))
-                        {
-                            isMoving = false;
-                        }
-
-                        if (_pmt.moveInput.x < -0.1 && Input.GetButtonDown("SwapP1P2"))
-                        {
-                            isMoving = false;
-                        }
+                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
                     }
-                    
+                }
+
+                if (_pmt.playerId == 1 && nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().ntNr == 1)
+                {
+                    if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
+                    {
+                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = true;
+                    }
+                    else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
+                    {
+                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                    }
+                }
+                if (_pmt.playerId == 1 && nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().ntNr == 2)
+                {
+                    if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
+                    {
+                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                    }
+                    else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
+                    {
+                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                    }
                 }
             }
 
@@ -223,6 +242,7 @@ public class AudioPlayerController : MonoBehaviour
 
         if (isGrounded == false)
         {
+            isMoving = false;
             isMovingDagr = false;
             isMovingNott = false;
         }
@@ -428,8 +448,6 @@ public class AudioPlayerController : MonoBehaviour
         }
         //--------------------------------//
 
-
-
         //-----------Nótt----------//
         if (isDagr == false && isNott == true)
         {
@@ -583,11 +601,10 @@ public class AudioPlayerController : MonoBehaviour
             }
         }
         //--------------------------------// 
+
     }
 
     // Plays the footsteps FMod events.
-    //--------------------------------// 
-    
     void CallFootsteps()
     {
         if (isSingle == true)
@@ -733,8 +750,9 @@ public class AudioPlayerController : MonoBehaviour
                 }
             }
         }
-        
+
     }
+    //--------------------------------// 
 
     void OnTriggerStay2D(Collider2D other)
     {

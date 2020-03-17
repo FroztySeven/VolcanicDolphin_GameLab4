@@ -383,6 +383,8 @@ MonoBehaviour:
   _pmt: {fileID: 0}
   _apdc: {fileID: 0}
   playerRB: {fileID: 0}
+  dagr: {fileID: 0}
+  nott: {fileID: 0}
   onSprite: {fileID: 0}
   dirtSprites:
   - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
@@ -559,6 +561,8 @@ MonoBehaviour:
   _pmt: {fileID: 0}
   _apdc: {fileID: 0}
   playerRB: {fileID: 0}
+  dagr: {fileID: 0}
+  nott: {fileID: 0}
   onSprite: {fileID: 0}
   dirtSprites:
   - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}

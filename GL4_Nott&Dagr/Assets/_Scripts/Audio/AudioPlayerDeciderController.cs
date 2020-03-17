@@ -53,11 +53,12 @@ public class AudioPlayerDeciderController : MonoBehaviour
             if (isDagr == true)
             {
                 player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
+                player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
             }
-
             if (isNott == true)
             {
                 player2.transform.Find("AudioTriggerNott").gameObject.SetActive(false);
+                player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
             }
         }
     }
