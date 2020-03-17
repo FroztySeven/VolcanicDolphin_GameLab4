@@ -22,10 +22,10 @@ public class PlayerPixelate : MonoBehaviour
     {
         exit = GameObject.Find("Door").GetComponent<ExitLevel>();
         material = GetComponent<SpriteRenderer>().material;
-        pixelateAmountTarget = 1.01f;
+        pixelateAmountTarget = 1f;
         pixelateAmount = 0;
         pixelateSpeed = 0.30f;
-        auraPixelateSpeed = pixelateSpeed / 2;
+        auraPixelateSpeed = (pixelateSpeed / 2f) * 1.5f;
 
         if (gameObject.name == "AuraShader")
         {
@@ -48,11 +48,11 @@ public class PlayerPixelate : MonoBehaviour
             //{
             //    pixelateSpeed = 0.5f;
             //}
-            if (pixelateAmount > 1f && !isOnAura)
+            if (pixelateAmount >= 1 && !isOnAura)
             {
                 GetComponent<SpriteRenderer>().enabled = false;
             }
-            if (pixelateAmount > 0.5f && isOnAura)
+            if (pixelateAmount >= 0.75f && isOnAura)
             {
                 GetComponent<SpriteRenderer>().enabled = false;
             }
