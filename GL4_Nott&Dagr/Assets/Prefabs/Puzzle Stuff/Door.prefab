@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1263870}
   - component: {fileID: 1263869}
   - component: {fileID: 1263868}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: LevelCompleteCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 264335688}
   - component: {fileID: 264335690}
   - component: {fileID: 264335689}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 407780039}
   - component: {fileID: 407780025}
   - component: {fileID: 407780024}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 642916998}
   - component: {fileID: 642916728}
   - component: {fileID: 642916999}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 680970330}
   - component: {fileID: 680970329}
   - component: {fileID: 680970328}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 2140451732}
   - component: {fileID: 2140451734}
   - component: {fileID: 2140451733}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 2829471752649276285}
   - component: {fileID: 6839829169392922828}
   - component: {fileID: 2071515847}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 5585166738181493725}
   - component: {fileID: 5585166738181493724}
   - component: {fileID: 5585166738181493715}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,6 +733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PortalParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002316788355089778, guid: 20e997c321f81f34e9fbfdff8f4f4272,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5002316788355089779, guid: 20e997c321f81f34e9fbfdff8f4f4272,
         type: 3}
@@ -814,6 +819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PortalSwirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913347679905358074, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2913347679905358076, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
         type: 3}
