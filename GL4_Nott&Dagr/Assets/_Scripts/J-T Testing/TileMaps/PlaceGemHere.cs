@@ -13,6 +13,7 @@ public class PlaceGemHere : MonoBehaviour
     private int gemSelect;
 
     private GameObject door;
+    private ParticleSystem particle;
 
     private void Start()
     {
@@ -21,6 +22,11 @@ public class PlaceGemHere : MonoBehaviour
         if (GameObject.Find("Door"))
         {
             door = GameObject.Find("Door");
+        }
+
+        if (transform.childCount > 0)
+        {
+            particle = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
         }
     }
 
@@ -33,6 +39,9 @@ public class PlaceGemHere : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = Color.white;
                 door.GetComponent<ExitLevel>().DoorOpen();
                 Destroy(other.gameObject);
+                particle.Play();
+                GetComponent<SpriteRenderer>().enabled = false;
+                GetComponent<CircleCollider2D>().enabled = false;
             }
         }
     }
@@ -46,6 +55,9 @@ public class PlaceGemHere : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = Color.white;
                 door.GetComponent<ExitLevel>().DoorOpen();
                 Destroy(other.gameObject);
+                particle.Play();
+                GetComponent<SpriteRenderer>().enabled = false;
+                GetComponent<CircleCollider2D>().enabled = false;
             }
         }
     }
