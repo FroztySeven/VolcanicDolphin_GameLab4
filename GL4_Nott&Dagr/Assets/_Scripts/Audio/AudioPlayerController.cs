@@ -14,7 +14,7 @@ public class AudioPlayerController : MonoBehaviour
     public PlayerMovementTest _pmt;
     [HideInInspector]
     public AudioPlayerDeciderController _apdc;
-
+    [HideInInspector]
     public Rigidbody2D playerRB;
 
 
@@ -33,55 +33,55 @@ public class AudioPlayerController : MonoBehaviour
     //... find the path to the fmod event.
 
     //[Header("  Footsteps ")]
-    [HideInInspector]
+    
     [FMODUnity.EventRef]                
     public string footstepDirt;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string footstepGrass;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string footstepIce;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string footstepPlant;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string footstepSnow;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string footstepStone;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string footstepWater;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string footstepWood;
 
 
     //[Header(" Jump Landings ")]
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandDirt;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandGrass;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandIce;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandPlant;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandSnow;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandStone;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandWater;
-    [HideInInspector]
+    
     [FMODUnity.EventRef]
     public string jumpLandWood;
 
