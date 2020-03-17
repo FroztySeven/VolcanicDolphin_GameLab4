@@ -39,7 +39,8 @@ public class AuraBounce : MonoBehaviour
     private float pixelStart;
     private float pixelTarget;
     private float pixelAmount;
-    private bool pixelate;
+
+    private PlayerPixelate pixelate;
 
     private void Start()
     {
@@ -51,6 +52,7 @@ public class AuraBounce : MonoBehaviour
 
         if (hasCapsuleCollider)
         {
+            pixelate = transform.GetChild(0).GetComponent< PlayerPixelate>();
             col = GetComponent<CapsuleCollider2D>();
             colSize = col.size;
             colOffset = col.offset;
@@ -105,13 +107,15 @@ public class AuraBounce : MonoBehaviour
 
         if (hasCapsuleCollider)
         {
-
-            pixelAmount = Mathf.MoveTowards(pixelAmount, pixelTarget, Time.deltaTime * 0.01f);
-            if (pixelAmount >= pixelTarget)
+            if (!pixelate.pixelating)
             {
-                pixelAmount = pixelStart;
+                pixelAmount = Mathf.MoveTowards(pixelAmount, pixelTarget, Time.deltaTime * 0.01f);
+                if (pixelAmount >= pixelTarget)
+                {
+                    pixelAmount = pixelStart;
+                }
+                auraMat.SetFloat("_PixelateAmount", pixelAmount);
             }
-            auraMat.SetFloat("_PixelateAmount", pixelAmount);
 
 
 
