@@ -104,7 +104,7 @@ public class PlayerMovementTest : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].gameObject != gameObject)
+            if (colliders[i].gameObject != gameObject && theRB.velocity.y <= 4)
             {
                 isGrounded = true;
 
