@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: 522e2694d37133443a8f6dbe31505aec
   - enabled: 1
     path: Assets/Scenes/Completed Levels/Prologue/Prologue Level 01.unity
-    guid: 5057ddf96b29dfa4d942e7fe73ab6d90
+    guid: ccd67426db60d47419a24de8fc2cd279
   - enabled: 1
     path: Assets/Scenes/Completed Levels/Prologue/Prologue Level 02.unity
     guid: c8594adf665020b488d523a92d5ab66e
