@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5352661376661720860}
   - component: {fileID: 1653341816}
   - component: {fileID: 5352661376661720862}
-  - component: {fileID: 712110466103309044}
   m_Layer: 11
   m_Name: PlaceGemHere
   m_TagString: Untagged
@@ -123,22 +122,6 @@ MonoBehaviour:
   - {fileID: -4180372594648412816, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: -758199125701439212, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: 2765407167549744217, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
---- !u!114 &712110466103309044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5352661376661720863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6fa46e705497a4ca8ce9dcc9f1d70e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portalChime: event:/SFX/Objects/DoorOpened
-  doorPortal: {fileID: 0}
-  portalActive: 0
-  playChime: 0
 --- !u!1001 &1378266744
 PrefabInstance:
   m_ObjectHideFlags: 0
