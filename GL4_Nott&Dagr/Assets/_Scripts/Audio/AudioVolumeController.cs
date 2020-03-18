@@ -100,6 +100,10 @@ public class AudioVolumeController : MonoBehaviour
     [Range(-80f, 20f)]
     public float trampolineVolume;
 
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float gemActiveVolume;
+
     //--------------------------------------------------------------------------------------------------------//
 
     [Header("       Footsteps SFX Controllers")]
@@ -195,6 +199,7 @@ public class AudioVolumeController : MonoBehaviour
         _plantGrowMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PlantGrowing");
         _stoneNoisesMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/StoneNoises");
         _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
+        _gemActivatedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Gems");
 
 
         // Players SFX
@@ -239,6 +244,7 @@ public class AudioVolumeController : MonoBehaviour
         _plantGrowMaster.setVolume(DecibelToLinear(plantGrowVolume));
         _stoneNoisesMaster.setVolume(DecibelToLinear(stoneNoisesVolume));
         _trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));
+        _gemActivatedMaster.setVolume(DecibelToLinear(gemActiveVolume));
 
         // Players
         // Footsteps

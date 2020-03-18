@@ -139,7 +139,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-9088871553386963930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/DoorOpened
   guid: fe8674451f8bf44fbaaa3390b7fe3ae5
   Banks:
-  - {fileID: -3592815700257400340}
+  - {fileID: -6134650391029878733}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -911,7 +911,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8342870779070654829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -998,7 +998,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Plant
   guid: ed04bc5eb5fb654a80dd3b47eb388592
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1319,6 +1319,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7962791783858605211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Water/Materials
+  m_EditorClassIdentifier: 
+  Name: Materials
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &-7959023457461902897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2031,7 +2048,7 @@ MonoBehaviour:
   lastModified: 637201214891971655
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7335495050862114514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2206,13 +2223,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Dirt
   guid: 0bdbcec2e4d9aa4cae0101e2ba90d164
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -4490076338653107222}
-  - {fileID: -5853093257657103595}
+  - {fileID: -2077987424147151664}
+  - {fileID: -4484444172806491521}
   MinDistance: 0
   MaxDistance: 0
   Length: 1074
@@ -3367,6 +3384,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-6134650391029878733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Objects.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
+  SubDir: 
+  lastModified: 637201218662981708
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6130258671153069523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3524,6 +3559,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6008656138854730464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StoneNoises/Random Pitch
+  m_EditorClassIdentifier: 
+  Name: Random Pitch
+  Min: 0
+  Max: 10
+  Default: 5
+  Exists: 1
 --- !u!114 &-5996820659205827237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3683,7 +3735,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5820857422777150188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3824,6 +3876,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-5699619539835958387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/IceMelt/Random Pitch
+  m_EditorClassIdentifier: 
+  Name: Random Pitch
+  Min: 0
+  Max: 10
+  Default: 5
+  Exists: 1
 --- !u!114 &-5662998880952077969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4309,12 +4378,12 @@ MonoBehaviour:
   Path: event:/SFX/Objects/BubbleEnterExit
   guid: 142d0e93617f9b479eb36d924644f6ba
   Banks:
-  - {fileID: -3592815700257400340}
+  - {fileID: -6134650391029878733}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3433646271209295579}
+  - {fileID: -3238705189723436715}
   MinDistance: 0
   MaxDistance: 0
   Length: 437
@@ -4457,7 +4526,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5156026653090545916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4473,7 +4542,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Grass
   guid: f10b78a868d41f44856338eddf3338ba
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4565,12 +4634,12 @@ MonoBehaviour:
   Path: event:/SFX/Enviroment/IceFreeze
   guid: 9a675a22de9e0546bb268f5d0923b7ff
   Banks:
-  - {fileID: -574496391061829734}
+  - {fileID: -217438884455180678}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 796813237466975266}
+  - {fileID: -4644912545503210584}
   MinDistance: 0
   MaxDistance: 0
   Length: 375
@@ -4867,6 +4936,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-4882202058039522194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Ice/Materials
+  m_EditorClassIdentifier: 
+  Name: Materials
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &-4880623608214523768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5026,6 +5112,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4726674338477605139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Grass/Players
+  m_EditorClassIdentifier: 
+  Name: Players
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-4726426229593478446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5078,6 +5181,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-4660409756613993750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637201218662074210
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4656182685927860050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5113,6 +5234,23 @@ MonoBehaviour:
   LoadResult: 13
   FileSizes: []
   Exists: 0
+--- !u!114 &-4644912545503210584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/IceFreeze/Random Pitch
+  m_EditorClassIdentifier: 
+  Name: Random Pitch
+  Min: 0
+  Max: 10
+  Default: 5
+  Exists: 1
 --- !u!114 &-4643101430004579125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5198,7 +5336,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Wood
   guid: 53c601b0be071b44a842cf53a51a4999
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5255,6 +5393,23 @@ MonoBehaviour:
   Name: Materials
   Min: 0
   Max: 7
+  Default: 0
+  Exists: 0
+--- !u!114 &-4484444172806491521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Dirt/Players
+  m_EditorClassIdentifier: 
+  Name: Players
+  Min: 0
+  Max: 2
   Default: 0
   Exists: 1
 --- !u!114 &-4479917700649918516
@@ -5676,7 +5831,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3916857019574210853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6163,7 +6318,7 @@ MonoBehaviour:
   lastModified: 637201214889837662
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3588797909232543727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6179,7 +6334,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Plant
   guid: 05fb400c962c0e46a64357fa554527e4
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6272,7 +6427,7 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 5
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3424515184127762469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6393,13 +6548,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Water
   guid: e2c7458c5c7a2a4db77d2549cf9b0c3f
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 8397193394367466403}
-  - {fileID: -3154987743974861930}
+  - {fileID: -7962791783858605211}
+  - {fileID: 2764647891683569618}
   MinDistance: 0
   MaxDistance: 0
   Length: 1074
@@ -6472,7 +6627,7 @@ MonoBehaviour:
   lastModified: 637201214887927356
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3243378519660391392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6489,6 +6644,23 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+  Exists: 0
+--- !u!114 &-3238705189723436715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BubbleEnterExit/Random Pitch
+  m_EditorClassIdentifier: 
+  Name: Random Pitch
+  Min: 0
+  Max: 10
+  Default: 5
   Exists: 1
 --- !u!114 &-3238319243528673478
 MonoBehaviour:
@@ -6558,7 +6730,7 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 5
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3158429228474703478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6592,7 +6764,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3142984608797189976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6664,6 +6836,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-2987426069414073282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Wood/Players
+  m_EditorClassIdentifier: 
+  Name: Players
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-2987011186046009951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6696,7 +6885,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/PlantGrowing
   guid: 34b461c702b49c4c93acf8cfeb1b374c
   Banks:
-  - {fileID: -3592815700257400340}
+  - {fileID: -6134650391029878733}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7135,7 +7324,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/TrampolinBounce
   guid: 010ed87e94a0b14d8ba6162fdb463dcf
   Banks:
-  - {fileID: -3592815700257400340}
+  - {fileID: -6134650391029878733}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7143,6 +7332,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 500
+--- !u!114 &-2598897386364551003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Wood/Materials
+  m_EditorClassIdentifier: 
+  Name: Materials
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &-2591511481145632693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7263,13 +7469,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Snow
   guid: 046bb977d170ab40b4eacb9a97faf0f6
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -8357723961738145906}
-  - {fileID: -5186318757375365597}
+  - {fileID: 9048565720306473661}
+  - {fileID: -1619350245048692769}
   MinDistance: 0
   MaxDistance: 0
   Length: 1074
@@ -7741,6 +7947,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-2077987424147151664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Dirt/Materials
+  m_EditorClassIdentifier: 
+  Name: Materials
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &-2053047218698839299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8350,6 +8573,23 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-1619350245048692769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Snow/Players
+  m_EditorClassIdentifier: 
+  Name: Players
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-1578637438934175772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8471,13 +8711,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Wood
   guid: b2a9f7f3909819469e8e220d781780ba
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3243378519660391392}
-  - {fileID: -9099562306591798478}
+  - {fileID: -2987426069414073282}
+  - {fileID: -2598897386364551003}
   MinDistance: 0
   MaxDistance: 0
   Length: 1074
@@ -8603,7 +8843,7 @@ MonoBehaviour:
   lastModified: 637201214892021793
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1422969814343135821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8722,7 +8962,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Ice
   guid: ff5fc47b062cc64d8b56321e1f6ea9e6
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9183,6 +9423,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-819745029997245621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
+  SubDir: 
+  lastModified: 637201218662133772
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-814008339803732249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9477,7 +9735,7 @@ MonoBehaviour:
   lastModified: 637201214888765129
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-564176524345528511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9599,7 +9857,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-478131750176034924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9790,7 +10048,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-255652954710959110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9845,6 +10103,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-217438884455180678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637201218662403252
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-171682006595402897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10032,13 +10308,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 638682269303254595}
-  - {fileID: 1220808642093172717}
-  - {fileID: -574496391061829734}
-  - {fileID: 5601323678067753774}
-  - {fileID: -3277297813005807021}
-  - {fileID: -3592815700257400340}
-  - {fileID: -7345768749372602120}
-  - {fileID: -1425478591867035835}
+  - {fileID: -819745029997245621}
+  - {fileID: -217438884455180678}
+  - {fileID: -4660409756613993750}
+  - {fileID: 1751233988237258935}
+  - {fileID: -6134650391029878733}
+  - {fileID: 8515911110826144026}
+  - {fileID: 8846527526838434288}
   EditorEvents:
   - {fileID: 7167251990977766476}
   - {fileID: -5115990710540726856}
@@ -10067,10 +10343,10 @@ MonoBehaviour:
   - {fileID: 7127978848823250901}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5601323678067753774}
+  - {fileID: -4660409756613993750}
   StringsBanks:
   - {fileID: 638682269303254595}
-  stringsBankWriteTime: 637201214887907404
+  stringsBankWriteTime: 637201218662093473
   cacheVersion: 3
 --- !u!114 &4472350883392366
 MonoBehaviour:
@@ -10210,13 +10486,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Grass
   guid: e1a721ad159236429aceec7a1ecbfd53
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 6590345675296688426}
-  - {fileID: -481493761871078565}
+  - {fileID: 5780853377250083624}
+  - {fileID: -4726674338477605139}
   MinDistance: 0
   MaxDistance: 0
   Length: 1074
@@ -10586,13 +10862,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Stone
   guid: 6907d38aef2bab4e99996adb1008c6a6
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -266239066000720103}
-  - {fileID: 6807672050980160966}
+  - {fileID: 8904628518179345650}
+  - {fileID: 6706485851042760433}
   MinDistance: 0
   MaxDistance: 0
   Length: 1074
@@ -10834,7 +11110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637201214887907404
+  lastModified: 637201218662093473
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -10856,7 +11132,7 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 5
-  Exists: 1
+  Exists: 0
 --- !u!114 &680012608930442548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11029,7 +11305,7 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 5
-  Exists: 1
+  Exists: 0
 --- !u!114 &802175327664792298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11616,7 +11892,7 @@ MonoBehaviour:
   lastModified: 637201214887937323
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &1222036684686129928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11719,7 +11995,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Water
   guid: 09f653dfc432d04e8a4991f505f4863e
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -12235,7 +12511,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Snow
   guid: c41df34c7bf74341a0e307cba3b5531d
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -12260,6 +12536,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &1751233988237258935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637201218662113426
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1836411424407181036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12872,7 +13166,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Dirt
   guid: 5c6240efcdefeb42a4e95e95d68c2593
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -13175,6 +13469,23 @@ MonoBehaviour:
   Max: 7
   Default: 0
   Exists: 0
+--- !u!114 &2764647891683569618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Water/Players
+  m_EditorClassIdentifier: 
+  Name: Players
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &2777526346095529697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14255,7 +14566,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4007243848669720511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14325,13 +14636,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/JumpLandings/Landings_Ice
   guid: 35f51e7167fc1849a0e43f062446842f
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 3999274198927447301}
-  - {fileID: -3928483803173090843}
+  - {fileID: 5038181666894931478}
+  - {fileID: -4882202058039522194}
   MinDistance: 0
   MaxDistance: 0
   Length: 1074
@@ -14385,12 +14696,12 @@ MonoBehaviour:
   Path: event:/SFX/Objects/StoneNoises
   guid: 0cf6eacc7a7d2d42970773a41a4e4e23
   Banks:
-  - {fileID: -3592815700257400340}
+  - {fileID: -6134650391029878733}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3176567020036318880}
+  - {fileID: -6008656138854730464}
   MinDistance: 0
   MaxDistance: 0
   Length: 1500
@@ -15454,6 +15765,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &5038181666894931478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Ice/Players
+  m_EditorClassIdentifier: 
+  Name: Players
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &5040515544827234383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15749,7 +16077,7 @@ MonoBehaviour:
   Path: event:/SFX/Players/Footsteps/Footsteps_Stone
   guid: a9fb43da1b7e844b822403534fc94349
   Banks:
-  - {fileID: -7345768749372602120}
+  - {fileID: 8515911110826144026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -16127,7 +16455,7 @@ MonoBehaviour:
   lastModified: 637201214887888118
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5642173852968639893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16301,6 +16629,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &5780853377250083624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Grass/Materials
+  m_EditorClassIdentifier: 
+  Name: Materials
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &5789055958845732194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16368,12 +16713,12 @@ MonoBehaviour:
   Path: event:/SFX/Enviroment/IceMelt
   guid: cc78689b5a099e428ca6fb3e29570cc2
   Banks:
-  - {fileID: -574496391061829734}
+  - {fileID: -217438884455180678}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 659060546680813366}
+  - {fileID: -5699619539835958387}
   MinDistance: 0
   MaxDistance: 0
   Length: 125
@@ -17123,7 +17468,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6594134404172053349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17351,6 +17696,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &6706485851042760433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Stone/Players
+  m_EditorClassIdentifier: 
+  Name: Players
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &6764925430000632886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17454,7 +17816,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6846939041740239866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17781,7 +18143,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/GemActivated
   guid: 0a5072553795ed4e8450386a4127ff39
   Banks:
-  - {fileID: -3592815700257400340}
+  - {fileID: -6134650391029878733}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -17839,7 +18201,7 @@ MonoBehaviour:
   Path: event:/SFX/Enviroment/WaterFreeze
   guid: 67d7a95333c4ea46821e8c46b2814eb3
   Banks:
-  - {fileID: -574496391061829734}
+  - {fileID: -217438884455180678}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -19243,7 +19605,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8400611969444263820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19417,6 +19779,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8515911110826144026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Players.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Players.bank
+  SubDir: 
+  lastModified: 637201218664024659
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8520611037558309344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19784,6 +20164,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &8846527526838434288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637201218664074524
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8881671669900676027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19818,6 +20216,23 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &8904628518179345650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Stone/Materials
+  m_EditorClassIdentifier: 
+  Name: Materials
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &8918952539577099164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19957,6 +20372,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &9048565720306473661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landings_Snow/Materials
+  m_EditorClassIdentifier: 
+  Name: Materials
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &9049408961189574272
 MonoBehaviour:
   m_ObjectHideFlags: 0
