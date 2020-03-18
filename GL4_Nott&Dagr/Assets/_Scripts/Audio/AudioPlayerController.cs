@@ -10,19 +10,20 @@ public class AudioPlayerController : MonoBehaviour
     //... it can use the terrain data to see what type of ground the player is standing on, to get the right type of footsteps sounds.
 
     //--------------------------------------------------------------------------//
-    
+    [HideInInspector]
     public PlayerMovementTest _pmt;
-    
+    [HideInInspector]
     public AudioPlayerDeciderController _apdc;
-
+    [HideInInspector]
     public Rigidbody2D playerRB;
 
-    public GameObject dagr, nott;
+    public GameObject dagrTrigger, nottTrigger;
 
     public Sprite onSprite;
    
     public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
 
+    [HideInInspector]
     public int dgNr, ntNr;
 
     public float walkingSpeed;
@@ -93,8 +94,8 @@ public class AudioPlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dagr = GameObject.Find("Player1");
-        nott = GameObject.Find("Player2");
+        dagrTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
+        nottTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
 
         InvokeRepeating("CallFootsteps", 0, walkingSpeed);
 
@@ -143,49 +144,49 @@ public class AudioPlayerController : MonoBehaviour
                 dgNr = _pmt.playerId;
                 ntNr = _pmt.playerId;
 
-                if (_pmt.playerId == 1 && dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().dgNr == 1)
+                if (_pmt.playerId == 1 && dagrTrigger.GetComponent<AudioPlayerController>().dgNr == 1)
                 {
                     if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
                     {
-                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = true;
+                        dagrTrigger.GetComponent<AudioPlayerController>().isMoving = true;
                     }
                     else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
                     {
-                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                        dagrTrigger.GetComponent<AudioPlayerController>().isMoving = false;
                     }
                 }
-                if (_pmt.playerId == 1 && dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().dgNr == 2)
+                if (_pmt.playerId == 1 && dagrTrigger.GetComponent<AudioPlayerController>().dgNr == 2)
                 {
                     if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
                     {
-                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                        dagrTrigger.GetComponent<AudioPlayerController>().isMoving = false;
                     }
                     else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
                     {
-                        dagr.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                        dagrTrigger.GetComponent<AudioPlayerController>().isMoving = false;
                     }
                 }
 
-                if (_pmt.playerId == 1 && nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().ntNr == 1)
+                if (_pmt.playerId == 1 && nottTrigger.GetComponent<AudioPlayerController>().ntNr == 1)
                 {
                     if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
                     {
-                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = true;
+                        nottTrigger.GetComponent<AudioPlayerController>().isMoving = true;
                     }
                     else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
                     {
-                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                        nottTrigger.GetComponent<AudioPlayerController>().isMoving = false;
                     }
                 }
-                if (_pmt.playerId == 1 && nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().ntNr == 2)
+                if (_pmt.playerId == 1 && nottTrigger.GetComponent<AudioPlayerController>().ntNr == 2)
                 {
                     if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
                     {
-                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                        nottTrigger.gameObject.GetComponent<AudioPlayerController>().isMoving = false;
                     }
                     else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
                     {
-                        nott.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
+                        nottTrigger.GetComponent<AudioPlayerController>().isMoving = false;
                     }
                 }
             }
@@ -332,6 +333,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = false;
+                isPlant = false;
                 isSnow = false;
                 isStone = false;
                 isWater = false;
@@ -342,6 +344,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = false;
+                isPlant = false;
                 isSnow = false;
                 isStone = false;
                 isWater = false;
@@ -355,6 +358,7 @@ public class AudioPlayerController : MonoBehaviour
                     isDirt = true;
                     isGrass = false;
                     isIce = false;
+                    isPlant = false;
                     isSnow = false;
                     isStone = false;
                     isWater = false;
@@ -369,6 +373,7 @@ public class AudioPlayerController : MonoBehaviour
                     isDirt = false;
                     isGrass = true;
                     isIce = false;
+                    isPlant = false;
                     isSnow = false;
                     isStone = false;
                     isWater = false;
@@ -383,6 +388,7 @@ public class AudioPlayerController : MonoBehaviour
                     isDirt = false;
                     isGrass = false;
                     isIce = true;
+                    isPlant = false;
                     isSnow = false;
                     isStone = false;
                     isWater = false;
@@ -397,6 +403,7 @@ public class AudioPlayerController : MonoBehaviour
                     isDirt = false;
                     isGrass = false;
                     isIce = false;
+                    isPlant = false;
                     isSnow = true;
                     isStone = false;
                     isWater = false;
@@ -411,6 +418,7 @@ public class AudioPlayerController : MonoBehaviour
                     isDirt = false;
                     isGrass = false;
                     isIce = false;
+                    isPlant = false;
                     isSnow = false;
                     isStone = true;
                     isWater = false;
@@ -425,6 +433,7 @@ public class AudioPlayerController : MonoBehaviour
                     isDirt = false;
                     isGrass = false;
                     isIce = false;
+                    isPlant = false;
                     isSnow = false;
                     isStone = false;
                     isWater = true;
@@ -439,6 +448,7 @@ public class AudioPlayerController : MonoBehaviour
                     isDirt = false;
                     isGrass = false;
                     isIce = false;
+                    isPlant = false;
                     isSnow = false;
                     isStone = false;
                     isWater = false;
@@ -627,12 +637,12 @@ public class AudioPlayerController : MonoBehaviour
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepIce);
                     }
-                    /*
+                    
                     if (isPlant == true)
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepPlant);
                     }
-                    */
+                    
                     if (isSnow == true)
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);
@@ -676,12 +686,12 @@ public class AudioPlayerController : MonoBehaviour
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepIce);
                     }
-                    /*
+                    
                     if (isPlant == true)
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepPlant);
                     }
-                    */
+                    
                     if (isSnow == true)
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);
@@ -722,12 +732,12 @@ public class AudioPlayerController : MonoBehaviour
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepIce);
                     }
-                    /*
+                    
                     if (isPlant == true)
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepPlant);
                     }
-                    */
+
                     if (isSnow == true)
                     {
                         FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);

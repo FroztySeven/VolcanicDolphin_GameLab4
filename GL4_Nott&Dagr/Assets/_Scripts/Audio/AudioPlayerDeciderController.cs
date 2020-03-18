@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class AudioPlayerDeciderController : MonoBehaviour
 {
+    [HideInInspector]
     public AudioPlayerController _apl;
-
+    [HideInInspector]
     public GameObject player1, player2;
-
+    [HideInInspector]
     public bool isDagr, isNott;
 
     // Start is called before the first frame update
@@ -52,8 +53,6 @@ public class AudioPlayerDeciderController : MonoBehaviour
         {
             if (isDagr == true)
             {
-                //player1.transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
-                //player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
                 player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().isGrounded =
                     false;
                 player1.transform.Find("AudioTriggerDagr").gameObject.GetComponent<AudioPlayerController>().hasLanded =
@@ -62,8 +61,6 @@ public class AudioPlayerDeciderController : MonoBehaviour
 
             if (isNott == true)
             {
-                //player2.transform.Find("AudioTriggerNott").gameObject.SetActive(false);
-                //player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isMoving = false;
                 player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().isGrounded =
                     false;
                 player2.transform.Find("AudioTriggerNott").gameObject.GetComponent<AudioPlayerController>().hasLanded =
