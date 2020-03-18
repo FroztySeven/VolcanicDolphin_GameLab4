@@ -383,18 +383,36 @@ MonoBehaviour:
   _pmt: {fileID: 0}
   _apdc: {fileID: 0}
   playerRB: {fileID: 0}
-  dagr: {fileID: 0}
-  nott: {fileID: 0}
+  dagrTrigger: {fileID: 0}
+  nottTrigger: {fileID: 0}
   onSprite: {fileID: 0}
   dirtSprites:
   - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -5689910174599873153, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -797257590610487928, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -6293375234738786701, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: 3571266210973983890, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 2585511563808840681, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 1165650153951515191, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -3909907433529257787, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -3643858700680497723, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 1618942625304308279, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -6850816797713808100, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 5190714412867817417, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: -5064066193609781024, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 1427202916762636805, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: -3483408652300646167, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 129352883158846100, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
   grassSprites:
   - {fileID: -6584357579700156119, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -7571674119313297283, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -187504290313515785, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: 1795822442877508043, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 5689319488747255562, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 2196084188413818093, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 5651988292761313260, guid: aa71400c3b4e5a24bbb6d79a01ff5e1a, type: 3}
+  - {fileID: 5399024683101120477, guid: aa71400c3b4e5a24bbb6d79a01ff5e1a, type: 3}
+  - {fileID: -8484060795787971380, guid: aa71400c3b4e5a24bbb6d79a01ff5e1a, type: 3}
   iceSprites:
   - {fileID: 21300000, guid: 9cb8fd6638fd0c24b8abf6a666cd1655, type: 3}
   - {fileID: 21300000, guid: 76c35b1d5fa903e478ba6526ac563ef0, type: 3}
@@ -405,6 +423,12 @@ MonoBehaviour:
   - {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
   - {fileID: -5566408235832919808, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
   - {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: 9190053220944701922, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 6884457542381758776, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -1315691551782125362, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -8378148152391625914, guid: 88a4ffb68cc75084380a64fbc7519701, type: 3}
+  - {fileID: 9125202724916370369, guid: 88a4ffb68cc75084380a64fbc7519701, type: 3}
+  - {fileID: 3422718556195562873, guid: 88a4ffb68cc75084380a64fbc7519701, type: 3}
   stoneSprites:
   - {fileID: 2977088678487346426, guid: bfb8b06b67029984bbd99b25d3e01505, type: 3}
   - {fileID: 8049695604387882894, guid: bfb8b06b67029984bbd99b25d3e01505, type: 3}
@@ -461,6 +485,8 @@ MonoBehaviour:
   - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  dgNr: 0
+  ntNr: 0
   walkingSpeed: 0.23
   isDagr: 0
   isNott: 0
@@ -561,18 +587,36 @@ MonoBehaviour:
   _pmt: {fileID: 0}
   _apdc: {fileID: 0}
   playerRB: {fileID: 0}
-  dagr: {fileID: 0}
-  nott: {fileID: 0}
+  dagrTrigger: {fileID: 0}
+  nottTrigger: {fileID: 0}
   onSprite: {fileID: 0}
   dirtSprites:
   - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -5689910174599873153, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -797257590610487928, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -6293375234738786701, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: 3571266210973983890, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 2585511563808840681, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 1165650153951515191, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -3909907433529257787, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -3643858700680497723, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 1618942625304308279, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -6850816797713808100, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 5190714412867817417, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: -5064066193609781024, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 1427202916762636805, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: -3483408652300646167, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 129352883158846100, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
   grassSprites:
   - {fileID: -6584357579700156119, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -7571674119313297283, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
   - {fileID: -187504290313515785, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
+  - {fileID: 1795822442877508043, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 5689319488747255562, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 2196084188413818093, guid: c2fddf02fb6a6534190bbb5fb4ff4fa7, type: 3}
+  - {fileID: 5651988292761313260, guid: aa71400c3b4e5a24bbb6d79a01ff5e1a, type: 3}
+  - {fileID: 5399024683101120477, guid: aa71400c3b4e5a24bbb6d79a01ff5e1a, type: 3}
+  - {fileID: -8484060795787971380, guid: aa71400c3b4e5a24bbb6d79a01ff5e1a, type: 3}
   iceSprites:
   - {fileID: 21300000, guid: 9cb8fd6638fd0c24b8abf6a666cd1655, type: 3}
   - {fileID: 21300000, guid: 76c35b1d5fa903e478ba6526ac563ef0, type: 3}
@@ -583,6 +627,12 @@ MonoBehaviour:
   - {fileID: -5566408235832919808, guid: 6f698868fe5ebdb428c7f19878d40b66, type: 3}
   - {fileID: -5566408235832919808, guid: fe77b43517e2784429fcd3c25117e3c7, type: 3}
   - {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
+  - {fileID: 9190053220944701922, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: 6884457542381758776, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -1315691551782125362, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
+  - {fileID: -8378148152391625914, guid: 88a4ffb68cc75084380a64fbc7519701, type: 3}
+  - {fileID: 9125202724916370369, guid: 88a4ffb68cc75084380a64fbc7519701, type: 3}
+  - {fileID: 3422718556195562873, guid: 88a4ffb68cc75084380a64fbc7519701, type: 3}
   stoneSprites:
   - {fileID: 2977088678487346426, guid: bfb8b06b67029984bbd99b25d3e01505, type: 3}
   - {fileID: 8049695604387882894, guid: bfb8b06b67029984bbd99b25d3e01505, type: 3}
@@ -639,6 +689,8 @@ MonoBehaviour:
   - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
+  dgNr: 0
+  ntNr: 0
   walkingSpeed: 0.23
   isDagr: 0
   isNott: 0

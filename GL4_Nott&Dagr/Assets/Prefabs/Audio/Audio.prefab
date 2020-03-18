@@ -84,7 +84,7 @@ MonoBehaviour:
   plantGrowVolume: -10
   stoneNoisesVolume: -15
   trampolineVolume: 0
-  gemActiveVolume: -10
+  gemActiveVolume: -80
   dirtFsVolume: -12
   grassFsVolume: -12
   iceFsVolume: -12
