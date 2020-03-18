@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7560626662078515382}
   - component: {fileID: 7560626662078515385}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BubbleElevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 5557208607871252706}
   - component: {fileID: 302009745196007494}
   - component: {fileID: 4717186962715657155}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7560626662974645822}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Move_Path
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
