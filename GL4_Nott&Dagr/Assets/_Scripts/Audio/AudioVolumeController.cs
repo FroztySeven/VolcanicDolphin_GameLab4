@@ -23,6 +23,7 @@ public class AudioVolumeController : MonoBehaviour
     private FMOD.Studio.Bus _plantGrowMaster;
     private FMOD.Studio.Bus _stoneNoisesMaster;
     private FMOD.Studio.Bus _trampolineMaster;
+    private FMOD.Studio.Bus _gemActivatedMaster;
 
     // Players SFX
     // Footsteps
