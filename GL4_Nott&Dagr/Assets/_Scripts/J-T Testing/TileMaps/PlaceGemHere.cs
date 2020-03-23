@@ -15,6 +15,11 @@ public class PlaceGemHere : MonoBehaviour
     private GameObject door;
     private ParticleSystem particle;
 
+    //----Audio Addon-----//
+    [HideInInspector]
+    [FMODUnity.EventRef] public string gemActivated;
+    //----Audio Addon-----//
+
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = gemSprites[(int)gemColour];
@@ -58,6 +63,10 @@ public class PlaceGemHere : MonoBehaviour
                 particle.Play();
                 GetComponent<SpriteRenderer>().enabled = false;
                 GetComponent<CircleCollider2D>().enabled = false;
+
+                //-----Audio Addon-----//
+                FMODUnity.RuntimeManager.PlayOneShot(gemActivated);
+                //-----Audio Addon-----//
             }
         }
     }

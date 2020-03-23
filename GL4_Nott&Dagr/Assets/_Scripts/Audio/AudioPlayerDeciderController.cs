@@ -111,6 +111,5 @@ public class AudioPlayerDeciderController : MonoBehaviour
                 player2.transform.Find("AudioTriggerNott").gameObject.SetActive(true);
             }
         }
-        
     }
 }

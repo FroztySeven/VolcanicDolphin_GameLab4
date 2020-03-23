@@ -33,7 +33,7 @@ public class AudioPlayerController : MonoBehaviour
 
     public float walkingSpeed;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isDagr, isNott, isSingle, isCoop, isGrounded, isMoving, isMovingDagr, isMovingNott, isClimbing, isFalling, hasLanded, onPlant, isDirt, isGrass, isIce, isPlant, isSnow, isStone, isWater, isWood;
     
     private FMOD.Studio.EventInstance gtDagrInstance, fojDagrInstance, gtNottInstance, fojNottInstance;
@@ -138,6 +138,7 @@ public class AudioPlayerController : MonoBehaviour
                     {
                         dagrTrigger.GetComponent<AudioPlayerController>().isMoving = false;
                     }
+
                 }
                 if (_pmt.playerId == 1 && nottTrigger.GetComponent<AudioPlayerController>().ntNr == 1)
                 {
@@ -227,6 +228,60 @@ public class AudioPlayerController : MonoBehaviour
             if (isNott == true)
             {
                 fojNottInstance.setParameterByName("fojNott", fojNott = 1);
+            }
+
+            //---- When players are climbing ----//
+
+            if (_pmt.playerId == 1 && dagrTrigger.GetComponent<AudioPlayerController>().dgNr == 1)
+            {
+                if (onPlant == true)
+                {
+                    
+                    if (_pmt.moveInput.y > 0.1 || _pmt.moveInput.y < -0.1)
+                    {
+                        dagrTrigger.GetComponent<AudioPlayerController>().isClimbing = true;
+                    }
+                    else if (_pmt.moveInput.y > -0.1 || _pmt.moveInput.y < 0.1)
+                    {
+                        dagrTrigger.GetComponent<AudioPlayerController>().isClimbing = false;
+                    }
+                }
+            }
+            if (_pmt.playerId == 1 && dagrTrigger.GetComponent<AudioPlayerController>().dgNr == 2)
+            {
+                if (onPlant == false)
+                {
+                    if (_pmt.moveInput.y > 0.1 || _pmt.moveInput.y < -0.1)
+                    {
+                        dagrTrigger.GetComponent<AudioPlayerController>().isClimbing = false;
+                    }
+                    else if (_pmt.moveInput.y > -0.1 || _pmt.moveInput.y < 0.1)
+                    {
+                        dagrTrigger.GetComponent<AudioPlayerController>().isClimbing = false;
+                    }
+                }
+            }
+            if (_pmt.playerId == 1 && nottTrigger.GetComponent<AudioPlayerController>().ntNr == 1)
+            {
+                if (_pmt.moveInput.y > 0.1 || _pmt.moveInput.y < -0.1)
+                {
+                    nottTrigger.GetComponent<AudioPlayerController>().isClimbing = true;
+                }
+                else if (_pmt.moveInput.y > -0.1 || _pmt.moveInput.y < 0.1)
+                {
+                    nottTrigger.GetComponent<AudioPlayerController>().isClimbing = false;
+                }
+            }
+            if (_pmt.playerId == 1 && nottTrigger.GetComponent<AudioPlayerController>().ntNr == 2)
+            {
+                if (_pmt.moveInput.y > 0.1 || _pmt.moveInput.y < -0.1)
+                {
+                    nottTrigger.gameObject.GetComponent<AudioPlayerController>().isClimbing = false;
+                }
+                else if (_pmt.moveInput.y > -0.1 || _pmt.moveInput.y < 0.1)
+                {
+                    nottTrigger.GetComponent<AudioPlayerController>().isClimbing = false;
+                }
             }
         }
 
@@ -345,7 +400,10 @@ public class AudioPlayerController : MonoBehaviour
         {
             onSprite = _pmt.currentSprite;
             isGrounded = _pmt.isGrounded;
-            isClimbing = _pmt.isOnLadder;
+
+            //----Testing----//
+            //isClimbing = _pmt.isOnLadder;
+            //----Testing----//
 
             // Checks falling.
             if (playerRB.velocity.y <= -3.5f)
@@ -441,6 +499,22 @@ public class AudioPlayerController : MonoBehaviour
                 }
             }
 
+            if (onPlant == true)
+            {
+                isDirt = false;
+                isGrass = false;
+                isIce = false;
+                isPlant = true;
+                isSnow = false;
+                isStone = false;
+                isWater = false;
+                isWood = false;
+            }
+            else
+            {
+                isPlant = false;
+            }
+
             for (int i = 0; i <= snowSprites.Length - 1; i++)
             {
                 if (onSprite == snowSprites[i])
@@ -507,7 +581,10 @@ public class AudioPlayerController : MonoBehaviour
         {
             onSprite = _pmt.currentSprite;
             isGrounded = _pmt.isGrounded;
-            isClimbing = _pmt.isOnLadder;
+
+            //----Test-----//
+            //isClimbing = _pmt.isOnLadder;
+            //----Test-----//
 
             // Checks if players is falling.
             if (playerRB.velocity.y <= -3.5f)
@@ -596,6 +673,21 @@ public class AudioPlayerController : MonoBehaviour
                     isWater = false;
                     isWood = false;
                 }
+            }
+            if (onPlant == true)
+            {
+                isDirt = false;
+                isGrass = false;
+                isIce = false;
+                isPlant = true;
+                isSnow = false;
+                isStone = false;
+                isWater = false;
+                isWood = false;
+            }
+            else
+            {
+                isPlant = false;
             }
 
             for (int i = 0; i <= snowSprites.Length - 1; i++)
@@ -768,6 +860,23 @@ public class AudioPlayerController : MonoBehaviour
                             gtNottInstance.setParameterByName("gtNott", gtNott = 7);
                             gtNottInstance.start();
                         }
+                    }
+                }
+            }
+
+            if (isClimbing == true && isGrounded == false)
+            {
+                if (isPlant == true)
+                {
+                    if (isDagr == true)
+                    {
+                        gtDagrInstance.setParameterByName("gtDagr", gtDagr = 3);
+                        gtDagrInstance.start();
+                    }
+                    if (isNott == true)
+                    {
+                        gtNottInstance.setParameterByName("gtNott", gtNott = 3);
+                        gtNottInstance.start();
                     }
                 }
             }
@@ -993,6 +1102,23 @@ public class AudioPlayerController : MonoBehaviour
                             gtNottInstance.setParameterByName("gtNott", gtNott = 7);
                             gtNottInstance.start();
                         }
+                    }
+                }
+            }
+
+            if (isClimbing == true && isGrounded == false)
+            {
+                if (isPlant == true)
+                {
+                    if (isDagr == true)
+                    {
+                        gtDagrInstance.setParameterByName("gtDagr", gtDagr = 3);
+                        gtDagrInstance.start();
+                    }
+                    if (isNott == true)
+                    {
+                        gtNottInstance.setParameterByName("gtNott", gtNott = 3);
+                        gtNottInstance.start();
                     }
                 }
             }

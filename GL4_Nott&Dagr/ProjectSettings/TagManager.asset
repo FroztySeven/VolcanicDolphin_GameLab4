@@ -16,6 +16,7 @@ TagManager:
   - GroundDetector
   - Plant
   - Gem
+  - GemHolder
   layers:
   - Default
   - TransparentFX

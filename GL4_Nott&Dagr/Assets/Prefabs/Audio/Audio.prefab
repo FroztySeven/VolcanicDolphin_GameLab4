@@ -84,6 +84,6 @@ MonoBehaviour:
   plantGrowVolume: -10
   stoneNoisesVolume: -15
   trampolineVolume: -7
-  gemActiveVolume: -80
+  gemActiveVolume: -5
   fjDagurVolume: -20
   fjNottVolume: -20

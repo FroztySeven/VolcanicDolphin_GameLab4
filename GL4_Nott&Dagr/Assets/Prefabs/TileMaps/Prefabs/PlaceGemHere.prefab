@@ -122,6 +122,7 @@ MonoBehaviour:
   - {fileID: -4180372594648412816, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: -758199125701439212, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: 2765407167549744217, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
+  gemActivated: event:/SFX/Objects/GemActivated
 --- !u!1001 &1378266744
 PrefabInstance:
   m_ObjectHideFlags: 0
