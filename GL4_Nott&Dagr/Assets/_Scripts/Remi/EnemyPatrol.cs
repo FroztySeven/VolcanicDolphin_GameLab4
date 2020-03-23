@@ -26,6 +26,7 @@ public class EnemyPatrol : MonoBehaviour
         transform.Translate(Vector2.right * (speed * Time.deltaTime));
         RaycastHit2D groundCheck = Physics2D.Raycast(groundDetection.position, Vector2.down, rayDist);
 
+        //If this bool is enabled through the Inspector, then prevent the enemy to fall of edges
         if (edgeDetection)
         {
             if (groundCheck.collider == false)
