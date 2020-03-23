@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPresetFolder" id="{a51c94a7-5952-41a9-a504-bb69cc6120c4}">
+		<property name="name">
+			<value>Randomizers</value>
+		</property>
+		<relationship name="folder">
+			<destination>{81a89367-a4d7-4023-9c4d-4c3c5128f938}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -487,6 +487,10 @@ MonoBehaviour:
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   dgNr: 0
   ntNr: 0
+  gtDagr: 0
+  fojDagr: 0
+  gtNott: 0
+  fojNott: 0
   walkingSpeed: 0.23
   isDagr: 0
   isNott: 0
@@ -508,22 +512,8 @@ MonoBehaviour:
   isStone: 0
   isWater: 0
   isWood: 0
-  footstepDirt: event:/SFX/Players/Footsteps/Footsteps_Dirt
-  footstepGrass: event:/SFX/Players/Footsteps/Footsteps_Grass
-  footstepIce: event:/SFX/Players/Footsteps/Footsteps_Ice
-  footstepPlant: event:/SFX/Players/Footsteps/Footsteps_Plant
-  footstepSnow: event:/SFX/Players/Footsteps/Footsteps_Snow
-  footstepStone: event:/SFX/Players/Footsteps/Footsteps_Stone
-  footstepWater: event:/SFX/Players/Footsteps/Footsteps_Water
-  footstepWood: event:/SFX/Players/Footsteps/Footsteps_Wood
-  jumpLandDirt: event:/SFX/Players/JumpLandings/Landings_Dirt
-  jumpLandGrass: event:/SFX/Players/JumpLandings/Landings_Grass
-  jumpLandIce: event:/SFX/Players/JumpLandings/Landings_Ice
-  jumpLandPlant: event:/SFX/Players/JumpLandings/Landings_Plant
-  jumpLandSnow: event:/SFX/Players/JumpLandings/Landings_Snow
-  jumpLandStone: event:/SFX/Players/JumpLandings/Landings_Stone
-  jumpLandWater: event:/SFX/Players/JumpLandings/Landings_Water
-  jumpLandWood: event:/SFX/Players/JumpLandings/Landings_Wood
+  fjDagr: event:/SFX/Players/DagrFootstepsJumps
+  fjNott: event:/SFX/Players/NottFootstepsJumps
 --- !u!1 &6746168327507794199
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +681,10 @@ MonoBehaviour:
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   dgNr: 0
   ntNr: 0
+  gtDagr: 0
+  fojDagr: 0
+  gtNott: 0
+  fojNott: 0
   walkingSpeed: 0.23
   isDagr: 0
   isNott: 0
@@ -712,22 +706,8 @@ MonoBehaviour:
   isStone: 0
   isWater: 0
   isWood: 0
-  footstepDirt: event:/SFX/Players/Footsteps/Footsteps_Dirt
-  footstepGrass: event:/SFX/Players/Footsteps/Footsteps_Grass
-  footstepIce: event:/SFX/Players/Footsteps/Footsteps_Ice
-  footstepPlant: event:/SFX/Players/Footsteps/Footsteps_Plant
-  footstepSnow: event:/SFX/Players/Footsteps/Footsteps_Snow
-  footstepStone: event:/SFX/Players/Footsteps/Footsteps_Stone
-  footstepWater: event:/SFX/Players/Footsteps/Footsteps_Water
-  footstepWood: event:/SFX/Players/Footsteps/Footsteps_Wood
-  jumpLandDirt: event:/SFX/Players/JumpLandings/Landings_Dirt
-  jumpLandGrass: event:/SFX/Players/JumpLandings/Landings_Grass
-  jumpLandIce: event:/SFX/Players/JumpLandings/Landings_Ice
-  jumpLandPlant: event:/SFX/Players/JumpLandings/Landings_Plant
-  jumpLandSnow: event:/SFX/Players/JumpLandings/Landings_Snow
-  jumpLandStone: event:/SFX/Players/JumpLandings/Landings_Stone
-  jumpLandWater: event:/SFX/Players/JumpLandings/Landings_Water
-  jumpLandWood: event:/SFX/Players/JumpLandings/Landings_Wood
+  fjDagr: event:/SFX/Players/DagrFootstepsJumps
+  fjNott: event:/SFX/Players/NottFootstepsJumps
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0

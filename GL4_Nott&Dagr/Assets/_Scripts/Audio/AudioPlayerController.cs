@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using FMODUnity;
 using UnityEngine;
 
 public class AudioPlayerController : MonoBehaviour
@@ -12,84 +13,42 @@ public class AudioPlayerController : MonoBehaviour
     //--------------------------------------------------------------------------//
     [HideInInspector]
     public PlayerMovementTest _pmt;
+
     [HideInInspector]
     public AudioPlayerDeciderController _apdc;
+
     [HideInInspector]
     public Rigidbody2D playerRB;
 
+    [HideInInspector]
     public GameObject dagrTrigger, nottTrigger;
 
     public Sprite onSprite;
-   
+
+    [HideInInspector]
     public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
 
     [HideInInspector]
-    public int dgNr, ntNr;
+    public int dgNr, ntNr, gtDagr, fojDagr, gtNott, fojNott;
 
     public float walkingSpeed;
-   
+
+    [HideInInspector]
     public bool isDagr, isNott, isSingle, isCoop, isGrounded, isMoving, isMovingDagr, isMovingNott, isClimbing, isFalling, hasLanded, onPlant, isDirt, isGrass, isIce, isPlant, isSnow, isStone, isWater, isWood;
+    
+    private FMOD.Studio.EventInstance gtDagrInstance, fojDagrInstance, gtNottInstance, fojNottInstance;
 
     //--------------------------------------------------------------------------//
 
+    [Header("  Dagr Footsteps and Landings  ")]
 
+    [FMODUnity.EventRef] 
+    public string fjDagr;
 
-    //... find the path to the fmod event.
+    [Header("  Dagr Footsteps and Landings  ")]
 
-    //[Header("  Footsteps ")]
-    
-    [FMODUnity.EventRef]                
-    public string footstepDirt;
-    
-    [FMODUnity.EventRef]
-    public string footstepGrass;
-    
-    [FMODUnity.EventRef]
-    public string footstepIce;
-    
-    [FMODUnity.EventRef]
-    public string footstepPlant;
-    
-    [FMODUnity.EventRef]
-    public string footstepSnow;
-    
-    [FMODUnity.EventRef]
-    public string footstepStone;
-    
-    [FMODUnity.EventRef]
-    public string footstepWater;
-    
-    [FMODUnity.EventRef]
-    public string footstepWood;
-
-
-    //[Header(" Jump Landings ")]
-    
-    [FMODUnity.EventRef]
-    public string jumpLandDirt;
-    
-    [FMODUnity.EventRef]
-    public string jumpLandGrass;
-    
-    [FMODUnity.EventRef]
-    public string jumpLandIce;
-    
-    [FMODUnity.EventRef]
-    public string jumpLandPlant;
-    
-    [FMODUnity.EventRef]
-    public string jumpLandSnow;
-    
-    [FMODUnity.EventRef]
-    public string jumpLandStone;
-    
-    [FMODUnity.EventRef]
-    public string jumpLandWater;
-    
-    [FMODUnity.EventRef]
-    public string jumpLandWood;
-
-    //--------------------------------------------------------------------------//
+    [FMODUnity.EventRef] 
+    public string fjNott;
 
     // Start is called before the first frame update
     void Start()
@@ -109,6 +68,8 @@ public class AudioPlayerController : MonoBehaviour
             isNott = _apdc.isNott;
             isSingle = _pmt.singlePlayer;
 
+            gtDagrInstance = FMODUnity.RuntimeManager.CreateInstance(fjDagr);
+            fojDagrInstance = FMODUnity.RuntimeManager.CreateInstance(fjDagr);
         }
 
         if (this.gameObject == GameObject.Find("AudioTriggerNott"))
@@ -121,6 +82,8 @@ public class AudioPlayerController : MonoBehaviour
             isNott = _apdc.isNott;
             isSingle = _pmt.singlePlayer;
 
+            gtNottInstance = FMODUnity.RuntimeManager.CreateInstance(fjNott);
+            fojNottInstance = FMODUnity.RuntimeManager.CreateInstance(fjNott);
         }
 
         if (isSingle == true)
@@ -137,8 +100,18 @@ public class AudioPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //----------Grounded------------//
         if (isGrounded == true)
         {
+            if (isDagr == true)
+            {
+                fojDagrInstance.setParameterByName("fojDagr", fojDagr = 0);
+            }
+            if (isNott == true)
+            {
+                fojNottInstance.setParameterByName("fojNott", fojNott = 0);
+            }
+
             if (isSingle == true)
             {
                 dgNr = _pmt.playerId;
@@ -166,7 +139,6 @@ public class AudioPlayerController : MonoBehaviour
                         dagrTrigger.GetComponent<AudioPlayerController>().isMoving = false;
                     }
                 }
-
                 if (_pmt.playerId == 1 && nottTrigger.GetComponent<AudioPlayerController>().ntNr == 1)
                 {
                     if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
@@ -241,61 +213,134 @@ public class AudioPlayerController : MonoBehaviour
             }
         }
 
+        //----------NotGrounded------------//
         if (isGrounded == false)
         {
             isMoving = false;
             isMovingDagr = false;
             isMovingNott = false;
+
+            if (isDagr == true)
+            {
+                fojDagrInstance.setParameterByName("fojDagr", fojDagr = 1);
+            }
+            if (isNott == true)
+            {
+                fojNottInstance.setParameterByName("fojNott", fojNott = 1);
+            }
         }
 
         //---------JumpLandings---------//
         if (hasLanded == true)
         {
-
             if (isDirt == true)
             {
-                //Debug.Log("Landed in dirt");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandDirt);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 0);
+                    gtDagrInstance.start();
+                }
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 0);
+                    gtNottInstance.start();
+                }
             }
             else if (isGrass == true)
             {
-                //Debug.Log("Landed in grass");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandGrass);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 1);
+                    gtDagrInstance.start();
+                }
+
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 1);
+                    gtNottInstance.start();
+                }
             }
             else if (isIce == true)
             {
-                //Debug.Log("Landed in ice");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandIce);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 2);
+                    gtDagrInstance.start();
+                }
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 2);
+                    gtNottInstance.start();
+                }
             }
-            else if (isIce == true)
+            else if (isPlant == true)
             {
-                //Debug.Log("Landed in plant");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandPlant);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 3);
+                    gtDagrInstance.start();
+                }
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 3);
+                    gtNottInstance.start();
+                }
             }
             else if (isSnow == true)
             {
-                //Debug.Log("Landed in snow");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandSnow);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 4);
+                    gtDagrInstance.start();
+                }
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 4);
+                    gtNottInstance.start();
+                }
             }
             else if (isStone == true)
             {
-                //Debug.Log("Landed in stone");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandStone);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 5);
+                    gtDagrInstance.start();
+                }
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 5);
+                    gtNottInstance.start();
+                }
             }
             else if (isWater == true)
             {
-                //Debug.Log("Landed in water");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandWater);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 6);
+                    gtDagrInstance.start();
+                }
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 6);
+                    gtNottInstance.start();
+                }
             }
             else if (isWood == true)
             {
-                //Debug.Log("Landed in wood");
-                FMODUnity.RuntimeManager.PlayOneShot(jumpLandWood);
+                if (isDagr == true)
+                {
+                    gtDagrInstance.setParameterByName("gtDagr", gtDagr = 7);
+                    gtDagrInstance.start();
+                }
+                if (isNott == true)
+                {
+                    gtNottInstance.setParameterByName("gtNott", gtNott = 7);
+                    gtNottInstance.start();
+                }
             }
         }
 
         //-----------Dagr----------//
-
         if (isDagr == true && isNott == false)
         {
             onSprite = _pmt.currentSprite;
@@ -456,7 +501,6 @@ public class AudioPlayerController : MonoBehaviour
                 }
             }
         }
-        //--------------------------------//
 
         //-----------Nótt----------//
         if (isDagr == false && isNott == true)
@@ -610,8 +654,6 @@ public class AudioPlayerController : MonoBehaviour
                 }
             }
         }
-        //--------------------------------// 
-
     }
 
     // Plays the footsteps FMod events.
@@ -625,42 +667,107 @@ public class AudioPlayerController : MonoBehaviour
                 {
                     if (isDirt == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepDirt);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 0);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 0);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isGrass == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepGrass);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 1);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 1);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isIce == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepIce);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 2);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 2);
+                            gtNottInstance.start();
+                        }
                     }
-                    
                     if (isPlant == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepPlant);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 3);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 3);
+                            gtNottInstance.start();
+                        }
                     }
-                    
                     if (isSnow == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 4);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 4);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isStone == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepStone);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 5);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 5);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isWater == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepWater);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 6);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 6);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isWood == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepWood);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 7);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 7);
+                            gtNottInstance.start();
+                        }
                     }
                 }
             }
@@ -674,42 +781,107 @@ public class AudioPlayerController : MonoBehaviour
                 {
                     if (isDirt == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepDirt);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 0);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 0);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isGrass == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepGrass);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 1);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 1);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isIce == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepIce);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 2);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 2);
+                            gtNottInstance.start();
+                        }
                     }
-                    
                     if (isPlant == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepPlant);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 3);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 3);
+                            gtNottInstance.start();
+                        }
                     }
-                    
                     if (isSnow == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 4);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 4);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isStone == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepStone);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 5);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 5);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isWater == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepWater);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 6);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 6);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isWood == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepWood);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 7);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 7);
+                            gtNottInstance.start();
+                        }
                     }
                 }
             }
@@ -720,47 +892,111 @@ public class AudioPlayerController : MonoBehaviour
                 {
                     if (isDirt == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepDirt);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 0);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 0);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isGrass == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepGrass);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 1);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 1);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isIce == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepIce);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 2);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 2);
+                            gtNottInstance.start();
+                        }
                     }
-                    
                     if (isPlant == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepPlant);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 3);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 3);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isSnow == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepSnow);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 4);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 4);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isStone == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepStone);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 5);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 5);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isWater == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepWater);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 6);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 6);
+                            gtNottInstance.start();
+                        }
                     }
-
                     if (isWood == true)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot(footstepWood);
+                        if (isDagr == true)
+                        {
+                            gtDagrInstance.setParameterByName("gtDagr", gtDagr = 7);
+                            gtDagrInstance.start();
+                        }
+                        if (isNott == true)
+                        {
+                            gtNottInstance.setParameterByName("gtNott", gtNott = 7);
+                            gtNottInstance.start();
+                        }
                     }
                 }
             }
         }
-
     }
     //--------------------------------// 
 

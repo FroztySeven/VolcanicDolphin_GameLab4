@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{ca6b62dc-bc6a-44d4-95a6-a2ffbc732a40}">
+		<property name="name">
+			<value>Dagr</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{afc0b5ce-c945-4e56-9ba0-f9a1672e3289}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{10274797-52f7-45e5-b6c1-8b495dde34ae}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{811aca50-45b4-4140-a935-96235357d413}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{afc0b5ce-c945-4e56-9ba0-f9a1672e3289}">
+		<relationship name="effects">
+			<destination>{1a40e844-a003-4377-91e2-02336a916906}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{10274797-52f7-45e5-b6c1-8b495dde34ae}" />
+	<object class="MixerBusFader" id="{1a40e844-a003-4377-91e2-02336a916906}" />
+</objects>

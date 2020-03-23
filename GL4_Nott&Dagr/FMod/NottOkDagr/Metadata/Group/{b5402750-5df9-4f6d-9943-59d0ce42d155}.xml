@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{b5402750-5df9-4f6d-9943-59d0ce42d155}">
+		<property name="name">
+			<value>Nott</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{2c315e1b-bc46-497d-84de-5daccc8e8969}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{76fce9a2-d867-46e5-8b11-0bc688bf5c97}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{811aca50-45b4-4140-a935-96235357d413}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{2c315e1b-bc46-497d-84de-5daccc8e8969}">
+		<relationship name="effects">
+			<destination>{56badfc5-45c7-4246-97bc-a0265202686d}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{76fce9a2-d867-46e5-8b11-0bc688bf5c97}" />
+	<object class="MixerBusFader" id="{56badfc5-45c7-4246-97bc-a0265202686d}" />
+</objects>

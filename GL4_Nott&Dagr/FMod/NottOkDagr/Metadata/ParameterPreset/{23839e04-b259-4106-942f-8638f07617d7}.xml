@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{23839e04-b259-4106-942f-8638f07617d7}">
+		<property name="name">
+			<value>fojNott</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8aa76de1-7aed-4356-a709-267e335787b6}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f4bcadf4-8f74-4f80-ab1d-695286c302b9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f4bcadf4-8f74-4f80-ab1d-695286c302b9}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Footsteps</value>
+			<value>Jumps</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

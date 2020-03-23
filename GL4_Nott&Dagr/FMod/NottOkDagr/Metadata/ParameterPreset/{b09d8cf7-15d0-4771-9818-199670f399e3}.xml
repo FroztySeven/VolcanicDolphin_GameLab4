@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{b09d8cf7-15d0-4771-9818-199670f399e3}">
+		<property name="name">
+			<value>fojDagr</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bd2964b4-689a-46a0-82f3-fb6c86d9dc2e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{00c54f8f-3478-46ba-9f58-8dc3b598400a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{00c54f8f-3478-46ba-9f58-8dc3b598400a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Footsteps</value>
+			<value>Jumps</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
