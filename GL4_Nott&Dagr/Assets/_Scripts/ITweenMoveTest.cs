@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class ITweenMoveTest : MonoBehaviour
 {
-    private Vector3 startPos;
-    private float speed;
-    private float[] velocityCheck = new float[2];
+    public float speed = 1f;
     private Rigidbody2D theRB;
+
+    private iTweenPath[] paths;
+    private iTweenPath firstPath;
 
     private void Start()
     {
-        startPos = transform.position;
         theRB = GetComponent<Rigidbody2D>();
-        velocityCheck[0] = 0f;
-        velocityCheck[1] = 0f;
+
+        paths = GetComponents<iTweenPath>();
+
+        for (int i = 0; i < paths.Length; i++)
+        {
+            if (paths[i].pathName == "Path1")
+            {
+                firstPath = paths[i];
+            }
+        }
     }
 
     //private void Update()
@@ -27,40 +35,34 @@ public class ITweenMoveTest : MonoBehaviour
     //    }
     //}
 
-    private void FixedUpdate()
-    {
-        velocityCheck[1] = velocityCheck[0];
-        velocityCheck[0] = theRB.position.x;
-
-        //speed = velocityCheck[1] - velocityCheck[0];
-    }
-
     private void PathOne()
     {
         TurnOffRigidbody();
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("TestPath"), "time", 1, "easetype", iTween.EaseType.easeInSine, "oncomplete", "PathTwo"));
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path1"), "time", speed, "easetype", iTween.EaseType.easeInSine, "oncomplete", "PathTwo"));
     }
 
     private void PathTwo()
     {
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("TestPath2"), "time", 1, "easetype", iTween.EaseType.easeOutSine, "oncomplete", "TurnOnRigidbody"));
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path2"), "time", speed, "easetype", iTween.EaseType.easeOutSine, "oncomplete", "TurnOnRigidbody"));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name == "StartBounce")
         {
+            firstPath.nodes[0] = transform.position;
             PathOne();
         }
     }
 
     private void TurnOffRigidbody()
     {
-        GetComponent<Rigidbody2D>().isKinematic = true;
+        theRB.isKinematic = true;
     }
 
     private void TurnOnRigidbody()
     {
-        GetComponent<Rigidbody2D>().isKinematic = false;
+        theRB.velocity = Vector2.zero;
+        theRB.isKinematic = false;
     }
 }

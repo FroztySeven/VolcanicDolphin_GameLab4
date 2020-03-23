@@ -7,6 +7,8 @@ public class DeathTrigger : MonoBehaviour
     private GameObject nott, dagr, key, seed;
     private Vector3 nottStartPosition, dagrStartPosition, keyStartPosition, seedStartPosition;
 
+    public bool resetNott = true, resetDagr = true, resetKey = true, resetSeed = true;
+
     private void Start()
     {
         nott = GameObject.Find("Player2");
@@ -29,23 +31,23 @@ public class DeathTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == nott)
+        if (other.gameObject == nott && resetNott)
         {
             nott.transform.position = nottStartPosition;
         }
 
-        if (other.gameObject == dagr)
+        if (other.gameObject == dagr && resetDagr)
         {
             dagr.transform.position = dagrStartPosition;
         }
 
-        if (other.gameObject == key)
+        if (other.gameObject == key && resetKey)
         {
             key.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             key.transform.position = keyStartPosition;
         }
 
-        if (other.gameObject == seed)
+        if (other.gameObject == seed && resetSeed)
         {
             seed.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             seed.transform.position = seedStartPosition;

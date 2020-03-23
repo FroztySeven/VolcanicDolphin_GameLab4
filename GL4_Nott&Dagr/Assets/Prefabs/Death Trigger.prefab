@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6174446283185515749}
   - component: {fileID: 8641339313451182941}
   - component: {fileID: 1408619495413588709}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Death Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,3 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48cd9b1a94794d5498cafd375388a9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetNott: 1
+  resetDagr: 1
+  resetKey: 1
+  resetSeed: 1
