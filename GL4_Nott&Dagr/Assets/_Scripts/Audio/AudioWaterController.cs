@@ -7,22 +7,23 @@ using FMODUnity;
 
 public class AudioWaterController : MonoBehaviour
 {
+    [HideInInspector]
+    public GameObject nottTrigger;
+    [HideInInspector]
     public Sprite waterSprite, frozenSprite;
-
+    [HideInInspector]
     public int typeOfSprite;
-
+    [HideInInspector]
     public bool isWater, isFrozen;
 
-    [FMODUnity.EventRef]                //... find the path to the fmod event.
+    [FMODUnity.EventRef]
     public string waterFreezes;
 
-    // Start is called before the first frame update
     void Start()
     {
-      
+          nottTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -43,9 +44,8 @@ public class AudioWaterController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == GameObject.FindGameObjectWithTag("NottAudioTrigger") && isWater == true)
+        if (other.gameObject == nottTrigger && isWater)
         {
-            // Debug.Log("Hit Water");
             CallWaterFreezes();
             isWater = false;
         }

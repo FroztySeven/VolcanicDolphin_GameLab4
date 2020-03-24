@@ -18,13 +18,17 @@ public class AudioVolumeController : MonoBehaviour
 
     // Objects
     private FMOD.Studio.Bus 
-        _bubbleEnterExitMaster, _gemActivatedMaster, _openDoorMaster, _plantGrowMaster, _stoneNoisesMaster, _trampolineMaster;
+        _bubbleEnterExitMaster, _gemActiveMaster, _icecubeDestroyedMaster, _portalActivatedMaster, _plantGrowMaster, _stoneNoisesMaster, _trampolineMaster;
 
     // Players SFX
 
     // Footsteps & Jump Landings
     private FMOD.Studio.Bus
-        _fjDagrMaster, _fjNottMaster;
+        _footstepsAndLandingsMaster;
+
+    // Players SFX
+    private FMOD.Studio.Bus
+        _buttonHighlightMaster, _buttonSelectedMaster;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -34,7 +38,8 @@ public class AudioVolumeController : MonoBehaviour
 
     [Header(" Master Controllers ")]
 
-    [SerializeField] [Range(-80f, 20f)]
+    [SerializeField] 
+    [Range(-80f, 20f)]
     public float musicMasterVolume, sfxMasterVolume;
 
     //--------------------------------------------------------------------------------------------------------//
@@ -51,7 +56,7 @@ public class AudioVolumeController : MonoBehaviour
 
     [SerializeField]
     [Range(-80f, 20f)]
-    public float bubbleEnterExitVolume, openDoorVolume, plantGrowVolume, stoneNoisesVolume, trampolineVolume, gemActiveVolume;
+    public float bubbleEnterExitVolume, gemActiveVolume, _icecubeDestroyedVolume, _portalActivatedVolume, plantGrowVolume, stoneNoisesVolume, trampolineVolume;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -61,8 +66,16 @@ public class AudioVolumeController : MonoBehaviour
 
     [SerializeField]
     [Range(-80f, 20f)]
-    public float fjDagurVolume, fjNottVolume;
+    public float footstepsAndLandingsVolume;
 
+    //--------------------------------------------------------------------------------------------------------//
+
+    [Header(" UI SFX Controllers")]
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float buttonHighlightVolume, buttonSelectedVolume;
+    
     //--------------------------------------------------------------------------------------------------------//
 
     private void Start()
@@ -83,17 +96,21 @@ public class AudioVolumeController : MonoBehaviour
 
         // Objects
         _bubbleEnterExitMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Bubbles/BubbleEnterExit");
-        _openDoorMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/DoorOpen");
+        _gemActiveMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Gems");
+        _icecubeDestroyedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/IcecubeDestroyed");
+        _portalActivatedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PortalActivated");
         _plantGrowMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PlantGrowing");
         _stoneNoisesMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/StoneNoises");
         _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
-        _gemActivatedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Gems");
 
 
         // Players SFX
         // Footsteps
-        _fjDagrMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps & Jump Landings/Dagr");
-        _fjNottMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps & Jump Landings/Nott");
+        _footstepsAndLandingsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps & Jump Landings");
+
+        // UI
+        _buttonHighlightMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/UI/ButtonHighlight");
+        _buttonSelectedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/UI/ButtonSelected");
     }
 
     private void Update()
@@ -111,17 +128,20 @@ public class AudioVolumeController : MonoBehaviour
 
         // Objects
         _bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
-        _openDoorMaster.setVolume(DecibelToLinear(openDoorVolume));
+        _gemActiveMaster.setVolume(DecibelToLinear(gemActiveVolume));
+        _icecubeDestroyedMaster.setVolume(DecibelToLinear(gemActiveVolume));
+        _portalActivatedMaster.setVolume(DecibelToLinear(_portalActivatedVolume));
         _plantGrowMaster.setVolume(DecibelToLinear(plantGrowVolume));
         _stoneNoisesMaster.setVolume(DecibelToLinear(stoneNoisesVolume));
         _trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));
-        _gemActivatedMaster.setVolume(DecibelToLinear(gemActiveVolume));
 
         // Players
         // Footsteps
-        _fjDagrMaster.setVolume(DecibelToLinear(fjDagurVolume));
-        _fjNottMaster.setVolume(DecibelToLinear(fjNottVolume));
+        _footstepsAndLandingsMaster.setVolume(DecibelToLinear(footstepsAndLandingsVolume));
 
+        // UI
+        _buttonHighlightMaster.setVolume(DecibelToLinear(buttonHighlightVolume));
+        _buttonSelectedMaster.setVolume(DecibelToLinear(buttonSelectedVolume));
     }
 
     //--------------------------------------------------------------------------------------------------------//

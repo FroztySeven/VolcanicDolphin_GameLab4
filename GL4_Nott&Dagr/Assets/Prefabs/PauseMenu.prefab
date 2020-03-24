@@ -2003,6 +2003,7 @@ GameObject:
   - component: {fileID: 3015417707489073469}
   - component: {fileID: 3015417707489073470}
   - component: {fileID: 3015417707489073466}
+  - component: {fileID: 3314243730316777223}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -2121,6 +2122,19 @@ MonoBehaviour:
   - {fileID: 3015417707506272733}
   - {fileID: 3015417707349136271}
   eventSystem: {fileID: 3015417707578317299}
+--- !u!114 &3314243730316777223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707489073471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7857f614959d2154bb2365dd20fa5bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPressed: event:/SFX/UI/ButtonSelected
 --- !u!1 &3015417707495596161
 GameObject:
   m_ObjectHideFlags: 0

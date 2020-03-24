@@ -11,24 +11,26 @@ public class AudioGemController : MonoBehaviour
     [FMODUnity.EventRef]
     public string unfreezeGem;
 
+    [HideInInspector]
     public GameObject dagrTrigger, nottTrigger;
 
+    [HideInInspector]
     public bool freeze, unfreeze;
 
     private void Awake()
     {
         dagrTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
         nottTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
         freeze = true;
         unfreeze = false;
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        
+    }
+
     void Update()
     {
         
@@ -36,14 +38,14 @@ public class AudioGemController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == dagrTrigger && freeze == true)
+        if (other.gameObject == dagrTrigger && freeze)
         {
             freeze = false;
             unfreeze = true;
             FMODUnity.RuntimeManager.PlayOneShot(unfreezeGem);
         }
 
-        if (other.gameObject == nottTrigger && unfreeze == true)
+        if (other.gameObject == nottTrigger && unfreeze)
         {
             freeze = true;
             unfreeze = false;

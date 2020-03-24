@@ -403,7 +403,6 @@ GameObject:
   - component: {fileID: 5698310589504625163}
   - component: {fileID: 5698310589504625162}
   - component: {fileID: 628099575346763710}
-  - component: {fileID: 2165051491404966031}
   m_Layer: 9
   m_Name: ShatteredWall
   m_TagString: Untagged
@@ -512,29 +511,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
---- !u!114 &2165051491404966031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5698310589504625167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/SFX/Objects/StoneNoises
-  PlayEvent: 9
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &5698310589890050276
 GameObject:
   m_ObjectHideFlags: 0

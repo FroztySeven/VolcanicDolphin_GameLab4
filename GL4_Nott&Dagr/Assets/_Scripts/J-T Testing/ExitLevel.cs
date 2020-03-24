@@ -9,8 +9,8 @@ public class ExitLevel : MonoBehaviour
     public GameObject finished, portalSwirl, loadingScreen;
 
     public ParticleSystem portalParticle;
-
-    private bool nightEnter, dayEnter, levelFinished, loadingScreenIsActive;
+    [HideInInspector] //--Changed private to public to let audiotrigger know level is over-- Gunnar
+    public bool nightEnter, dayEnter, levelFinished, loadingScreenIsActive;
     [HideInInspector]
     public bool playerPixelate;
 

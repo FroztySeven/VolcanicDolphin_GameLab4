@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdd53b5ae0311348918d574816ddcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nottTrigger: {fileID: 0}
   waterSprite: {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32,
     type: 3}
   frozenSprite: {fileID: 3178468697947503287, guid: dc4bb04565aecd04d8f588f7b487dd32,

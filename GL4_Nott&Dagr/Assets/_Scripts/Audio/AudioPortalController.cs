@@ -8,31 +8,31 @@ public class AudioPortalController : MonoBehaviour
     [FMODUnity.EventRef]
     public string portalChime;
 
+    [HideInInspector]
     public GameObject doorPortal;
 
+    [HideInInspector]
     public bool portalActive, playChime;
-
-    // Start is called before the first frame update
 
     private void Awake()
     {
         doorPortal = GameObject.Find("PortalSwirl");
+        playChime = true;
     }
 
     void Start()
     {
-        playChime = true;
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (doorPortal.activeSelf == true)
+        if (doorPortal.activeSelf)
         {
             portalActive = true;
         }
 
-        if (portalActive == true && playChime == true)
+        if (portalActive && playChime)
         {
             FMODUnity.RuntimeManager.PlayOneShot(portalChime);
             playChime = false;

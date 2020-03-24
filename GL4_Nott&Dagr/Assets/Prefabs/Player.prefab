@@ -337,7 +337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4175540453729784279
 Transform:
   m_ObjectHideFlags: 0
@@ -381,10 +381,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pmt: {fileID: 0}
-  _apdc: {fileID: 0}
   playerRB: {fileID: 0}
-  dagrTrigger: {fileID: 0}
-  nottTrigger: {fileID: 0}
+  audioTrigger: {fileID: 0}
+  door: {fileID: 0}
+  pause: {fileID: 0}
   onSprite: {fileID: 0}
   dirtSprites:
   - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
@@ -485,21 +485,14 @@ MonoBehaviour:
   - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  dgNr: 0
-  ntNr: 0
-  gtDagr: 0
-  fojDagr: 0
-  gtNott: 0
-  fojNott: 0
+  - {fileID: 8487287726588716192, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
+  - {fileID: -5473300698157627766, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
+  - {fileID: -3528381534444488921, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
   walkingSpeed: 0.23
   isDagr: 0
   isNott: 0
-  isSingle: 0
-  isCoop: 0
   isGrounded: 0
   isMoving: 0
-  isMovingDagr: 0
-  isMovingNott: 0
   isClimbing: 0
   isFalling: 0
   hasLanded: 0
@@ -512,8 +505,8 @@ MonoBehaviour:
   isStone: 0
   isWater: 0
   isWood: 0
-  fjDagr: event:/SFX/Players/DagrFootstepsJumps
-  fjNott: event:/SFX/Players/NottFootstepsJumps
+  playerTeleport: event:/SFX/Objects/TeleportPlayers
+  footstepsLandings: event:/SFX/Players/PlayerFootstepsLandings
 --- !u!1 &6746168327507794199
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8536230631779655350
 Transform:
   m_ObjectHideFlags: 0
@@ -575,10 +568,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pmt: {fileID: 0}
-  _apdc: {fileID: 0}
   playerRB: {fileID: 0}
-  dagrTrigger: {fileID: 0}
-  nottTrigger: {fileID: 0}
+  audioTrigger: {fileID: 0}
+  door: {fileID: 0}
+  pause: {fileID: 0}
   onSprite: {fileID: 0}
   dirtSprites:
   - {fileID: -5490104083382426460, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
@@ -679,21 +672,14 @@ MonoBehaviour:
   - {fileID: 6894205296545815324, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: 1910900772617384919, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
   - {fileID: -7763895339223401821, guid: f5c4ea9c584042b42a83a9b5a1118628, type: 3}
-  dgNr: 0
-  ntNr: 0
-  gtDagr: 0
-  fojDagr: 0
-  gtNott: 0
-  fojNott: 0
+  - {fileID: 8487287726588716192, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
+  - {fileID: -5473300698157627766, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
+  - {fileID: -3528381534444488921, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
   walkingSpeed: 0.23
   isDagr: 0
   isNott: 0
-  isSingle: 0
-  isCoop: 0
   isGrounded: 0
   isMoving: 0
-  isMovingDagr: 0
-  isMovingNott: 0
   isClimbing: 0
   isFalling: 0
   hasLanded: 0
@@ -706,8 +692,8 @@ MonoBehaviour:
   isStone: 0
   isWater: 0
   isWood: 0
-  fjDagr: event:/SFX/Players/DagrFootstepsJumps
-  fjNott: event:/SFX/Players/NottFootstepsJumps
+  playerTeleport: event:/SFX/Objects/TeleportPlayers
+  footstepsLandings: event:/SFX/Players/PlayerFootstepsLandings
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +802,6 @@ GameObject:
   - component: {fileID: 7788640642130820838}
   - component: {fileID: 7788640640931986718}
   - component: {fileID: 1890390277906901525}
-  - component: {fileID: 381928611261863197}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -936,20 +921,3 @@ MonoBehaviour:
   dayAura: {fileID: 0}
   nightSprite: {fileID: 21300000, guid: 0fc54536f473e2f4d981eae556fbcd83, type: 3}
   daySprite: {fileID: 21300000, guid: cef352563c0509b49a26b03d4d6d4d3f, type: 3}
---- !u!114 &381928611261863197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7788640642130820836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2872887425bc20b4c867c62b178b1fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _apl: {fileID: 0}
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  isDagr: 0
-  isNott: 0

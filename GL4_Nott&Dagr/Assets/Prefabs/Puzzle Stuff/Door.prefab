@@ -656,6 +656,10 @@ MonoBehaviour:
   loadingScreen: {fileID: 1963211976349138334, guid: c985b9bf95000804bb74b9bcb8bf9aa2,
     type: 3}
   portalParticle: {fileID: 5858022684360618215}
+  nightEnter: 0
+  dayEnter: 0
+  levelFinished: 0
+  loadingScreenIsActive: 0
   playerPixelate: 0
 --- !u!114 &3972832008474369104
 MonoBehaviour:
@@ -669,10 +673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6fa46e705497a4ca8ce9dcc9f1d70e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portalChime: event:/SFX/Objects/DoorOpened
+  portalChime: event:/SFX/Objects/PortalActivated
   doorPortal: {fileID: 0}
   portalActive: 0
-  playChime: 0
+  playChime: 1
 --- !u!1 &5585166738181493714
 GameObject:
   m_ObjectHideFlags: 0
