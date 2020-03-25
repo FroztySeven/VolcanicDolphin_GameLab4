@@ -9,13 +9,14 @@ public class PressurePlate : MonoBehaviour
     public WhoCanUse setUser;
 
     public GameObject wall;
+    public GameObject button;
 
     private Vector3 startPos;
     private Vector3 pressedPos;
 
     private void Start()
     {
-        startPos = transform.position;
+        startPos = button.transform.position;
         pressedPos = startPos - new Vector3(0f, 0.08f, 0f);
     }
 
@@ -25,15 +26,13 @@ public class PressurePlate : MonoBehaviour
         {
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == setUser.ToString())
             {
-                transform.position = pressedPos;
-                GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.8f);
+                button.transform.position = pressedPos;
                 wall.SetActive(false);
             }
 
             if (setUser.ToString() == "Both")
             {
-                transform.position = pressedPos;
-                GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.8f);
+                button.transform.position = pressedPos;
                 wall.SetActive(false);
             }
         }
@@ -45,15 +44,13 @@ public class PressurePlate : MonoBehaviour
         {
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == setUser.ToString())
             {
-                transform.position = pressedPos;
-                GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.8f);
+                button.transform.position = pressedPos;
                 wall.SetActive(false);
             }
 
             if (setUser.ToString() == "Both")
             {
-                transform.position = pressedPos;
-                GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.8f);
+                button.transform.position = pressedPos;
                 wall.SetActive(false);
             }
         }
@@ -65,15 +62,13 @@ public class PressurePlate : MonoBehaviour
         {
             if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == setUser.ToString())
             {
-                transform.position = startPos;
-                GetComponent<BoxCollider2D>().offset = Vector2.zero;
+                button.transform.position = startPos;
                 wall.SetActive(true);
             }
 
             if (setUser.ToString() == "Both")
             {
-                transform.position = startPos;
-                GetComponent<BoxCollider2D>().offset = Vector2.zero;
+                button.transform.position = startPos;
                 wall.SetActive(true);
             }
         }

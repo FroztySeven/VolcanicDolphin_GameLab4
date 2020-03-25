@@ -54,6 +54,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PressurePlates
+    uniqueID: 2340850395
+    locked: 0
   - name: Player
     uniqueID: 437680993
     locked: 0
