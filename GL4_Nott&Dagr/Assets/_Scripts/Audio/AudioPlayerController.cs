@@ -410,13 +410,16 @@ public class AudioPlayerController : MonoBehaviour
 
     void CheckPause()
     {
-        if (pause.GetComponent<PauseMenu>().mainPanel.gameObject.activeSelf || pause.GetComponent<PauseMenu>().settingsPanel.gameObject.activeSelf || pause.GetComponent<PauseMenu>().howToPlayPanel.gameObject.activeSelf)
+        if (pause != null)
         {
-            pause.GetComponent<AudioButtonPressed>().enabled = true;
-        }
-        else
-        {
-            pause.GetComponent<AudioButtonPressed>().enabled = false;
+            if (pause.GetComponent<PauseMenu>().mainPanel.gameObject.activeSelf || pause.GetComponent<PauseMenu>().settingsPanel.gameObject.activeSelf || pause.GetComponent<PauseMenu>().howToPlayPanel.gameObject.activeSelf)
+            {
+                pause.GetComponent<AudioButtonPressed>().enabled = true;
+            }
+            else
+            {
+                pause.GetComponent<AudioButtonPressed>().enabled = false;
+            }
         }
     }
 
