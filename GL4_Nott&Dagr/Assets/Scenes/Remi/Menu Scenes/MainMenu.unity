@@ -744,6 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &170215301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,6 +1853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &355940196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2706,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3015417706910297407, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015417707130747992, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015417707335308985, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015417707349136271, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3015417707489073467, guid: e46409731677ddc4fb30a2f3e43e0ef2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2814,14 +2836,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3015417707495596175, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015417707506272733, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3015417707578317302, guid: e46409731677ddc4fb30a2f3e43e0ef2,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3015417707716350790, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3015417707941147891, guid: e46409731677ddc4fb30a2f3e43e0ef2,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015417708242712930, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015417708446541982, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015417708498970926, guid: e46409731677ddc4fb30a2f3e43e0ef2,
+        type: 3}
+      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3637,6 +3689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &620027038
 GameObject:
   m_ObjectHideFlags: 0
@@ -3866,6 +3919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &629495224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,6 +4251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &671268125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5770,6 +5825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1060555381
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,6 +6065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1128580974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6327,6 +6384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1151152858
 GameObject:
   m_ObjectHideFlags: 0
@@ -6455,6 +6513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1163503205
 GameObject:
   m_ObjectHideFlags: 0
@@ -6609,6 +6668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1171388663
 GameObject:
   m_ObjectHideFlags: 0
@@ -7169,6 +7229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1316166229
 GameObject:
   m_ObjectHideFlags: 0
@@ -7504,6 +7565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1379688015
 GameObject:
   m_ObjectHideFlags: 0
@@ -8177,6 +8239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1479479183
 GameObject:
   m_ObjectHideFlags: 0
@@ -8320,6 +8383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1479555063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3015417707283656463, guid: e46409731677ddc4fb30a2f3e43e0ef2,
@@ -8339,6 +8403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1480487205
 GameObject:
   m_ObjectHideFlags: 0
@@ -9595,6 +9660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1739641012
 GameObject:
   m_ObjectHideFlags: 0
@@ -9738,6 +9804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1765658556
 GameObject:
   m_ObjectHideFlags: 0
@@ -9958,6 +10025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1784848861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3015417708201539806, guid: e46409731677ddc4fb30a2f3e43e0ef2,
@@ -9977,6 +10045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1807531561
 GameObject:
   m_ObjectHideFlags: 0
@@ -10450,6 +10519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1886122263
 GameObject:
   m_ObjectHideFlags: 0
@@ -10825,6 +10895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &1936849604
 GameObject:
   m_ObjectHideFlags: 0
@@ -11534,6 +11605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &2046858053
 GameObject:
   m_ObjectHideFlags: 0

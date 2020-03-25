@@ -152,7 +152,6 @@
 			<destination>{e903bb05-a338-48e2-a758-91feffd3d910}</destination>
 			<destination>{5bfdf00e-4d39-4cc4-b359-10cd09a32abc}</destination>
 			<destination>{3e9034ad-9f8a-4b8b-838f-ebc2dfdf4864}</destination>
-			<destination>{4f6b1c0b-c3af-49f7-8d5a-5216595d361e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f2de8ce8-03ff-4a7c-9600-1d731038a7c5}" />
@@ -169,13 +168,13 @@
 	</object>
 	<object class="AutomationPoint" id="{8b1b4e2f-2e29-42e9-b5f4-ae3e83cdac80}">
 		<property name="position">
-			<value>0.12</value>
+			<value>0.11999999999999998</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.308251381</value>
+			<value>0.220539406</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{e1cd4e36-0484-47d1-acaf-b4942816574e}">
@@ -187,27 +186,17 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{e903bb05-a338-48e2-a758-91feffd3d910}" />
-	<object class="SFXReverbEffect" id="{5bfdf00e-4d39-4cc4-b359-10cd09a32abc}" />
-	<object class="MultibandEqEffect" id="{3e9034ad-9f8a-4b8b-838f-ebc2dfdf4864}">
-		<property name="frequencyA">
-			<value>137.360825</value>
-		</property>
-		<property name="qualityA">
-			<value>3.13793111</value>
+	<object class="SFXReverbEffect" id="{5bfdf00e-4d39-4cc4-b359-10cd09a32abc}">
+		<property name="decayTime">
+			<value>1000</value>
 		</property>
 	</object>
-	<object class="DelayEffect" id="{4f6b1c0b-c3af-49f7-8d5a-5216595d361e}">
-		<property name="delay">
-			<value>440</value>
+	<object class="MultibandEqEffect" id="{3e9034ad-9f8a-4b8b-838f-ebc2dfdf4864}">
+		<property name="frequencyA">
+			<value>183.58522</value>
 		</property>
-		<property name="feedback">
-			<value>34</value>
-		</property>
-		<property name="level">
-			<value>-6.5</value>
-		</property>
-		<property name="dryLevel">
-			<value>-5</value>
+		<property name="qualityA">
+			<value>1.28662062</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{a473ff2d-7176-4b6b-973c-203359e3c3ba}">
