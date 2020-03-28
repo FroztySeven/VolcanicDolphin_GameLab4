@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Sp_Background_Muspelheim
+  m_Name: SpS_Helheim_Bricks_Platform_Multiple_Moss_4
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: bdec31ba8aa9e6f40a13fe56ca815c39, type: 3}
-  m_Color: {r: 0.43529412, g: 0.21960784, b: 0.1764706, a: 1}
+  m_Sprite: {fileID: 3138395826416199732, guid: 365a9ac38318fab47bfc92589084cbcb,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
