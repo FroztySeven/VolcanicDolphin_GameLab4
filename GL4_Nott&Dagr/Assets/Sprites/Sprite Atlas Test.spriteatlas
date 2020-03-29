@@ -44,7 +44,6 @@ SpriteAtlas:
     packables:
     - {fileID: 2800000, guid: dc4bb04565aecd04d8f588f7b487dd32, type: 3}
     - {fileID: 2800000, guid: 26b15e83a028be0448f7dd2cae6d5b48, type: 3}
-    - {fileID: 2800000, guid: 83bfd04d84d979a489518982c8a393f1, type: 3}
     - {fileID: 2800000, guid: 88a4ffb68cc75084380a64fbc7519701, type: 3}
     - {fileID: 2800000, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
     - {fileID: 2800000, guid: 74fbd10e224e932488e9a0a96b17b83d, type: 3}
@@ -145,7 +144,6 @@ SpriteAtlas:
   - {fileID: 5976521678722573320, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
   - {fileID: -4325187691497911562, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
   - {fileID: 21300000, guid: 76c35b1d5fa903e478ba6526ac563ef0, type: 3}
-  - {fileID: 21300000, guid: 83bfd04d84d979a489518982c8a393f1, type: 3}
   - {fileID: -2446935908418361789, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: -6893316236957123113, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: -2666102191681399209, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
@@ -248,7 +246,6 @@ SpriteAtlas:
   - SpS_Gem_Frozen_1
   - SpS_Gem_Frozen_0
   - Sp_IceCube_OneUnit
-  - Sp_Portal_Vines
   - SpS_Gems_10
   - SpS_Gems_11
   - SpS_Gems_12
