@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 3015417706814430693}
   - component: {fileID: 3015417706814430694}
   - component: {fileID: 3015417706814430695}
+  - component: {fileID: 6467760393527675188}
   m_Layer: 5
   m_Name: SettingsPlayButton
   m_TagString: Untagged
@@ -554,6 +555,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6467760393527675188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417706814430713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417706830289353
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +735,7 @@ GameObject:
   - component: {fileID: 3015417706910297405}
   - component: {fileID: 3015417706910297406}
   - component: {fileID: 3015417706910297407}
+  - component: {fileID: 5676060651853115803}
   m_Layer: 5
   m_Name: DagrAbility2
   m_TagString: Untagged
@@ -826,6 +842,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5676060651853115803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417706910297393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707047329953
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +868,7 @@ GameObject:
   - component: {fileID: 3015417707047329965}
   - component: {fileID: 3015417707047329966}
   - component: {fileID: 3015417707047329967}
+  - component: {fileID: 5973263482438024351}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -955,6 +986,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5973263482438024351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707047329953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707094150927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1087,7 @@ GameObject:
   - component: {fileID: 3015417707130747974}
   - component: {fileID: 3015417707130747975}
   - component: {fileID: 3015417707130747992}
+  - component: {fileID: 8360045702980470966}
   m_Layer: 5
   m_Name: DagrAbility1
   m_TagString: Untagged
@@ -1148,6 +1194,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8360045702980470966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707130747994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707133750315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1220,7 @@ GameObject:
   - component: {fileID: 3015417707133750359}
   - component: {fileID: 3015417707133750312}
   - component: {fileID: 3015417707133750313}
+  - component: {fileID: 3335679259421028046}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -1277,6 +1338,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3335679259421028046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707133750315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707235303221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1441,7 @@ GameObject:
   - component: {fileID: 3015417707283656459}
   - component: {fileID: 3015417707283656460}
   - component: {fileID: 3015417707283656461}
+  - component: {fileID: 7341105089379618720}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -1483,6 +1559,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7341105089379618720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707283656463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707335308987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1585,7 @@ GameObject:
   - component: {fileID: 3015417707335308967}
   - component: {fileID: 3015417707335308984}
   - component: {fileID: 3015417707335308985}
+  - component: {fileID: 7576559819297104649}
   m_Layer: 5
   m_Name: NottAbility2
   m_TagString: Untagged
@@ -1600,6 +1691,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7576559819297104649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707335308987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707349136257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1717,7 @@ GameObject:
   - component: {fileID: 3015417707349136269}
   - component: {fileID: 3015417707349136270}
   - component: {fileID: 3015417707349136271}
+  - component: {fileID: 4173962885875962058}
   m_Layer: 5
   m_Name: DagrAbility5
   m_TagString: Untagged
@@ -1717,6 +1823,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4173962885875962058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707349136257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707391102941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,6 +2267,7 @@ GameObject:
   - component: {fileID: 3015417707495596173}
   - component: {fileID: 3015417707495596174}
   - component: {fileID: 3015417707495596175}
+  - component: {fileID: 4344391028717828825}
   m_Layer: 5
   m_Name: NottAbility1
   m_TagString: Untagged
@@ -2253,6 +2374,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4344391028717828825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707495596161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707498644813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2477,7 @@ GameObject:
   - component: {fileID: 3015417707506272731}
   - component: {fileID: 3015417707506272732}
   - component: {fileID: 3015417707506272733}
+  - component: {fileID: 9214932372735656050}
   m_Layer: 5
   m_Name: DagrAbility4
   m_TagString: Untagged
@@ -2447,6 +2583,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9214932372735656050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707506272735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707507103380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,6 +2684,7 @@ GameObject:
   - component: {fileID: 3015417707533547846}
   - component: {fileID: 3015417707533547847}
   - component: {fileID: 3015417707533547864}
+  - component: {fileID: 3515982575133037288}
   m_Layer: 5
   m_Name: ReturnToMenuButton
   m_TagString: Untagged
@@ -2651,6 +2802,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3515982575133037288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707533547866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707578317302
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,6 +3275,7 @@ GameObject:
   - component: {fileID: 3015417707716350788}
   - component: {fileID: 3015417707716350789}
   - component: {fileID: 3015417707716350790}
+  - component: {fileID: 4247669612995226850}
   m_Layer: 5
   m_Name: DagrAbility3
   m_TagString: Untagged
@@ -3215,6 +3381,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4247669612995226850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417707716350808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417707746446693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,6 +3953,7 @@ GameObject:
   - component: {fileID: 3015417708201539802}
   - component: {fileID: 3015417708201539803}
   - component: {fileID: 3015417708201539804}
+  - component: {fileID: 8076093724350542924}
   m_Layer: 5
   m_Name: HowToPlayButton
   m_TagString: Untagged
@@ -3890,6 +4071,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8076093724350542924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417708201539806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417708242712932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3902,6 +4097,7 @@ GameObject:
   - component: {fileID: 3015417708242712928}
   - component: {fileID: 3015417708242712929}
   - component: {fileID: 3015417708242712930}
+  - component: {fileID: 5278115716119081308}
   m_Layer: 5
   m_Name: NottAbility3
   m_TagString: Untagged
@@ -4007,6 +4203,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5278115716119081308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417708242712932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417708356729678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,6 +4306,7 @@ GameObject:
   - component: {fileID: 3015417708446541980}
   - component: {fileID: 3015417708446541981}
   - component: {fileID: 3015417708446541982}
+  - component: {fileID: 1872632802870296114}
   m_Layer: 5
   m_Name: NottAbility5
   m_TagString: Untagged
@@ -4201,6 +4412,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1872632802870296114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417708446541968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417708448653201
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,6 +4515,7 @@ GameObject:
   - component: {fileID: 3015417708498970924}
   - component: {fileID: 3015417708498970925}
   - component: {fileID: 3015417708498970926}
+  - component: {fileID: 6699445155503198142}
   m_Layer: 5
   m_Name: NottAbility4
   m_TagString: Untagged
@@ -4395,6 +4621,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6699445155503198142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015417708498970912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423414de16af79045b1a2e0a2c4d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHighlight: event:/SFX/UI/ButtonHighlight
+  play: 0
 --- !u!1 &3015417708625888369
 GameObject:
   m_ObjectHideFlags: 0

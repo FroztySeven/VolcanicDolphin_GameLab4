@@ -6,13 +6,13 @@ public class AudioMenuPlayerSelect : MonoBehaviour
 {
     [FMODUnity.EventRef] public string playerSelect;
 
-    //[HideInInspector]
+    [HideInInspector]
     public GameObject player1, player2;
     [HideInInspector]
     public bool left1, center1, right1, playLeft1, playCenter1, playRight1;
     [HideInInspector]
     public bool left2, center2, right2, playLeft2, playCenter2, playRight2;
-    //[HideInInspector]
+    [HideInInspector]
     public CharacterSelection _cs1, _cs2;
 
 

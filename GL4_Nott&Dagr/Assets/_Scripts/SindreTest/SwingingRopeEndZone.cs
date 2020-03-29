@@ -11,7 +11,7 @@ public class SwingingRopeEndZone : MonoBehaviour
     private GameObject dagrGO, nottGO;
 
     private bool dagrOnRope = false, nottOnRope = false;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,11 +69,19 @@ public class SwingingRopeEndZone : MonoBehaviour
             if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
             {
                 dagrOnRope = true;
+
+                //----Audio Addon-----//
+                FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+                //----Audio Addon-----//
             }
 
             if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
             {
                 nottOnRope = true;
+
+                //----Audio Addon-----//
+                FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+                //----Audio Addon-----//
             }
         }
     }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{d8c86908-21c6-411c-853e-70459675fa13}">
+		<property name="name">
+			<value>UpOrDown</value>
+		</property>
+		<relationship name="folder">
+			<destination>{81a89367-a4d7-4023-9c4d-4c3c5128f938}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{63aa0ba7-e0a8-4e21-8174-d670cfb3ad17}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{63aa0ba7-e0a8-4e21-8174-d670cfb3ad17}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Up</value>
+			<value>Down</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
