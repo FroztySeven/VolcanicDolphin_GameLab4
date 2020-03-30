@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{6a33fdd3-96e9-4f3a-8afd-1e2f2c9576b5}">
+		<property name="name">
+			<value>RopeBurnSnap</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{d4b49c76-c5ed-44de-9189-ed49c30edb6f}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{ee07fbd2-c564-442b-9c01-1c45da528f3c}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5a56a70e-4a55-4bb1-ba5e-b29879268c64}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{d4b49c76-c5ed-44de-9189-ed49c30edb6f}">
+		<relationship name="effects">
+			<destination>{85c701fb-ae75-440c-b713-998d2965b7b4}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{ee07fbd2-c564-442b-9c01-1c45da528f3c}" />
+	<object class="MixerBusFader" id="{85c701fb-ae75-440c-b713-998d2965b7b4}" />
+</objects>

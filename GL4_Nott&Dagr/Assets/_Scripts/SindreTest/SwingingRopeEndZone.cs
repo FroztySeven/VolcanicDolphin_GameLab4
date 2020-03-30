@@ -10,8 +10,13 @@ public class SwingingRopeEndZone : MonoBehaviour
 
     private GameObject dagrGO, nottGO;
 
-    private bool dagrOnRope = false, nottOnRope = false;
-    
+    private bool dagrOnRope = false, nottOnRope = false, isTriggered;
+
+    //---Audio Addon---//
+    private bool isSwinging, onRopeDSFX, onRopeNSFX;
+    private Rigidbody2D parentRB;
+    //---Audio Addon---//
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +24,10 @@ public class SwingingRopeEndZone : MonoBehaviour
         nottGO = GameObject.Find("Player2");
         
         _sr = gameObject.GetComponentInParent<SwingingRope>();
+
+        //----Audio Addon-----//
+        parentRB = this.gameObject.GetComponentInParent<Rigidbody2D>();
+        //----Audio Addon-----//
     }
 
 
@@ -39,6 +48,16 @@ public class SwingingRopeEndZone : MonoBehaviour
                     dagrGO.transform.SetParent(null);
                     StartCoroutine(turnOnTriggerAgain());
                 }
+                //----Audio Addon-----//
+                if (parentRB.velocity.x >= -7.55f && parentRB.velocity.x <= -7.45f || parentRB.velocity.x <= 7.55f && parentRB.velocity.x >= 7.45f)
+                {
+                    isSwinging = true;
+                    if (isSwinging)
+                    {
+                        StartCoroutine(SwingWooshSound());
+                    }
+                }
+                //----Audio Addon-----//
             }
         }
 
@@ -57,6 +76,16 @@ public class SwingingRopeEndZone : MonoBehaviour
                     nottGO.transform.SetParent(null);
                     StartCoroutine(turnOnTriggerAgain());
                 }
+                //----Audio Addon-----//
+                if (parentRB.velocity.x >= -7.55f && parentRB.velocity.x <= -7.45f || parentRB.velocity.x <= 7.55f && parentRB.velocity.x >= 7.45f)
+                {
+                    isSwinging = true;
+                    if (isSwinging)
+                    {
+                        StartCoroutine(SwingWooshSound());
+                    }
+                }
+                //----Audio Addon-----//
             }
         }
     }
@@ -64,18 +93,45 @@ public class SwingingRopeEndZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (!isTriggered)
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
-            {
-                dagrOnRope = true;
-            }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.gameObject.CompareTag("Player"))
             {
-                nottOnRope = true;
+                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                {
+                    dagrOnRope = true;
+                    Debug.Log("DAGR ON ROPE");
+                    
+                    //----Audio Addon-----//
+                    onRopeDSFX = true;
+                    if (dagrOnRope && onRopeDSFX)
+                    {
+                        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+                        onRopeDSFX = false;
+                    }
+
+                    //----Audio Addon-----//
+                }
+
+                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                {
+                    nottOnRope = true;
+
+                    //----Audio Addon-----//
+                    onRopeNSFX = true;
+                    if (nottOnRope && onRopeNSFX)
+                    {
+                        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+                        onRopeNSFX = false;
+                    }
+
+                    //----Audio Addon-----//
+                }
             }
         }
+
+        isTriggered = true;
     }
 
     /*private void OnTriggerStay2D(Collider2D other)
@@ -152,5 +208,17 @@ public class SwingingRopeEndZone : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        isTriggered = false;
     }
+
+    //---Audio Addon---//
+    private IEnumerator SwingWooshSound()
+    {
+        isSwinging = false;
+        yield return new WaitForSeconds(0.1f);
+        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeWoosh);
+        yield return new WaitForSeconds(0.5f);
+        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+    }
+    //---Audio Addon---//
 }

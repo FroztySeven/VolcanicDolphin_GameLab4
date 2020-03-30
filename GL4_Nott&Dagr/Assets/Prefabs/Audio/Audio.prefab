@@ -80,10 +80,17 @@ MonoBehaviour:
   iceMeltVolume: -15
   waterFreezeVolume: -5
   bubbleEnterExitVolume: -25
-  openDoorVolume: -15
-  plantGrowVolume: -10
-  stoneNoisesVolume: -15
-  trampolineVolume: -7
   gemActiveVolume: -5
-  fjDagurVolume: 0
-  fjNottVolume: 0
+  icecubeDestroyedVolume: -10
+  portalActivatedVolume: -7
+  plantGrowVolume: -10
+  pressurePlateVolume: -10
+  ropeBurnSnapVolume: -3
+  ropeSwingVolume: -20
+  ropeTwistVolume: -7
+  stoneNoisesVolume: -15
+  teleportPlayersVolume: -10
+  trampolineVolume: -7
+  footstepsAndLandingsVolume: -10
+  buttonHighlightVolume: -5
+  buttonSelectedVolume: -5

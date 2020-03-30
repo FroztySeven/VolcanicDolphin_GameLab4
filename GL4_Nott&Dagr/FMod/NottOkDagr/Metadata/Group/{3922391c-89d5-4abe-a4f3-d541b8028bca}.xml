@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{3922391c-89d5-4abe-a4f3-d541b8028bca}">
+		<property name="name">
+			<value>PressurePlate</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{8f2067e5-6454-4529-9d3f-8cf071742f98}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{de23b585-399a-4df0-bece-645897581b47}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5a56a70e-4a55-4bb1-ba5e-b29879268c64}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{8f2067e5-6454-4529-9d3f-8cf071742f98}">
+		<relationship name="effects">
+			<destination>{f4b4bea0-00c6-4feb-9f2e-99add2776b87}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{de23b585-399a-4df0-bece-645897581b47}" />
+	<object class="MixerBusFader" id="{f4b4bea0-00c6-4feb-9f2e-99add2776b87}" />
+</objects>

@@ -17,7 +17,7 @@ public class AudioPlayerController : MonoBehaviour
     public GameObject audioTrigger, door, pause;
 
     public Sprite onSprite;
-    [HideInInspector]
+    //[HideInInspector]
     public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
 
     [SerializeField][Range(0,1)]
