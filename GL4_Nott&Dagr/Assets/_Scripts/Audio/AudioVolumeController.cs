@@ -18,7 +18,7 @@ public class AudioVolumeController : MonoBehaviour
 
     // Objects
     private FMOD.Studio.Bus 
-        _bubbleEnterExitMaster, _gemActiveMaster, _icecubeDestroyedMaster, _portalActivatedMaster, _plantGrowMaster, _stoneNoisesMaster, _trampolineMaster;
+        _bubbleEnterExitMaster, _gemActiveMaster, _icecubeDestroyedMaster, _portalActivatedMaster, _plantGrowMaster, _pressurePlateMaster, _ropeBurnSnapMaster, _ropeSwingMaster, _ropeTwistMaster, _stoneNoisesMaster, _teleportPlayersMaster, _trampolineMaster;
 
     // Players SFX
 
@@ -36,27 +36,49 @@ public class AudioVolumeController : MonoBehaviour
     //... with 0 being the default value, -80 means the sound is off. They should be linked the apropriate names, master as in the bus 
     //... in FMod, name for what it controls i.e. music, then name it musicMasterVolume.
 
-    [Header(" Master Controllers ")]
-
-    [SerializeField] 
-    [Range(-80f, 20f)]
-    public float musicMasterVolume, sfxMasterVolume;
-
-    //--------------------------------------------------------------------------------------------------------//
-
-    [Header(" Environment SFX Controllers")]
-
-    [SerializeField]
-    [Range(-80f, 20f)]
-    public float iceFreezeVolume, iceMeltVolume, waterFreezeVolume;
+    [Header(" Master Controllers ")] 
+    [SerializeField] [Range(-80f, 20f)]
+    public float musicMasterVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float sfxMasterVolume;
 
     //--------------------------------------------------------------------------------------------------------//
 
-    [Header(" Objects SFX Controllers")]
+    [Header(" Environment SFX Controllers")] 
+    [SerializeField] [Range(-80f, 20f)]
+    public float iceFreezeVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float iceMeltVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float waterFreezeVolume;
 
-    [SerializeField]
-    [Range(-80f, 20f)]
-    public float bubbleEnterExitVolume, gemActiveVolume, _icecubeDestroyedVolume, _portalActivatedVolume, plantGrowVolume, stoneNoisesVolume, trampolineVolume;
+    //--------------------------------------------------------------------------------------------------------//
+
+    [Header(" Objects SFX Controllers")] 
+    [SerializeField] [Range(-80f, 20f)]
+    public float bubbleEnterExitVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float gemActiveVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float icecubeDestroyedVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float portalActivatedVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float plantGrowVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float pressurePlateVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float ropeBurnSnapVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float ropeSwingVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float ropeTwistVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float stoneNoisesVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float teleportPlayersVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float trampolineVolume;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -64,17 +86,16 @@ public class AudioVolumeController : MonoBehaviour
 
     [Header(" Players SFX Controllers")]
 
-    [SerializeField]
-    [Range(-80f, 20f)]
+    [SerializeField] [Range(-80f, 20f)]
     public float footstepsAndLandingsVolume;
 
     //--------------------------------------------------------------------------------------------------------//
 
-    [Header(" UI SFX Controllers")]
-
-    [SerializeField]
-    [Range(-80f, 20f)]
-    public float buttonHighlightVolume, buttonSelectedVolume;
+    [Header(" UI SFX Controllers")] 
+    [SerializeField] [Range(-80f, 20f)]
+    public float buttonHighlightVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float buttonSelectedVolume;
     
     //--------------------------------------------------------------------------------------------------------//
 
@@ -100,8 +121,13 @@ public class AudioVolumeController : MonoBehaviour
         _icecubeDestroyedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/IcecubeDestroyed");
         _portalActivatedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PortalActivated");
         _plantGrowMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PlantGrowing");
+        _pressurePlateMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PressurePlate");
+        _ropeBurnSnapMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeBurnSnap");
+        _ropeSwingMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeSwing");
+        _ropeTwistMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeTwist");
         _stoneNoisesMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/StoneNoises");
         _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
+        _teleportPlayersMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/TeleportPlayers");
 
 
         // Players SFX
@@ -130,9 +156,14 @@ public class AudioVolumeController : MonoBehaviour
         _bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
         _gemActiveMaster.setVolume(DecibelToLinear(gemActiveVolume));
         _icecubeDestroyedMaster.setVolume(DecibelToLinear(gemActiveVolume));
-        _portalActivatedMaster.setVolume(DecibelToLinear(_portalActivatedVolume));
+        _portalActivatedMaster.setVolume(DecibelToLinear(portalActivatedVolume));
         _plantGrowMaster.setVolume(DecibelToLinear(plantGrowVolume));
+        _pressurePlateMaster.setVolume(DecibelToLinear(pressurePlateVolume));
+        _ropeBurnSnapMaster.setVolume(DecibelToLinear(ropeBurnSnapVolume));
+        _ropeSwingMaster.setVolume(DecibelToLinear(ropeSwingVolume));
+        _ropeTwistMaster.setVolume(DecibelToLinear(ropeTwistVolume));
         _stoneNoisesMaster.setVolume(DecibelToLinear(stoneNoisesVolume));
+        _teleportPlayersMaster.setVolume(DecibelToLinear(teleportPlayersVolume));
         _trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));
 
         // Players
@@ -143,7 +174,6 @@ public class AudioVolumeController : MonoBehaviour
         _buttonHighlightMaster.setVolume(DecibelToLinear(buttonHighlightVolume));
         _buttonSelectedMaster.setVolume(DecibelToLinear(buttonSelectedVolume));
     }
-
     //--------------------------------------------------------------------------------------------------------//
 
     //... this is so the float value is more like audio dB value.
@@ -152,6 +182,5 @@ public class AudioVolumeController : MonoBehaviour
         var linear = Mathf.Pow(10.0f, dB / 20f);
         return linear;
     }
-    
     //--------------------------------------------------------------------------------------------------------//
 }

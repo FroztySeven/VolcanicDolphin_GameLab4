@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{c6da58dc-4d46-46a7-855f-de280151c262}">
+		<property name="name">
+			<value>RopeTwist</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{d83dd584-2b40-48d2-80dd-e784d653ac6a}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{bb2de427-77a3-4437-9ab9-3de1ac931eec}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5a56a70e-4a55-4bb1-ba5e-b29879268c64}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{d83dd584-2b40-48d2-80dd-e784d653ac6a}">
+		<relationship name="effects">
+			<destination>{317a71ff-82e6-4ea9-83de-08f4c0953207}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{bb2de427-77a3-4437-9ab9-3de1ac931eec}" />
+	<object class="MixerBusFader" id="{317a71ff-82e6-4ea9-83de-08f4c0953207}" />
+</objects>
