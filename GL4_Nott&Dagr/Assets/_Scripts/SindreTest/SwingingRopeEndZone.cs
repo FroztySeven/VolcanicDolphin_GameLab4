@@ -10,7 +10,8 @@ public class SwingingRopeEndZone : MonoBehaviour
 
     private GameObject dagrGO, nottGO;
 
-    private bool dagrOnRope = false, nottOnRope = false, isTriggered;
+    //[HideInInspector]
+    public bool dagrOnRope = false, nottOnRope = false, isTriggered;
 
     //---Audio Addon---//
     private bool isSwinging, onRopeDSFX, onRopeNSFX;
@@ -204,7 +205,7 @@ public class SwingingRopeEndZone : MonoBehaviour
         }
     }*/
 
-    private IEnumerator turnOnTriggerAgain()
+    public IEnumerator turnOnTriggerAgain()
     {
         yield return new WaitForSeconds(1f);
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
