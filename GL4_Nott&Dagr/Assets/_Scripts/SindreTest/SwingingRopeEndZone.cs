@@ -10,7 +10,7 @@ public class SwingingRopeEndZone : MonoBehaviour
 
     private GameObject dagrGO, nottGO;
 
-    private bool dagrOnRope = false, nottOnRope = false;
+    private bool dagrOnRope = false, nottOnRope = false, isTriggered;
 
     //---Audio Addon---//
     private bool isSwinging, onRopeDSFX, onRopeNSFX;
@@ -93,36 +93,45 @@ public class SwingingRopeEndZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (!isTriggered)
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+
+            if (other.gameObject.CompareTag("Player"))
             {
-                dagrOnRope = true;
-
-                //----Audio Addon-----//
-                onRopeDSFX = true;
-                if (dagrOnRope && onRopeDSFX)
+                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
                 {
-                    FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
-                    onRopeDSFX = false;
+                    dagrOnRope = true;
+                    Debug.Log("DAGR ON ROPE");
+                    
+                    //----Audio Addon-----//
+                    onRopeDSFX = true;
+                    if (dagrOnRope && onRopeDSFX)
+                    {
+                        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+                        onRopeDSFX = false;
+                    }
+
+                    //----Audio Addon-----//
                 }
-                //----Audio Addon-----//
-            }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
-            {
-                nottOnRope = true;
-
-                //----Audio Addon-----//
-                onRopeNSFX = true;
-                if (nottOnRope && onRopeNSFX)
+                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
                 {
-                    FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
-                    onRopeNSFX = false;
+                    nottOnRope = true;
+
+                    //----Audio Addon-----//
+                    onRopeNSFX = true;
+                    if (nottOnRope && onRopeNSFX)
+                    {
+                        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+                        onRopeNSFX = false;
+                    }
+
+                    //----Audio Addon-----//
                 }
-                //----Audio Addon-----//
             }
         }
+
+        isTriggered = true;
     }
 
     /*private void OnTriggerStay2D(Collider2D other)
@@ -199,6 +208,7 @@ public class SwingingRopeEndZone : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        isTriggered = false;
     }
 
     //---Audio Addon---//
