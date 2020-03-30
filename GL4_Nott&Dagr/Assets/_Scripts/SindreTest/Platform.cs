@@ -20,6 +20,8 @@ public class Platform : MonoBehaviour
     
     
     private float yCenter, xCenter;
+    private float currentYPos = 0;
+    private float currentXPos = 0;
 
     private HingeJoint2D _hingeJoint2D;
     private JointMotor2D _jointMotor2D;
@@ -56,12 +58,22 @@ public class Platform : MonoBehaviour
         
         if (sideWays)
         {
-            gameObject.transform.position = new Vector2(xCenter + Mathf.PingPong(Time.time * moveSpeed,moveDistance),transform.position.y);
+            currentXPos += moveSpeed * Time.deltaTime;
+            gameObject.transform.position = new Vector2(xCenter + Mathf.PingPong(currentXPos, moveDistance),transform.position.y);
+            if (currentXPos >= moveDistance * 2)
+            {
+                currentXPos = 0;
+            }
         }
 
         if (upAndDown)
         {
-            gameObject.transform.position = new Vector2(transform.position.x, yCenter + Mathf.PingPong(Time.time * moveSpeed, moveDistance));
+            currentYPos += moveSpeed * Time.deltaTime;
+            gameObject.transform.position = new Vector2(transform.position.x, yCenter + Mathf.PingPong(currentYPos, moveDistance));
+            if (currentYPos >= moveDistance * 2)
+            {
+                currentYPos = 0;
+            }
         }
 
         if (seeSaw)
