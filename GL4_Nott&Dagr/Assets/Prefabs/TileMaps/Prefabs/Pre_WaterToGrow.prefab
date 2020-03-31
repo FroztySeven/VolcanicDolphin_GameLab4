@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 724314853633595633}
   - component: {fileID: 5598350578261796997}
   m_Layer: 10
-  m_Name: WaterPrefab
+  m_Name: Pre_WaterToGrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdd53b5ae0311348918d574816ddcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dagrTrigger: {fileID: 0}
   nottTrigger: {fileID: 0}
   waterSprite: {fileID: -232557141201085988, guid: dc4bb04565aecd04d8f588f7b487dd32,
     type: 3}
@@ -158,3 +159,4 @@ MonoBehaviour:
   isWater: 0
   isFrozen: 0
   waterFreezes: event:/SFX/Enviroment/WaterFreeze
+  waterSplash: event:/SFX/Enviroment/WaterSplash

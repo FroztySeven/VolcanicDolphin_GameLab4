@@ -61,8 +61,8 @@ GameObject:
   - component: {fileID: 3640748300887031817}
   - component: {fileID: 9064490499702086086}
   m_Layer: 9
-  m_Name: Seed
-  m_TagString: Untagged
+  m_Name: Pre_Seed
+  m_TagString: SeedBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

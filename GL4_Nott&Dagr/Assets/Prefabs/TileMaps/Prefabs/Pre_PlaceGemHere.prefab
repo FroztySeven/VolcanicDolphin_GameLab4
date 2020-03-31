@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1653341816}
   - component: {fileID: 5352661376661720862}
   m_Layer: 11
-  m_Name: PlaceGemHere
-  m_TagString: Untagged
+  m_Name: Pre_PlaceGemHere
+  m_TagString: GemHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

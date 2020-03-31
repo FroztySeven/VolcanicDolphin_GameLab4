@@ -79,15 +79,17 @@ MonoBehaviour:
   iceFreezeVolume: -15
   iceMeltVolume: -15
   waterFreezeVolume: -5
+  waterSplashVolume: -15
   bubbleEnterExitVolume: -25
   gemActiveVolume: -5
   icecubeDestroyedVolume: -10
-  portalActivatedVolume: -7
+  portalActivatedVolume: -15
   plantGrowVolume: -10
   pressurePlateVolume: -10
   ropeBurnSnapVolume: -3
   ropeSwingVolume: -20
   ropeTwistVolume: -7
+  slidingVolume: -15
   stoneNoisesVolume: -15
   teleportPlayersVolume: -10
   trampolineVolume: -7

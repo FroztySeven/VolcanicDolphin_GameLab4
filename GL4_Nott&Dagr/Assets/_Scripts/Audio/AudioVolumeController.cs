@@ -14,11 +14,11 @@ public class AudioVolumeController : MonoBehaviour
 
     // Environment SFX
     private FMOD.Studio.Bus 
-        _iceFreezeMaster, _iceMeltMaster, _waterFreezeMaster;
+        _iceFreezeMaster, _iceMeltMaster, _waterFreezeMaster, _waterSplashMaster;
 
     // Objects
     private FMOD.Studio.Bus 
-        _bubbleEnterExitMaster, _gemActiveMaster, _icecubeDestroyedMaster, _portalActivatedMaster, _plantGrowMaster, _pressurePlateMaster, _ropeBurnSnapMaster, _ropeSwingMaster, _ropeTwistMaster, _stoneNoisesMaster, _teleportPlayersMaster, _trampolineMaster;
+        _bubbleEnterExitMaster, _gemActiveMaster, _icecubeDestroyedMaster, _portalActivatedMaster, _plantGrowMaster, _pressurePlateMaster, _ropeBurnSnapMaster, _ropeSwingMaster, _ropeTwistMaster, _slidingMaster, _stoneNoisesMaster, _teleportPlayersMaster, _trampolineMaster;
 
     // Players SFX
 
@@ -51,6 +51,8 @@ public class AudioVolumeController : MonoBehaviour
     public float iceMeltVolume;
     [SerializeField] [Range(-80f, 20f)]
     public float waterFreezeVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float waterSplashVolume;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -73,6 +75,8 @@ public class AudioVolumeController : MonoBehaviour
     public float ropeSwingVolume;
     [SerializeField] [Range(-80f, 20f)]
     public float ropeTwistVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float slidingVolume;
     [SerializeField] [Range(-80f, 20f)]
     public float stoneNoisesVolume;
     [SerializeField] [Range(-80f, 20f)]
@@ -113,6 +117,7 @@ public class AudioVolumeController : MonoBehaviour
         _iceFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceFreeze");
         _iceMeltMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceMelt");
         _waterFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/WaterFreeze");
+        _waterSplashMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/WaterSplash");
 
 
         // Objects
@@ -125,6 +130,7 @@ public class AudioVolumeController : MonoBehaviour
         _ropeBurnSnapMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeBurnSnap");
         _ropeSwingMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeSwing");
         _ropeTwistMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeTwist");
+        _slidingMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Sliding");
         _stoneNoisesMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/StoneNoises");
         _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
         _teleportPlayersMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/TeleportPlayers");
@@ -151,6 +157,7 @@ public class AudioVolumeController : MonoBehaviour
         _iceFreezeMaster.setVolume(DecibelToLinear(iceFreezeVolume));
         _iceMeltMaster.setVolume(DecibelToLinear(iceMeltVolume));
         _waterFreezeMaster.setVolume(DecibelToLinear(waterFreezeVolume));
+        _waterSplashMaster.setVolume(DecibelToLinear(waterSplashVolume));
 
         // Objects
         _bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
@@ -162,6 +169,7 @@ public class AudioVolumeController : MonoBehaviour
         _ropeBurnSnapMaster.setVolume(DecibelToLinear(ropeBurnSnapVolume));
         _ropeSwingMaster.setVolume(DecibelToLinear(ropeSwingVolume));
         _ropeTwistMaster.setVolume(DecibelToLinear(ropeTwistVolume));
+        _slidingMaster.setVolume(DecibelToLinear(slidingVolume));
         _stoneNoisesMaster.setVolume(DecibelToLinear(stoneNoisesVolume));
         _teleportPlayersMaster.setVolume(DecibelToLinear(teleportPlayersVolume));
         _trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));

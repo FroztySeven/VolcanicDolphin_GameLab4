@@ -7,8 +7,8 @@ using FMODUnity;
 
 public class AudioWaterController : MonoBehaviour
 {
-    [HideInInspector]
-    public GameObject nottTrigger;
+    //[HideInInspector]
+    public GameObject dagrTrigger, nottTrigger, gem;
     [HideInInspector]
     public Sprite waterSprite, frozenSprite;
     [HideInInspector]
@@ -17,11 +17,13 @@ public class AudioWaterController : MonoBehaviour
     public bool isWater, isFrozen;
 
     [FMODUnity.EventRef]
-    public string waterFreezes;
+    public string waterFreezes, waterSplash;
 
     void Start()
     {
+          dagrTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
           nottTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
+          gem = GameObject.Find("Gem");
     }
 
     void Update()
@@ -49,10 +51,26 @@ public class AudioWaterController : MonoBehaviour
             CallWaterFreezes();
             isWater = false;
         }
+
+        if (other.gameObject == dagrTrigger && isWater)
+        {
+            CallWaterSplash();
+        }
+        
+        if (other.gameObject == gem)
+        {
+            CallWaterSplash();
+            Debug.Log("Hit water gem");
+        }
     }
 
     void CallWaterFreezes()
     {
         FMODUnity.RuntimeManager.PlayOneShot(waterFreezes);
+    }
+
+    void CallWaterSplash()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(waterSplash);
     }
 }
