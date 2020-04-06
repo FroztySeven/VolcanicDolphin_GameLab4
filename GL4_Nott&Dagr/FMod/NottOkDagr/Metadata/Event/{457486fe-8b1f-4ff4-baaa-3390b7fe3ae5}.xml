@@ -118,6 +118,9 @@
 		<property name="volume">
 			<value>-10</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{06552e5a-8b68-4a07-a2a3-9818a8715575}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{c94686cc-9825-42bb-a14b-f6ab2cba8710}</destination>
 		</relationship>
@@ -149,7 +152,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{b662b6de-3917-42b2-9fe6-a5e89bf5938e}">
 		<property name="volume">
-			<value>-3</value>
+			<value>-11.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -176,6 +179,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{ab54b86e-6a05-4fa4-a974-81bda1f54392}">
+		<property name="volume">
+			<value>-11.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>
@@ -196,6 +202,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{101d1b5a-3cfd-4ea8-bb1d-941260332480}" />
 	<object class="MixerBusFader" id="{7961f384-6868-4bef-b0ff-880a06596e6b}" />
+	<object class="FadeCurve" id="{06552e5a-8b68-4a07-a2a3-9818a8715575}">
+		<relationship name="startPoint">
+			<destination>{8f577241-9dc2-49e8-8f94-97f4c8a70dd4}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{b1f4543c-6837-4425-983c-ebfbaef4379b}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{b896fd00-364e-4ca0-bca6-886b7eb490af}">
 		<relationship name="effects">
 			<destination>{379321c2-48c6-4d62-b676-c8a3d263fd45}</destination>
@@ -215,7 +229,7 @@
 	<object class="MixerBusEffectChain" id="{28195ec6-d009-46b7-8998-315021ba4f82}">
 		<relationship name="effects">
 			<destination>{fc39deed-c713-43dd-9b0d-aa3791ed658b}</destination>
-			<destination>{4271f711-5a56-4373-a393-1bd969fef274}</destination>
+			<destination>{da75bf45-5a6c-4e2b-9bbf-934cb6736d7d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2c42977e-88b0-407f-9b34-a3f9ed4788d0}" />
@@ -236,6 +250,25 @@
 	</object>
 	<object class="MixerBusPanner" id="{55edcbe3-ca91-4533-8a1f-254a4b8b83b2}" />
 	<object class="MixerBusFader" id="{f0cbec52-f827-4d2f-9328-03016025279f}" />
+	<object class="AutomationPoint" id="{8f577241-9dc2-49e8-8f94-97f4c8a70dd4}">
+		<property name="position">
+			<value>1.1000000000000001</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.0503297374</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{b1f4543c-6837-4425-983c-ebfbaef4379b}">
+		<property name="position">
+			<value>3.3159637188208619</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{379321c2-48c6-4d62-b676-c8a3d263fd45}" />
 	<object class="ChorusEffect" id="{9c126bd5-3c41-4777-9c6d-05263ed5a5fe}">
 		<property name="rate">
@@ -250,7 +283,7 @@
 			<value>1600</value>
 		</property>
 		<property name="resonance">
-			<value>4.19999981</value>
+			<value>3.49999976</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{451771a4-9149-45a6-98b7-f87ddad28d35}">
@@ -261,7 +294,7 @@
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.170847386</value>
+			<value>-1.00000048</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{ebf842e8-3858-4a94-96e5-69d2df0d5692}">
@@ -273,9 +306,9 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{fc39deed-c713-43dd-9b0d-aa3791ed658b}" />
-	<object class="ChorusEffect" id="{4271f711-5a56-4373-a393-1bd969fef274}">
+	<object class="ChorusEffect" id="{da75bf45-5a6c-4e2b-9bbf-934cb6736d7d}">
 		<property name="rate">
-			<value>0.140000001</value>
+			<value>0.074000001</value>
 		</property>
 		<property name="depth">
 			<value>56</value>
@@ -289,7 +322,7 @@
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.588032365</value>
+			<value>-1.00000048</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{991d4a58-ab60-4b22-9866-2461d1240c01}">

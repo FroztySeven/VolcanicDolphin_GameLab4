@@ -57,7 +57,7 @@ public class AudioWaterController : MonoBehaviour
             CallWaterSplash();
         }
         
-        if (other.gameObject == gem)
+        if (other.gameObject == gem && isWater)
         {
             CallWaterSplash();
             Debug.Log("Hit water gem");
