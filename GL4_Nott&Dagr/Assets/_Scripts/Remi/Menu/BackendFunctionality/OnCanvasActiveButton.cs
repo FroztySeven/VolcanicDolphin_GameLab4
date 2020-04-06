@@ -29,4 +29,10 @@ public class OnCanvasActiveButton : MonoBehaviour
             es.SetSelectedGameObject(whichButtonIsFirstSelected);
         }
     }
+
+    public void OnCalledThroughInspector()
+    {
+        EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        es.SetSelectedGameObject(whichButtonIsFirstSelected);
+    }
 }

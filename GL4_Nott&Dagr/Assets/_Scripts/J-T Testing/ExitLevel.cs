@@ -17,12 +17,14 @@ public class ExitLevel : MonoBehaviour
 
     [HideInInspector] //--Changed private to public to let audiotrigger know level is over-- Gunnar
     public bool nightEnter, dayEnter, levelFinished, loadingScreenIsActive;
-    [HideInInspector]
-    public bool playerPixelate;
+
+    [HideInInspector] public bool playerPixelate;
 
     private GameObject night, day, tempLoadingScreen;
 
-    private int nextSceneLoad;
+    [Header("Which level scene should load and unlock next?")]
+    public string nextLevelSceneName;
+    public int unlockLevelNumber;
 
     private void Awake()
     {
@@ -43,8 +45,6 @@ public class ExitLevel : MonoBehaviour
 
         sparksNightMain = sparksNight.main;
         sparksDayMain = sparksDay.main;
-
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -109,6 +109,14 @@ public class ExitLevel : MonoBehaviour
             StartCoroutine(instantiateLoadingScreen());
         }
 
+        //Cheat complete level
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            tempLoadingScreen = Instantiate(loadingScreen);
+            StartCoroutine(nextLevel());
+            loadingScreenIsActive = true;
+        }
+
         if (levelFinished)
         {
             //finished.SetActive(true);
@@ -159,17 +167,18 @@ public class ExitLevel : MonoBehaviour
             StartCoroutine(nextLevel());
             loadingScreenIsActive = true;
         }
-        
+
     }
-    
+
     private IEnumerator nextLevel()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(nextSceneLoad);
-        //Setting Int for Index
-        if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
+
+        if (unlockLevelNumber > PlayerPrefs.GetInt("LevelPrefs", 1))
         {
-            PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
+            PlayerPrefs.SetInt("LevelPrefs", unlockLevelNumber);
         }
+
+        SceneManager.LoadScene(nextLevelSceneName);
     }
 }

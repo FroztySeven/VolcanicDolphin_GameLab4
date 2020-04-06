@@ -48,7 +48,7 @@ public class OptionConfigs : MonoBehaviour
 
     public void SetPlayerPrefsToMax()
     {
-        PlayerPrefs.SetInt("LevelPrefs", 100);
+        PlayerPrefs.SetInt("LevelPrefs", 999);
         SceneManager.LoadScene("MainMenu");
     }
 
