@@ -77,9 +77,9 @@ public class Plant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
-                other.GetComponent<PlayerMovementTest>().isOnLadder = true;
+                other.GetComponent<PlayerController>().isOnLadder = true;
 
                 if (isFrozen)
                 {
@@ -87,7 +87,7 @@ public class Plant : MonoBehaviour
                 }
             }
 
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 if (!isFrozen)
                 {
@@ -102,20 +102,20 @@ public class Plant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
-                other.GetComponent<PlayerMovementTest>().isOnLadder = true;
+                other.GetComponent<PlayerController>().isOnLadder = true;
             }
 
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 if (isFrozen)
                 {
-                    other.GetComponent<PlayerMovementTest>().isOnLadder = false;
+                    other.GetComponent<PlayerController>().isOnLadder = false;
                 }
                 else
                 {
-                    other.GetComponent<PlayerMovementTest>().isOnLadder = true;
+                    other.GetComponent<PlayerController>().isOnLadder = true;
                 }
             }
         }
@@ -125,14 +125,14 @@ public class Plant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
-                other.GetComponent<PlayerMovementTest>().isOnLadder = false;
+                other.GetComponent<PlayerController>().isOnLadder = false;
             }
 
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
-                other.GetComponent<PlayerMovementTest>().isOnLadder = false;
+                other.GetComponent<PlayerController>().isOnLadder = false;
             }
         }
     }

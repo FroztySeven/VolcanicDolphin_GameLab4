@@ -25,7 +25,7 @@ public class OneWayPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            _startJumpforce = other.GetComponent<PlayerMovementTest>().jumpForce;
+            _startJumpforce = other.GetComponent<PlayerController>().jumpForce;
             if (_startJumpforce <= 0)
             {
                 _startJumpforce = 750;
@@ -37,12 +37,12 @@ public class OneWayPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetAxis("VerticalP" + other.GetComponent<PlayerMovementTest>().playerId) <= -1)
+            if (Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -1)
             {
-                other.GetComponent<PlayerMovementTest>().jumpForce = 0;
+                other.GetComponent<PlayerController>().jumpForce = 0;
 
-                if (other.GetComponent<PlayerMovementTest>().isGrounded && Input.GetAxis("VerticalP" + other.GetComponent<PlayerMovementTest>().playerId) <= -1 && 
-                    Input.GetButton("JumpP" + other.GetComponent<PlayerMovementTest>().playerId))
+                if (other.GetComponent<PlayerController>().isGrounded && Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -1 && 
+                    Input.GetButton("JumpP" + other.GetComponent<PlayerController>().playerId))
                 {
                     _platformEffector.rotationalOffset = 180;
                     StartCoroutine(rotateBack());
@@ -50,7 +50,7 @@ public class OneWayPlatform : MonoBehaviour
             }
             else
             {
-                other.GetComponent<PlayerMovementTest>().jumpForce = _startJumpforce;
+                other.GetComponent<PlayerController>().jumpForce = _startJumpforce;
             }
         }
     }
@@ -59,7 +59,7 @@ public class OneWayPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerMovementTest>().jumpForce = _startJumpforce;
+            other.GetComponent<PlayerController>().jumpForce = _startJumpforce;
         }
     }
 

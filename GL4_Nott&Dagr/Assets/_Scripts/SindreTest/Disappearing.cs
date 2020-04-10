@@ -53,14 +53,14 @@ public class Disappearing : MonoBehaviour
             other.transform.SetParent(null); 
             if (disappearBehindNott)
             {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     foreach (Transform child in gameObject.transform)
                     {
                         child.transform.gameObject.SetActive(false);
                     }
                 }
-                else if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                else if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                 {
                     foreach (Transform child in gameObject.transform)
                     {
@@ -71,14 +71,14 @@ public class Disappearing : MonoBehaviour
 
             if (disappearBehindDagr)
             { 
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day") 
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day") 
                 { 
                     foreach (Transform child in gameObject.transform) 
                     { 
                         child.transform.gameObject.SetActive(false);
                     }
                 }
-                else if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                else if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     foreach (Transform child in gameObject.transform)
                     {
@@ -99,14 +99,14 @@ public class Disappearing : MonoBehaviour
             {
                 if (turnOnByNott) 
                 { 
-                    if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night") //night turns on a object
+                    if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night") //night turns on a object
                     { 
                         foreach (Transform child in gameObject.transform) 
                         { 
                             child.transform.gameObject.SetActive(true);
                         }
                     }
-                    else if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                    else if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                     { //turns off object when day enters the trigger
                         foreach (Transform child in gameObject.transform) 
                         { 
@@ -117,14 +117,14 @@ public class Disappearing : MonoBehaviour
 
                 if (turnOnByDagr)
                 {
-                    if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day") //day turns on a object
+                    if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day") //day turns on a object
                     {
                         foreach (Transform child in gameObject.transform)
                         {
                             child.transform.gameObject.SetActive(true);
                         }
                     }
-                    else if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                    else if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                     { //turn off object when night tries to enter
                         foreach (Transform child in gameObject.transform) 
                         { 
@@ -134,7 +134,7 @@ public class Disappearing : MonoBehaviour
                 } 
             }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             { //if day is inside the trigger and night tries to enter, have to move night so she does not get stuck inside the wall
                 dagrInsideTrigger = true;
                 if (nottInsideTrigger)
@@ -143,7 +143,7 @@ public class Disappearing : MonoBehaviour
                 }
             }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             { //same as above just with day instead of night
                 nottInsideTrigger = true;
                 if (dagrInsideTrigger)
@@ -180,11 +180,11 @@ public class Disappearing : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player")) //turn off the correct boolean
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 nottInsideTrigger = false;
             }
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 dagrInsideTrigger = false;
             }

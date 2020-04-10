@@ -11,14 +11,14 @@ public class EnemyFreeze : MonoBehaviour
         {
             if (GetComponentInParent<EnemyPatrol>().canUnfreeze == true)
             {
-                if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     GetComponentInParent<EnemyPatrol>().enabled = false;
                     GetComponentInParent<SpriteRenderer>().sprite = GetComponentInParent<EnemyPatrol>().transformSprite;
                     GetComponentInParent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 
                 }
-                if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                 {
                     startUnFreezing = true;
                 }
@@ -26,7 +26,7 @@ public class EnemyFreeze : MonoBehaviour
 
             if (GetComponentInParent<EnemyPatrol>().canUnfreeze == false)
             {
-                if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     GetComponentInParent<EnemyPatrol>().enabled = false;
                     GetComponentInParent<SpriteRenderer>().sprite = GetComponentInParent<EnemyPatrol>().transformSprite;

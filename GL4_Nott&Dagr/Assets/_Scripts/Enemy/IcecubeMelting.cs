@@ -16,7 +16,7 @@ public class IcecubeMelting : MonoBehaviour
         // 
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 if (!isIceCubeExisting)
                 {
@@ -37,7 +37,7 @@ public class IcecubeMelting : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 if (isIceCubeExisting)
                 {

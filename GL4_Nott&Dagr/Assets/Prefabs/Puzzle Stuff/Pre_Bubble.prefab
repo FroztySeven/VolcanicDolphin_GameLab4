@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7560626662078515382}
   - component: {fileID: 7560626662078515385}
   m_Layer: 15
-  m_Name: BubbleElevator
+  m_Name: Pre_Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

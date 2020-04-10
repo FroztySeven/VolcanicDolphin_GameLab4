@@ -18,7 +18,7 @@ public class SwingingPlatform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(null);
-            other.transform.GetComponent<PlayerMovementTest>().canMove = true;
+            other.transform.GetComponent<PlayerController>().playerCanMove = true;
         }
     }
 
@@ -26,13 +26,13 @@ public class SwingingPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.transform.GetComponent<PlayerMovementTest>().moveInput.x > 0 || other.transform.GetComponent<PlayerMovementTest>().moveInput.x < 0)
+            if (other.transform.GetComponent<PlayerController>().movementInputHorizontalDirection > 0 || other.transform.GetComponent<PlayerController>().movementInputHorizontalDirection < 0)
             {
-                other.transform.GetComponent<PlayerMovementTest>().canMove = true;
+                other.transform.GetComponent<PlayerController>().playerCanMove = true;
             }
             else
             {
-                other.transform.GetComponent<PlayerMovementTest>().canMove = false;
+                other.transform.GetComponent<PlayerController>().playerCanMove = false;
             }
         }
     }

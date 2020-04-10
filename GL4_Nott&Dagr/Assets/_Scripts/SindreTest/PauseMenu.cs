@@ -71,16 +71,16 @@ public class PauseMenu : MonoBehaviour
             {
                 mainPanel.SetActive(false);
                 Time.timeScale = 1f;
-                dagr.GetComponent<PlayerMovementTest>().enabled = true;
-                nott.GetComponent<PlayerMovementTest>().enabled = true;
+                dagr.GetComponent<PlayerController>().enabled = true;
+                nott.GetComponent<PlayerController>().enabled = true;
             }
             else if (!mainPanel.activeSelf) // turn on the pause menu
             {
                 mainPanel.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
                 Time.timeScale = 0f;
-                dagr.GetComponent<PlayerMovementTest>().enabled = false;
-                nott.GetComponent<PlayerMovementTest>().enabled = false;
+                dagr.GetComponent<PlayerController>().enabled = false;
+                nott.GetComponent<PlayerController>().enabled = false;
             }
         }
 
@@ -113,8 +113,8 @@ public class PauseMenu : MonoBehaviour
         mainPanel.SetActive(false);
         Time.timeScale = 1f;
         
-        dagr.GetComponent<PlayerMovementTest>().enabled = true;
-        nott.GetComponent<PlayerMovementTest>().enabled = true;
+        dagr.GetComponent<PlayerController>().enabled = true;
+        nott.GetComponent<PlayerController>().enabled = true;
     }
 
     public void returnToMenuButton()

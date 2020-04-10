@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -214,8 +214,7 @@ PrefabInstance:
     - target: {fileID: 1141244599, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2e672f0e01a08e24cbff7f7a95121bb3,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1533157058, guid: c2f959fe761f0d14f975e220ddb38c5b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -433,7 +432,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6dde91f640ed9d1438fdfb88855c403c,
+      objectReference: {fileID: 21300000, guid: 0fc54536f473e2f4d981eae556fbcd83,
         type: 3}
     - target: {fileID: 7788640641283361658, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
@@ -443,12 +442,22 @@ PrefabInstance:
     - target: {fileID: 7788640641283361658, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7788640641283361658, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788640641283361658, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.53125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788640641283361658, guid: c2f959fe761f0d14f975e220ddb38c5b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.28125
       objectReference: {fileID: 0}
     - target: {fileID: 7788640641283361659, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}
@@ -524,11 +533,6 @@ PrefabInstance:
         type: 3}
       propertyPath: singlePlayer
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788640642130819353, guid: c2f959fe761f0d14f975e220ddb38c5b,
-        type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 1847
       objectReference: {fileID: 0}
     - target: {fileID: 7788640642130819353, guid: c2f959fe761f0d14f975e220ddb38c5b,
         type: 3}

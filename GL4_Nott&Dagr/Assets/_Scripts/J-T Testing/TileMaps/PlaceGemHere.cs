@@ -8,6 +8,8 @@ public class PlaceGemHere : MonoBehaviour
 
     public Gems gemColour;
 
+    public bool stopGemWhenInPosition;
+
     public Sprite[] gemSprites;
 
     private int gemSelect;
@@ -39,6 +41,12 @@ public class PlaceGemHere : MonoBehaviour
     {
         if (other.name == "Gem")
         {
+            if (other.GetComponent<Gem>().gemColour.ToString() == gemColour.ToString() && other.GetComponent<Gem>().isFrozen && stopGemWhenInPosition)
+            {
+                other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                other.transform.position = transform.position;
+            }
+
             if (other.GetComponent<Gem>().gemColour.ToString() == gemColour.ToString() && !other.GetComponent<Gem>().isFrozen)
             {
                 GetComponent<SpriteRenderer>().color = Color.white;

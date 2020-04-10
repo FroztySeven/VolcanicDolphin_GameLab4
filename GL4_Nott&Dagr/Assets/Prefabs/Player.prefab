@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 7788640642130819352}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1010262861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010262862}
+  m_Layer: 9
+  m_Name: LedgeCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1010262862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010262861}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7788640642130819352}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1141244595
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +72,7 @@ GameObject:
   - component: {fileID: 1141244599}
   - component: {fileID: 1141244598}
   - component: {fileID: 1141244597}
-  - component: {fileID: 7788640640931986715}
+  - component: {fileID: 1699007064116312395}
   m_Layer: 12
   m_Name: Aura
   m_TagString: Untagged
@@ -62,6 +92,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1755796625}
+  - {fileID: 1734484973}
+  - {fileID: 1469931225}
   m_Father: {fileID: 7788640642130819352}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -149,7 +181,9 @@ MonoBehaviour:
   dayAuraColor: {r: 0.7264151, g: 0.6015163, b: 0.23642756, a: 0.6}
   nightAuraColor: {r: 0.45698926, g: 0.6344086, b: 1, a: 0.6}
   colorIntensity: 1
---- !u!70 &7788640640931986715
+  auraPickupRight: {fileID: 1734484972}
+  auraPickupLeft: {fileID: 1469931224}
+--- !u!70 &1699007064116312395
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,6 +199,126 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.8}
   m_Size: {x: 1.6, y: 1.6}
   m_Direction: 1
+--- !u!1 &1469931224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469931225}
+  - component: {fileID: 1469931227}
+  - component: {fileID: 1469931226}
+  m_Layer: 2
+  m_Name: AuraPickUpLeft
+  m_TagString: AuraPickup
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1469931225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469931224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1141244596}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1469931227
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469931224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!114 &1469931226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469931224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fedd23f12458549af302519e27d9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1734484972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734484973}
+  - component: {fileID: 1734484974}
+  - component: {fileID: 1734484975}
+  m_Layer: 2
+  m_Name: AuraPickUpRight
+  m_TagString: AuraPickup
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734484973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734484972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1141244596}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1734484974
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734484972}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!114 &1734484975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734484972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fedd23f12458549af302519e27d9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755796624
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011920406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7788640642130819352}
@@ -778,6 +932,7 @@ GameObject:
   - component: {fileID: 7788640642130820838}
   - component: {fileID: 7788640640931986718}
   - component: {fileID: 1890390277906901525}
+  - component: {fileID: 7788640640931986715}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -803,6 +958,7 @@ Transform:
   - {fileID: 4175540453729784279}
   - {fileID: 8536230631779655350}
   - {fileID: 1141244596}
+  - {fileID: 1010262862}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -820,28 +976,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setPlayer: 1
   playerId: 0
-  singlePlayer: 1
-  movementSpeed: 10
-  jumpForce: 750
-  moveInput: {x: 0, y: 0}
-  theRB: {fileID: 7788640642130820838}
-  canWallJump: 0
-  canDoubleJump: 0
-  doubleJumpCounter: 0
-  canMove: 1
+  amountOfJumps: 1
+  movementInputHorizontalDirection: 0
+  movementInputVerticalDirection: 0
+  movementSpeed: 9
+  jumpForce: 16
+  groundCheckRadius: 0.15
+  wallCheckDistance: 0.65
+  wallSlideSpeed: 1
+  movementForceInAir: 50
+  airDragMultiplier: 0.95
+  variableJumpHeightMultiplier: 0.5
+  wallHopForce: 10
+  wallJumpForce: 20
+  wallJumpDownwardForce: 6
+  jumpTimerSet: 0.15
+  turnTimerSet: 0.1
+  wallJumpTimerSet: 0.5
+  ledgeClimbXOffset1: 0.3
+  ledgeClimbYOffset1: 1
+  ledgeClimbXOffset2: 0.5
+  ledgeClimbYOffset2: 1.5
+  isOnLadder: 0
   isGrounded: 0
+  auraBounce: 0
+  playerCanMove: 1
+  singlePlayer: 1
+  wallHopDirection: {x: 1, y: 0.5}
+  wallJumpDirection: {x: 1, y: 2}
+  groundCheck: {fileID: 868335383}
+  wallCheck: {fileID: 2011920407}
+  ledgeCheck: {fileID: 1010262862}
+  noFriction: {fileID: 6200000, guid: 62898d32a0a8944449b5aaf72c01573b, type: 2}
+  friction: {fileID: 6200000, guid: ecde2e7d293f0484a976fb8712f6c8bf, type: 2}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1847
-  groundedRadius: 0.15
-  ceilingRadius: 0.05
-  wallSize: {x: 0.4, y: 0.6}
+    m_Bits: 262145
+  theRB: {fileID: 7788640642130820838}
   currentSprite: {fileID: 0}
-  isOnLadder: 0
-  auraBounce: 0
-  groundCheck: {fileID: 868335383}
-  ceilingCheck: {fileID: 1905536795}
-  wallCheck: {fileID: 2011920407}
 --- !u!50 &7788640642130820838
 Rigidbody2D:
   serializedVersion: 4
@@ -857,9 +1029,9 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_GravityScale: 4
+  m_Material: {fileID: 6200000, guid: 62898d32a0a8944449b5aaf72c01573b, type: 2}
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -897,3 +1069,22 @@ MonoBehaviour:
   dayAura: {fileID: 0}
   nightSprite: {fileID: 21300000, guid: 0fc54536f473e2f4d981eae556fbcd83, type: 3}
   daySprite: {fileID: 21300000, guid: cef352563c0509b49a26b03d4d6d4d3f, type: 3}
+--- !u!95 &7788640640931986715
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788640642130820836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49423fa56d5a1b940a9672ef2055bece, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

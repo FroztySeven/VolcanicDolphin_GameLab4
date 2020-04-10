@@ -11,7 +11,8 @@ public class Gem : MonoBehaviour
     public Sprite[] gemFrozenSprites;
     public Sprite[] gemUnfrozenSprites;
 
-    private Rigidbody2D theRB;
+    [HideInInspector]
+    public Rigidbody2D theRB;
     private CircleCollider2D theCC;
 
     private Vector2 startOffset;
@@ -21,6 +22,9 @@ public class Gem : MonoBehaviour
     private float unfrozenRadius;
 
     public bool isFrozen;
+    public bool isPickedUp = false;
+
+    private bool auraPickupTouch = false;
 
     private void Start()
     {
@@ -44,14 +48,14 @@ public class Gem : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 theRB.isKinematic = false;
                 theRB.mass = 10;
                 theCC.isTrigger = false;
             }
 
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 theRB.isKinematic = false;
                 theRB.velocity = Vector2.zero;
@@ -63,13 +67,19 @@ public class Gem : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = gemUnfrozenSprites[(int)gemColour];
             }
         }
+
+        if (other.tag == "AuraPickup" && !auraPickupTouch)
+        {
+            theRB.isKinematic = false;
+            theCC.isTrigger = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 theRB.mass = 10;
                 theCC.offset = startOffset;
@@ -78,7 +88,7 @@ public class Gem : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = gemFrozenSprites[(int)gemColour];
             }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 theRB.velocity = Vector2.zero;
                 theRB.mass = 1000;

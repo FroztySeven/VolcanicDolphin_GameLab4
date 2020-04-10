@@ -13,7 +13,7 @@ public class AuraBounce : MonoBehaviour
 
     private float auraRangeStart;
 
-    private PlayerMovementTest player;
+    private PlayerController player;
 
     private float auraBounceTimer;
     private bool auraBounce;
@@ -42,9 +42,12 @@ public class AuraBounce : MonoBehaviour
 
     private PlayerPixelate pixelate;
 
+    public GameObject auraPickupRight, auraPickupLeft;
+    private Vector3 auraPickUpRightPos, auraPickUpLeftPos;
+
     private void Start()
     {
-        player = GetComponentInParent<PlayerMovementTest>();
+        player = GetComponentInParent<PlayerController>();
         if (GetComponent<CapsuleCollider2D>())
         {
             hasCapsuleCollider = true;
@@ -65,6 +68,9 @@ public class AuraBounce : MonoBehaviour
             pixelStart = auraMat.GetFloat("_PixelateAmount");
             pixelTarget = pixelStart * 2;
             pixelAmount = pixelStart;
+
+            auraPickUpRightPos = auraPickupRight.transform.localPosition;
+            auraPickUpLeftPos = auraPickupLeft.transform.localPosition;
 
             colorIntensity += 1;
             if (player.setPlayer.ToString() == "Night")
@@ -129,6 +135,7 @@ public class AuraBounce : MonoBehaviour
                     col.offset = col.offset + (new Vector2(moveInput.x * Time.deltaTime * auraMovementSpeed, 0f) / 2);
                     auraMat.SetFloat("_Width", auraMat.GetFloat("_Width") + moveInput.x * (Time.deltaTime * auraMovementSpeed) / 16);
                     auraMat.SetVector("_Offset", auraMat.GetVector("_Offset") + (new Vector4(-moveInput.x * ((Time.deltaTime * auraMovementSpeed) / 2) / 16 , 0f, 0f, 0f)));
+                    auraPickupRight.transform.localPosition = auraPickUpRightPos + new Vector3(col.offset.x * 2, 0f, 0f);
                 }
 
                 if (moveInput.x > 0 && col.offset.x <= colOffset.x && auraMat.GetVector("_Offset").x >= auraOffset.x)
@@ -137,6 +144,8 @@ public class AuraBounce : MonoBehaviour
                     col.offset = new Vector2(Mathf.MoveTowards(col.offset.x, colOffset.x, (Time.deltaTime * auraMovementSpeed) / 2), colOffset.y);
                     auraMat.SetFloat("_Width", Mathf.MoveTowards(auraMat.GetFloat("_Width"), auraWidth, (Time.deltaTime * auraMovementSpeed) / 16));
                     auraMat.SetVector("_Offset", new Vector2(Mathf.MoveTowards(auraMat.GetVector("_Offset").x, auraOffset.x, (((Time.deltaTime * auraMovementSpeed) / 2) / 16)), auraOffset.y));
+                    auraPickupRight.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupRight.transform.localPosition.x, auraPickUpRightPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpRightPos.y, auraPickUpRightPos.z);
+                    auraPickupLeft.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupLeft.transform.localPosition.x, auraPickUpLeftPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpLeftPos.y, auraPickUpLeftPos.y);
                 }
 
                 if (moveInput.x < 0 && col.size.x < auraRangeStart * auraRange && col.offset.x <= colOffset.x && auraMat.GetFloat("_Width") < auraWidth * auraRange)
@@ -145,6 +154,7 @@ public class AuraBounce : MonoBehaviour
                     col.offset = col.offset + (new Vector2(moveInput.x * Time.deltaTime * auraMovementSpeed, 0f) / 2);
                     auraMat.SetFloat("_Width", auraMat.GetFloat("_Width") + -moveInput.x * (Time.deltaTime * auraMovementSpeed) / 16);
                     auraMat.SetVector("_Offset", auraMat.GetVector("_Offset") + (new Vector4(-moveInput.x * ((Time.deltaTime * auraMovementSpeed) / 2) / 16, 0f, 0f, 0f)));
+                    auraPickupLeft.transform.localPosition = auraPickUpLeftPos + new Vector3(col.offset.x * 2, 0f, 0f);
                 }
 
                 if (moveInput.x < 0 && col.offset.x >= colOffset.x && auraMat.GetVector("_Offset").x <= auraOffset.x)
@@ -153,6 +163,8 @@ public class AuraBounce : MonoBehaviour
                     col.offset = new Vector2(Mathf.MoveTowards(col.offset.x, colOffset.x, (Time.deltaTime * auraMovementSpeed) / 2), colOffset.y);
                     auraMat.SetFloat("_Width", Mathf.MoveTowards(auraMat.GetFloat("_Width"), auraWidth, (Time.deltaTime * auraMovementSpeed) / 16));
                     auraMat.SetVector("_Offset", new Vector2(Mathf.MoveTowards(auraMat.GetVector("_Offset").x, auraOffset.x, (((Time.deltaTime * auraMovementSpeed) / 2) / 16)), auraOffset.y));
+                    auraPickupLeft.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupLeft.transform.localPosition.x, auraPickUpLeftPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpLeftPos.y, auraPickUpLeftPos.y);
+                    auraPickupRight.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupRight.transform.localPosition.x, auraPickUpRightPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpRightPos.y, auraPickUpRightPos.z);
                 }
             }
             else if (moveInput.x != 0 && col.offset.y != colOffset.y && auraMat.GetVector("_Offset").y != auraOffset.y)
@@ -205,6 +217,8 @@ public class AuraBounce : MonoBehaviour
                 col.offset = new Vector2(Mathf.MoveTowards(col.offset.x, colOffset.x, (Time.deltaTime * auraMovementSpeed) / 2), colOffset.y);
                 auraMat.SetFloat("_Width", Mathf.MoveTowards(auraMat.GetFloat("_Width"), auraWidth, (Time.deltaTime * auraMovementSpeed) / 16));
                 auraMat.SetVector("_Offset", new Vector2(Mathf.MoveTowards(auraMat.GetVector("_Offset").x, auraOffset.x, (((Time.deltaTime * auraMovementSpeed) / 2) / 16)), auraOffset.y));
+                auraPickupRight.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupRight.transform.localPosition.x, auraPickUpRightPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpRightPos.y, auraPickUpRightPos.z);
+                auraPickupLeft.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupLeft.transform.localPosition.x, auraPickUpLeftPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpLeftPos.y, auraPickUpLeftPos.y);
             }
 
             if (moveInput.x == 0 && moveInput.y == 0)
@@ -214,6 +228,8 @@ public class AuraBounce : MonoBehaviour
                 auraMat.SetFloat("_Width", Mathf.MoveTowards(auraMat.GetFloat("_Width"), auraWidth, (Time.deltaTime * auraMovementSpeed) / 16));
                 auraMat.SetFloat("_Height", Mathf.MoveTowards(auraMat.GetFloat("_Height"), auraHeight, (Time.deltaTime * auraMovementSpeed) / 16));
                 auraMat.SetVector("_Offset", new Vector2(Mathf.MoveTowards(auraMat.GetVector("_Offset").x, auraOffset.x, (((Time.deltaTime * auraMovementSpeed) / 2) / 16)), Mathf.MoveTowards(auraMat.GetVector("_Offset").y, auraOffset.y, (((Time.deltaTime * auraMovementSpeed) / 2) / 16))));
+                auraPickupRight.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupRight.transform.localPosition.x, auraPickUpRightPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpRightPos.y, auraPickUpRightPos.z);
+                auraPickupLeft.transform.localPosition = new Vector3(Mathf.MoveTowards(auraPickupLeft.transform.localPosition.x, auraPickUpLeftPos.x, (Time.deltaTime * auraMovementSpeed)), auraPickUpLeftPos.y, auraPickUpLeftPos.y);
             }
         }
     }

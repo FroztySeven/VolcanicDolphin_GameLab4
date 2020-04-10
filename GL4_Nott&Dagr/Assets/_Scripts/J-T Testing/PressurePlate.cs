@@ -68,7 +68,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == setUser.ToString())
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString())
             {
                 button.transform.position = pressedPos;
 
@@ -115,7 +115,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == setUser.ToString())
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString())
             {
                 button.transform.position = pressedPos;
                 if (setItemToControl.ToString() == "Wall")
@@ -161,7 +161,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == setUser.ToString())
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString())
             {
                 button.transform.position = startPos;
                 if (setItemToControl.ToString() == "Wall")
@@ -179,7 +179,7 @@ public class PressurePlate : MonoBehaviour
                     rope.SetActive(true);
                     if (ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.childCount > 0)
                     {
-                        ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.GetChild(0).GetComponent<PlayerMovementTest>().theRB.velocity = Vector2.zero;
+                        ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.GetChild(0).GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
                         ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.DetachChildren();
                         ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).GetComponent<SwingingRopeEndZone>().dagrOnRope = false;
                         ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).GetComponent<SwingingRopeEndZone>().nottOnRope = false;
@@ -207,7 +207,7 @@ public class PressurePlate : MonoBehaviour
                     rope.SetActive(true);
                     if (ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.childCount > 0)
                     {
-                        ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.GetChild(0).GetComponent<PlayerMovementTest>().theRB.velocity = Vector2.zero;
+                        ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.GetChild(0).GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
                         ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.DetachChildren();
                         ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).GetComponent<SwingingRopeEndZone>().dagrOnRope = false;
                         ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).GetComponent<SwingingRopeEndZone>().nottOnRope = false;

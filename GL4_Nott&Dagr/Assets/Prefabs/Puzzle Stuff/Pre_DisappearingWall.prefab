@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 765617023103629113}
   - component: {fileID: 765617023103629114}
   m_Layer: 0
-  m_Name: DisappearingWall
+  m_Name: Pre_DisappearingWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

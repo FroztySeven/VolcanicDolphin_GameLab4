@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemColour: 0
+  stopGemWhenInPosition: 1
   gemSprites:
   - {fileID: 2705623035998209056, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: 1791769691355452127, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}

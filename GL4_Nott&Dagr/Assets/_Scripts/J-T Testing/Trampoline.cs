@@ -73,7 +73,7 @@ public class Trampoline : MonoBehaviour
         dayColor = Color.yellow;
         bothColor = Color.green;
 
-        playerJumpForce = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementTest>().jumpForce;
+        playerJumpForce = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().jumpForce;
 
         startLayer = gameObject.layer;
 
@@ -112,18 +112,18 @@ public class Trampoline : MonoBehaviour
         {
             if (setJumper.ToString() == "Both")
             {
-                other.gameObject.GetComponent<PlayerMovementTest>().theRB.velocity = Vector2.zero;
-                other.gameObject.GetComponent<PlayerMovementTest>().theRB.AddForce(new Vector2(0f, jumpForce));
+                other.gameObject.GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
+                other.gameObject.GetComponent<PlayerController>().theRB.AddForce(new Vector2(0f, jumpForce));
             }
 
             if (setJumper.ToString() == "Night")
             {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
-                    other.gameObject.GetComponent<PlayerMovementTest>().theRB.velocity = Vector2.zero;
-                    other.gameObject.GetComponent<PlayerMovementTest>().theRB.AddForce(new Vector2(0f, jumpForce));
+                    other.gameObject.GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
+                    other.gameObject.GetComponent<PlayerController>().theRB.AddForce(new Vector2(0f, jumpForce));
                 }
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                 {
                     gameObject.layer = default;
                 }
@@ -131,21 +131,21 @@ public class Trampoline : MonoBehaviour
 
             if (setJumper.ToString() == "Day")
             {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                 {
-                    other.gameObject.GetComponent<PlayerMovementTest>().theRB.velocity = Vector2.zero;
-                    other.gameObject.GetComponent<PlayerMovementTest>().theRB.AddForce(new Vector2(0f, jumpForce));
+                    other.gameObject.GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
+                    other.gameObject.GetComponent<PlayerController>().theRB.AddForce(new Vector2(0f, jumpForce));
                 }
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     gameObject.layer = default;
                 }
             }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().canDoubleJump)
-            {
-                other.gameObject.GetComponent<PlayerMovementTest>().doubleJumpCounter = 1;
-            }
+            //if (other.gameObject.GetComponent<PlayerMovementTest>().canDoubleJump)
+            //{
+            //    other.gameObject.GetComponent<PlayerMovementTest>().doubleJumpCounter = 1;
+            //}
         }
 
         if (other.gameObject.name == "Gem")
@@ -161,7 +161,7 @@ public class Trampoline : MonoBehaviour
         {
             if (setJumper.ToString() == "Night")
             {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                 {
                     gameObject.layer = startLayer;
                 }
@@ -169,16 +169,16 @@ public class Trampoline : MonoBehaviour
 
             if (setJumper.ToString() == "Day")
             {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     gameObject.layer = startLayer;
                 }
             }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().canDoubleJump)
-            {
-                other.gameObject.GetComponent<PlayerMovementTest>().doubleJumpCounter = 1;
-            }
+            //if (other.gameObject.GetComponent<PlayerMovementTest>().canDoubleJump)
+            //{
+            //    other.gameObject.GetComponent<PlayerMovementTest>().doubleJumpCounter = 1;
+            //}
         }
     }
 }

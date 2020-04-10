@@ -107,6 +107,7 @@ public class Platform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(this.transform);
+            other.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.None;
         }
 
         if (disappearing)
@@ -114,9 +115,11 @@ public class Platform : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 other.transform.SetParent(null);
+                other.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
+
                 if (disappearBehindNott)
                 {
-                    if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                    if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                     {
                         foreach (Transform child in gameObject.transform)
                         {
@@ -130,7 +133,7 @@ public class Platform : MonoBehaviour
 
                 if (disappearBehindDagr)
                 {
-                    if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                    if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                     {
                         foreach (Transform child in gameObject.transform)
                         {
@@ -146,7 +149,7 @@ public class Platform : MonoBehaviour
                 {
                     if (turnOnByNott)
                     {
-                        if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night") //night turns on a platform
+                        if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night") //night turns on a platform
                         {
                             foreach (Transform child in gameObject.transform)
                             {
@@ -160,7 +163,7 @@ public class Platform : MonoBehaviour
 
                     if (turnOnByDagr)
                     {
-                        if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day") //day turns on a platform
+                        if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day") //day turns on a platform
                         {
                             foreach (Transform child in gameObject.transform)
                             {
@@ -182,6 +185,7 @@ public class Platform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(null);
+            other.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
         }
     }
 

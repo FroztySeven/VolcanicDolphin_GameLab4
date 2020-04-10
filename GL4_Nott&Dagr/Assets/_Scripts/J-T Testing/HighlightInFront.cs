@@ -59,12 +59,12 @@ public class HighlightInFront : MonoBehaviour
             hangFromCellSet = true;
         }
 
-        if ((Input.GetKey("joystick " + GetComponent<PlayerMovementTest>().playerId + " button 5") || Input.GetKey("joystick " + GetComponent<PlayerMovementTest>().playerId + " button 4")) && hangFromCellSet)
+        if ((Input.GetKey("joystick " + GetComponent<PlayerController>().playerId + " button 5") || Input.GetKey("joystick " + GetComponent<PlayerController>().playerId + " button 4")) && hangFromCellSet)
         {
             if (hangFromCell != default)
             {
                 transform.position = new Vector3(hangFromCell.x + 0.5f, hangFromCell.y + 0.5f, transform.position.z);
-                GetComponent<PlayerMovementTest>().theRB.velocity = Vector2.zero;
+                GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
             }
         }
         else
@@ -113,7 +113,7 @@ public class HighlightInFront : MonoBehaviour
             // set the new tile
             //highlightMap.SetTile(currentCell, highlightTile);
 
-            if (GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 standingOnTile = waterMap.GetTile(currentCell);
                 leftTile = waterMap.GetTile(leftCell);
@@ -159,15 +159,15 @@ public class HighlightInFront : MonoBehaviour
 
                 if (groundAboveTile == ladderMiddle || groundAboveTile == ladderTop)
                 {
-                    GetComponent<PlayerMovementTest>().isOnLadder = true;
+                    GetComponent<PlayerController>().isOnLadder = true;
                 }
                 else
                 {
-                    GetComponent<PlayerMovementTest>().isOnLadder = false;
+                    GetComponent<PlayerController>().isOnLadder = false;
                 }
             }
 
-            if (GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 standingOnTile = waterMap.GetTile(currentCell);
                 leftTile = waterMap.GetTile(leftCell);
@@ -266,11 +266,11 @@ public class HighlightInFront : MonoBehaviour
 
                 if (groundAboveTile == ladderMiddle || groundAboveTile == ladderTop)
                 {
-                    GetComponent<PlayerMovementTest>().isOnLadder = true;
+                    GetComponent<PlayerController>().isOnLadder = true;
                 }
                 else
                 {
-                    GetComponent<PlayerMovementTest>().isOnLadder = false;
+                    GetComponent<PlayerController>().isOnLadder = false;
                 }
             }
 

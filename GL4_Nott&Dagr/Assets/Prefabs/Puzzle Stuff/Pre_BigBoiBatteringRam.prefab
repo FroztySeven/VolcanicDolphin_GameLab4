@@ -2982,7 +2982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3040315714880394512}
   m_Layer: 0
-  m_Name: SwingingBatteringRamBig
+  m_Name: Pre_BigBoiBatteringRam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

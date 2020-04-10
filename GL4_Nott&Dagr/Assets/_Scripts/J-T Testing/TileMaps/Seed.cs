@@ -16,7 +16,7 @@ public class Seed : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 GetComponent<Rigidbody2D>().isKinematic = false;
                 GetComponent<Rigidbody2D>().mass = 10;
@@ -24,7 +24,7 @@ public class Seed : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = Color.white;
             }
 
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 GetComponent<Rigidbody2D>().isKinematic = false;
                 GetComponent<Rigidbody2D>().mass = 1000;
@@ -38,13 +38,13 @@ public class Seed : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 GetComponent<Rigidbody2D>().mass = 10;
                 GetComponent<SpriteRenderer>().color = Color.white;
             }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 GetComponent<Rigidbody2D>().mass = 1000;
                 GetComponent<SpriteRenderer>().color = frozenColor;

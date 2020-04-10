@@ -11,7 +11,7 @@ public class AudioPlayerController : MonoBehaviour
 
     //--------------------------------------------------------------------------//
     [HideInInspector]
-    public PlayerMovementTest _pmt;
+    public PlayerController _pmt;
     [HideInInspector]
     public Rigidbody2D playerRB;
     [HideInInspector]
@@ -144,22 +144,22 @@ public class AudioPlayerController : MonoBehaviour
         {
             if (onPlant)
             {
-                if (_pmt.moveInput.y > 0.1 || _pmt.moveInput.y < -0.1)
+                if (_pmt.movementInputVerticalDirection > 0.1 || _pmt.movementInputVerticalDirection < -0.1)
                 {
                     isClimbing = true;
                 }
-                else if (_pmt.moveInput.y > -0.1 || _pmt.moveInput.y < 0.1)
+                else if (_pmt.movementInputVerticalDirection > -0.1 || _pmt.movementInputVerticalDirection < 0.1)
                 {
                     isClimbing = false;
                 }
             }
             else if (!onPlant)
             {
-                if (_pmt.moveInput.y > 0.1 || _pmt.moveInput.y < -0.1)
+                if (_pmt.movementInputVerticalDirection > 0.1 || _pmt.movementInputVerticalDirection < -0.1)
                 {
                     isClimbing = false;
                 }
-                else if (_pmt.moveInput.y > -0.1 || _pmt.moveInput.y < 0.1)
+                else if (_pmt.movementInputVerticalDirection > -0.1 || _pmt.movementInputVerticalDirection < 0.1)
                 {
                     isClimbing = false;
                 }
@@ -351,11 +351,11 @@ public class AudioPlayerController : MonoBehaviour
 
         if (isDagr || isNott)
         {
-            if (_pmt.moveInput.x > 0.1 || _pmt.moveInput.x < -0.1)
+            if (_pmt.movementInputHorizontalDirection > 0.1 || _pmt.movementInputHorizontalDirection < -0.1)
             {
                 isMoving = true;
             }
-            else if (_pmt.moveInput.x > -0.1 || _pmt.moveInput.x < 0.1)
+            else if (_pmt.movementInputHorizontalDirection > -0.1 || _pmt.movementInputHorizontalDirection < 0.1)
             {
                 isMoving = false;
             }
@@ -440,7 +440,7 @@ public class AudioPlayerController : MonoBehaviour
     {
         if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
         {
-            _pmt = GameObject.Find("Player1").GetComponent<PlayerMovementTest>();
+            _pmt = GameObject.Find("Player1").GetComponent<PlayerController>();
             playerRB = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
             audioTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
             gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
@@ -450,7 +450,7 @@ public class AudioPlayerController : MonoBehaviour
 
         if (this.gameObject == GameObject.Find("AudioTriggerNott"))
         {
-            _pmt = GameObject.Find("Player2").GetComponent<PlayerMovementTest>();
+            _pmt = GameObject.Find("Player2").GetComponent<PlayerController>();
             playerRB = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
             audioTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
             gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);

@@ -67,9 +67,10 @@ public class BubbleController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 _player2.transform.parent = this.transform;
+                _player2.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.None;
 
                 if (bubbleMoveInt == 0)
                 {
@@ -80,9 +81,10 @@ public class BubbleController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 _player1.transform.parent = this.transform;
+                _player1.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.None;
                 GetComponent<SpriteRenderer>().color = Color.yellow;
                 bubbleMoveInt = 2;
             }
@@ -93,9 +95,10 @@ public class BubbleController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 _player2.transform.parent = null;
+                _player2.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
 
                 bubbleMoveInt = 0;
             }
@@ -103,9 +106,11 @@ public class BubbleController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 _player1.transform.parent = null;
+                _player1.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
+
                 bubbleMoveInt = 0;
                 GetComponent<SpriteRenderer>().color = Color.white;
             }

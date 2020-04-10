@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72971526467969409}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 755872840399877398}
@@ -322,7 +322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755872840399877401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 72971526467969415}
@@ -518,6 +518,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 755872840523104732}
     m_Modifications:
     - target: {fileID: 1599435802, guid: bc1e6158a5f734446808695a961f97db, type: 3}
+      propertyPath: upAndDown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599435802, guid: bc1e6158a5f734446808695a961f97db, type: 3}
       propertyPath: moveDistance
       value: 6
       objectReference: {fileID: 0}
@@ -528,14 +532,6 @@ PrefabInstance:
     - target: {fileID: 1599435802, guid: bc1e6158a5f734446808695a961f97db, type: 3}
       propertyPath: seeSawSpeed
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1599435802, guid: bc1e6158a5f734446808695a961f97db, type: 3}
-      propertyPath: upAndDown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1599435802, guid: bc1e6158a5f734446808695a961f97db, type: 3}
-      propertyPath: sideWays
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1233943483173093006, guid: bc1e6158a5f734446808695a961f97db,
         type: 3}
@@ -690,17 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1377567181335024603, guid: d78c92733c6d43143b300783c8524036,
         type: 3}
-      propertyPath: ropeLength
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1377567181335024603, guid: d78c92733c6d43143b300783c8524036,
-        type: 3}
       propertyPath: both
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1377567181335024603, guid: d78c92733c6d43143b300783c8524036,
-        type: 3}
-      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1377567181443502041, guid: d78c92733c6d43143b300783c8524036,

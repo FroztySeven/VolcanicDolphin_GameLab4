@@ -20,7 +20,7 @@ public class GrowingPlant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 //Debug.Log("Something hit me!");
                 StartCoroutine(PlantGrow());

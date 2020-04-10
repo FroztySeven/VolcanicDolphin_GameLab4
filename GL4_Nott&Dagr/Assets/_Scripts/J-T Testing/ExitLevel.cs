@@ -51,7 +51,7 @@ public class ExitLevel : MonoBehaviour
     {
         if (other.gameObject == night || other.gameObject == day)
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 nightEnter = true;
                 other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
@@ -61,7 +61,7 @@ public class ExitLevel : MonoBehaviour
                 sparksNightMain.loop = true;
             }
 
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 dayEnter = true;
                 other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
@@ -77,7 +77,7 @@ public class ExitLevel : MonoBehaviour
     {
         if (other.gameObject == night || other.gameObject == day)
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 nightEnter = false;
                 other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
@@ -85,7 +85,7 @@ public class ExitLevel : MonoBehaviour
                 sparksNightMain.loop = false;
             }
 
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 dayEnter = false;
                 other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
@@ -99,10 +99,10 @@ public class ExitLevel : MonoBehaviour
     {
         if (nightEnter && dayEnter)
         {
-            night.GetComponent<PlayerMovementTest>().canMove = false;
-            day.GetComponent<PlayerMovementTest>().canMove = false;
-            night.GetComponent<PlayerMovementTest>().theRB.velocity = new Vector2(0f, -10f);
-            day.GetComponent<PlayerMovementTest>().theRB.velocity = new Vector2(0f, -10f);
+            night.GetComponent<PlayerController>().playerCanMove = false;
+            day.GetComponent<PlayerController>().playerCanMove = false;
+            night.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
+            day.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
             //levelFinished = true;
             playerPixelate = true;
             Invoke("LevelFinished", 5f);

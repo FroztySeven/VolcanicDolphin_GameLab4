@@ -105,7 +105,7 @@ public class Water : MonoBehaviour
 
     public void Frozen()
     {
-        gameObject.layer = default;
+        gameObject.layer = 18;
         theSR.sprite = frozenWater;
         isFrozen = true;
     }
@@ -130,7 +130,7 @@ public class Water : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 night = other.gameObject;
                 if (!isFrozen)
@@ -139,7 +139,7 @@ public class Water : MonoBehaviour
                 }
             }
 
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 if (isFrozen)
                 {
@@ -153,7 +153,7 @@ public class Water : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 night = null;
             }

@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class SetPlayerSprite : MonoBehaviour
 {
-    private PlayerMovementTest player;
+    private PlayerController player;
 
     public SpriteRenderer playerSprite, auraSprite;
     public Sprite nightAura, dayAura, nightSprite, daySprite;
@@ -13,7 +13,7 @@ public class SetPlayerSprite : MonoBehaviour
     private void Start()
     {
         playerSprite.gameObject.SetActive(true);
-        player = GetComponent<PlayerMovementTest>();
+        player = GetComponent<PlayerController>();
 
         if (player.setPlayer.ToString() == "Night")
         {

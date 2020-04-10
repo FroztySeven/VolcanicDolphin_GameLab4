@@ -54,7 +54,7 @@ public class IceCube : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 unfreeze = true;
             }

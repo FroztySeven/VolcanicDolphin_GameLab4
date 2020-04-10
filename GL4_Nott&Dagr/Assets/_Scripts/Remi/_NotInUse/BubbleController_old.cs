@@ -49,7 +49,7 @@ public class BubbleController_old : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 if (canMove) 
                 {
@@ -65,7 +65,7 @@ public class BubbleController_old : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 if (canMove)
                 {
@@ -82,7 +82,7 @@ public class BubbleController_old : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 if (canMove)
                 {
@@ -95,7 +95,7 @@ public class BubbleController_old : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player"))
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 if (canMove)
                 {

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4130485588344187778}
   - component: {fileID: 4130485588344187789}
   - component: {fileID: 4130485588344187788}
-  m_Layer: 0
-  m_Name: TwoWayPlatform
+  m_Layer: 18
+  m_Name: Pre_TwoWayPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

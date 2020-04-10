@@ -9,7 +9,7 @@ public class RopeBurn : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+            if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 gameObject.SetActive(false);
                 platform.GetComponent<PlatformEffector2D>().enabled = false;

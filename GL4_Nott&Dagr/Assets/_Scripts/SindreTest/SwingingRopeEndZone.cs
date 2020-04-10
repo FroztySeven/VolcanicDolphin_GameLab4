@@ -41,7 +41,7 @@ public class SwingingRopeEndZone : MonoBehaviour
                 dagrGO.transform.SetParent(this.transform);
                 dagrGO.transform.position = transform.position;
                 
-                if (Input.GetButtonDown("JumpP" + dagrGO.GetComponent<PlayerMovementTest>().playerId))
+                if (Input.GetButtonDown("JumpP" + dagrGO.GetComponent<PlayerController>().playerId))
                 {
                     dagrOnRope = false;
                     dagrGO.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
@@ -69,7 +69,7 @@ public class SwingingRopeEndZone : MonoBehaviour
                 nottGO.transform.SetParent(this.transform);
                 nottGO.transform.position = transform.position;
                 
-                if (Input.GetButtonDown("JumpP" + nottGO.GetComponent<PlayerMovementTest>().playerId))
+                if (Input.GetButtonDown("JumpP" + nottGO.GetComponent<PlayerController>().playerId))
                 {
                     nottOnRope = false;
                     nottGO.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
@@ -99,7 +99,7 @@ public class SwingingRopeEndZone : MonoBehaviour
 
             if (other.gameObject.CompareTag("Player"))
             {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                 {
                     dagrOnRope = true;
                     Debug.Log("DAGR ON ROPE");
@@ -115,7 +115,7 @@ public class SwingingRopeEndZone : MonoBehaviour
                     //----Audio Addon-----//
                 }
 
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     nottOnRope = true;
 

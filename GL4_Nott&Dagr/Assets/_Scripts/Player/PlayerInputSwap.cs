@@ -17,16 +17,16 @@ public class PlayerInputSwap : MonoBehaviour
 
             if (swapInputs)
             {
-                GameObject.Find("Player1").GetComponent<PlayerMovementTest>().playerId = 2;
-                GameObject.Find("Player2").GetComponent<PlayerMovementTest>().playerId = 1;
+                GameObject.Find("Player1").GetComponent<PlayerController>().playerId = 2;
+                GameObject.Find("Player2").GetComponent<PlayerController>().playerId = 1;
                 swapInputs = true;
 
                 print("Player inputs swapped");
             }
             else if (!swapInputs)
             {
-                GameObject.Find("Player1").GetComponent<PlayerMovementTest>().playerId = 1;
-                GameObject.Find("Player2").GetComponent<PlayerMovementTest>().playerId = 2;
+                GameObject.Find("Player1").GetComponent<PlayerController>().playerId = 1;
+                GameObject.Find("Player2").GetComponent<PlayerController>().playerId = 2;
 
                 print("Player inputs swapped");
             }
