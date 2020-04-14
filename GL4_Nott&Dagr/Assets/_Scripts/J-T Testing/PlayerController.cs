@@ -327,16 +327,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetAxisRaw("HorizontalP" + playerId) != 0 && isTouchingWall)
-        {
-            if (!isGrounded && movementInputHorizontalDirection != facingDirection)
-            {
-                canMove = false;
-                canFlip = false;
+        //if (Input.GetAxisRaw("HorizontalP" + playerId) != 0 && isTouchingWall)
+        //{
+        //    if (!isGrounded && movementInputHorizontalDirection != facingDirection)
+        //    {
+        //        canMove = false;
+        //        canFlip = false;
 
-                turnTimer = turnTimerSet;
-            }
-        }
+        //        turnTimer = turnTimerSet;
+        //    }
+        //}
 
         if (turnTimer >= 0)
         {
