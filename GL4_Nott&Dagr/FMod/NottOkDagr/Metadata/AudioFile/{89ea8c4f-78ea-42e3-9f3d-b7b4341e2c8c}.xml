@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{89ea8c4f-78ea-42e3-9f3d-b7b4341e2c8c}">
+		<property name="assetPath">
+			<value>Music/Chapter 2 - Jötunheim.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>117</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{304ebde2-9951-4076-b858-19283e48cee1}</destination>
+		</relationship>
+	</object>
+</objects>

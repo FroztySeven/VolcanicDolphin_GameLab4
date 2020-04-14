@@ -18,13 +18,13 @@ public class AudioPlayerController : MonoBehaviour
     public GameObject audioTrigger, door, pause;
 
     public Sprite onSprite;
-    //[HideInInspector]
+    [HideInInspector]
     public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
 
     [SerializeField][Range(0,1)]
     public float walkingSpeed;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isDagr, isNott, isGrounded, isMoving, isClimbing, isFalling, isTeleporting, hasLanded, onPlant, isDirt, isGrass, isIce, isPlant, isSnow, isStone, isWater, isWood;
 
     //--------------------------------------------------------------------------//
@@ -64,6 +64,7 @@ public class AudioPlayerController : MonoBehaviour
 
     void Update()
     {
+        
         CheckPause();
 
         //----------Grounded------------//
@@ -88,12 +89,6 @@ public class AudioPlayerController : MonoBehaviour
             CheckClimbing();
         }
 
-        //---------JumpLandings---------//
-        if (hasLanded)
-        {
-            GroundTypes();
-        }
-
         //-----------Dagr----------//
         if (isDagr)
         {
@@ -114,6 +109,12 @@ public class AudioPlayerController : MonoBehaviour
             CheckFalling();
 
             CheckGroundTypes();
+        }
+
+        //---------JumpLandings---------//
+        if (hasLanded)
+        {
+            GroundTypes();
         }
 
         LevelDone();

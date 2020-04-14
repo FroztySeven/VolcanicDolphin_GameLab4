@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{534d663d-d466-47cf-9161-d180b1d83469}">
+		<property name="assetPath">
+			<value>Music/Chapter 4 - Vanaheim.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>214.28572916666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{304ebde2-9951-4076-b858-19283e48cee1}</destination>
+		</relationship>
+	</object>
+</objects>

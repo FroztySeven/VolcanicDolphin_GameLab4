@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{36cb7ee0-324f-48f0-bdc2-a7592a982771}">
+		<property name="assetPath">
+			<value>Music/Chapter 3 - Múspelsheim.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>150.857125</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{304ebde2-9951-4076-b858-19283e48cee1}</destination>
+		</relationship>
+	</object>
+</objects>

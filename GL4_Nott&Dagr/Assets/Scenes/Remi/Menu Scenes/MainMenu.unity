@@ -5893,6 +5893,7 @@ GameObject:
   - component: {fileID: 1074516517}
   - component: {fileID: 1074516516}
   - component: {fileID: 1074516519}
+  - component: {fileID: 1074516520}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5907,7 +5908,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074516515}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1074516517
 Camera:
   m_ObjectHideFlags: 0
@@ -5996,6 +5997,19 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1074516520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074516515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1080944581
 GameObject:
   m_ObjectHideFlags: 0
@@ -12141,3 +12155,228 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145239888}
   m_CullTransparentMesh: 0
+--- !u!1001 &3353899688253593371
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Params.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Params.Array.data[2].Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Params.Array.data[3].Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TriggerEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120699421094363957, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141058964034784400, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 141058964034784400, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 256559425433572777, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 256559425433572777, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 256559425433572777, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: StopEvent
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 256559425433572777, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: StopEvent
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 256559425433572777, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 572020988634560786, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 572020988634560786, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: StopEvent
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020507874934784613, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: music
+      value: event:/Music/Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020507874934784613, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: isPlaying
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020507874934784613, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: play
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749019754853211270, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749019754853211270, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749019754853211270, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: Params.Array.data[0].Name
+      value: Music Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749019754853211270, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: StopEvent
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749019754853211270, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: Params.Array.data[0].Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010747778864597651, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010747778864597651, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: StopEvent
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440361353998808392, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887557802287902092, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887557802287902092, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: StopEvent
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207245768037451365, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909803629282718352, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787162049486584809, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787162049486584809, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: StopEvent
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000221029755329520, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_Name
+      value: MusicController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874769539476327757, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899614995581497634, guid: 23c7d73318e22e74c996e1621ad19c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23c7d73318e22e74c996e1621ad19c83, type: 3}

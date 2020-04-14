@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{5c0ca785-ddf1-4a72-8d98-49941d962e63}">
+		<property name="name">
+			<value>Music Controller</value>
+		</property>
+		<relationship name="folder">
+			<destination>{81a89367-a4d7-4023-9c4d-4c3c5128f938}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c8c501f4-d551-4112-9cc1-ff7f96c3d5d4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c8c501f4-d551-4112-9cc1-ff7f96c3d5d4}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>7</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Blank</value>
+			<value>CutSce.</value>
+			<value>Menu</value>
+			<value>Chp. 1</value>
+			<value>Chp. 2</value>
+			<value>Chp. 3</value>
+			<value>Chp. 4</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
