@@ -46,9 +46,9 @@ public class PlayerController : MonoBehaviour
     public int playerId = 0;
     public int amountOfJumps = 1;
 
-    //[HideInInspector]
+    [HideInInspector]
     public float movementInputHorizontalDirection;
-    //[HideInInspector]
+    [HideInInspector]
     public float movementInputVerticalDirection;
 
     public float movementSpeed = 10f;
@@ -111,20 +111,20 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+            CheckSurroundings();
         if (playerCanMove)
         {
             ApplyMovement();
-            CheckSurroundings();
         }
     }
 
     private void Update()
     {
             CheckInput();
+            CheckIfCanJump();
         if (playerCanMove)
         {
             CheckMovementDirection();
-            CheckIfCanJump();
             CheckIfWallSliding();
             CheckJump();
             CheckLedgeClimb();
