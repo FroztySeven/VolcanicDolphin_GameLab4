@@ -10,6 +10,7 @@ public class SwingingPlatform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(transform);
+            other.transform.GetComponent<PlayerController>().playerCanMove = true;
         }
     }
 
@@ -29,10 +30,12 @@ public class SwingingPlatform : MonoBehaviour
             if (other.transform.GetComponent<PlayerController>().movementInputHorizontalDirection > 0 || other.transform.GetComponent<PlayerController>().movementInputHorizontalDirection < 0)
             {
                 other.transform.GetComponent<PlayerController>().playerCanMove = true;
+                other.transform.GetComponent<PlayerController>().theRB.velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, other.transform.GetComponent<PlayerController>().theRB.velocity.y);
             }
-            else
+            else if (other.transform.GetComponent<PlayerController>().movementInputHorizontalDirection == 0)
             {
                 other.transform.GetComponent<PlayerController>().playerCanMove = false;
+                other.transform.GetComponent<PlayerController>().theRB.velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, other.transform.GetComponent<PlayerController>().theRB.velocity.y);
             }
         }
     }

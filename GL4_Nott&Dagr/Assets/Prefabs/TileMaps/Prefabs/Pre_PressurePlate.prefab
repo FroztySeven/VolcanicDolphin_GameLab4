@@ -593,6 +593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 2602546182651819281, guid: bc1e6158a5f734446808695a961f97db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4977118347988515401, guid: bc1e6158a5f734446808695a961f97db,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
