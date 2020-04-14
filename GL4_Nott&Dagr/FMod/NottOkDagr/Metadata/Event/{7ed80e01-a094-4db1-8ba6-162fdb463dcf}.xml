@@ -214,6 +214,7 @@
 	<object class="MixerBusEffectChain" id="{0baf5924-398f-4b42-a157-ea5a776617c4}">
 		<relationship name="effects">
 			<destination>{66b09bc5-98bc-42d5-aeeb-287c4c923561}</destination>
+			<destination>{4d339f08-ebf5-4f3f-96bd-98cd49372122}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{11ef4f90-86c1-4422-be51-bb2c42f4bb3b}" />
@@ -273,6 +274,7 @@
 	<object class="MixerBusEffectChain" id="{6dbf5366-5b56-45fc-a4d0-be658fc9e7fb}">
 		<relationship name="effects">
 			<destination>{006a75d1-0c69-487f-8e51-a6994c047a13}</destination>
+			<destination>{a9f6d614-d34a-481e-a379-5ca73646907c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fad2e524-48eb-4290-b8dc-ea37f4f66a77}" />
@@ -331,6 +333,7 @@
 	<object class="MixerBusEffectChain" id="{6bef5981-ad8b-4849-adaf-0f9ddf612a91}">
 		<relationship name="effects">
 			<destination>{c246e780-cca6-4bac-909e-3e9cfb0fffb8}</destination>
+			<destination>{b4b70fce-552b-452b-984a-78e1d95286d4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{05f9eaf1-4507-46c2-9f4d-4910a768bff1}" />
@@ -379,11 +382,16 @@
 	<object class="MixerBusEffectChain" id="{76b79eae-f552-4a97-8dcd-8711eae9645f}">
 		<relationship name="effects">
 			<destination>{3d19b93d-8a74-4671-8b5f-8980823cf656}</destination>
-			<destination>{cade1034-5899-45bd-9a44-f2dc033b5bda}</destination>
+			<destination>{9df7830c-211f-4de9-83a7-24794bcb6280}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b05677bc-d669-4e3d-aa9e-7d39538fc08e}" />
 	<object class="MixerBusFader" id="{66b09bc5-98bc-42d5-aeeb-287c4c923561}" />
+	<object class="PitchShifterEffect" id="{4d339f08-ebf5-4f3f-96bd-98cd49372122}">
+		<property name="pitch">
+			<value>0.75000006</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{bce91bb7-acd0-4431-85e6-754a3e757e49}">
 		<property name="position">
 			<value>0</value>
@@ -423,6 +431,11 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{006a75d1-0c69-487f-8e51-a6994c047a13}" />
+	<object class="LowpassEffect" id="{a9f6d614-d34a-481e-a379-5ca73646907c}">
+		<property name="cutoff">
+			<value>8000</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{0317feae-f7ff-4283-87aa-aafabc4e7448}">
 		<property name="position">
 			<value>0</value>
@@ -462,6 +475,11 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{c246e780-cca6-4bac-909e-3e9cfb0fffb8}" />
+	<object class="LowpassEffect" id="{b4b70fce-552b-452b-984a-78e1d95286d4}">
+		<property name="cutoff">
+			<value>1000</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{3f0394d2-308b-467e-b2ff-b653eb144104}">
 		<property name="position">
 			<value>0</value>
@@ -501,9 +519,9 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{3d19b93d-8a74-4671-8b5f-8980823cf656}" />
-	<object class="SFXReverbEffect" id="{cade1034-5899-45bd-9a44-f2dc033b5bda}">
-		<property name="decayTime">
-			<value>900</value>
+	<object class="LowpassEffect" id="{9df7830c-211f-4de9-83a7-24794bcb6280}">
+		<property name="cutoff">
+			<value>7500</value>
 		</property>
 	</object>
 </objects>
