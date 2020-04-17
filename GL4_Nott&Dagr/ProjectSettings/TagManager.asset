@@ -41,7 +41,7 @@ TagManager:
   - AudioLayer
   - DeathTrigger
   - Ground
-  - 
+  - Ignore All But Player & Aura
   - 
   - 
   - 

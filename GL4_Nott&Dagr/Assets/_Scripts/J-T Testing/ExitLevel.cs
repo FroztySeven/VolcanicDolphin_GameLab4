@@ -16,7 +16,7 @@ public class ExitLevel : MonoBehaviour
     //public Transform firePosNight, firePosDay;
 
     [HideInInspector] //--Changed private to public to let audiotrigger know level is over-- Gunnar
-    public bool nightEnter, dayEnter, levelFinished, loadingScreenIsActive;
+    public bool nightEnter, dayEnter, bothEntered, levelFinished, loadingScreenIsActive;
 
     [HideInInspector] public bool playerPixelate;
 
@@ -49,12 +49,17 @@ public class ExitLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.name == "Aura")
+        {
+            other.GetComponent<CapsuleCollider2D>().isTrigger = true;
+        }
+
         if (other.gameObject == night || other.gameObject == day)
         {
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 nightEnter = true;
-                other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
+                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
                 fireNigth.Play();
                 fireNightMain.loop = true;
                 sparksNight.Play();
@@ -64,7 +69,7 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 dayEnter = true;
-                other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
+                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
                 fireDay.Play();
                 fireDayMain.loop = true;
                 sparksDay.Play();
@@ -75,12 +80,17 @@ public class ExitLevel : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.name == "Aura")
+        {
+            other.GetComponent<CapsuleCollider2D>().isTrigger = false;
+        }
+
         if (other.gameObject == night || other.gameObject == day)
         {
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 nightEnter = false;
-                other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
+                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
                 fireNightMain.loop = false;
                 sparksNightMain.loop = false;
             }
@@ -88,7 +98,7 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 dayEnter = false;
-                other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
+                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
                 fireDayMain.loop = false;
                 sparksDayMain.loop = false;
             }
@@ -100,13 +110,31 @@ public class ExitLevel : MonoBehaviour
         if (nightEnter && dayEnter)
         {
             night.GetComponent<PlayerController>().playerCanMove = false;
+            night.GetComponent<PlayerController>().playerCanJump = false;
             day.GetComponent<PlayerController>().playerCanMove = false;
-            night.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
-            day.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
-            //levelFinished = true;
+            day.GetComponent<PlayerController>().playerCanJump = false;
+            night.GetComponent<CapsuleCollider2D>().isTrigger = true;
+            day.GetComponent<CapsuleCollider2D>().isTrigger = true;
+            night.GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
+            night.GetComponent<PlayerController>().theRB.gravityScale = 0f;
+            day.GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
+            day.GetComponent<PlayerController>().theRB.gravityScale = 0f;
+            night.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            day.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            //night.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
+            //day.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
             playerPixelate = true;
             Invoke("LevelFinished", 5f);
             StartCoroutine(instantiateLoadingScreen());
+            bothEntered = true;
+            nightEnter = false;
+            dayEnter = false;
+        }
+
+        if (bothEntered)
+        {
+            night.transform.position = Vector3.Lerp(night.transform.position, transform.position - new Vector3(0.5f, 0.15f, 0f), 2f * Time.deltaTime);
+            day.transform.position = Vector3.Lerp(day.transform.position, transform.position + new Vector3(0.5f, -0.15f, 0f), 2f * Time.deltaTime);
         }
 
         //Cheat complete level

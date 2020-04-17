@@ -70,7 +70,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1141244596}
   - component: {fileID: 1141244599}
-  - component: {fileID: 1141244598}
   - component: {fileID: 1141244597}
   - component: {fileID: 1699007064116312395}
   m_Layer: 12
@@ -147,22 +146,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1141244598
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141244595}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 62b426dd5e2e41e4dadbb905dcda3475, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8}
-  serializedVersion: 2
-  m_Radius: 0.8
 --- !u!114 &1141244597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,6 +984,7 @@ MonoBehaviour:
   isGrounded: 0
   auraBounce: 0
   playerCanMove: 1
+  playerCanJump: 1
   singlePlayer: 1
   wallHopDirection: {x: 1, y: 0.5}
   wallJumpDirection: {x: 1, y: 2}
