@@ -20,6 +20,7 @@ TagManager:
   - SeedBlock
   - Water
   - AuraPickup
+  - Wall
   layers:
   - Default
   - TransparentFX

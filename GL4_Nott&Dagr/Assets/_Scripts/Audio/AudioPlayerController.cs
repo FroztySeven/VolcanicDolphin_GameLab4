@@ -15,6 +15,8 @@ public class AudioPlayerController : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D playerRB;
     [HideInInspector]
+    public Transform playerTrans;
+    [HideInInspector]
     public GameObject audioTrigger, door, pause;
 
     public Sprite onSprite;
@@ -24,8 +26,11 @@ public class AudioPlayerController : MonoBehaviour
     [SerializeField][Range(0,1)]
     public float walkingSpeed;
 
+    [HideInInspector]
+    public float height, oldHeight, heightDiff;
+
     //[HideInInspector]
-    public bool isDagr, isNott, isGrounded, isMoving, isClimbing, isFalling, isTeleporting, hasLanded, onPlant, isDirt, isGrass, isIce, isPlant, isSnow, isStone, isWater, isWood;
+    public bool isDagr, isNott, isGrounded, isClimbing, isFalling, isMoving, isTeleporting, hasLanded, wasGrounded = true, onPlant, isDirt, isGrass, isIce, isPlant, isSnow, isStone, isWater, isWood;
 
     //--------------------------------------------------------------------------//
 
@@ -51,15 +56,34 @@ public class AudioPlayerController : MonoBehaviour
     {
         GameObject.Find("Player1").transform.Find("AudioTriggerNott").gameObject.SetActive(false);
         GameObject.Find("Player2").transform.Find("AudioTriggerDagr").gameObject.SetActive(false);
-        door = GameObject.Find("Door");
-        pause = GameObject.Find("PauseMenu");
     }
 
     void Start()
     {
-        InvokeRepeating("CallFootsteps", 0, walkingSpeed);
-
         PlayerStart();
+
+        door = GameObject.Find("Door");
+        pause = GameObject.Find("PauseMenu");
+
+        InvokeRepeating("CallFootsteps", 0, walkingSpeed);
+    }
+
+    void FixedUpdate()
+    {
+        CheckLanding();
+        wasGrounded = isGrounded;
+
+        CheckFalling();
+
+        if (wasGrounded == false)
+        {
+            isFalling = true;
+            isMoving = false;
+        }
+        else
+        {
+            isFalling = false;
+        }
     }
 
     void Update()
@@ -95,8 +119,6 @@ public class AudioPlayerController : MonoBehaviour
             onSprite = _pmt.currentSprite;
             isGrounded = _pmt.isGrounded;
 
-            CheckFalling();
-
             CheckGroundTypes();
         }
 
@@ -106,15 +128,7 @@ public class AudioPlayerController : MonoBehaviour
             onSprite = _pmt.currentSprite;
             isGrounded = _pmt.isGrounded;
 
-            CheckFalling();
-
             CheckGroundTypes();
-        }
-
-        //---------JumpLandings---------//
-        if (hasLanded)
-        {
-            GroundTypes();
         }
 
         LevelDone();
@@ -122,6 +136,50 @@ public class AudioPlayerController : MonoBehaviour
 
     //-----------------------------------------//
 
+    void PlayerStart()
+    {
+        if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
+        {
+            _pmt = GameObject.Find("Player1").GetComponent<PlayerController>();
+            playerRB = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
+            playerTrans = GameObject.Find("Player1").GetComponent<Transform>();
+            audioTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
+            gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
+            folInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
+            isDagr = true;
+        }
+
+        if (this.gameObject == GameObject.Find("AudioTriggerNott"))
+        {
+            _pmt = GameObject.Find("Player2").GetComponent<PlayerController>();
+            playerRB = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
+            playerTrans = GameObject.Find("Player2").GetComponent<Transform>();
+            audioTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
+            gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
+            folInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
+            isNott = true;
+        }
+    }
+    
+    void CheckMovement()
+    {
+        //---Movement Checker---//
+
+        isClimbing = false;
+
+        if (isDagr || isNott)
+        {
+            if (_pmt.movementInputHorizontalDirection > 0.1 || _pmt.movementInputHorizontalDirection < -0.1)
+            {
+                isMoving = true;
+            }
+            else if (_pmt.movementInputHorizontalDirection > -0.1 || _pmt.movementInputHorizontalDirection < 0.1)
+            {
+                isMoving = false;
+            }
+        }
+    }
+    
     void CallFootsteps()
     {
         if (isMoving && isGrounded)
@@ -130,6 +188,38 @@ public class AudioPlayerController : MonoBehaviour
         }
 
         if (isClimbing && isPlant && !isGrounded)
+        {
+            GroundTypes();
+        }
+    }
+    
+    void CheckFalling()
+    {
+        //----Checks Falling----//
+
+        if (isDagr || isNott)
+        {
+            oldHeight = height;
+
+            height = playerTrans.position.y;
+
+            heightDiff = height - oldHeight;
+
+            if (heightDiff > 0)
+            {
+                heightDiff = heightDiff * -1;
+            }
+        }
+
+        if (onPlant && isClimbing)
+        {
+            isFalling = false;
+        }
+    }
+
+    void CheckLanding()
+    {
+        if (isGrounded && !wasGrounded)
         {
             GroundTypes();
         }
@@ -167,35 +257,54 @@ public class AudioPlayerController : MonoBehaviour
             }
         }
     }
-
-    void CheckFalling()
+    
+    void GroundTypes()
     {
-        //----Checks Falling----//
-        if (playerRB.velocity.y <= -3.5f)
+        if (isDagr || isNott)
         {
-            isFalling = true;
-            isMoving = false;
-        }
-        if (playerRB.velocity.y >= -3.5f)
-        {
-            StartCoroutine(Falling());
-        }
-
-        if (onPlant && isClimbing)
-        {
-            isFalling = false;
-        }
-
-        if (isFalling && isGrounded)
-        {
-            hasLanded = true;
-        }
-        else
-        {
-            hasLanded = false;
+            if (isDirt)
+            {
+                gtInstance.setParameterByName("GT", gt = 0);
+                gtInstance.start();
+            }
+            if (isGrass)
+            {
+                gtInstance.setParameterByName("GT", gt = 1);
+                gtInstance.start();
+            }
+            if (isIce)
+            {
+                gtInstance.setParameterByName("GT", gt = 2);
+                gtInstance.start();
+            }
+            if (isPlant)
+            {
+                gtInstance.setParameterByName("GT", gt = 3);
+                gtInstance.start();
+            }
+            if (isSnow)
+            {
+                gtInstance.setParameterByName("GT", gt = 4);
+                gtInstance.start();
+            }
+            if (isStone)
+            {
+                gtInstance.setParameterByName("GT", gt = 5);
+                gtInstance.start();
+            }
+            if (isWater)
+            {
+                gtInstance.setParameterByName("GT", gt = 6);
+                gtInstance.start();
+            }
+            if (isWood)
+            {
+                gtInstance.setParameterByName("GT", gt = 7);
+                gtInstance.start();
+            }
         }
     }
-
+    
     void CheckGroundTypes()
     {
         // Check type of ground
@@ -343,72 +452,6 @@ public class AudioPlayerController : MonoBehaviour
             isPlant = false;
         }
     }
-    
-    void CheckMovement()
-    {
-        //---Movement Checker---//
-
-        isClimbing = false;
-
-        if (isDagr || isNott)
-        {
-            if (_pmt.movementInputHorizontalDirection > 0.1 || _pmt.movementInputHorizontalDirection < -0.1)
-            {
-                isMoving = true;
-            }
-            else if (_pmt.movementInputHorizontalDirection > -0.1 || _pmt.movementInputHorizontalDirection < 0.1)
-            {
-                isMoving = false;
-            }
-        }
-    }
-
-    void GroundTypes()
-    {
-        if (isDagr || isNott)
-        {
-            if (isDirt)
-            {
-                gtInstance.setParameterByName("GT", gt = 0);
-                gtInstance.start();
-            }
-            if (isGrass)
-            {
-                gtInstance.setParameterByName("GT", gt = 1);
-                gtInstance.start();
-            }
-            if (isIce)
-            {
-                gtInstance.setParameterByName("GT", gt = 2);
-                gtInstance.start();
-            }
-            if (isPlant)
-            {
-                gtInstance.setParameterByName("GT", gt = 3);
-                gtInstance.start();
-            }
-            if (isSnow)
-            {
-                gtInstance.setParameterByName("GT", gt = 4);
-                gtInstance.start();
-            }
-            if (isStone)
-            {
-                gtInstance.setParameterByName("GT", gt = 5);
-                gtInstance.start();
-            }
-            if (isWater)
-            {
-                gtInstance.setParameterByName("GT", gt = 6);
-                gtInstance.start();
-            }
-            if (isWood)
-            {
-                gtInstance.setParameterByName("GT", gt = 7);
-                gtInstance.start();
-            }
-        }
-    }
 
     void CheckPause()
     {
@@ -437,34 +480,11 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
 
-    void PlayerStart()
-    {
-        if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
-        {
-            _pmt = GameObject.Find("Player1").GetComponent<PlayerController>();
-            playerRB = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
-            audioTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
-            gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
-            folInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
-            isDagr = true;
-        }
-
-        if (this.gameObject == GameObject.Find("AudioTriggerNott"))
-        {
-            _pmt = GameObject.Find("Player2").GetComponent<PlayerController>();
-            playerRB = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
-            audioTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
-            gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
-            folInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
-            isNott = true;
-        }
-    }
-
     //-----------------------------------------//
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Plant") && isDagr || isNott)
+        if (other.gameObject.CompareTag("Plant"))
         {
             onPlant = true;
         }
@@ -472,20 +492,13 @@ public class AudioPlayerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Plant") && isDagr || isNott)
+        if (other.gameObject.CompareTag("Plant"))
         {
             onPlant = false;
         }
     }
 
     //-----------------------------------------//
-
-    IEnumerator Falling()
-    {
-        //yield return new WaitForEndOfFrame();
-        yield return new WaitForSeconds(0.01f);
-        isFalling = false;
-    }
 
     IEnumerator TeleportSFX()
     {

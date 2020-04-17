@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 5722568432650726504}
   - component: {fileID: 173157096793657068}
   - component: {fileID: 8268913315106581580}
-  - component: {fileID: 1146312955497669523}
-  - component: {fileID: 146403896825196722}
+  - component: {fileID: 6083611109693295477}
   m_Layer: 9
   m_Name: Pre_Gem
   m_TagString: Gem
@@ -155,7 +154,9 @@ MonoBehaviour:
   - {fileID: -4180372594648412816, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: -758199125701439212, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
   - {fileID: 2765407167549744217, guid: daa8ed4d4cf020b44b8564f2a0fe7b38, type: 3}
+  theRB: {fileID: 0}
   isFrozen: 0
+  isPickedUp: 0
 --- !u!114 &8268913315106581580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +175,7 @@ MonoBehaviour:
   nottTrigger: {fileID: 0}
   freeze: 0
   unfreeze: 0
---- !u!114 &1146312955497669523
+--- !u!114 &6083611109693295477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,34 +184,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 173157096793657057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 9114c997d7ecbde42b3e6d6dbb61ac2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/SFX/Objects/PushSlide
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 1
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
---- !u!114 &146403896825196722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173157096793657057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4464d697369d39c498a11e6c509bab75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _see: {fileID: 0}
-  isSliding: 0
+  audioPlaying: 0
 --- !u!1 &4298474028067474734
 GameObject:
   m_ObjectHideFlags: 0

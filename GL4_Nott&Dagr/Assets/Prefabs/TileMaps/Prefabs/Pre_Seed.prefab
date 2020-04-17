@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 3272152806510461814}
   - component: {fileID: 3640748300887031817}
   - component: {fileID: 9064490499702086086}
+  - component: {fileID: 1339595885416540765}
   m_Layer: 9
   m_Name: Pre_Seed
   m_TagString: SeedBlock
@@ -182,3 +183,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frozenColor: {r: 0, g: 0.49019608, b: 1, a: 1}
+--- !u!114 &1339595885416540765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190441215001191040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9114c997d7ecbde42b3e6d6dbb61ac2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPlaying: 0

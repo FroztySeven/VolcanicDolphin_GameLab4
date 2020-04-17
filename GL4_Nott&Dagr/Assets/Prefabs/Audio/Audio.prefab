@@ -83,7 +83,7 @@ MonoBehaviour:
   bubbleEnterExitVolume: -25
   gemActiveVolume: -5
   icecubeDestroyedVolume: -10
-  portalActivatedVolume: -15
+  portalActivatedVolume: -5
   plantGrowVolume: -10
   pressurePlateVolume: -10
   ropeBurnSnapVolume: -3

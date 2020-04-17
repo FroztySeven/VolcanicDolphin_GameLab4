@@ -14,8 +14,10 @@ public class SwingingRopeEndZone : MonoBehaviour
     public bool dagrOnRope = false, nottOnRope = false, isTriggered;
 
     //---Audio Addon---//
-    private bool isSwinging, onRopeDSFX, onRopeNSFX;
-    private Rigidbody2D parentRB;
+    public Rigidbody2D parentRB;
+    public bool ropeSwinging, ropeTwisting;
+    private FMOD.Studio.EventInstance ropeSwing;
+    private FMOD.Studio.EventInstance ropeTwist;
     //---Audio Addon---//
 
     // Start is called before the first frame update
@@ -28,6 +30,8 @@ public class SwingingRopeEndZone : MonoBehaviour
 
         //----Audio Addon-----//
         parentRB = this.gameObject.GetComponentInParent<Rigidbody2D>();
+        ropeSwing = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Objects/RopeSwing");
+        ropeTwist = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Objects/RopeTwist");
         //----Audio Addon-----//
     }
 
@@ -49,16 +53,6 @@ public class SwingingRopeEndZone : MonoBehaviour
                     dagrGO.transform.SetParent(null);
                     StartCoroutine(turnOnTriggerAgain());
                 }
-                //----Audio Addon-----//
-                if (parentRB.velocity.x >= -7.55f && parentRB.velocity.x <= -7.45f || parentRB.velocity.x <= 7.55f && parentRB.velocity.x >= 7.45f)
-                {
-                    isSwinging = true;
-                    if (isSwinging)
-                    {
-                        StartCoroutine(SwingWooshSound());
-                    }
-                }
-                //----Audio Addon-----//
             }
         }
 
@@ -77,18 +71,12 @@ public class SwingingRopeEndZone : MonoBehaviour
                     nottGO.transform.SetParent(null);
                     StartCoroutine(turnOnTriggerAgain());
                 }
-                //----Audio Addon-----//
-                if (parentRB.velocity.x >= -7.55f && parentRB.velocity.x <= -7.45f || parentRB.velocity.x <= 7.55f && parentRB.velocity.x >= 7.45f)
-                {
-                    isSwinging = true;
-                    if (isSwinging)
-                    {
-                        StartCoroutine(SwingWooshSound());
-                    }
-                }
-                //----Audio Addon-----//
             }
         }
+
+        //---- Audio Addon ----//
+        RopeAudio();
+        //---- Audio Addon ----//
     }
 
 
@@ -103,31 +91,11 @@ public class SwingingRopeEndZone : MonoBehaviour
                 {
                     dagrOnRope = true;
                     Debug.Log("DAGR ON ROPE");
-                    
-                    //----Audio Addon-----//
-                    onRopeDSFX = true;
-                    if (dagrOnRope && onRopeDSFX)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
-                        onRopeDSFX = false;
-                    }
-
-                    //----Audio Addon-----//
                 }
 
                 if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                 {
                     nottOnRope = true;
-
-                    //----Audio Addon-----//
-                    onRopeNSFX = true;
-                    if (nottOnRope && onRopeNSFX)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
-                        onRopeNSFX = false;
-                    }
-
-                    //----Audio Addon-----//
                 }
             }
         }
@@ -212,14 +180,58 @@ public class SwingingRopeEndZone : MonoBehaviour
         isTriggered = false;
     }
 
-    //---Audio Addon---//
-    private IEnumerator SwingWooshSound()
+    //---- Audio Addon ----//
+    void RopeAudio()
     {
-        isSwinging = false;
-        yield return new WaitForSeconds(0.1f);
-        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeWoosh);
-        yield return new WaitForSeconds(0.5f);
-        FMODUnity.RuntimeManager.PlayOneShot(_sr.ropeTwist);
+        //---- Rope Swing ----//
+
+        if (parentRB.velocity.magnitude > 6f)
+        {
+            ropeSwinging = true;
+
+            if (!IsPlaying(ropeSwing))
+            {
+                if (ropeSwinging)
+                {
+                    ropeSwing.start();
+                }
+            }
+        }
+        else
+        {
+            ropeSwinging = false;
+        }
+
+        if (parentRB.velocity.magnitude > 7f)
+        {
+            ropeSwinging = false;
+        }
+
+        //---- Rope Twist ----//
+
+        if (parentRB.velocity.magnitude > 3f)
+        {
+            ropeTwisting = true;
+
+            if (!IsPlaying(ropeTwist))
+            {
+                if (ropeTwisting)
+                {
+                    ropeTwist.start();
+                }
+            }
+        }
+        else
+        {
+            ropeTwisting = false;
+        }
     }
-    //---Audio Addon---//
+
+    public static bool IsPlaying(FMOD.Studio.EventInstance instance)
+    {
+        FMOD.Studio.PLAYBACK_STATE state;
+        instance.getPlaybackState(out state);
+        return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
+    }
+    //---- Audio Addon ----//
 }

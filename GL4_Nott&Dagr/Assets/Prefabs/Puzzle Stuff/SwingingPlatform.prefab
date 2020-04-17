@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 4415905920873732343}
   - component: {fileID: 288656993110022680}
   - component: {fileID: 7285908152081529432}
-  - component: {fileID: 3346875865275824767}
+  - component: {fileID: 6271438847465930778}
   m_Layer: 0
   m_Name: PlatformSpirtes
   m_TagString: Untagged
@@ -1164,7 +1164,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3346875865275824767
+--- !u!114 &6271438847465930778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1173,11 +1173,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6613142253926919746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df305f19103092c41b227f1a69bc8f8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b860147c288d5d4c83fbf553df96768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ropeTwist: event:/SFX/Objects/RopeTwist
-  ropeWoosh: event:/SFX/Objects/RopeSwing
 --- !u!1 &7073650116516102245
 GameObject:
   m_ObjectHideFlags: 0

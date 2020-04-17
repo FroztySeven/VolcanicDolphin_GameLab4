@@ -1007,8 +1007,6 @@ MonoBehaviour:
   groundCheck: {fileID: 868335383}
   wallCheck: {fileID: 2011920407}
   ledgeCheck: {fileID: 1010262862}
-  noFriction: {fileID: 6200000, guid: 62898d32a0a8944449b5aaf72c01573b, type: 2}
-  friction: {fileID: 6200000, guid: ecde2e7d293f0484a976fb8712f6c8bf, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 262145

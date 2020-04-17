@@ -12,10 +12,6 @@ public class SwingingRope : MonoBehaviour
 
     public Sprite ropeSprite;
     
-    //----Audio Addon-----//
-    [FMODUnity.EventRef] public string ropeTwist, ropeWoosh;
-    //----Audio Addon-----//
-
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +35,7 @@ public class SwingingRope : MonoBehaviour
                 endZone.transform.parent = gameObject.transform.GetChild(i + 1);
                 endZone.transform.position = transform.position + new Vector3(0f, -i - 1, 0f);
                 endZone.AddComponent<BoxCollider2D>().isTrigger = true;
-                endZone.GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
+                endZone.GetComponent<BoxCollider2D>().size = new Vector2(0.125f, 1f);
                 endZone.AddComponent<SwingingRopeEndZone>();
             }
         }

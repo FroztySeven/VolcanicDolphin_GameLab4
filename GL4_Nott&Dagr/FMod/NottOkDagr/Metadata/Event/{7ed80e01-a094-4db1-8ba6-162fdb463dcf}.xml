@@ -275,6 +275,7 @@
 		<relationship name="effects">
 			<destination>{006a75d1-0c69-487f-8e51-a6994c047a13}</destination>
 			<destination>{a9f6d614-d34a-481e-a379-5ca73646907c}</destination>
+			<destination>{5211e27b-5979-48cf-b5d9-e11c860e835d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fad2e524-48eb-4290-b8dc-ea37f4f66a77}" />
@@ -334,6 +335,7 @@
 		<relationship name="effects">
 			<destination>{c246e780-cca6-4bac-909e-3e9cfb0fffb8}</destination>
 			<destination>{b4b70fce-552b-452b-984a-78e1d95286d4}</destination>
+			<destination>{41493965-a746-4f67-8c78-9926ae66ad19}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{05f9eaf1-4507-46c2-9f4d-4910a768bff1}" />
@@ -436,6 +438,11 @@
 			<value>8000</value>
 		</property>
 	</object>
+	<object class="PitchShifterEffect" id="{5211e27b-5979-48cf-b5d9-e11c860e835d}">
+		<property name="pitch">
+			<value>0.75000006</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{0317feae-f7ff-4283-87aa-aafabc4e7448}">
 		<property name="position">
 			<value>0</value>
@@ -478,6 +485,11 @@
 	<object class="LowpassEffect" id="{b4b70fce-552b-452b-984a-78e1d95286d4}">
 		<property name="cutoff">
 			<value>1000</value>
+		</property>
+	</object>
+	<object class="PitchShifterEffect" id="{41493965-a746-4f67-8c78-9926ae66ad19}">
+		<property name="pitch">
+			<value>0.900000036</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{3f0394d2-308b-467e-b2ff-b653eb144104}">

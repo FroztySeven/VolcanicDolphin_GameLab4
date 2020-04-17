@@ -4205,7 +4205,7 @@ GameObject:
   - component: {fileID: 3040315715311940005}
   - component: {fileID: 3040315715311940006}
   - component: {fileID: 3040315715311940007}
-  - component: {fileID: 9112611532347278534}
+  - component: {fileID: 2940247116100207562}
   m_Layer: 0
   m_Name: PlatformSpirtes
   m_TagString: Untagged
@@ -4355,7 +4355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa0649195e696a4da0f906089ab587b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9112611532347278534
+--- !u!114 &2940247116100207562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4364,11 +4364,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3040315715311940001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df305f19103092c41b227f1a69bc8f8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b860147c288d5d4c83fbf553df96768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ropeTwist: event:/SFX/Objects/RopeTwist
-  ropeWoosh: event:/SFX/Objects/RopeSwing
 --- !u!1 &3040315715327975690
 GameObject:
   m_ObjectHideFlags: 0

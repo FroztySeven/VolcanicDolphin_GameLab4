@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD;
 using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
+using Debug = UnityEngine.Debug;
 
 public class AudioWaterController : MonoBehaviour
 {
-    //[HideInInspector]
-    public GameObject dagrTrigger, nottTrigger, gem;
     [HideInInspector]
-    public Sprite waterSprite, frozenSprite;
+    public Water _water;
     [HideInInspector]
-    public int typeOfSprite;
+    public GameObject dagrTrigger, nottTrigger;
     [HideInInspector]
-    public bool isWater, isFrozen;
-
+    
     [FMODUnity.EventRef]
     public string waterFreezes, waterSplash;
 
@@ -23,44 +22,25 @@ public class AudioWaterController : MonoBehaviour
     {
           dagrTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
           nottTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
-          gem = GameObject.Find("Gem");
+
+          _water = gameObject.GetComponent<Water>();
     }
 
     void Update()
     {
-
-        if (this.gameObject.GetComponent<SpriteRenderer>().sprite == waterSprite)
-        {
-            typeOfSprite = 1;
-            isWater = true;
-            isFrozen = false;
-        }
-
-        if (this.gameObject.GetComponent<SpriteRenderer>().sprite == frozenSprite)
-        {
-            typeOfSprite = 2;
-            isWater = false;
-            isFrozen = true;
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == nottTrigger && isWater)
+        if (other.gameObject == nottTrigger && !_water.isFrozen)
         {
             CallWaterFreezes();
-            isWater = false;
         }
 
-        if (other.gameObject == dagrTrigger && isWater)
+        if (other.gameObject == dagrTrigger && !_water.isFrozen)
         {
             CallWaterSplash();
-        }
-        
-        if (other.gameObject == gem && isWater)
-        {
-            CallWaterSplash();
-            Debug.Log("Hit water gem");
         }
     }
 
