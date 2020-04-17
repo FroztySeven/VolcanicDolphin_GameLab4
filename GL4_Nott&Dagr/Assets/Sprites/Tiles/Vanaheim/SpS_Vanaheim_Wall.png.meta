@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: -6994535563547939999
     second: SpS_Vanaheim_Wall_1
+  - first:
+      213: 751780872993680318
+    second: SpS_Vanaheim_Wall_0
+  - first:
+      213: -7677582794000464525
+    second: SpS_Vanaheim_Wall_1
+  - first:
+      213: 1903851585086778966
+    second: SpS_Vanaheim_Wall_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -118,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b0e7035d44ae1a80800000000000000
-      internalID: -8494171195161714512
+      spriteID: ebba8bb88bcde6a00800000000000000
+      internalID: 751780872993680318
       vertices: []
       indices: 
       edges: []
@@ -139,8 +148,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16b63eda6fa6eee90800000000000000
-      internalID: -6994535563547939999
+      spriteID: 37583fd502fb37590800000000000000
+      internalID: -7677582794000464525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpS_Vanaheim_Wall_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e692afde6db6a10800000000000000
+      internalID: 1903851585086778966
       vertices: []
       indices: 
       edges: []
