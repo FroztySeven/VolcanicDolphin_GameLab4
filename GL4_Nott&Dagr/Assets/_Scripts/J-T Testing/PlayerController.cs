@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool auraBounce;
     public bool playerCanMove = true;
+    public bool playerCanJump = true;
     public bool singlePlayer;
 
     public Vector2 wallHopDirection;
@@ -120,8 +121,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (playerCanJump)
+        {
             CheckInput();
             CheckIfCanJump();
+        }
         if (playerCanMove)
         {
             CheckMovementDirection();

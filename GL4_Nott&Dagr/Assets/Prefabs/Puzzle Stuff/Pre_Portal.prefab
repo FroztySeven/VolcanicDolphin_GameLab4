@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1263870}
   - component: {fileID: 1263869}
   - component: {fileID: 1263868}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: LevelCompleteCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 264335688}
   - component: {fileID: 264335690}
   - component: {fileID: 264335689}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 407780039}
   - component: {fileID: 407780025}
   - component: {fileID: 407780024}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 642916998}
   - component: {fileID: 642916728}
   - component: {fileID: 642916999}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 680970330}
   - component: {fileID: 680970329}
   - component: {fileID: 680970328}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 2140451732}
   - component: {fileID: 2140451734}
   - component: {fileID: 2140451733}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,8 +548,8 @@ GameObject:
   - component: {fileID: 6839829169392922828}
   - component: {fileID: 2071515847}
   - component: {fileID: 3972832008474369104}
-  m_Layer: 11
-  m_Name: Door
+  m_Layer: 19
+  m_Name: Pre_Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,9 +662,12 @@ MonoBehaviour:
   fireDay: {fileID: 8964520979757258453}
   nightEnter: 0
   dayEnter: 0
+  bothEntered: 0
   levelFinished: 0
   loadingScreenIsActive: 0
   playerPixelate: 0
+  nextLevelSceneName: 
+  unlockLevelNumber: 0
 --- !u!114 &3972832008474369104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,7 +695,7 @@ GameObject:
   - component: {fileID: 5585166738181493725}
   - component: {fileID: 5585166738181493724}
   - component: {fileID: 5585166738181493715}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,6 +762,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireParticleNott
       objectReference: {fileID: 0}
+    - target: {fileID: 5129655232586881769, guid: 3960a62b30d8fbf48865b47b247b4c64,
+        type: 3}
+      propertyPath: m_Layer
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 5129655232586881772, guid: 3960a62b30d8fbf48865b47b247b4c64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -814,6 +822,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5129655234496991259, guid: 3960a62b30d8fbf48865b47b247b4c64,
+        type: 3}
+      propertyPath: m_Layer
+      value: 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3960a62b30d8fbf48865b47b247b4c64, type: 3}
 --- !u!198 &5129655233486373015 stripped
@@ -839,6 +852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FireParticleDagr
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964520978942445608, guid: d7280757b89028a4ca114fc8daf27149,
+        type: 3}
+      propertyPath: m_Layer
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8964520978942445615, guid: d7280757b89028a4ca114fc8daf27149,
         type: 3}
@@ -895,6 +913,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8964520979286070284, guid: d7280757b89028a4ca114fc8daf27149,
+        type: 3}
+      propertyPath: m_Layer
+      value: 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7280757b89028a4ca114fc8daf27149, type: 3}
 --- !u!4 &8964520979757258452 stripped
@@ -924,7 +947,7 @@ PrefabInstance:
     - target: {fileID: 5002316788355089778, guid: 20e997c321f81f34e9fbfdff8f4f4272,
         type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5002316788355089779, guid: 20e997c321f81f34e9fbfdff8f4f4272,
         type: 3}
@@ -1016,7 +1039,7 @@ PrefabInstance:
     - target: {fileID: 2913347679905358074, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
         type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2913347679905358076, guid: d1ed682f94adf5d4b82f6e3ce1392cdb,
         type: 3}

@@ -87,6 +87,11 @@ public class AuraBounce : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
     private void Update()
     {
         playerId = player.playerId;

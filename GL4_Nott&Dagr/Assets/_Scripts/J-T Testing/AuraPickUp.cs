@@ -52,7 +52,7 @@ public class AuraPickUp : MonoBehaviour
         {
             gemPickup = other.transform;
             gem = other.GetComponent<Gem>();
-            Debug.Log("Player: " + playerId + " Triggered Gem");
+            //Debug.Log("Player: " + playerId + " Triggered Gem");
         }
     }
 
@@ -70,7 +70,7 @@ public class AuraPickUp : MonoBehaviour
         {
             gemPickup = null;
             gem = null;
-            Debug.Log("Invoked Player: " + playerId);
+            //Debug.Log("Invoked Player: " + playerId);
         }
     }
 }
