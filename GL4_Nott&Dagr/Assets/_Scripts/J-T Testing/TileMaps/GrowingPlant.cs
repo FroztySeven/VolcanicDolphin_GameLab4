@@ -14,7 +14,20 @@ public class GrowingPlant : MonoBehaviour
     public int growHeight;
     public float growSpeed;
 
+    [Header("Check if plant should be grown from start of level")]
+    public bool growOnStart = false;
+
     private int growCount = 0;
+
+    private void Start()
+    {
+        if (growOnStart)
+        {
+            StartCoroutine(PlantGrow());
+            gameObject.GetComponent<SpriteRenderer>().sprite = null;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
