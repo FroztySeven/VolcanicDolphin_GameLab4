@@ -21,7 +21,7 @@ public class AudioPlayerController : MonoBehaviour
 
     public Sprite onSprite;
     [HideInInspector]
-    public Sprite[] dirtSprites, grassSprites, iceSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
+    public Sprite[] dirtSprites, grassSprites, iceSprites, leavesSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
 
     [SerializeField][Range(0,1)]
     public float walkingSpeed;
@@ -29,7 +29,7 @@ public class AudioPlayerController : MonoBehaviour
     [HideInInspector]
     public float height, oldHeight, heightDiff;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool isDagr, isNott, isGrounded, isClimbing, isFalling, isMoving, isTeleporting, hasLanded, wasGrounded = true, onPlant, isDirt, isGrass, isIce, isPlant, isSnow, isStone, isWater, isWood;
 
     //--------------------------------------------------------------------------//
@@ -369,6 +369,21 @@ public class AudioPlayerController : MonoBehaviour
                 isGrass = false;
                 isIce = true;
                 isPlant = false;
+                isSnow = false;
+                isStone = false;
+                isWater = false;
+                isWood = false;
+            }
+        }
+
+        for (int i = 0; i < leavesSprites.Length; i++)
+        {
+            if (onSprite == leavesSprites[i])
+            {
+                isDirt = false;
+                isGrass = false;
+                isIce = false;
+                isPlant = true;
                 isSnow = false;
                 isStone = false;
                 isWater = false;

@@ -519,6 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pmt: {fileID: 0}
   playerRB: {fileID: 0}
+  playerTrans: {fileID: 0}
   audioTrigger: {fileID: 0}
   door: {fileID: 0}
   pause: {fileID: 0}
@@ -563,6 +564,19 @@ MonoBehaviour:
   - {fileID: 1107993772865303655, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
   - {fileID: 6506994045347843672, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
   - {fileID: -7202980376755234820, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
+  leavesSprites:
+  - {fileID: 8096497863545364891, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: -4989656951081914048, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 17779832590313447, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 9157195656247035376, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 5163032267312015828, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: -2038111247909862143, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 2644041243966551186, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 3473789473764708341, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 4254761456826992331, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 8745221533097307935, guid: 4ce8dfb9a0ee8154a809c7219de0266d, type: 3}
+  - {fileID: 7229744221554800612, guid: 4ce8dfb9a0ee8154a809c7219de0266d, type: 3}
+  - {fileID: 735863762120110397, guid: 4ce8dfb9a0ee8154a809c7219de0266d, type: 3}
   snowSprites:
   - {fileID: 9190053220944701922, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
   - {fileID: 6884457542381758776, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
@@ -612,15 +626,22 @@ MonoBehaviour:
   - {fileID: 8487287726588716192, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
   - {fileID: -5473300698157627766, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
   - {fileID: -3528381534444488921, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
+  - {fileID: -8494171195161714512, guid: f05091599ce84e64c93e91b430732573, type: 3}
+  - {fileID: -6994535563547939999, guid: f05091599ce84e64c93e91b430732573, type: 3}
+  - {fileID: 1903851585086778966, guid: f05091599ce84e64c93e91b430732573, type: 3}
   walkingSpeed: 0.23
+  height: 0
+  oldHeight: 0
+  heightDiff: 0
   isDagr: 0
   isNott: 0
   isGrounded: 0
-  isMoving: 0
   isClimbing: 0
   isFalling: 0
+  isMoving: 0
   isTeleporting: 0
   hasLanded: 0
+  wasGrounded: 1
   onPlant: 0
   isDirt: 0
   isGrass: 0
@@ -694,6 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pmt: {fileID: 0}
   playerRB: {fileID: 0}
+  playerTrans: {fileID: 0}
   audioTrigger: {fileID: 0}
   door: {fileID: 0}
   pause: {fileID: 0}
@@ -738,6 +760,19 @@ MonoBehaviour:
   - {fileID: 1107993772865303655, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
   - {fileID: 6506994045347843672, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
   - {fileID: -7202980376755234820, guid: 0335219cf6b64b746ad019ef7929f99d, type: 3}
+  leavesSprites:
+  - {fileID: 8096497863545364891, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: -4989656951081914048, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 17779832590313447, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 9157195656247035376, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 5163032267312015828, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: -2038111247909862143, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 2644041243966551186, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 3473789473764708341, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 4254761456826992331, guid: c5856ef427721ef46bcb3ff1cd43046f, type: 3}
+  - {fileID: 8745221533097307935, guid: 4ce8dfb9a0ee8154a809c7219de0266d, type: 3}
+  - {fileID: 7229744221554800612, guid: 4ce8dfb9a0ee8154a809c7219de0266d, type: 3}
+  - {fileID: 735863762120110397, guid: 4ce8dfb9a0ee8154a809c7219de0266d, type: 3}
   snowSprites:
   - {fileID: 9190053220944701922, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
   - {fileID: 6884457542381758776, guid: a4c9d537045f6854aa7f558b5be84a9b, type: 3}
@@ -787,15 +822,22 @@ MonoBehaviour:
   - {fileID: 8487287726588716192, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
   - {fileID: -5473300698157627766, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
   - {fileID: -3528381534444488921, guid: a16c4c99c932a754da6231a8e390fbb3, type: 3}
+  - {fileID: -8494171195161714512, guid: f05091599ce84e64c93e91b430732573, type: 3}
+  - {fileID: -6994535563547939999, guid: f05091599ce84e64c93e91b430732573, type: 3}
+  - {fileID: 1903851585086778966, guid: f05091599ce84e64c93e91b430732573, type: 3}
   walkingSpeed: 0.23
+  height: 0
+  oldHeight: 0
+  heightDiff: 0
   isDagr: 0
   isNott: 0
   isGrounded: 0
-  isMoving: 0
   isClimbing: 0
   isFalling: 0
+  isMoving: 0
   isTeleporting: 0
   hasLanded: 0
+  wasGrounded: 1
   onPlant: 0
   isDirt: 0
   isGrass: 0
