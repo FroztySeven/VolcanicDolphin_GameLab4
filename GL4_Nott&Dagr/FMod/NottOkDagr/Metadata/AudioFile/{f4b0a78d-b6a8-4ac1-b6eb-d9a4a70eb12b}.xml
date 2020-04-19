@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f4b0a78d-b6a8-4ac1-b6eb-d9a4a70eb12b}">
+		<property name="assetPath">
+			<value>SFX/Objects/Woosh/Design, Cinematic Whoosh, Impact, Futuristic, Sci Fi 01 SND39526.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0423125</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{304ebde2-9951-4076-b858-19283e48cee1}</destination>
+		</relationship>
+	</object>
+</objects>

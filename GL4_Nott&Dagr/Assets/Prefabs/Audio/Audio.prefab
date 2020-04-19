@@ -74,25 +74,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d694f6032b9e7dd4f95e2bf801fdceb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicMasterVolume: 0
+  musicMasterVolume: -3
   sfxMasterVolume: 0
   iceFreezeVolume: -15
-  iceMeltVolume: -15
-  waterFreezeVolume: -5
+  iceMeltVolume: -8
+  waterFreezeVolume: -17
   waterSplashVolume: -15
-  bubbleEnterExitVolume: -25
-  gemActiveVolume: -5
-  icecubeDestroyedVolume: -10
-  portalActivatedVolume: -5
-  plantGrowVolume: -10
+  batRamBoomVolume: -10
+  gemActiveVolume: -10
+  icecubeDestroyVolume: -22
+  plantGrowVolume: -15
+  platformMoveVolume: -7
+  portalActivatedVolume: -8
   pressurePlateVolume: -10
-  ropeBurnSnapVolume: -3
-  ropeSwingVolume: -20
-  ropeTwistVolume: -7
-  slidingVolume: -15
-  stoneNoisesVolume: -15
+  ropeBurnSnapVolume: -7.4
+  ropeSwingVolume: -5
+  ropeTwistVolume: -12
+  slidingVolume: -10
+  stoneNoisesVolume: -11
   teleportPlayersVolume: -10
   trampolineVolume: -7
-  footstepsAndLandingsVolume: -10
+  footstepsAndLandingsVolume: -17
   buttonHighlightVolume: -5
   buttonSelectedVolume: -5

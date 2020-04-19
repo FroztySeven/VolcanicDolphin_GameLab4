@@ -113,7 +113,7 @@
 			<value>0.10000000000000001</value>
 		</property>
 		<property name="length">
-			<value>3.2159637188208618</value>
+			<value>2.2749999999999999</value>
 		</property>
 		<property name="volume">
 			<value>-10</value>
@@ -126,6 +126,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{4402d1d8-ad02-4651-a8bd-16fc3dfd2f39}">
+		<property name="volume">
+			<value>-8.5</value>
+		</property>
 		<property name="name">
 			<value>DoorChime</value>
 		</property>
@@ -141,7 +144,7 @@
 	</object>
 	<object class="SingleSound" id="{0d69d2e6-7e1c-4248-b549-0944d68529d2}">
 		<property name="length">
-			<value>4.0499999999999998</value>
+			<value>2.9344150246305416</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{4bc4c348-7065-4e10-9edd-39fa23e2393c}</destination>
@@ -152,7 +155,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{b662b6de-3917-42b2-9fe6-a5e89bf5938e}">
 		<property name="volume">
-			<value>-11.5</value>
+			<value>-8.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -169,8 +172,14 @@
 	</object>
 	<object class="SingleSound" id="{bc5ce6be-2407-419f-ae5f-f9e4c2fb96d7}">
 		<property name="length">
-			<value>2.8999999999999999</value>
+			<value>2.9344150246305416</value>
 		</property>
+		<property name="pitch">
+			<value>-4</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{ffbd8c75-6136-484e-b4d4-a9da37def4a3}</destination>
+		</relationship>
 		<relationship name="fadeOutCurve">
 			<destination>{1ef398e8-3510-416d-8b8e-c19bef362fcf}</destination>
 		</relationship>
@@ -180,7 +189,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{ab54b86e-6a05-4fa4-a974-81bda1f54392}">
 		<property name="volume">
-			<value>-11.5</value>
+			<value>-10</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -233,6 +242,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2c42977e-88b0-407f-9b34-a3f9ed4788d0}" />
+	<object class="RandomizerModulator" id="{ffbd8c75-6136-484e-b4d4-a9da37def4a3}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>4</value>
+		</property>
+	</object>
 	<object class="FadeCurve" id="{1ef398e8-3510-416d-8b8e-c19bef362fcf}">
 		<relationship name="startPoint">
 			<destination>{77067488-9f41-4f85-b8c0-d4eb861fdf73}</destination>
@@ -252,18 +269,18 @@
 	<object class="MixerBusFader" id="{f0cbec52-f827-4d2f-9328-03016025279f}" />
 	<object class="AutomationPoint" id="{8f577241-9dc2-49e8-8f94-97f4c8a70dd4}">
 		<property name="position">
-			<value>1.1000000000000001</value>
+			<value>0.10000000000000001</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.0503297374</value>
+			<value>-0.660030246</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b1f4543c-6837-4425-983c-ebfbaef4379b}">
 		<property name="position">
-			<value>3.3159637188208619</value>
+			<value>2.375</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -288,7 +305,7 @@
 	</object>
 	<object class="AutomationPoint" id="{451771a4-9149-45a6-98b7-f87ddad28d35}">
 		<property name="position">
-			<value>0.050000000000000003</value>
+			<value>0</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -299,7 +316,7 @@
 	</object>
 	<object class="AutomationPoint" id="{ebf842e8-3858-4a94-96e5-69d2df0d5692}">
 		<property name="position">
-			<value>4.0499999999999998</value>
+			<value>2.9344150246305416</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -316,7 +333,7 @@
 	</object>
 	<object class="AutomationPoint" id="{77067488-9f41-4f85-b8c0-d4eb861fdf73}">
 		<property name="position">
-			<value>0</value>
+			<value>0.034415024630541691</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -327,7 +344,7 @@
 	</object>
 	<object class="AutomationPoint" id="{991d4a58-ab60-4b22-9866-2461d1240c01}">
 		<property name="position">
-			<value>2.8999999999999999</value>
+			<value>2.9344150246305416</value>
 		</property>
 		<property name="value">
 			<value>0</value>

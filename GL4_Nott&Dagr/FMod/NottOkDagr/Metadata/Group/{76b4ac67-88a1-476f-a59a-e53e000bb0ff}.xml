@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{76b4ac67-88a1-476f-a59a-e53e000bb0ff}">
+		<property name="name">
+			<value>IcecubeDestroy</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{93d88549-6bdb-435f-a9eb-c32b44f8bebb}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{2a5b6829-d25f-4b26-8120-b804a67a171f}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5a56a70e-4a55-4bb1-ba5e-b29879268c64}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{93d88549-6bdb-435f-a9eb-c32b44f8bebb}">
+		<relationship name="effects">
+			<destination>{48f44553-24d9-4d8e-b84d-4123d9299443}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{2a5b6829-d25f-4b26-8120-b804a67a171f}" />
+	<object class="MixerBusFader" id="{48f44553-24d9-4d8e-b84d-4123d9299443}" />
+</objects>

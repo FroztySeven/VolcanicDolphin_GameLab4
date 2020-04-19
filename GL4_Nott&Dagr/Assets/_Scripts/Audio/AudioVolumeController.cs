@@ -18,7 +18,7 @@ public class AudioVolumeController : MonoBehaviour
 
     // Objects
     private FMOD.Studio.Bus 
-        _bubbleEnterExitMaster, _gemActiveMaster, _icecubeDestroyedMaster, _portalActivatedMaster, _plantGrowMaster, _pressurePlateMaster, _ropeBurnSnapMaster, _ropeSwingMaster, _ropeTwistMaster, _slidingMaster, _stoneNoisesMaster, _teleportPlayersMaster, _trampolineMaster;
+        _batRamBoomMaster, _gemActiveMaster, _icecubeDestroyMaster,  _plantGrowMaster, _platformMoveMaster, _portalActivatedMaster, _pressurePlateMaster, _ropeBurnSnapMaster, _ropeSwingMaster, _ropeTwistMaster, _slidingMaster, _stoneNoisesMaster, _teleportPlayersMaster, _trampolineMaster;
 
     // Players SFX
 
@@ -56,17 +56,20 @@ public class AudioVolumeController : MonoBehaviour
 
     //--------------------------------------------------------------------------------------------------------//
 
-    [Header(" Objects SFX Controllers")] 
+    [Header(" Objects SFX Controllers")]
+
     [SerializeField] [Range(-80f, 20f)]
-    public float bubbleEnterExitVolume;
+    public float batRamBoomVolume;
     [SerializeField] [Range(-80f, 20f)]
     public float gemActiveVolume;
     [SerializeField] [Range(-80f, 20f)]
-    public float icecubeDestroyedVolume;
-    [SerializeField] [Range(-80f, 20f)]
-    public float portalActivatedVolume;
+    public float icecubeDestroyVolume;
     [SerializeField] [Range(-80f, 20f)]
     public float plantGrowVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float platformMoveVolume;
+    [SerializeField] [Range(-80f, 20f)]
+    public float portalActivatedVolume;
     [SerializeField] [Range(-80f, 20f)]
     public float pressurePlateVolume;
     [SerializeField] [Range(-80f, 20f)]
@@ -121,11 +124,12 @@ public class AudioVolumeController : MonoBehaviour
 
 
         // Objects
-        _bubbleEnterExitMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Bubbles/BubbleEnterExit");
+        _batRamBoomMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/BatRamBoom");
         _gemActiveMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Gems");
-        _icecubeDestroyedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/IcecubeDestroyed");
-        _portalActivatedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PortalActivated");
+        _icecubeDestroyMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/IcecubeDestroy");
         _plantGrowMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PlantGrowing");
+        _platformMoveMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PlatformMoving");
+        _portalActivatedMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PortalActivated");
         _pressurePlateMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/PressurePlate");
         _ropeBurnSnapMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeBurnSnap");
         _ropeSwingMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeSwing");
@@ -160,11 +164,12 @@ public class AudioVolumeController : MonoBehaviour
         _waterSplashMaster.setVolume(DecibelToLinear(waterSplashVolume));
 
         // Objects
-        _bubbleEnterExitMaster.setVolume(DecibelToLinear(bubbleEnterExitVolume));
+        _batRamBoomMaster.setVolume(DecibelToLinear(batRamBoomVolume));
         _gemActiveMaster.setVolume(DecibelToLinear(gemActiveVolume));
-        _icecubeDestroyedMaster.setVolume(DecibelToLinear(gemActiveVolume));
-        _portalActivatedMaster.setVolume(DecibelToLinear(portalActivatedVolume));
+        _icecubeDestroyMaster.setVolume(DecibelToLinear(icecubeDestroyVolume));
         _plantGrowMaster.setVolume(DecibelToLinear(plantGrowVolume));
+        _platformMoveMaster.setVolume(DecibelToLinear(platformMoveVolume));
+        _portalActivatedMaster.setVolume(DecibelToLinear(portalActivatedVolume));
         _pressurePlateMaster.setVolume(DecibelToLinear(pressurePlateVolume));
         _ropeBurnSnapMaster.setVolume(DecibelToLinear(ropeBurnSnapVolume));
         _ropeSwingMaster.setVolume(DecibelToLinear(ropeSwingVolume));

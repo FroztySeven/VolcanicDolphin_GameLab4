@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6697943739792321517}
   - component: {fileID: 6268633400693879582}
   m_Layer: 10
-  m_Name: Water
+  m_Name: Pre_WaterToPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezeSpeed: 0.05
   waterLength: 0
+  isBehindWall: 0
   isAnimated: 0
   animationRate: 15
   waterPrefab: {fileID: 1290980568863465763, guid: 711d73c7fa15ba0408d2d490003c9439,

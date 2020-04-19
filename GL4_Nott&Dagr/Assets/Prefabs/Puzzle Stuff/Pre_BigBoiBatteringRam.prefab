@@ -4206,6 +4206,7 @@ GameObject:
   - component: {fileID: 3040315715311940006}
   - component: {fileID: 3040315715311940007}
   - component: {fileID: 2940247116100207562}
+  - component: {fileID: 617126301230125656}
   m_Layer: 0
   m_Name: PlatformSpirtes
   m_TagString: Untagged
@@ -4365,6 +4366,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b860147c288d5d4c83fbf553df96768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ropeSwinging: 0
+  ropeTwisting: 0
+  objectRB: {fileID: 0}
+--- !u!114 &617126301230125656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040315715311940001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec3bd307558f2240b6ed5df73751065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3040315715327975690

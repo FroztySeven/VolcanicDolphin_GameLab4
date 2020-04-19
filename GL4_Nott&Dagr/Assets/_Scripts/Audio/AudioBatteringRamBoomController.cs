@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class AudioBatteringRamBoomController : MonoBehaviour
 {
+    private FMOD.Studio.EventInstance wallBoom;
     // Start is called before the first frame update
     void Start()
     {
-        
+        wallBoom = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Objects/BatRamBoom");
     }
 
     // Update is called once per frame
@@ -22,6 +23,8 @@ public class AudioBatteringRamBoomController : MonoBehaviour
         if (other.gameObject.tag == "Wall")
         {
             Debug.Log("Hit Wall Boom");
+            wallBoom.start();
+            wallBoom.release();
         }
     }
 }
