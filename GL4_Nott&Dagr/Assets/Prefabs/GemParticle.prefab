@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5002316788355089781}
   - component: {fileID: 5002316788355089780}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: GemParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,8 +221,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.08317016, g: 0.8396226, b: 0.099734806, a: 1}
-      maxColor: {r: 0, g: 0.254717, b: 0.06367925, a: 1}
+      minColor: {r: 0.58431375, g: 0.84705883, b: 0.8784314, a: 1}
+      maxColor: {r: 0.07058824, g: 0.40784314, b: 0.44313726, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1538,7 +1538,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: bf61ec24bb3e69d4598efd5d2d7ef7c9, type: 3}
+    - sprite: {fileID: 21300000, guid: c984d62c49ad74043a887f041b1a3045, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
