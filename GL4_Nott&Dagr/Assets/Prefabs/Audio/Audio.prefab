@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicMasterVolume: -3
-  sfxMasterVolume: 0
+  sfxMasterVolume: 2
   iceFreezeVolume: -15
   iceMeltVolume: -8
   waterFreezeVolume: -17
@@ -84,7 +84,7 @@ MonoBehaviour:
   gemActiveVolume: -10
   icecubeDestroyVolume: -22
   plantGrowVolume: -15
-  platformMoveVolume: -7
+  platformMoveVolume: -4.5
   portalActivatedVolume: -8
   pressurePlateVolume: -10
   ropeBurnSnapVolume: -7.4
