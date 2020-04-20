@@ -156,7 +156,7 @@ public class AudioMusicController2 : MonoBehaviour
         }
         */
         //-----Chapter 1 - Level 1 -----//
-        if (sceneNr == 2)
+        if (sceneNr == 6)
         {
             menu = false;
             cutScene = false;
@@ -171,7 +171,7 @@ public class AudioMusicController2 : MonoBehaviour
             chapter4Loop = false;
         }
         //-----Chapter 1 - Level 2, 3, 4 -----//
-        if (sceneNr == 3 || sceneNr == 4 || sceneNr == 5)
+        if (sceneNr == 7 || sceneNr == 8 || sceneNr == 9)
         {
             menu = false;
             cutScene = false;
@@ -247,7 +247,7 @@ public class AudioMusicController2 : MonoBehaviour
             chapter4Loop = false;
         }
         //-----Chapter 4 - Level 1 -----//
-        if (sceneNr == 19)
+        if (sceneNr == 18)
         {
             menu = false;
             cutScene = false;

@@ -6,84 +6,87 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Remi/Menu Scenes/MainMenu.unity
+    path: Assets/Scenes/_Main Game/Menu Scenes/MainMenu.unity
     guid: 18090cb96c96091428e925b943e3e2f9
   - enabled: 1
-    path: Assets/Scenes/Remi/Menu Scenes/Chapters&Levels.unity
+    path: Assets/Scenes/_Main Game/Menu Scenes/Chapters&Levels.unity
     guid: c3f1b056d97dde147a8aa187c1301d7d
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/Helheim/Helheim_01.unity
-    guid: 5f0ad1e092eb3d74ab72fb002d55dcbd
-  - enabled: 1
-    path: Assets/Scenes/Completed Levels/Helheim/Helheim_02.unity
-    guid: 8ac3492d2fb9a4f47b96448413e1f5ef
-  - enabled: 1
-    path: Assets/Scenes/Completed Levels/Helheim/Helheim_03.unity
-    guid: 15b9da19b7d876745ba99535ea72c1e4
-  - enabled: 1
-    path: Assets/Scenes/Completed Levels/Helheim/Helheim_04.unity
-    guid: d6922f92efba4de428999955c29f74b6
-  - enabled: 1
-    path: Assets/Scenes/Remi/Menu Scenes/Cutscenes/Cutscene1.unity
+    path: Assets/Scenes/_Main Game/Menu Scenes/Cutscenes/Cutscene1.unity
     guid: 522e2694d37133443a8f6dbe31505aec
   - enabled: 1
-    path: Assets/Scenes/Remi/Menu Scenes/Cutscenes/Cutscene2.unity
+    path: Assets/Scenes/_Main Game/Menu Scenes/Cutscenes/Cutscene2.unity
     guid: 75b55e5e97cab6e409f345e4897b580e
   - enabled: 1
-    path: Assets/Scenes/Remi/Menu Scenes/Cutscenes/Cutscene3.unity
+    path: Assets/Scenes/_Main Game/Menu Scenes/Cutscenes/Cutscene3.unity
     guid: 073790b58be8f184e98bdab6cff4453f
   - enabled: 1
-    path: Assets/Scenes/Remi/Menu Scenes/Cutscenes/Cutscene4.unity
+    path: Assets/Scenes/_Main Game/Menu Scenes/Cutscenes/Cutscene4.unity
     guid: 4a295848257cb024ea54485f9037aeda
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/Sindre Level 03.unity
+    path: Assets/Scenes/_Main Game/Chapter 1 - Helheim/Helheim_01.unity
+    guid: 5f0ad1e092eb3d74ab72fb002d55dcbd
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 1 - Helheim/Helheim_02.unity
+    guid: 8ac3492d2fb9a4f47b96448413e1f5ef
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 1 - Helheim/Helheim_03.unity
+    guid: 15b9da19b7d876745ba99535ea72c1e4
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 1 - Helheim/Helheim_04.unity
+    guid: d6922f92efba4de428999955c29f74b6
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 2 - Jotunheim/Jotunheim_01.unity
     guid: d66dcfc6458839c488935f230584bb48
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/Remi Level 02.unity
+    path: Assets/Scenes/_Main Game/Chapter 2 - Jotunheim/Jotunheim_02.unity
     guid: 767514c42ce82b74fa52373c32d516a1
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/Remi Level 01.unity
+    path: Assets/Scenes/_Main Game/Chapter 2 - Jotunheim/Jotunheim_03.unity
     guid: c0777dd1c0d43c843904a4a65d906be5
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/Gunnar - Level 02.unity
+    path: Assets/Scenes/_Main Game/Chapter 2 - Jotunheim/Jotunheim_04.unity
     guid: 8385f7a7f800515438ce9e26d2fdeee0
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/Burny-burny Swing-Swing.unity
+    path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_01.unity
     guid: c28346b2f1bda3b44aafe9b6daaa03c5
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/Gunnar - Level 03.unity
+    path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_02.unity
     guid: 0438530211d26ca40827d1ea333aaed7
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/J-T Level 02.unity
+    path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_03.unity
     guid: 0e3d4206315897c41b4a46200c4846ac
   - enabled: 1
-    path: Assets/Scenes/Completed Levels/J-T Level 04.unity
+    path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_04.unity
     guid: 81b94be240b34264bbb181443a6d72e5
   - enabled: 1
-    path: Assets/Scenes/Remi/Menu Scenes/Cutscenes/CutsceneTBC.unity
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_01.unity
+    guid: 59201db64d7fa29469c7a738f61c3dfb
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Menu Scenes/Cutscenes/CutsceneTBC.unity
     guid: 46f79d624b33ffd458c2faab055b82ee
   - enabled: 0
-    path: Assets/Scenes/Completed Levels/J-T Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/J-T Level 01.unity
     guid: a2db50c356d964347b016fbc7b9e8ab5
   - enabled: 0
-    path: Assets/Scenes/Completed Levels/J-T Level 03.unity
+    path: Assets/Scenes/_Main Game/Unsorted/J-T Level 03.unity
     guid: b7baeaf9d5b21a546bde5c3524ea1572
   - enabled: 0
-    path: Assets/Scenes/Completed Levels/Jane Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Jane Level 01.unity
     guid: 4512343d3f107a242a184e6f61113e20
   - enabled: 0
-    path: Assets/Scenes/Completed Levels/Sindre Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Sindre Level 01.unity
     guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
   - enabled: 0
-    path: Assets/Scenes/Completed Levels/Sindre Level 02.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Sindre Level 02.unity
     guid: 20d555554340f1346b53bd57a9b3fa79
   - enabled: 0
-    path: Assets/Scenes/Completed Levels/Sindre Level 04.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Sindre Level 04.unity
     guid: a149dd64f6a96764eaf4caa8f1b2d4f9
   - enabled: 0
-    path: Assets/Scenes/Completed Levels/Gunnar - Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Gunnar - Level 01.unity
     guid: 2a55f41774911e8408689ed13f87a62e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Remi/Week_16/Vanaheim_Remi_01.unity
     guid: aac5612cc9fb6474ca3e31fb321b5157
   m_configObjects: {}
