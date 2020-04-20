@@ -485,7 +485,7 @@ MonoBehaviour:
   skipBG: {fileID: 674812909}
   skipImage: {fileID: 1938004124}
   mainMenu: 
-  firstLevelInChapter1: Prologue Level 01
+  firstLevelInChapter1: Helheim_01
   firstLevelInChapter2: Sindre Level 03
   firstLevelInChapter3: Burny-burny Swing-Swing
 --- !u!1 &886475094
