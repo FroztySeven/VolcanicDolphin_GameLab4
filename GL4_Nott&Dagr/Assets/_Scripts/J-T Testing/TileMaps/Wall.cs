@@ -26,7 +26,7 @@ public class Wall : MonoBehaviour
                 }
                 //transform.GetChild(i).GetComponent<Rigidbody2D>().AddForce(new Vector2(1000, 1000));
                 //transform.GetChild(i).GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-10f, 10f), Random.Range(5f, 10f)));
-                Destroy(transform.GetChild(i).gameObject, Random.Range(5f, 10f));
+                Destroy(transform.GetChild(i).gameObject, Random.Range(3f, 6f));
             }
             transform.DetachChildren();
             Destroy(gameObject);
