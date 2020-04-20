@@ -14,7 +14,7 @@ public class AudioMusicController2 : MonoBehaviour
 
     public int sceneNr;
 
-    public int[] menuNr, cutSceneNr, chapter1Nr, chapter2Nr, chapter3Nr, chapter4Nr;
+    public int[] menuNr, cutSceneNr/*, chapter1Nr, chapter2Nr, chapter3Nr, chapter4Nr*/;
 
     private int menuVal = 0,
         menuLoopVal = 1,
@@ -59,13 +59,6 @@ public class AudioMusicController2 : MonoBehaviour
         SceneCheck();
 
         PlayTrack();
-
-        if (chapter2Loop)
-        {
-            gameObject.GetComponent<StudioEventEmitter>().SetParameter("Music Controller", levelWonVal);
-            SendMessage("Play");
-        }
-        
     }
 
     void SceneCheck()
@@ -105,7 +98,7 @@ public class AudioMusicController2 : MonoBehaviour
                 chapter4Loop = false;
             }
         }
-
+        /*
         for (int i = 0; i < chapter1Nr.Length; i++)
         {
             if (sceneNr == chapter1Nr[i])
@@ -114,13 +107,9 @@ public class AudioMusicController2 : MonoBehaviour
                 cutScene = false;
                 levelWon = false;
                 chapter1 = true;
-                chapter1Loop = false;
                 chapter2 = false;
-                chapter2Loop = false;
                 chapter3 = false;
-                chapter3Loop = false;
                 chapter4 = false;
-                chapter4Loop = false;
             }
         }
 
@@ -132,13 +121,9 @@ public class AudioMusicController2 : MonoBehaviour
                 cutScene = false;
                 levelWon = false;
                 chapter1 = false;
-                chapter1Loop = false;
                 chapter2 = true;
-                chapter2Loop = false;
                 chapter3 = false;
-                chapter3Loop = false;
                 chapter4 = false;
-                chapter4Loop = false;
             }
         }
 
@@ -150,13 +135,9 @@ public class AudioMusicController2 : MonoBehaviour
                 cutScene = false;
                 levelWon = false;
                 chapter1 = false;
-                chapter1Loop = false;
                 chapter2 = false;
-                chapter2Loop = false;
                 chapter3 = true;
-                chapter3Loop = false;
                 chapter4 = false;
-                chapter4Loop = false;
             }
         }
 
@@ -168,15 +149,135 @@ public class AudioMusicController2 : MonoBehaviour
                 cutScene = false;
                 levelWon = false;
                 chapter1 = false;
-                chapter1Loop = false;
                 chapter2 = false;
-                chapter2Loop = false;
                 chapter3 = false;
-                chapter3Loop = false;
                 chapter4 = true;
-                chapter4Loop = false;
             }
         }
+        */
+        //-----Chapter 1 - Level 1 -----//
+        if (sceneNr == 2)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = true;
+            chapter1Loop = false;
+            chapter2 = false;
+            chapter2Loop = false;
+            chapter3 = false;
+            chapter3Loop = false;
+            chapter4 = false;
+            chapter4Loop = false;
+        }
+        //-----Chapter 1 - Level 2, 3, 4 -----//
+        if (sceneNr == 3 || sceneNr == 4 || sceneNr == 5)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = false;
+            chapter1Loop = true;
+            chapter2 = false;
+            chapter2Loop = false;
+            chapter3 = false;
+            chapter3Loop = false;
+            chapter4 = false;
+            chapter4Loop = false;
+        }
+        //-----Chapter 2 - Level 1 -----//
+        if (sceneNr == 10)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = false;
+            chapter1Loop = false;
+            chapter2 = true;
+            chapter2Loop = false;
+            chapter3 = false;
+            chapter3Loop = false;
+            chapter4 = false;
+            chapter4Loop = false;
+        }
+        //-----Chapter 2 - Level 2, 3, 4 -----//
+        if (sceneNr == 11 || sceneNr == 12 || sceneNr == 13)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = false;
+            chapter1Loop = false;
+            chapter2 = false;
+            chapter2Loop = true;
+            chapter3 = false;
+            chapter3Loop = false;
+            chapter4 = false;
+            chapter4Loop = false;
+        }
+
+        //-----Chapter 3 - Level 1 -----//
+        if (sceneNr == 14)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = false;
+            chapter1Loop = false;
+            chapter2 = false;
+            chapter2Loop = false;
+            chapter3 = true;
+            chapter3Loop = false;
+            chapter4 = false;
+            chapter4Loop = false;
+        }
+        //-----Chapter 3 - Level 2, 3, 4 -----//
+        if (sceneNr == 15 || sceneNr == 16 || sceneNr == 17)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = false;
+            chapter1Loop = false;
+            chapter2 = false;
+            chapter2Loop = false;
+            chapter3 = false;
+            chapter3Loop = true;
+            chapter4 = false;
+            chapter4Loop = false;
+        }
+        //-----Chapter 4 - Level 1 -----//
+        if (sceneNr == 19)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = false;
+            chapter1Loop = false;
+            chapter2 = false;
+            chapter2Loop = false;
+            chapter3 = false;
+            chapter3Loop = false;
+            chapter4 = true;
+            chapter4Loop = false;
+        }
+        /*
+        //-----Chapter 4 - Level 2, 3, 4 -----//
+        if (sceneNr == 19 || sceneNr == 20 || sceneNr == 21)
+        {
+            menu = false;
+            cutScene = false;
+            levelWon = false;
+            chapter1 = false;
+            chapter1Loop = false;
+            chapter2 = false;
+            chapter2Loop = false;
+            chapter3 = false;
+            chapter3Loop = false;
+            chapter4 = false;
+            chapter4Loop = true;
+        }
+        */
     }
 
     void PlayTrack()
@@ -191,11 +292,169 @@ public class AudioMusicController2 : MonoBehaviour
             music.setParameterByName("Music Controller", cutSceVal);
         }
 
+        /*
         if (levelWon)
         {
             music.setParameterByName("Music Controller", levelWonVal);
         }
+        */
 
+        //---- Chapter 1 Levels after second, loop ----//
+        if (chapter1)
+        {
+            music.setParameterByName("Music Controller", chapt1Val);
+
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true; 
+                if (levelWon)
+                {
+                    chapter1 = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+
+        }
+
+        if (chapter1Loop)
+        {
+            music.setParameterByName("Music Controller", chapt1LoopVal);
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true;
+                if (levelWon)
+                {
+                    chapter1Loop = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+        }
+
+        //---- Chapter 2 Levels after second, loop ----//
+        if (chapter2)
+        {
+            music.setParameterByName("Music Controller", chapt2Val);
+
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true;
+                if (levelWon)
+                {
+                    chapter2 = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+
+        }
+
+        if (chapter2Loop)
+        {
+            music.setParameterByName("Music Controller", chapt2LoopVal);
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true;
+                if (levelWon)
+                {
+                    chapter2Loop = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+        }
+
+        //---- Chapter 3 Levels after second, loop ----//
+        if (chapter3)
+        {
+            music.setParameterByName("Music Controller", chapt3Val);
+
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true;
+                if (levelWon)
+                {
+                    chapter3 = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+
+        }
+
+        if (chapter3Loop)
+        {
+            music.setParameterByName("Music Controller", chapt3LoopVal);
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true;
+                if (levelWon)
+                {
+                    chapter3Loop = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+        }
+
+        //---- Chapter 4 Levels after second, loop ----//
+        if (chapter4)
+        {
+            music.setParameterByName("Music Controller", chapt4Val);
+
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true;
+                if (levelWon)
+                {
+                    chapter4 = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+
+        }
+
+        if (chapter4Loop)
+        {
+            music.setParameterByName("Music Controller", chapt4LoopVal);
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            {
+                levelWon = true;
+                if (levelWon)
+                {
+                    chapter4Loop = false;
+                    music.setParameterByName("Music Controller", levelWonVal);
+                }
+            }
+            else
+            {
+                levelWon = false;
+            }
+        }
+        /*
         if (chapter1)
         {
             music.setParameterByName("Music Controller", chapt1Val);
@@ -235,5 +494,6 @@ public class AudioMusicController2 : MonoBehaviour
         {
             music.setParameterByName("Music Controller", chapt4LoopVal);
         }
+        */
     }
 }

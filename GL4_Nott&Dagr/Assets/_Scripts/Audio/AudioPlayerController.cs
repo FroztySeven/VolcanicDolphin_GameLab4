@@ -20,7 +20,7 @@ public class AudioPlayerController : MonoBehaviour
     public GameObject audioTrigger, door, pause;
 
     public Sprite onSprite;
-    [HideInInspector]
+    //[HideInInspector]
     public Sprite[] dirtSprites, grassSprites, iceSprites, leavesSprites, snowSprites, stoneSprites, waterSprites, woodSprites;
 
     [SerializeField][Range(0,1)]
@@ -29,8 +29,8 @@ public class AudioPlayerController : MonoBehaviour
     [HideInInspector]
     public float height, oldHeight, heightDiff;
 
-    [HideInInspector]
-    public bool isDagr, isNott, isGrounded, isClimbing, isFalling, isMoving, isTeleporting, hasLanded, wasGrounded = true, onPlant, isDirt, isGrass, isIce, isPlant, isSnow, isStone, isWater, isWood;
+    //[HideInInspector]
+    public bool isDagr, isNott, isGrounded, isClimbing, isFalling, isMoving, isTeleporting, hasLanded, wasGrounded = true, onPlant, isDirt, isGrass, isIce, isLeaves, isPlant, isSnow, isStone, isWater, isWood;
 
     //--------------------------------------------------------------------------//
 
@@ -277,6 +277,11 @@ public class AudioPlayerController : MonoBehaviour
                 gtInstance.setParameterByName("GT", gt = 2);
                 gtInstance.start();
             }
+            if (isLeaves)
+            {
+                gtInstance.setParameterByName("GT", gt = 3);
+                gtInstance.start();
+            }
             if (isPlant)
             {
                 gtInstance.setParameterByName("GT", gt = 3);
@@ -313,6 +318,7 @@ public class AudioPlayerController : MonoBehaviour
             isDirt = false;
             isGrass = false;
             isIce = false;
+            isLeaves = false;
             isPlant = false;
             isSnow = false;
             isStone = false;
@@ -324,6 +330,7 @@ public class AudioPlayerController : MonoBehaviour
             isDirt = false;
             isGrass = false;
             isIce = false;
+            isLeaves = false;
             isPlant = false;
             isSnow = false;
             isStone = false;
@@ -338,6 +345,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = true;
                 isGrass = false;
                 isIce = false;
+                isLeaves = false;
                 isPlant = false;
                 isSnow = false;
                 isStone = false;
@@ -353,6 +361,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = true;
                 isIce = false;
+                isLeaves = false;
                 isPlant = false;
                 isSnow = false;
                 isStone = false;
@@ -368,6 +377,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = true;
+                isLeaves = false;
                 isPlant = false;
                 isSnow = false;
                 isStone = false;
@@ -383,7 +393,8 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = false;
-                isPlant = true;
+                isLeaves = true;
+                isPlant = false;
                 isSnow = false;
                 isStone = false;
                 isWater = false;
@@ -398,6 +409,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = false;
+                isLeaves = false;
                 isPlant = false;
                 isSnow = true;
                 isStone = false;
@@ -413,6 +425,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = false;
+                isLeaves = false;
                 isPlant = false;
                 isSnow = false;
                 isStone = true;
@@ -428,6 +441,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = false;
+                isLeaves = false;
                 isPlant = false;
                 isSnow = false;
                 isStone = false;
@@ -443,6 +457,7 @@ public class AudioPlayerController : MonoBehaviour
                 isDirt = false;
                 isGrass = false;
                 isIce = false;
+                isLeaves = false;
                 isPlant = false;
                 isSnow = false;
                 isStone = false;
@@ -456,6 +471,7 @@ public class AudioPlayerController : MonoBehaviour
             isDirt = false;
             isGrass = false;
             isIce = false;
+            isLeaves = false;
             isPlant = true;
             isSnow = false;
             isStone = false;

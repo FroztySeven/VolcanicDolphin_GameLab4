@@ -47,13 +47,13 @@ MonoBehaviour:
   cutScene: 0
   levelWon: 0
   chapter1: 0
+  chapter1Loop: 0
   chapter2: 0
+  chapter2Loop: 0
   chapter3: 0
+  chapter3Loop: 0
   chapter4: 0
+  chapter4Loop: 0
   sceneNr: 0
   menuNr: ffffffff0000000001000000
-  cutSceneNr: 020000000300000008000000
-  chapter1Nr: 
-  chapter2Nr: 04000000
-  chapter3Nr: 
-  chapter4Nr: 
+  cutSceneNr: 06000000070000000800000009000000
