@@ -47,16 +47,16 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -4801,16 +4801,16 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -9555,16 +9555,16 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -14303,22 +14303,22 @@ ParticleSystem:
   m_GameObject: {fileID: 1306425593}
   serializedVersion: 6
   lengthInSec: 1
-  simulationSpeed: 0.5
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -15126,9 +15126,9 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 2
-      minScalar: 10
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -19063,16 +19063,16 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -23817,16 +23817,16 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -28571,16 +28571,16 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -33325,16 +33325,16 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
-    minScalar: 0
+    minMaxState: 3
+    scalar: 5
+    minScalar: 1
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -38096,18 +38096,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
         type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
+        type: 3}
+      propertyPath: startDelay.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
+        type: 3}
+      propertyPath: startDelay.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
+        type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
         type: 3}
-      propertyPath: InitialModule.startSpeed.minScalar
-      value: 12
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
         type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 14
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5002760995049055973, guid: d3423bb859b3a1b42a2571d632bb8ccf,
         type: 3}
@@ -38117,7 +38137,7 @@ PrefabInstance:
     - target: {fileID: 6760961546698174026, guid: d3423bb859b3a1b42a2571d632bb8ccf,
         type: 3}
       propertyPath: m_Name
-      value: BackgroundParticles_Helheim_L02
+      value: BackgroundParticles_Helheim_L02 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3423bb859b3a1b42a2571d632bb8ccf, type: 3}

@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0db4ee8141d839429474f1aa3b8f81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutsceneLoadToLevel: 4
+  cutsceneLoadToLevel: 5
   cutsceneTimer: 0
   loadingText: {fileID: 886475096}
   skipBG: {fileID: 674812909}
@@ -414,6 +414,7 @@ MonoBehaviour:
   firstLevelInChapter1: Prologue Level 01
   firstLevelInChapter2: Sindre Level 03
   firstLevelInChapter3: Burny-burny Swing-Swing
+  firstLevelInChapter4: Vanaheim_Remi_01
 --- !u!1 &886475094
 GameObject:
   m_ObjectHideFlags: 0
