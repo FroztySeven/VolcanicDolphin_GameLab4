@@ -12,20 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Remi/Menu Scenes/Chapters&Levels.unity
     guid: c3f1b056d97dde147a8aa187c1301d7d
   - enabled: 1
+    path: Assets/Scenes/Completed Levels/Helheim/Helheim_01.unity
+    guid: 5f0ad1e092eb3d74ab72fb002d55dcbd
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Helheim/Helheim_02.unity
+    guid: 8ac3492d2fb9a4f47b96448413e1f5ef
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Helheim/Helheim_03.unity
+    guid: 15b9da19b7d876745ba99535ea72c1e4
+  - enabled: 1
+    path: Assets/Scenes/Completed Levels/Helheim/Helheim_04.unity
+    guid: d6922f92efba4de428999955c29f74b6
+  - enabled: 1
     path: Assets/Scenes/Remi/Menu Scenes/Cutscenes/Cutscene1.unity
     guid: 522e2694d37133443a8f6dbe31505aec
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Remi/Menu Scenes/Cutscenes/Cutscene2.unity
     guid: 75b55e5e97cab6e409f345e4897b580e
@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Completed Levels/Gunnar - Level 01.unity
     guid: 2a55f41774911e8408689ed13f87a62e
+  - enabled: 1
+    path: Assets/Scenes/Remi/Week_16/Vanaheim_Remi_01.unity
+    guid: aac5612cc9fb6474ca3e31fb321b5157
   m_configObjects: {}
