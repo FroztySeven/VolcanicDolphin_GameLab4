@@ -86,7 +86,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/_Main Game/Unsorted/Gunnar - Level 01.unity
     guid: 2a55f41774911e8408689ed13f87a62e
-  - enabled: 0
-    path: Assets/Scenes/Remi/Week_16/Vanaheim_Remi_01.unity
-    guid: aac5612cc9fb6474ca3e31fb321b5157
   m_configObjects: {}
