@@ -7,6 +7,10 @@ using UnityEngine.SocialPlatforms;
 
 public class Platform : MonoBehaviour
 {
+    public enum PlatformPlacement { TopOrRight, Middle, BottomOrLeft }
+
+    public PlatformPlacement whereToStartPlatform;
+
     public bool upAndDown = false, sideWays = false, seeSaw = false, disappearing = false;
     [Header("Movement:")]
     [Range(0.1f, 10.0f)] public float moveDistance;
@@ -20,8 +24,8 @@ public class Platform : MonoBehaviour
     
     
     private float yCenter, xCenter;
-    private float currentYPos = 0;
-    private float currentXPos = 0;
+    private float currentYPos;
+    private float currentXPos;
 
     private HingeJoint2D _hingeJoint2D;
     private JointMotor2D _jointMotor2D;
@@ -33,6 +37,22 @@ public class Platform : MonoBehaviour
     {
         yCenter = transform.position.y - (moveDistance / 2);
         xCenter = transform.position.x - (moveDistance / 2);
+
+        if (whereToStartPlatform.ToString() == "TopOrRight")
+        {
+            currentYPos = moveDistance;
+            currentXPos = moveDistance;
+        }
+        else if (whereToStartPlatform.ToString() == "Middle")
+        {
+            currentYPos = moveDistance / 2;
+            currentXPos = moveDistance / 2;
+        }
+        else if (whereToStartPlatform.ToString() == "BottomOrLeft")
+        {
+            currentYPos = 0;
+            currentXPos = 0;
+        }
 
         _hingeJoint2D = gameObject.GetComponent<HingeJoint2D>();
         _jointMotor2D = _hingeJoint2D.motor;

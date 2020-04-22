@@ -197,7 +197,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755872839135430089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -369,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755872840523104735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -7.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2247443424754183918}
@@ -601,12 +601,12 @@ PrefabInstance:
     - target: {fileID: 4977118347988515401, guid: bc1e6158a5f734446808695a961f97db,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 5.068324
+      value: 0.06832388
       objectReference: {fileID: 0}
     - target: {fileID: 4977118347988515401, guid: bc1e6158a5f734446808695a961f97db,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -7.528438
+      value: -0.028437987
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1e6158a5f734446808695a961f97db, type: 3}
@@ -697,12 +697,12 @@ PrefabInstance:
     - target: {fileID: 1377567181443502041, guid: d78c92733c6d43143b300783c8524036,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1377567181443502041, guid: d78c92733c6d43143b300783c8524036,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -7.5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d78c92733c6d43143b300783c8524036, type: 3}

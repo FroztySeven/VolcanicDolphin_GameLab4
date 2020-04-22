@@ -236,10 +236,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b8d1fe13554f84ab950528d6c2eef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whereToStartPlatform: 1
   upAndDown: 0
   sideWays: 0
   seeSaw: 0
   disappearing: 0
+  top: 0
+  middle: 0
+  bottom: 0
   moveDistance: 6.77
   moveSpeed: 8.08
   seeSawSpeed: 19.3
