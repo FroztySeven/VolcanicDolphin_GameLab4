@@ -8,6 +8,7 @@ public class AnimalHide : MonoBehaviour
     public Transform hiddenPosition;
 
     public bool isNotCommingBack;
+    public bool startHidden;
 
     public float playerDetectionRadius;
     public float timeBeforeMoveBack;
@@ -30,6 +31,13 @@ public class AnimalHide : MonoBehaviour
         idlePosition.parent = null;
         hiddenPosition.parent = null;
         timer = timeBeforeMoveBack;
+
+        if (startHidden)
+        {
+            transform.position = hiddenPosition.position;
+            isMovingAwayFromPlayer = true;
+            isIdle = false;
+        }
     }
 
     private void Update()
