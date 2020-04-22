@@ -7,6 +7,8 @@ public class AnimalHide : MonoBehaviour
     public Transform idlePosition;
     public Transform hiddenPosition;
 
+    public bool isNotCommingBack;
+
     public float playerDetectionRadius;
     public float timeBeforeMoveBack;
     public float moveSpeed;
@@ -62,6 +64,12 @@ public class AnimalHide : MonoBehaviour
             isIdle = false;
         }
 
+        if (playerDetected && isMovingToIdle)
+        {
+            isMovingToIdle = false;
+            isMovingAwayFromPlayer = true;
+        }
+
         if (isMovingAwayFromPlayer)
         {
             MoveAwayFromPlayer();
@@ -107,6 +115,12 @@ public class AnimalHide : MonoBehaviour
             if (playerDetected)
             {
                 timer = timeBeforeMoveBack;
+            }
+            else if (isNotCommingBack)
+            {
+                Destroy(idlePosition.gameObject);
+                Destroy(hiddenPosition.gameObject);
+                Destroy(gameObject);
             }
             else
             {

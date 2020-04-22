@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idlePosition: {fileID: 713151360767301181}
   hiddenPosition: {fileID: 713151360621354114}
+  isNotCommingBack: 0
   playerDetectionRadius: 3
   timeBeforeMoveBack: 5
   moveSpeed: 5
