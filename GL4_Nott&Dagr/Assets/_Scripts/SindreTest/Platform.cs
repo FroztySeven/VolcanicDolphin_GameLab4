@@ -13,7 +13,7 @@ public class Platform : MonoBehaviour
 
     public bool upAndDown = false, sideWays = false, seeSaw = false, disappearing = false;
     [Header("Movement:")]
-    [Range(0.1f, 10.0f)] public float moveDistance;
+    [Range(0.1f, 100.0f)] public float moveDistance;
     [Range(0.1f, 10.0f)] public float moveSpeed;
     [Header("Seesaw:")]
     [Range(0.1f, 30.0f)] public float seeSawSpeed;
