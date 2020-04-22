@@ -369,7 +369,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-9129399142961775538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,12 +784,12 @@ MonoBehaviour:
   Path: event:/SFX/Objects/PlatformMoving
   guid: 3d59ce243d923246a77e44ad1f582945
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -9129709618130105054}
+  - {fileID: 6292173869976309344}
   MinDistance: 0
   MaxDistance: 0
   Length: 14000
@@ -1467,6 +1467,23 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-8785412255213342553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PressurePlate/UpOrDown
+  m_EditorClassIdentifier: 
+  Name: UpOrDown
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-8770314241077409096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1724,23 @@ MonoBehaviour:
   m_Name: parameter:/DagrFootstepsJumps/gtDagr
   m_EditorClassIdentifier: 
   Name: gtDagr
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 0
+--- !u!114 &-8633541886838662904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/GT
+  m_EditorClassIdentifier: 
+  Name: GT
   Min: 0
   Max: 8
   Default: 0
@@ -1993,7 +2027,7 @@ MonoBehaviour:
   Path: event:/SFX/Enviroment/WaterSplash
   guid: 76d52575343e3e49a06d5ee1708058bb
   Banks:
-  - {fileID: 287930084952958352}
+  - {fileID: 1241690386965322104}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2102,6 +2136,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637226542668309562
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8548280445260569438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637231492682483313
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -2717,6 +2769,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8376496537117744380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/FOL
+  m_EditorClassIdentifier: 
+  Name: FOL
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-8372684755233371437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,6 +3138,24 @@ MonoBehaviour:
   Max: 8
   Default: 0
   Exists: 1
+--- !u!114 &-8275253654558553894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Players.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Players.bank
+  SubDir: 
+  lastModified: 637231540378772430
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8273372447042935830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3319,7 +3406,7 @@ MonoBehaviour:
   lastModified: 637229774313404377
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8199711680289767511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3876,6 +3963,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &-8069120520613528103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Players.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Players.bank
+  SubDir: 
+  lastModified: 637231516139961777
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8064553787757998973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3928,6 +4033,23 @@ MonoBehaviour:
   lastModified: 637204191277355878
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-8057223878196825122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlatformMoving/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &-8039270820822754871
 MonoBehaviour:
@@ -4490,6 +4612,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7858494281775237851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Players.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Players.bank
+  SubDir: 
+  lastModified: 637231492698475830
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7849884052034932306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4609,7 +4749,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/RopeTwist
   guid: feac11048194ac46aa26eff783a3bf6c
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5142,6 +5282,29 @@ MonoBehaviour:
   Max: 7
   Default: 0
   Exists: 0
+--- !u!114 &-7661026778211660373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/TimerFast
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/TimerFast
+  guid: 950c0d0fb65a2c4c8ca14162f5729812
+  Banks:
+  - {fileID: 3662470679708428397}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1007
 --- !u!114 &-7656307043314314371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5295,7 +5458,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/IcecubeDestroy
   guid: 01cc3fca0281d346b28b521cce5807dc
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6086,6 +6249,24 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 5
+  Exists: 0
+--- !u!114 &-7358925833188980263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Objects.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
+  SubDir: 
+  lastModified: 637231515926736886
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-7351168844143729948
 MonoBehaviour:
@@ -7354,7 +7535,7 @@ MonoBehaviour:
   lastModified: 637229774315628693
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7012719463549603281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7858,6 +8039,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6850030874145359351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Music Controller
+  m_EditorClassIdentifier: 
+  Name: Music Controller
+  Min: 0
+  Max: 12
+  Default: 0
+  Exists: 1
 --- !u!114 &-6844056664710954208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8568,6 +8766,24 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
+  Exists: 0
+--- !u!114 &-6609165955141464535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Players.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Players.bank
+  SubDir: 
+  lastModified: 637231515928496582
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-6606724331043657144
 MonoBehaviour:
@@ -9948,6 +10164,23 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-6243904228811041908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/GT
+  m_EditorClassIdentifier: 
+  Name: GT
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 0
 --- !u!114 &-6237653806166739632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10120,6 +10353,24 @@ MonoBehaviour:
   SubDir: 
   lastModified: 637199815648013909
   LoadResult: 13
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6186820230334071110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Objects.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
+  SubDir: 
+  lastModified: 637231540377595576
+  LoadResult: 0
   FileSizes: []
   Exists: 0
 --- !u!114 &-6184677762028692482
@@ -11074,6 +11325,24 @@ MonoBehaviour:
   Max: 10
   Default: 0
   Exists: 0
+--- !u!114 &-5849905998055360775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
+  SubDir: 
+  lastModified: 637231516136840144
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-5839174004842286962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11197,6 +11466,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637204155889195694
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-5795113844166635544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
+  SubDir: 
+  lastModified: 637231515922871397
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -12758,7 +13045,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/PlantGrowing
   guid: 34b461c702b49c4c93acf8cfeb1b374c
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -13134,6 +13421,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-5238998907239913808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PressurePlate/UpOrDown
+  m_EditorClassIdentifier: 
+  Name: UpOrDown
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-5234710128687320788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13378,6 +13682,23 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-5164390375033082085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Music Controller
+  m_EditorClassIdentifier: 
+  Name: Music Controller
+  Min: 0
+  Max: 12
+  Default: 0
+  Exists: 0
 --- !u!114 &-5161816976148848648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13606,7 +13927,7 @@ MonoBehaviour:
   Path: event:/SFX/Enviroment/IceFreeze
   guid: 9a675a22de9e0546bb268f5d0923b7ff
   Banks:
-  - {fileID: 287930084952958352}
+  - {fileID: 1241690386965322104}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -14514,6 +14835,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4789792201672513284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637231540376628172
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-4783434750889644867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15089,6 +15428,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-4614753741458058707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Objects.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
+  SubDir: 
+  lastModified: 637231492688688380
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-4611634559997472984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15633,6 +15990,41 @@ MonoBehaviour:
   Name: dirtJLVolDagr
   Min: -80
   Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &-4419841387656011470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637231515929134890
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4416960764348135448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlatformMoving/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
   Default: 0
   Exists: 0
 --- !u!114 &-4414602880957551502
@@ -16388,6 +16780,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4162043542184444443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/GT
+  m_EditorClassIdentifier: 
+  Name: GT
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 1
 --- !u!114 &-4148675738381442420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16508,7 +16917,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/StoneNoises
   guid: 0cf6eacc7a7d2d42970773a41a4e4e23
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -16619,6 +17028,23 @@ MonoBehaviour:
   Name: Materials
   Min: 0
   Max: 7
+  Default: 0
+  Exists: 0
+--- !u!114 &-4083399140962812548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Music Controller
+  m_EditorClassIdentifier: 
+  Name: Music Controller
+  Min: 0
+  Max: 12
   Default: 0
   Exists: 0
 --- !u!114 &-4079050160480377693
@@ -19456,6 +19882,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-3178189004764446272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PressurePlate/UpOrDown
+  m_EditorClassIdentifier: 
+  Name: UpOrDown
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-3178027032724668480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20802,6 +21245,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2747845133318531959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637231568705627614
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2741925957958372193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21275,7 +21736,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/TeleportPlayers
   guid: 4410184f2f205c45903e42209a1cb92c
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -22091,7 +22552,7 @@ MonoBehaviour:
   lastModified: 637229774315837855
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2365963152068794049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22596,7 +23057,24 @@ MonoBehaviour:
   lastModified: 637229774312626446
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &-2192879891954859037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/FOL
+  m_EditorClassIdentifier: 
+  Name: FOL
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-2190288614939082701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25110,7 +25588,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/RopeSwing
   guid: bef67981583073479141d9bdf183391d
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -25710,6 +26188,24 @@ MonoBehaviour:
   Max: 7
   Default: 0
   Exists: 0
+--- !u!114 &-1284714779936758101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637231492699622387
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1281593461280364596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25725,6 +26221,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
   SubDir: 
   lastModified: 637229146446752782
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1277266797119621643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637231492680562112
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -25813,6 +26327,24 @@ MonoBehaviour:
   Max: 10
   Default: 0
   Exists: 0
+--- !u!114 &-1250250371749885272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
+  SubDir: 
+  lastModified: 637231568703218966
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1247731843868811782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26164,6 +26696,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Players.bank
   SubDir: 
   lastModified: 637226396208394848
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1139040823150804942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637231516136800235
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -26902,6 +27452,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-937558706334277251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/GT
+  m_EditorClassIdentifier: 
+  Name: GT
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 0
 --- !u!114 &-937195075327100617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27041,6 +27608,24 @@ MonoBehaviour:
   Max: 8
   Default: 0
   Exists: 1
+--- !u!114 &-894538179004751117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637231516140181191
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-876065515402498007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27302,6 +27887,23 @@ MonoBehaviour:
   lastModified: 637202573316625448
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-805915005028476327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/FOL
+  m_EditorClassIdentifier: 
+  Name: FOL
+  Min: 0
+  Max: 2
+  Default: 0
   Exists: 0
 --- !u!114 &-804587226618651449
 MonoBehaviour:
@@ -27962,7 +28564,7 @@ MonoBehaviour:
   lastModified: 637229774314441587
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-591925779003959878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28733,7 +29335,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/PushSlide
   guid: 4bc1ae8507a88f4999d75ac8c9df3110
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -29017,6 +29619,23 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 5
+  Exists: 0
+--- !u!114 &-268366479398697447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Music Controller
+  m_EditorClassIdentifier: 
+  Name: Music Controller
+  Min: 0
+  Max: 12
+  Default: 0
   Exists: 0
 --- !u!114 &-266239066000720103
 MonoBehaviour:
@@ -29419,7 +30038,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/GemActivated
   guid: 0a5072553795ed4e8450386a4127ff39
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -29954,6 +30573,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &-5702956365009280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637231515923719127
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-5501950970297497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30036,13 +30673,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 638682269303254595}
-  - {fileID: -8202152886460858378}
-  - {fileID: 287930084952958352}
-  - {fileID: -2212901903433741890}
-  - {fileID: 460439154919043707}
-  - {fileID: -596370544641769201}
-  - {fileID: -7012832302854166084}
-  - {fileID: -2371826263623316470}
+  - {fileID: -1250250371749885272}
+  - {fileID: 1241690386965322104}
+  - {fileID: 4891038555598623537}
+  - {fileID: 3480761239088433419}
+  - {fileID: 3662470679708428397}
+  - {fileID: 622883872727290336}
+  - {fileID: -2747845133318531959}
   EditorEvents:
   - {fileID: 7167251990977766476}
   - {fileID: -5115990710540726856}
@@ -30067,12 +30704,15 @@ MonoBehaviour:
   - {fileID: 6368625789813084444}
   - {fileID: -7586024665713278266}
   - {fileID: -9049579933368191423}
+  - {fileID: 3579084662038578452}
+  - {fileID: -7661026778211660373}
+  - {fileID: 4539327752334235673}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2212901903433741890}
+  - {fileID: 4891038555598623537}
   StringsBanks:
   - {fileID: 638682269303254595}
-  stringsBankWriteTime: 637229774312636754
+  stringsBankWriteTime: 637231568702431069
   cacheVersion: 3
 --- !u!114 &4472350883392366
 MonoBehaviour:
@@ -30828,7 +31468,7 @@ MonoBehaviour:
   lastModified: 637229774313683627
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &291394748080240365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31532,7 +32172,25 @@ MonoBehaviour:
   lastModified: 637229774313374783
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &477049496883778756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
+  SubDir: 
+  lastModified: 637231540376668058
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &478007394983438667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31759,6 +32417,23 @@ MonoBehaviour:
   Max: 8
   Default: 0
   Exists: 0
+--- !u!114 &577811346706220662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PressurePlate/UpOrDown
+  m_EditorClassIdentifier: 
+  Name: UpOrDown
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &578460174602453481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31880,6 +32555,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &622883872727290336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Players.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Players.bank
+  SubDir: 
+  lastModified: 637231568705408198
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &634937290295908590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31929,11 +32622,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMod/NottOkDagr/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637229774312636754
+  lastModified: 637231568702431069
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3654
+    Value: 3776
   Exists: 1
 --- !u!114 &641032347360047699
 MonoBehaviour:
@@ -32427,6 +33120,23 @@ MonoBehaviour:
   lastModified: 637200437188301442
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &780733926293050661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Music Controller
+  m_EditorClassIdentifier: 
+  Name: Music Controller
+  Min: 0
+  Max: 12
+  Default: 0
   Exists: 0
 --- !u!114 &792690637349663182
 MonoBehaviour:
@@ -34029,6 +34739,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &1241690386965322104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637231568703468298
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1248247638826773366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34261,7 +34989,7 @@ MonoBehaviour:
   Path: event:/SFX/UI/ButtonSelected
   guid: f0d5bd7a7a0ec14abe56add23fc95541
   Banks:
-  - {fileID: -2371826263623316470}
+  - {fileID: -2747845133318531959}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -35779,6 +36507,23 @@ MonoBehaviour:
   Max: 8
   Default: 0
   Exists: 0
+--- !u!114 &1806245679572092043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/FOL
+  m_EditorClassIdentifier: 
+  Name: FOL
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &1807301520463558896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36426,6 +37171,23 @@ MonoBehaviour:
   lastModified: 637229463865629806
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &2007469312069991795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlatformMoving/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &2008977456571724739
 MonoBehaviour:
@@ -37173,6 +37935,23 @@ MonoBehaviour:
   Max: 8
   Default: 0
   Exists: 0
+--- !u!114 &2195019733798675600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/FOL
+  m_EditorClassIdentifier: 
+  Name: FOL
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &2213655113222524775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37362,6 +38141,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/UI.bank
   SubDir: 
   lastModified: 637229128902812499
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2291135439566881994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637231516137079479
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -38441,6 +39238,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2645893515327598453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlatformMoving/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &2651605696246330417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38994,7 +39808,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/PortalActivated
   guid: fe8674451f8bf44fbaaa3390b7fe3ae5
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -39436,12 +40250,12 @@ MonoBehaviour:
   Path: event:/Music/Music
   guid: 6ef344b619535443aaadc6f89aabe075
   Banks:
-  - {fileID: 460439154919043707}
+  - {fileID: 3480761239088433419}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7476237889882954114}
+  - {fileID: -6850030874145359351}
   MinDistance: 0
   MaxDistance: 0
   Length: 819428
@@ -39531,6 +40345,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
   SubDir: 
   lastModified: 637199815646438082
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3036522097324141581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231492675468607
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -40125,13 +40957,13 @@ MonoBehaviour:
   Path: event:/SFX/Players/PlayerFootstepsLandings
   guid: e3aac3e5b69b964bb87ac24a2cba2a6c
   Banks:
-  - {fileID: -7012832302854166084}
+  - {fileID: 622883872727290336}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 4589238534995288055}
-  - {fileID: 3335185358573741520}
+  - {fileID: -8376496537117744380}
+  - {fileID: -4162043542184444443}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -40414,7 +41246,7 @@ MonoBehaviour:
   Min: 0
   Max: 8
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3337597222632463693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40818,6 +41650,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &3480761239088433419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637231568703189052
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3487593621946628946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41132,6 +41982,29 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &3579084662038578452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/TimerEnd
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/TimerEnd
+  guid: a5b1f7248e411f4e91a784184b74e2c6
+  Banks:
+  - {fileID: 3662470679708428397}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &3581742671975086758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41164,6 +42037,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
   SubDir: 
   lastModified: 637200729349956492
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3596988270231566810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637231515922542285
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -41287,6 +42178,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &3662470679708428397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Objects.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
+  SubDir: 
+  lastModified: 637231568704211404
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3667796603471484452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41919,6 +42828,23 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 1
+--- !u!114 &3827577387476992569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootstepsLandings/GT
+  m_EditorClassIdentifier: 
+  Name: GT
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 0
 --- !u!114 &3829374883199199381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42479,6 +43405,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &4004196570092063248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637231540378991850
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4007243848669720511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42530,7 +43474,7 @@ MonoBehaviour:
   Path: event:/SFX/Enemies/EnemyNoise
   guid: b92a6db254e56543a2721271e18ec88a
   Banks:
-  - {fileID: -8202152886460858378}
+  - {fileID: -1250250371749885272}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -42826,7 +43770,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4095256712958321874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43243,7 +44187,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/TrampolinBounce
   guid: 010ed87e94a0b14d8ba6162fdb463dcf
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -43666,7 +44610,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/RopeBurnSnap
   guid: 1a53177fbbadcd45b65b2dd0e0167375
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -44233,6 +45177,29 @@ MonoBehaviour:
   LoadResult: 13
   FileSizes: []
   Exists: 0
+--- !u!114 &4539327752334235673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/TimerNormal
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/TimerNormal
+  guid: a0be7a8606f15b418d4a959df2a3177a
+  Banks:
+  - {fileID: 3662470679708428397}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &4552146467502035243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44353,7 +45320,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4593395976234679746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45322,6 +46289,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &4891038555598623537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231568702411123
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4894333471897151001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46229,6 +47214,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &5126547030095431960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Enemies.bank
+  SubDir: 
+  lastModified: 637231492680702085
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5130085911658284402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46543,6 +47546,23 @@ MonoBehaviour:
   lastModified: 637206621329332318
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &5223754521177365196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PressurePlate/UpOrDown
+  m_EditorClassIdentifier: 
+  Name: UpOrDown
+  Min: 0
+  Max: 2
+  Default: 0
   Exists: 0
 --- !u!114 &5227234108416912383
 MonoBehaviour:
@@ -47581,6 +48601,24 @@ MonoBehaviour:
   Max: 10
   Default: 5
   Exists: 0
+--- !u!114 &5565184655261099793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231515920517699
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5566619484639128674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47788,6 +48826,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
   SubDir: 
   lastModified: 637229058092471770
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5623879344427022314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Objects.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Objects.bank
+  SubDir: 
+  lastModified: 637231516138864705
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -48690,7 +49746,7 @@ MonoBehaviour:
   Path: event:/SFX/Enviroment/IceMelt
   guid: cc78689b5a099e428ca6fb3e29570cc2
   Banks:
-  - {fileID: 287930084952958352}
+  - {fileID: 1241690386965322104}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -49870,6 +50926,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4050
+--- !u!114 &6292173869976309344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlatformMoving/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &6296034444189640822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50026,6 +51099,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6352470342275140508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637231540376917396
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6352750583079947037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50162,7 +51253,7 @@ MonoBehaviour:
   Path: event:/SFX/Objects/BatRamBoom
   guid: 8787d29933251746b2d8bcdbfeac94f9
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -52597,7 +53688,7 @@ MonoBehaviour:
   Path: event:/SFX/Enviroment/WaterFreeze
   guid: 67d7a95333c4ea46821e8c46b2814eb3
   Banks:
-  - {fileID: 287930084952958352}
+  - {fileID: 1241690386965322104}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -53626,7 +54717,7 @@ MonoBehaviour:
   Min: 0
   Max: 12
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7476938020133823829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58195,7 +59286,7 @@ MonoBehaviour:
   Path: event:/SFX/UI/ButtonHighlight
   guid: de85d33f7dc2204591f9c4578967b8c5
   Banks:
-  - {fileID: -2371826263623316470}
+  - {fileID: -2747845133318531959}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -58331,6 +59422,28 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8826813049474765723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/Timer
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/Timer
+  guid: a0be7a8606f15b418d4a959df2a3177a
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4000
 --- !u!114 &8843445073209172066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58846,12 +59959,12 @@ MonoBehaviour:
   Path: event:/SFX/Objects/PressurePlate
   guid: 742575fbf9903f41ad220e3e3f237018
   Banks:
-  - {fileID: -596370544641769201}
+  - {fileID: 3662470679708428397}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 4094480812036669832}
+  - {fileID: 577811346706220662}
   MinDistance: 0
   MaxDistance: 0
   Length: 288
@@ -58870,6 +59983,24 @@ MonoBehaviour:
   Path: FMod/NottOkDagr/Build/Desktop/Environment.bank
   SubDir: 
   lastModified: 637205498005174884
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8987993305641762972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231540375710607
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -59405,6 +60536,24 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 5
+  Exists: 0
+--- !u!114 &9175701337958471139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMod/NottOkDagr/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231516135922568
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &9178466277867017434
 MonoBehaviour:
