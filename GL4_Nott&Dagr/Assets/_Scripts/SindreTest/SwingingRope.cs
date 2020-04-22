@@ -37,6 +37,7 @@ public class SwingingRope : MonoBehaviour
                 endZone.AddComponent<BoxCollider2D>().isTrigger = true;
                 endZone.GetComponent<BoxCollider2D>().size = new Vector2(0.125f, 1f);
                 endZone.AddComponent<SwingingRopeEndZone>();
+                endZone.layer = 11;
             }
         }
     }
