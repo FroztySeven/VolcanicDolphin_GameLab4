@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3576626064807290162}
   - component: {fileID: 818396110068214464}
   - component: {fileID: -2312256359338143448}
-  m_Layer: 0
-  m_Name: PlaceSeedHere
+  m_Layer: 2
+  m_Name: Pre_PlaceSeedHere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,10 +26,13 @@ public class Gem : MonoBehaviour
 
     private bool auraPickupTouch = false;
 
-    private void Start()
+    private void Awake()
     {
         name = "Gem";
+    }
 
+    private void Start()
+    {
         theRB = GetComponent<Rigidbody2D>();
         theCC = GetComponent<CircleCollider2D>();
 

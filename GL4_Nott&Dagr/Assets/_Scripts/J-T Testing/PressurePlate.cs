@@ -16,20 +16,22 @@ public class PressurePlate : MonoBehaviour
     public GameObject platform;
     public GameObject rope;
     public GameObject button;
+    public int ropeLengthWhenOnPlate;
 
-    private Vector3 startPos;
-    private Vector3 pressedPos;
+    [Header("Sprites")]
+    public Sprite unPressed;
+    public Sprite pressed;
 
     private Platform thePF;
     private float platformMoveSpeed;
 
     private GameObject ropeDuplicate;
-    public int ropeLengthWhenOnPlate;
+
+    private SpriteRenderer theSR;
 
     private void Start()
     {
-        startPos = button.transform.position;
-        pressedPos = startPos - new Vector3(0f, 0.08f, 0f);
+        theSR = GetComponentInChildren<SpriteRenderer>();
 
         if (setItemToControl.ToString() == "Wall")
         {
@@ -70,7 +72,7 @@ public class PressurePlate : MonoBehaviour
         {
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString())
             {
-                button.transform.position = pressedPos;
+                theSR.sprite = pressed;
 
                 if (setItemToControl.ToString() == "Wall")
                 {
@@ -91,7 +93,7 @@ public class PressurePlate : MonoBehaviour
 
             if (setUser.ToString() == "Both")
             {
-                button.transform.position = pressedPos;
+                theSR.sprite = pressed;
                 if (setItemToControl.ToString() == "Wall")
                 {
                     wall.SetActive(false);
@@ -117,7 +119,7 @@ public class PressurePlate : MonoBehaviour
         {
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString())
             {
-                button.transform.position = pressedPos;
+                theSR.sprite = pressed;
                 if (setItemToControl.ToString() == "Wall")
                 {
                     wall.SetActive(false);
@@ -137,7 +139,7 @@ public class PressurePlate : MonoBehaviour
 
             if (setUser.ToString() == "Both")
             {
-                button.transform.position = pressedPos;
+                theSR.sprite = pressed;
                 if (setItemToControl.ToString() == "Wall")
                 {
                     wall.SetActive(false);
@@ -163,7 +165,7 @@ public class PressurePlate : MonoBehaviour
         {
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString())
             {
-                button.transform.position = startPos;
+                theSR.sprite = unPressed;
                 if (setItemToControl.ToString() == "Wall")
                 {
                     wall.SetActive(true);
@@ -191,7 +193,7 @@ public class PressurePlate : MonoBehaviour
 
             if (setUser.ToString() == "Both")
             {
-                button.transform.position = startPos;
+                theSR.sprite = unPressed;
                 if (setItemToControl.ToString() == "Wall")
                 {
                     wall.SetActive(true);

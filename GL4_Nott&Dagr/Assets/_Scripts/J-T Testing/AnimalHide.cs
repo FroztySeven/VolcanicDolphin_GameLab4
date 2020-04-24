@@ -28,6 +28,8 @@ public class AnimalHide : MonoBehaviour
 
     private void Start()
     {
+        canFlip = true;
+        isFacingRight = true;
         idlePosition.parent = null;
         hiddenPosition.parent = null;
         timer = timeBeforeMoveBack;
@@ -43,6 +45,7 @@ public class AnimalHide : MonoBehaviour
     private void Update()
     {
         CheckState();
+        CheckMovementDirection();
     }
 
     private void FixedUpdate()
@@ -53,6 +56,27 @@ public class AnimalHide : MonoBehaviour
     private void CheckSurroundings()
     {
         playerDetected = Physics2D.OverlapCircle(idlePosition.position, playerDetectionRadius, whatIsPlayer);
+    }
+
+    private void CheckMovementDirection()
+    {
+        if (isFacingRight && isMovingAwayFromPlayer)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && isMovingToIdle)
+        {
+            Flip();
+        }
+
+        //if (isFacingRight && isMovingToIdle)
+        //{
+        //    Flip();
+        //}
+        //else if (!isFacingRight && isMovingToIdle)
+        //{
+        //    Flip();
+        //}
     }
 
     private void Flip()
