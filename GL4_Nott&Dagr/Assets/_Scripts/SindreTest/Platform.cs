@@ -129,6 +129,10 @@ public class Platform : MonoBehaviour
             other.transform.SetParent(this.transform);
             other.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.None;
         }
+        if (other.gameObject.CompareTag("Gem"))
+        {
+            other.transform.SetParent(this.transform);
+        }
 
         if (disappearing)
         {
@@ -206,6 +210,11 @@ public class Platform : MonoBehaviour
         {
             other.transform.SetParent(null);
             other.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
+        }
+        
+        if (other.gameObject.CompareTag("Gem"))
+        {
+            other.transform.SetParent(null);
         }
     }
 
