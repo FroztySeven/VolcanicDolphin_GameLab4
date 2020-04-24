@@ -10,6 +10,9 @@ public class MinionSpawn : MonoBehaviour
     public float timeToCompleteRoute;
     public bool alwaysAliveAfterSpawned = false;
     public int timeAlive;
+
+    [Header("Path number, needs to be added in the ITweenPath script")]
+    public int pathNumber;
     
     private iTweenPath[] paths;
     private iTweenPath firstPath;
@@ -22,42 +25,61 @@ public class MinionSpawn : MonoBehaviour
 
     private bool dagrMinionIsSpawned = false, nottMinionIsSpawned = false;
     private bool minionOnRoute = false;
-    
+
+    private static MinionSpawn instance;
+    private bool disableSpawning;
+
     private void Start()
     {
         dagr = GameObject.Find("Player1");
         nott = GameObject.Find("Player2");
+        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            disableSpawning = true;
+        }
+
+        gameObject.GetComponent<iTweenPath>().nodes[0] = transform.position; //set start node to the same position as the gameobject
     }
 
 
     private void Update()
     {
-        if (Input.GetButtonDown("MinionSpawnP" + dagr.GetComponent<PlayerController>().playerId) && !dagrMinionIsSpawned) //Spawns Dagr's minion
+        if (!disableSpawning)
         {
-            dagrMinionIsSpawned = true;
-            dagrMinionClone = Instantiate(minionPrefab, new Vector3(0,0,0), Quaternion.identity);
-            dagrMinionClone.transform.SetParent(dagr.transform);
-            dagrMinionClone.transform.localPosition = new Vector3(0, 2, 0);
-            originalParent = dagr;
-            if (!alwaysAliveAfterSpawned)
+            if (Input.GetButtonDown("MinionSpawnP" + dagr.GetComponent<PlayerController>().playerId) &&
+                !dagrMinionIsSpawned) //Spawns Dagr's minion
             {
-                StartCoroutine(despawnDagrMinion());
+                dagrMinionIsSpawned = true;
+                dagrMinionClone = Instantiate(minionPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                dagrMinionClone.transform.SetParent(dagr.transform);
+                dagrMinionClone.transform.localPosition = new Vector3(0, 2, 0);
+                originalParent = dagr;
+                if (!alwaysAliveAfterSpawned)
+                {
+                    StartCoroutine(despawnDagrMinion());
+                }
+            }
+
+            if (Input.GetButtonDown("MinionSpawnP" + nott.GetComponent<PlayerController>().playerId) &&
+                !nottMinionIsSpawned) //Spawns Nott's minion
+            {
+                nottMinionIsSpawned = true;
+                nottMinionClone = Instantiate(minionPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                nottMinionClone.transform.SetParent(nott.transform);
+                nottMinionClone.transform.localPosition = new Vector3(0, 2, 0);
+                originalParent = nott;
+                if (!alwaysAliveAfterSpawned)
+                {
+                    StartCoroutine(despawnNottMinion());
+                }
             }
         }
-        
-        if (Input.GetButtonDown("MinionSpawnP" + nott.GetComponent<PlayerController>().playerId) && !nottMinionIsSpawned) //Spawns Nott's minion
-        {
-            nottMinionIsSpawned = true;
-            nottMinionClone = Instantiate(minionPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            nottMinionClone.transform.SetParent(nott.transform);
-            nottMinionClone.transform.localPosition = new Vector3(0,2,0);
-            originalParent = nott;
-            if (!alwaysAliveAfterSpawned)
-            {
-                StartCoroutine(despawnNottMinion());
-            }
-        }
-        
+
     }
 
 
@@ -81,7 +103,7 @@ public class MinionSpawn : MonoBehaviour
     
     private void PathOne()
     {
-        iTween.MoveTo(minionToMove, iTween.Hash("path", iTweenPath.GetPath("MinionPath"), "time", timeToCompleteRoute, "easetype", iTween.EaseType.linear, "oncomplete", "PathOne"));
+        iTween.MoveTo(minionToMove, iTween.Hash("path", iTweenPath.GetPath("MinionPath" + pathNumber), "time", timeToCompleteRoute, "easetype", iTween.EaseType.linear, "oncomplete", "PathOne"));
         if (alwaysAliveAfterSpawned)
         {
             StartCoroutine(parentMinion());
