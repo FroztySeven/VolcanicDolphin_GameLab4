@@ -124,7 +124,7 @@ public class ExitLevel : MonoBehaviour
             //night.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
             //day.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
             playerPixelate = true;
-            Invoke("LevelFinished", 5f);
+            Invoke("LevelFinished", 7f); //Origanl 5f GB
             StartCoroutine(instantiateLoadingScreen());
             bothEntered = true;
             nightEnter = false;
@@ -188,7 +188,7 @@ public class ExitLevel : MonoBehaviour
 
     private IEnumerator instantiateLoadingScreen()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(6); //Origanl 4f GB
         if (!loadingScreenIsActive)
         {
             tempLoadingScreen = Instantiate(loadingScreen);
@@ -200,7 +200,7 @@ public class ExitLevel : MonoBehaviour
 
     private IEnumerator nextLevel()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f); //Origanl 2f GB
 
         if (unlockLevelNumber > PlayerPrefs.GetInt("LevelPrefs", 1))
         {
