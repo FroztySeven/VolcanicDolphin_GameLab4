@@ -204,5 +204,26 @@ public class LevelUnlockButtons : MonoBehaviour
                 C3[i].interactable = false;
             }
         }
+        
+        //Disable all level buttons in chapter 4 and the LevelPrefs int increases to unlock every button
+        //The integer increases after completing every level within the chapter from the "ExitLevel.cs" script
+        for (int i = 0; i < C4.Length; i++)
+        {
+            //The first level button is enabled when chapter 3 is unlocked
+            if (i + lastNumberOfC3 >= levelReached)
+            {
+                C4[i].interactable = false;
+            }
+        }
+        
+        //Skip locking Chapter 5 levels
+        
+        //Skip locking Chapter 6 levels
+        
+        //Skip locking Chapter 7 levels
+        
+        //Skip locking Chapter 8 levels
+        
+        //Skip locking Chapter 9 levels
     }
 }

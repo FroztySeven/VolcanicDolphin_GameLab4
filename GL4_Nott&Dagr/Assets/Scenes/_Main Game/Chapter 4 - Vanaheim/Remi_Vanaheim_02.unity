@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -23747,11 +23747,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2071515847, guid: 967fc011f3ce1f546abd15d5a27e600c, type: 3}
       propertyPath: unlockLevelNumber
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2071515847, guid: 967fc011f3ce1f546abd15d5a27e600c, type: 3}
       propertyPath: nextLevelSceneName
-      value: 0
+      value: CutsceneTBC
       objectReference: {fileID: 0}
     - target: {fileID: 2829471752649276282, guid: 967fc011f3ce1f546abd15d5a27e600c,
         type: 3}
