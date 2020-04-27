@@ -68,25 +68,46 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_Main Game/Menu Scenes/Cutscenes/CutsceneTBC.unity
     guid: 46f79d624b33ffd458c2faab055b82ee
-  - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Working/J-T Level 01.unity
-    guid: a2db50c356d964347b016fbc7b9e8ab5
-  - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Working/J-T Level 03.unity
-    guid: b7baeaf9d5b21a546bde5c3524ea1572
-  - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Working/Jane Level 01.unity
-    guid: 4512343d3f107a242a184e6f61113e20
-  - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 01.unity
-    guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
-  - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 02.unity
-    guid: 20d555554340f1346b53bd57a9b3fa79
-  - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 04.unity
-    guid: a149dd64f6a96764eaf4caa8f1b2d4f9
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/01_Jane.unity
+    guid: 30ebc1cb151f7cf4c804a18216edf9e7
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/02_Jane.unity
+    guid: 9fa4ad0e41646774e86b92572d4f92e1
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Double Jump Intro - JT.unity
+    guid: 896a0c9d7df4a8248940982a63cd07d9
+  - enabled: 1
     path: Assets/Scenes/_Main Game/Unsorted/Working/Gunnar - Level 01.unity
     guid: 2a55f41774911e8408689ed13f87a62e
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Gunnar - Level 04.unity
+    guid: 935a2fb93aaa4014cb065c54de291e2a
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/J-T Level 01.unity
+    guid: a2db50c356d964347b016fbc7b9e8ab5
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/J-T Level 03.unity
+    guid: b7baeaf9d5b21a546bde5c3524ea1572
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Jane Level 01.unity
+    guid: 4512343d3f107a242a184e6f61113e20
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Moving Platforms - JT.unity
+    guid: 5852fbc7066751c4e9801323adcea468
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 01.unity
+    guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 02.unity
+    guid: 20d555554340f1346b53bd57a9b3fa79
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 04.unity
+    guid: a149dd64f6a96764eaf4caa8f1b2d4f9
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Unknown - JT.unity
+    guid: cf54524ce8ee5ef4eb9b08d57602f6bc
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Vanaheim_Maybe.unity
+    guid: 7283bab6deeb62844a7dbad32945bbcc
   m_configObjects: {}
