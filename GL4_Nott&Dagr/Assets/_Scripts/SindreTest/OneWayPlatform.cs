@@ -28,7 +28,7 @@ public class OneWayPlatform : MonoBehaviour
             _startJumpforce = other.GetComponent<PlayerController>().jumpForce;
             if (_startJumpforce <= 0)
             {
-                _startJumpforce = 750;
+                _startJumpforce = 16;
             }
         }
     }
@@ -37,11 +37,11 @@ public class OneWayPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -1)
+            if (Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -0.9)
             {
                 other.GetComponent<PlayerController>().jumpForce = 0;
 
-                if (other.GetComponent<PlayerController>().isGrounded && Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -1 && 
+                if (other.GetComponent<PlayerController>().isGrounded && Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -0.9 && 
                     Input.GetButton("JumpP" + other.GetComponent<PlayerController>().playerId))
                 {
                     _platformEffector.rotationalOffset = 180;
