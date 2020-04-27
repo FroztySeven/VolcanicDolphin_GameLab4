@@ -66,24 +66,24 @@ EditorBuildSettings:
     path: Assets/Scenes/_Main Game/Menu Scenes/Cutscenes/CutsceneTBC.unity
     guid: 46f79d624b33ffd458c2faab055b82ee
   - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/J-T Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Working/J-T Level 01.unity
     guid: a2db50c356d964347b016fbc7b9e8ab5
   - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/J-T Level 03.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Not Working/J-T Level 03.unity
     guid: b7baeaf9d5b21a546bde5c3524ea1572
   - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Jane Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Jane Level 01.unity
     guid: 4512343d3f107a242a184e6f61113e20
   - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Sindre Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 01.unity
     guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
   - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Sindre Level 02.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 02.unity
     guid: 20d555554340f1346b53bd57a9b3fa79
   - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Sindre Level 04.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Sindre Level 04.unity
     guid: a149dd64f6a96764eaf4caa8f1b2d4f9
   - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Gunnar - Level 01.unity
+    path: Assets/Scenes/_Main Game/Unsorted/Working/Gunnar - Level 01.unity
     guid: 2a55f41774911e8408689ed13f87a62e
   m_configObjects: {}
