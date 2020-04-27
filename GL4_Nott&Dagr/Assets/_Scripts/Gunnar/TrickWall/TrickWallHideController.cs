@@ -22,6 +22,9 @@ public class TrickWallHideController : MonoBehaviour
     public GameObject[] walls;
 
     public GameObject button;
+    
+    [HideInInspector]
+    public Sprite pressed, unPressed, pressDagr, unpressDagr, pressNott, unpressNott, pressBoth, unpressBoth;
 
     public StudioEventEmitter playEnter, playExit, playTimerNormal, playTimerFast, playBong;
 
@@ -31,29 +34,37 @@ public class TrickWallHideController : MonoBehaviour
 
     //--- Private ---//
 
-    private Vector3 startPos, pressedPos;
-
     private int playEventCount = 0, lastPressed = 0;
     
     private float currCountdownValue;
 
+    private FMOD.Studio.EventInstance onButton;
     private void Start()
     {
+        onButton = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Objects/PressurePlate");
+
         if (setUser == WhoCanUse.Day)
         {
-            button.GetComponent<SpriteRenderer>().color = Color.yellow;
+            unPressed = unpressDagr;
+            pressed = pressDagr;
+
+            button.GetComponent<SpriteRenderer>().sprite = unPressed;
+
         }
         else if (setUser == WhoCanUse.Night)
         {
-            button.GetComponent<SpriteRenderer>().color = Color.cyan;
+            unPressed = unpressNott;
+            pressed = pressNott;
+
+            button.GetComponent<SpriteRenderer>().sprite = unPressed;
         }
         else if (setUser == WhoCanUse.Both)
         {
-            button.GetComponent<SpriteRenderer>().color = Color.green;
-        }
+            unPressed = unpressBoth;
+            pressed = pressBoth;
 
-        startPos = button.transform.position;
-        pressedPos = startPos - new Vector3(0f, 0.08f, 0f);
+            button.GetComponent<SpriteRenderer>().sprite = unPressed;
+        }
 
         if (hideMoveMethod.ToString() == "HideAllOnStart")
         {
@@ -124,7 +135,7 @@ public class TrickWallHideController : MonoBehaviour
 
         if (hideMoveMethod.ToString() == "SetByWallLockTimer")
         {
-            button.transform.position = startPos;
+            //button.transform.position = startPos;
 
             playEnter.PlayEvent = EmitterGameEvent.None;
             playExit.PlayEvent = EmitterGameEvent.None;
@@ -159,8 +170,8 @@ public class TrickWallHideController : MonoBehaviour
         {
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString() || setUser.ToString() == "Both")
             {
-                button.transform.position = pressedPos;
-                
+                button.GetComponent<SpriteRenderer>().sprite = pressed;
+
                 if (hideMoveMethod.ToString() == "HideAllOnStart")
                 {
                     ShowWall();
@@ -261,7 +272,7 @@ public class TrickWallHideController : MonoBehaviour
 
                 if (hideMoveMethod.ToString() == "SetByWallLockTimer")
                 {
-                    button.transform.position = pressedPos;
+                    button.GetComponent<SpriteRenderer>().sprite = pressed;
 
                     if (hasHidden == false)
                     {
@@ -332,7 +343,7 @@ public class TrickWallHideController : MonoBehaviour
 
                 if (hideMoveMethod.ToString() == "MoveLockOnTimer")
                 {
-                    button.transform.position = pressedPos;
+                    button.GetComponent<SpriteRenderer>().sprite = pressed;
 
                     if (hasMoved == false)
                     {
@@ -347,7 +358,7 @@ public class TrickWallHideController : MonoBehaviour
 
         if (other.tag == "Minion")
         {
-            button.transform.position = pressedPos;
+            button.GetComponent<SpriteRenderer>().sprite = pressed;
 
             if (hideMoveMethod.ToString() == "HideAllOnStart")
             {
@@ -449,7 +460,7 @@ public class TrickWallHideController : MonoBehaviour
 
             if (hideMoveMethod.ToString() == "SetByWallLockTimer")
             {
-                button.transform.position = pressedPos;
+                button.GetComponent<SpriteRenderer>().sprite = pressed;
 
                 if (hasHidden == false)
                 {
@@ -520,7 +531,7 @@ public class TrickWallHideController : MonoBehaviour
 
             if (hideMoveMethod.ToString() == "MoveLockOnTimer")
             {
-                button.transform.position = pressedPos;
+                button.GetComponent<SpriteRenderer>().sprite = pressed;
 
                 if (hasMoved == false)
                 {
@@ -539,22 +550,22 @@ public class TrickWallHideController : MonoBehaviour
         {
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == setUser.ToString() || setUser.ToString() == "Both")
             {
-                
+
                 if (hideMoveMethod.ToString() == "HideAllOnStart")
                 {
-                    button.transform.position = startPos;
+                    button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     HideWall();
                 }
 
                 if (hideMoveMethod.ToString() == "ShowAllOnStart")
                 {
-                    button.transform.position = startPos;
+                    button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     ShowWall();
                 }
 
                 if (hideMoveMethod.ToString() == "SetByWall") // Set Reverse on or off on Wall object
                 {
-                    button.transform.position = startPos;
+                    button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     for (int i = 0; i < walls.Length; i++)
                     {
                         foreach (GameObject walls in walls)
@@ -577,7 +588,7 @@ public class TrickWallHideController : MonoBehaviour
                     {
                         foreach (GameObject walls in walls)
                         {
-                            button.transform.position = pressedPos;
+                            button.GetComponent<SpriteRenderer>().sprite = pressed;
                             playExit.PlayEvent = EmitterGameEvent.None;
                         }
                     }
@@ -585,13 +596,13 @@ public class TrickWallHideController : MonoBehaviour
 
                 if (hideMoveMethod.ToString() == "SetByWallLockUnlockOnEnter")
                 {
-                    button.transform.position = startPos;
+                    button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     //playExit.Play();
                 }
 
                 if (hideMoveMethod.ToString() == "MoveAllWalls")
                 {
-                    button.transform.position = startPos;
+                    button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     for (int i = 0; i < walls.Length; i++)
                     {
                         foreach (GameObject walls in walls)
@@ -607,7 +618,7 @@ public class TrickWallHideController : MonoBehaviour
                     {
                         foreach (GameObject walls in walls)
                         {
-                            button.transform.position = pressedPos;
+                            button.GetComponent<SpriteRenderer>().sprite = pressed;
                             playExit.PlayEvent = EmitterGameEvent.None;
                         }
                     }
@@ -615,7 +626,7 @@ public class TrickWallHideController : MonoBehaviour
 
                 if (hideMoveMethod.ToString() == "MoveLockUnlockOnEnter")
                 {
-                    button.transform.position = startPos;
+                    button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     //playExit.Play();
                 }
 
@@ -626,19 +637,19 @@ public class TrickWallHideController : MonoBehaviour
         {
             if (hideMoveMethod.ToString() == "HideAllOnStart")
             {
-                button.transform.position = startPos;
+                button.GetComponent<SpriteRenderer>().sprite = unPressed;
                 HideWall();
             }
 
             if (hideMoveMethod.ToString() == "ShowAllOnStart")
             {
-                button.transform.position = startPos;
+                button.GetComponent<SpriteRenderer>().sprite = unPressed;
                 ShowWall();
             }
 
             if (hideMoveMethod.ToString() == "SetByWall") // Set Reverse on or off on Wall object
             {
-                button.transform.position = startPos;
+                button.GetComponent<SpriteRenderer>().sprite = unPressed;
                 for (int i = 0; i < walls.Length; i++)
                 {
                     foreach (GameObject walls in walls)
@@ -661,7 +672,7 @@ public class TrickWallHideController : MonoBehaviour
                 {
                     foreach (GameObject walls in walls)
                     {
-                        button.transform.position = pressedPos;
+                        button.GetComponent<SpriteRenderer>().sprite = pressed;
                         playExit.PlayEvent = EmitterGameEvent.None;
                     }
                 }
@@ -669,13 +680,13 @@ public class TrickWallHideController : MonoBehaviour
 
             if (hideMoveMethod.ToString() == "SetByWallLockUnlockOnEnter")
             {
-                button.transform.position = startPos;
+                button.GetComponent<SpriteRenderer>().sprite = unPressed;
                 //playExit.Play();
             }
 
             if (hideMoveMethod.ToString() == "MoveAllWalls")
             {
-                button.transform.position = startPos;
+                button.GetComponent<SpriteRenderer>().sprite = unPressed;
                 for (int i = 0; i < walls.Length; i++)
                 {
                     foreach (GameObject walls in walls)
@@ -691,7 +702,7 @@ public class TrickWallHideController : MonoBehaviour
                 {
                     foreach (GameObject walls in walls)
                     {
-                        button.transform.position = pressedPos;
+                        button.GetComponent<SpriteRenderer>().sprite = pressed;
                         playExit.PlayEvent = EmitterGameEvent.None;
                     }
                 }
@@ -699,7 +710,7 @@ public class TrickWallHideController : MonoBehaviour
 
             if (hideMoveMethod.ToString() == "MoveLockUnlockOnEnter")
             {
-                button.transform.position = startPos;
+                button.GetComponent<SpriteRenderer>().sprite = unPressed;
                 //playExit.Play();
             }
         }
@@ -774,7 +785,7 @@ public class TrickWallHideController : MonoBehaviour
             playBong.Play();
             playExit.Play();
 
-            button.transform.position = startPos;
+            button.GetComponent<SpriteRenderer>().sprite = unPressed;
 
             yield return new WaitForSeconds(0.5f);
 
@@ -844,7 +855,7 @@ public class TrickWallHideController : MonoBehaviour
             playBong.Play();
             playExit.Play();
 
-            button.transform.position = startPos;
+            button.GetComponent<SpriteRenderer>().sprite = unPressed;
 
             yield return new WaitForSeconds(0.5f);
 
