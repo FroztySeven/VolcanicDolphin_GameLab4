@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private float turnTimer;
     private float wallJumpTimer;
 
-    private int amountOfJumpsLeft;
     private int facingDirection = 1;
     private int lastWallJumpDirection;
     private int currentlevelindex;
@@ -44,6 +43,8 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public int playerId = 0;
+    [HideInInspector]
+    public int amountOfJumpsLeft;
     public int amountOfJumps = 1;
 
     [HideInInspector]

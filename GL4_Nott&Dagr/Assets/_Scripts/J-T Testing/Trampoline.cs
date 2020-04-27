@@ -142,10 +142,14 @@ public class Trampoline : MonoBehaviour
                 }
             }
 
-            //if (other.gameObject.GetComponent<PlayerMovementTest>().canDoubleJump)
+            //if (other.gameObject.GetComponent<PlayerController>().amountOfJumps == 1)
             //{
-            //    other.gameObject.GetComponent<PlayerMovementTest>().doubleJumpCounter = 1;
+            //    other.gameObject.GetComponent<PlayerController>().amountOfJumpsLeft = other.gameObject.GetComponent<PlayerController>().amountOfJumps;
             //}
+            if (other.gameObject.GetComponent<PlayerController>().amountOfJumps > 1)
+            {
+                other.gameObject.GetComponent<PlayerController>().amountOfJumpsLeft = other.gameObject.GetComponent<PlayerController>().amountOfJumps - 1;
+            }
         }
 
         if (other.gameObject.name == "Gem")
