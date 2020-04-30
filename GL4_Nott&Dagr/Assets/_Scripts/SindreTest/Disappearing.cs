@@ -190,4 +190,42 @@ public class Disappearing : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
+            {
+                if (disappearBehindNott)
+                {
+                    nottInsideTrigger = true;
+                    foreach (Transform child in gameObject.transform)
+                    {
+                        child.transform.gameObject.SetActive(false);
+                    }
+                }
+            }
+
+            if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
+            {
+                if (disappearBehindDagr)
+                {
+                    dagrInsideTrigger = true;
+                    foreach (Transform child in gameObject.transform)
+                    {
+                        child.transform.gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
+
+        if (other.gameObject.CompareTag("Gem"))
+        {
+            foreach (Transform child in gameObject.transform)
+            {
+                child.transform.gameObject.SetActive(false);
+            }
+        }
+    }
 }
