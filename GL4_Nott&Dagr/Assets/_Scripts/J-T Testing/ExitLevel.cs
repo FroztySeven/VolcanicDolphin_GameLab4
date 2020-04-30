@@ -107,7 +107,7 @@ public class ExitLevel : MonoBehaviour
 
     private void Update()
     {
-        if (nightEnter && dayEnter)
+        if (nightEnter && dayEnter && night.GetComponent<PlayerController>().isGrounded && day.GetComponent<PlayerController>().isGrounded)
         {
             night.GetComponent<PlayerController>().playerCanMove = false;
             night.GetComponent<PlayerController>().playerCanJump = false;
