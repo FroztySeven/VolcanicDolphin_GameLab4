@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8149134381371969832}
   - component: {fileID: 8157121659953584886}
   m_Layer: 0
-  m_Name: MusicController2
+  m_Name: MusicController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,4 +56,4 @@ MonoBehaviour:
   chapter4Loop: 0
   sceneNr: 0
   menuNr: ffffffff0000000001000000
-  cutSceneNr: 02000000030000000400000005000000
+  cutSceneNr: 0200000003000000040000000500000006000000

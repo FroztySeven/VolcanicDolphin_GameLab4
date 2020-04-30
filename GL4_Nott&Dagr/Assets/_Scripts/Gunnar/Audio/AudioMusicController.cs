@@ -100,7 +100,7 @@ public class AudioMusicController : MonoBehaviour
         }
         
         //-----Chapter 1 - Level 1 -----//
-        if (sceneNr == 6)
+        if (sceneNr == 7)
         {
             menu = false;
             cutScene = false;
@@ -115,7 +115,7 @@ public class AudioMusicController : MonoBehaviour
             chapter4Loop = false;
         }
         //-----Chapter 1 - Level 2, 3, 4 -----//
-        if (sceneNr == 7 || sceneNr == 8 || sceneNr == 9)
+        if (sceneNr == 8 || sceneNr == 9 || sceneNr == 10 || sceneNr == 11)
         {
             menu = false;
             cutScene = false;
@@ -130,7 +130,7 @@ public class AudioMusicController : MonoBehaviour
             chapter4Loop = false;
         }
         //-----Chapter 2 - Level 1 -----//
-        if (sceneNr == 10)
+        if (sceneNr == 12)
         {
             menu = false;
             cutScene = false;
@@ -145,7 +145,7 @@ public class AudioMusicController : MonoBehaviour
             chapter4Loop = false;
         }
         //-----Chapter 2 - Level 2, 3, 4 -----//
-        if (sceneNr == 11 || sceneNr == 12 || sceneNr == 13)
+        if (sceneNr == 13 || sceneNr == 14 || sceneNr == 15 || sceneNr == 16 || sceneNr == 17 || sceneNr == 18 || sceneNr == 19 || sceneNr == 20 || sceneNr == 21)
         {
             menu = false;
             cutScene = false;
@@ -161,7 +161,7 @@ public class AudioMusicController : MonoBehaviour
         }
 
         //-----Chapter 3 - Level 1 -----//
-        if (sceneNr == 14)
+        if (sceneNr == 22)
         {
             menu = false;
             cutScene = false;
@@ -176,7 +176,7 @@ public class AudioMusicController : MonoBehaviour
             chapter4Loop = false;
         }
         //-----Chapter 3 - Level 2, 3, 4 -----//
-        if (sceneNr == 15 || sceneNr == 16 || sceneNr == 17)
+        if (sceneNr == 23 || sceneNr == 24 || sceneNr == 25 || sceneNr == 26 || sceneNr == 27 || sceneNr == 28 || sceneNr == 29 || sceneNr == 30 /*|| sceneNr == 31*/) // 31 is Sindres test level used as a placeholder to keep correct music transitions
         {
             menu = false;
             cutScene = false;
@@ -191,7 +191,7 @@ public class AudioMusicController : MonoBehaviour
             chapter4Loop = false;
         }
         //-----Chapter 4 - Level 1 -----//
-        if (sceneNr == 18)
+        if (sceneNr == 32)
         {
             menu = false;
             cutScene = false;
@@ -205,9 +205,9 @@ public class AudioMusicController : MonoBehaviour
             chapter4 = true;
             chapter4Loop = false;
         }
-        /*
+        
         //-----Chapter 4 - Level 2, 3, 4 -----//
-        if (sceneNr == 19 || sceneNr == 20 || sceneNr == 21)
+        if (sceneNr == 33 || sceneNr == 34 /*|| sceneNr == 35*/)
         {
             menu = false;
             cutScene = false;
@@ -221,7 +221,7 @@ public class AudioMusicController : MonoBehaviour
             chapter4 = false;
             chapter4Loop = true;
         }
-        */
+        
     }
 
     void PlayTrack()
