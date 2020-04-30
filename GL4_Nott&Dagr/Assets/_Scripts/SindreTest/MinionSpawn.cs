@@ -7,6 +7,7 @@ using UnityEngine.PlayerLoop;
 public class MinionSpawn : MonoBehaviour
 {
     public GameObject minionPrefab;
+    public Sprite nottMinionSprite, dagrMinionSprite;
     public float timeToCompleteRoute;
     public bool alwaysAliveAfterSpawned = false;
     public int timeAlive;
@@ -59,6 +60,7 @@ public class MinionSpawn : MonoBehaviour
                 dagrMinionClone.transform.SetParent(dagr.transform);
                 dagrMinionClone.transform.localPosition = new Vector3(0, 2, 0);
                 originalParent = dagr;
+                dagrMinionClone.GetComponent<SpriteRenderer>().sprite = dagrMinionSprite;
                 if (!alwaysAliveAfterSpawned)
                 {
                     StartCoroutine(despawnDagrMinion());
@@ -73,6 +75,7 @@ public class MinionSpawn : MonoBehaviour
                 nottMinionClone.transform.SetParent(nott.transform);
                 nottMinionClone.transform.localPosition = new Vector3(0, 2, 0);
                 originalParent = nott;
+                nottMinionClone.GetComponent<SpriteRenderer>().sprite = nottMinionSprite;
                 if (!alwaysAliveAfterSpawned)
                 {
                     StartCoroutine(despawnNottMinion());
