@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class TrickWallMoveController : MonoBehaviour
 
     private Vector2 position, targetUp, targetDown, targetRight, targetLeft;
 
-    public bool moveUp, moveDown, moveLeft, moveRight, move;
+    public bool moveUp, moveDown, moveLeft, moveRight, move, hasMoved;
 
     void Start()
     {
@@ -19,6 +20,8 @@ public class TrickWallMoveController : MonoBehaviour
         targetDown = new Vector2(position.x, position.y - moveUnits);
         targetRight = new Vector2(position.x + moveUnits, position.y);
         targetLeft = new Vector2(position.x - moveUnits, position.y);
+
+        hasMoved = false;
     }
 
     void Update()

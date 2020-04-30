@@ -21,6 +21,7 @@ TagManager:
   - Water
   - AuraPickup
   - Wall
+  - Plate
   layers:
   - Default
   - TransparentFX

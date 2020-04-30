@@ -19,10 +19,10 @@ public class TrickWallHideController : MonoBehaviour
 
     public HideMoveMethod hideMoveMethod;
 
-    public GameObject[] walls;
+    public GameObject[] walls, multiPlates;
 
     public GameObject button;
-    
+
     [HideInInspector]
     public Sprite pressed, unPressed, pressDagr, unpressDagr, pressNott, unpressNott, pressBoth, unpressBoth;
 
@@ -34,7 +34,7 @@ public class TrickWallHideController : MonoBehaviour
 
     //--- Private ---//
 
-    private int playEventCount = 0, lastPressed = 0;
+    public int playEventCount = 0, lastPressed = 0;
     
     private float currCountdownValue;
 
@@ -235,6 +235,7 @@ public class TrickWallHideController : MonoBehaviour
                     if (lastPressed != 1)
                     {
                         lastPressed = 1;
+
                         for (int i = 0; i < walls.Length; i++)
                         {
                             foreach (GameObject walls in walls)
@@ -319,7 +320,11 @@ public class TrickWallHideController : MonoBehaviour
 
                     if (lastPressed != 1)
                     {
-                        lastPressed = 1;
+                        foreach (var plate in multiPlates)
+                        {
+                            plate.GetComponent<TrickWallHideController>().lastPressed = 1;
+                        }
+                        
                         for (int i = 0; i < walls.Length; i++)
                         {
                             foreach (GameObject walls in walls)
@@ -330,7 +335,11 @@ public class TrickWallHideController : MonoBehaviour
                     }
                     else
                     {
-                        lastPressed = 0;
+                        foreach (var plate in multiPlates)
+                        {
+                            plate.GetComponent<TrickWallHideController>().lastPressed = 0;
+                        }
+
                         for (int i = 0; i < walls.Length; i++)
                         {
                             foreach (GameObject walls in walls)
@@ -629,7 +638,6 @@ public class TrickWallHideController : MonoBehaviour
                     button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     //playExit.Play();
                 }
-
             }
         }
 

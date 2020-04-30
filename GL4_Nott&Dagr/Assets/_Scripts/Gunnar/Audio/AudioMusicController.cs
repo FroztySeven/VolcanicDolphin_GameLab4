@@ -14,7 +14,7 @@ public class AudioMusicController : MonoBehaviour
 
     public int sceneNr;
 
-    public int[] menuNr, cutSceneNr/*, chapter1Nr, chapter2Nr, chapter3Nr, chapter4Nr*/;
+    public int[] menuNr, cutSceneNr;
 
     private int menuVal = 0,
         menuLoopVal = 1,
@@ -98,63 +98,7 @@ public class AudioMusicController : MonoBehaviour
                 chapter4Loop = false;
             }
         }
-        /*
-        for (int i = 0; i < chapter1Nr.Length; i++)
-        {
-            if (sceneNr == chapter1Nr[i])
-            {
-                menu = false;
-                cutScene = false;
-                levelWon = false;
-                chapter1 = true;
-                chapter2 = false;
-                chapter3 = false;
-                chapter4 = false;
-            }
-        }
-
-        for (int i = 0; i < chapter2Nr.Length; i++)
-        {
-            if (sceneNr == chapter2Nr[i])
-            {
-                menu = false;
-                cutScene = false;
-                levelWon = false;
-                chapter1 = false;
-                chapter2 = true;
-                chapter3 = false;
-                chapter4 = false;
-            }
-        }
-
-        for (int i = 0; i < chapter3Nr.Length; i++)
-        {
-            if (sceneNr == chapter3Nr[i])
-            {
-                menu = false;
-                cutScene = false;
-                levelWon = false;
-                chapter1 = false;
-                chapter2 = false;
-                chapter3 = true;
-                chapter4 = false;
-            }
-        }
-
-        for (int i = 0; i < chapter4Nr.Length; i++)
-        {
-            if (sceneNr == chapter4Nr[i])
-            {
-                menu = false;
-                cutScene = false;
-                levelWon = false;
-                chapter1 = false;
-                chapter2 = false;
-                chapter3 = false;
-                chapter4 = true;
-            }
-        }
-        */
+        
         //-----Chapter 1 - Level 1 -----//
         if (sceneNr == 6)
         {
@@ -291,13 +235,6 @@ public class AudioMusicController : MonoBehaviour
         {
             music.setParameterByName("Music Controller", cutSceVal);
         }
-
-        /*
-        if (levelWon)
-        {
-            music.setParameterByName("Music Controller", levelWonVal);
-        }
-        */
 
         //---- Chapter 1 Levels after second, loop ----//
         if (chapter1)
@@ -454,46 +391,5 @@ public class AudioMusicController : MonoBehaviour
                 levelWon = false;
             }
         }
-        /*
-        if (chapter1)
-        {
-            music.setParameterByName("Music Controller", chapt1Val);
-        }
-
-        if (chapter1Loop)
-        {
-            music.setParameterByName("Music Controller", chapt1LoopVal);
-        }
-
-        if (chapter2)
-        {
-            music.setParameterByName("Music Controller", chapt2Val);
-        }
-
-        if (chapter2Loop)
-        {
-            music.setParameterByName("Music Controller", chapt2LoopVal);
-        }
-
-        if (chapter3)
-        {
-            music.setParameterByName("Music Controller", chapt3Val);
-        }
-
-        if (chapter3Loop)
-        {
-            music.setParameterByName("Music Controller", chapt3LoopVal);
-        }
-
-        if (chapter4)
-        {
-            music.setParameterByName("Music Controller", chapt4Val);
-        }
-
-        if (chapter4Loop)
-        {
-            music.setParameterByName("Music Controller", chapt4LoopVal);
-        }
-        */
     }
 }
