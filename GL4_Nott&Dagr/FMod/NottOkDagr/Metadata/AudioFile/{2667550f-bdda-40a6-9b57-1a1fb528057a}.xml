@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{2667550f-bdda-40a6-9b57-1a1fb528057a}">
 		<property name="assetPath">
-			<value>Clock Tock.wav</value>
+			<value>SFX/Objects/Timer/Clock Tock.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>

@@ -14,17 +14,17 @@ public class AudioVolumeController : MonoBehaviour
 
     // Environment SFX
     private FMOD.Studio.Bus 
-        _iceFreezeMaster, _iceMeltMaster, _waterFreezeMaster, _waterSplashMaster;
+       _ambianceMaster, _iceFreezeMaster, _iceMeltMaster, _waterFreezeMaster, _waterSplashMaster;
 
     // Objects
     private FMOD.Studio.Bus 
-        _batRamBoomMaster, _gemActiveMaster, _icecubeDestroyMaster,  _plantGrowMaster, _platformMoveMaster, _portalActivatedMaster, _pressurePlateMaster, _ropeBurnSnapMaster, _ropeSwingMaster, _ropeTwistMaster, _slidingMaster, _stoneNoisesMaster, _teleportPlayersMaster, _trampolineMaster;
+        _batRamBoomMaster, _gemActiveMaster, _icecubeDestroyMaster,  _plantGrowMaster, _platformMoveMaster, _portalActivatedMaster, _pressurePlateMaster, _ropeBurnSnapMaster, _ropeSwingMaster, _ropeTwistMaster, _slidingMaster, _stoneNoisesMaster, _teleportPlayersMaster, _timerMaster, _trampolineMaster;
 
     // Players SFX
 
     // Footsteps & Jump Landings
     private FMOD.Studio.Bus
-        _footstepsAndLandingsMaster;
+        _footstepsAndLandingsMaster, _jumpGruntsMaster;
 
     // Players SFX
     private FMOD.Studio.Bus
@@ -44,7 +44,9 @@ public class AudioVolumeController : MonoBehaviour
 
     //--------------------------------------------------------------------------------------------------------//
 
-    [Header(" Environment SFX Controllers")] 
+    [Header(" Environment SFX Controllers")]
+    [SerializeField] [Range(-80f, 20f)]
+    public float ambienceVolume;
     [SerializeField] [Range(-80f, 20f)]
     public float iceFreezeVolume;
     [SerializeField] [Range(-80f, 20f)]
@@ -85,6 +87,8 @@ public class AudioVolumeController : MonoBehaviour
     [SerializeField] [Range(-80f, 20f)]
     public float teleportPlayersVolume;
     [SerializeField] [Range(-80f, 20f)]
+    public float timerVolume;
+    [SerializeField] [Range(-80f, 20f)]
     public float trampolineVolume;
 
     //--------------------------------------------------------------------------------------------------------//
@@ -95,6 +99,10 @@ public class AudioVolumeController : MonoBehaviour
 
     [SerializeField] [Range(-80f, 20f)]
     public float footstepsAndLandingsVolume;
+
+    [SerializeField]
+    [Range(-80f, 20f)]
+    public float jumpGruntsVolume;
 
     //--------------------------------------------------------------------------------------------------------//
 
@@ -117,6 +125,7 @@ public class AudioVolumeController : MonoBehaviour
         _sfxMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
 
         // Environment
+        _ambianceMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/Ambience");
         _iceFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceFreeze");
         _iceMeltMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/IceMelt");
         _waterFreezeMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Environment/WaterFreeze");
@@ -136,13 +145,15 @@ public class AudioVolumeController : MonoBehaviour
         _ropeTwistMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/RopeTwist");
         _slidingMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Sliding");
         _stoneNoisesMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/StoneNoises");
-        _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
         _teleportPlayersMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/TeleportPlayers");
+        _timerMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Timer");
+        _trampolineMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Objects/Trampoline");
 
 
         // Players SFX
         // Footsteps
         _footstepsAndLandingsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/Footsteps & Jump Landings");
+        _jumpGruntsMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/Players/JumpGrunts");
 
         // UI
         _buttonHighlightMaster = FMODUnity.RuntimeManager.GetBus("bus:/SFX/UI/ButtonHighlight");
@@ -158,6 +169,7 @@ public class AudioVolumeController : MonoBehaviour
         _sfxMaster.setVolume(DecibelToLinear(sfxMasterVolume));
 
         // Environment
+        _ambianceMaster.setVolume(DecibelToLinear(ambienceVolume));
         _iceFreezeMaster.setVolume(DecibelToLinear(iceFreezeVolume));
         _iceMeltMaster.setVolume(DecibelToLinear(iceMeltVolume));
         _waterFreezeMaster.setVolume(DecibelToLinear(waterFreezeVolume));
@@ -177,11 +189,13 @@ public class AudioVolumeController : MonoBehaviour
         _slidingMaster.setVolume(DecibelToLinear(slidingVolume));
         _stoneNoisesMaster.setVolume(DecibelToLinear(stoneNoisesVolume));
         _teleportPlayersMaster.setVolume(DecibelToLinear(teleportPlayersVolume));
+        _timerMaster.setVolume(DecibelToLinear(timerVolume));
         _trampolineMaster.setVolume(DecibelToLinear(trampolineVolume));
 
         // Players
         // Footsteps
         _footstepsAndLandingsMaster.setVolume(DecibelToLinear(footstepsAndLandingsVolume));
+        _jumpGruntsMaster.setVolume(DecibelToLinear(jumpGruntsVolume));
 
         // UI
         _buttonHighlightMaster.setVolume(DecibelToLinear(buttonHighlightVolume));

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class AudioMusicController : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance music;
+    private FMOD.Studio.EventInstance music, ambiance;
 
     public static AudioMusicController instance;
 
@@ -46,8 +46,11 @@ public class AudioMusicController : MonoBehaviour
     void Start()
     {
         music = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Music");
+        ambiance = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Enviroment/Ambience");
         music.setParameterByName("Music Controller", 0);
         music.start();
+        ambiance.setParameterByName("Ambience", 0);
+        ambiance.start();
     }
 
     // Update is called once per frame
@@ -143,6 +146,7 @@ public class AudioMusicController : MonoBehaviour
             chapter3Loop = false;
             chapter4 = false;
             chapter4Loop = false;
+
         }
         //-----Chapter 2 - Level 2, 3, 4 -----//
         if (sceneNr == 13 || sceneNr == 14 || sceneNr == 15 || sceneNr == 16 || sceneNr == 17 || sceneNr == 18 || sceneNr == 19 || sceneNr == 20 || sceneNr == 21)
@@ -174,6 +178,7 @@ public class AudioMusicController : MonoBehaviour
             chapter3Loop = false;
             chapter4 = false;
             chapter4Loop = false;
+
         }
         //-----Chapter 3 - Level 2, 3, 4 -----//
         if (sceneNr == 23 || sceneNr == 24 || sceneNr == 25 || sceneNr == 26 || sceneNr == 27 || sceneNr == 28 || sceneNr == 29 || sceneNr == 30 /*|| sceneNr == 31*/) // 31 is Sindres test level used as a placeholder to keep correct music transitions
@@ -204,6 +209,8 @@ public class AudioMusicController : MonoBehaviour
             chapter3Loop = false;
             chapter4 = true;
             chapter4Loop = false;
+
+            
         }
         
         //-----Chapter 4 - Level 2, 3, 4 -----//
@@ -229,17 +236,21 @@ public class AudioMusicController : MonoBehaviour
         if (menu)
         {
             music.setParameterByName("Music Controller", menuVal);
+            ambiance.setParameterByName("Ambience", 0);
         }
 
         if (cutScene)
         {
             music.setParameterByName("Music Controller", cutSceVal);
+            ambiance.setParameterByName("Ambience", 0);
         }
 
         //---- Chapter 1 Levels after second, loop ----//
         if (chapter1)
         {
             music.setParameterByName("Music Controller", chapt1Val);
+            ambiance.setParameterByName("Ambience", 1);
+            
 
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
@@ -260,6 +271,7 @@ public class AudioMusicController : MonoBehaviour
         if (chapter1Loop)
         {
             music.setParameterByName("Music Controller", chapt1LoopVal);
+            ambiance.setParameterByName("Ambience", 1);
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
                 levelWon = true;
@@ -279,6 +291,7 @@ public class AudioMusicController : MonoBehaviour
         if (chapter2)
         {
             music.setParameterByName("Music Controller", chapt2Val);
+            ambiance.setParameterByName("Ambience", 2);
 
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
@@ -293,12 +306,12 @@ public class AudioMusicController : MonoBehaviour
             {
                 levelWon = false;
             }
-
         }
 
         if (chapter2Loop)
         {
             music.setParameterByName("Music Controller", chapt2LoopVal);
+            ambiance.setParameterByName("Ambience", 2);
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
                 levelWon = true;
@@ -318,7 +331,7 @@ public class AudioMusicController : MonoBehaviour
         if (chapter3)
         {
             music.setParameterByName("Music Controller", chapt3Val);
-
+            ambiance.setParameterByName("Ambience", 3);
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
                 levelWon = true;
@@ -338,6 +351,7 @@ public class AudioMusicController : MonoBehaviour
         if (chapter3Loop)
         {
             music.setParameterByName("Music Controller", chapt3LoopVal);
+            ambiance.setParameterByName("Ambience", 3);
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
                 levelWon = true;
@@ -357,7 +371,7 @@ public class AudioMusicController : MonoBehaviour
         if (chapter4)
         {
             music.setParameterByName("Music Controller", chapt4Val);
-
+            ambiance.setParameterByName("Ambience", 4);
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
                 levelWon = true;
@@ -377,6 +391,7 @@ public class AudioMusicController : MonoBehaviour
         if (chapter4Loop)
         {
             music.setParameterByName("Music Controller", chapt4LoopVal);
+            ambiance.setParameterByName("Ambience", 4);
             if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
             {
                 levelWon = true;

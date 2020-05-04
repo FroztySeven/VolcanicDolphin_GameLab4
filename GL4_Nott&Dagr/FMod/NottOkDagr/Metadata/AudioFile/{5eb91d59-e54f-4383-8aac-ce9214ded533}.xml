@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{5eb91d59-e54f-4383-8aac-ce9214ded533}">
 		<property name="assetPath">
-			<value>Clock Bell.wav</value>
+			<value>SFX/Objects/Timer/Clock Bell.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>

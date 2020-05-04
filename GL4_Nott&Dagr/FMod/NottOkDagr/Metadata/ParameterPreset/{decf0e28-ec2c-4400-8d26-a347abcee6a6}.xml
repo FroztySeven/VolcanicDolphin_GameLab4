@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{decf0e28-ec2c-4400-8d26-a347abcee6a6}">
+		<property name="name">
+			<value>PlayerJump</value>
+		</property>
+		<relationship name="folder">
+			<destination>{81a89367-a4d7-4023-9c4d-4c3c5128f938}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c5982a43-addf-4598-a277-1725b16f95ef}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c5982a43-addf-4598-a277-1725b16f95ef}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Dagr</value>
+			<value>Nott</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

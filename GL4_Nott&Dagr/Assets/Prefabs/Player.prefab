@@ -646,6 +646,7 @@ MonoBehaviour:
   isDirt: 0
   isGrass: 0
   isIce: 0
+  isLeaves: 0
   isPlant: 0
   isSnow: 0
   isStone: 0
@@ -653,6 +654,7 @@ MonoBehaviour:
   isWood: 0
   playerTeleport: event:/SFX/Objects/TeleportPlayers
   footstepsLandings: event:/SFX/Players/PlayerFootstepsLandings
+  jumpGrunt: event:/SFX/Players/PlayerJumps
 --- !u!1 &6746168327507794199
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +844,7 @@ MonoBehaviour:
   isDirt: 0
   isGrass: 0
   isIce: 0
+  isLeaves: 0
   isPlant: 0
   isSnow: 0
   isStone: 0
@@ -849,6 +852,7 @@ MonoBehaviour:
   isWood: 0
   playerTeleport: event:/SFX/Objects/TeleportPlayers
   footstepsLandings: event:/SFX/Players/PlayerFootstepsLandings
+  jumpGrunt: event:/SFX/Players/PlayerJumps
 --- !u!1 &7788640641283361656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setPlayer: 1
   playerId: 0
+  amountOfJumpsLeft: 0
   amountOfJumps: 1
   movementInputHorizontalDirection: 0
   movementInputVerticalDirection: 0

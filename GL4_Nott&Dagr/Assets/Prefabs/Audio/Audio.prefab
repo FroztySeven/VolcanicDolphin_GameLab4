@@ -75,7 +75,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicMasterVolume: -3
-  sfxMasterVolume: 2
+  sfxMasterVolume: 0
+  ambienceVolume: -25
   iceFreezeVolume: -15
   iceMeltVolume: -8
   waterFreezeVolume: -17
@@ -83,7 +84,7 @@ MonoBehaviour:
   batRamBoomVolume: -10
   gemActiveVolume: -10
   icecubeDestroyVolume: -22
-  plantGrowVolume: -15
+  plantGrowVolume: -25
   platformMoveVolume: -4.5
   portalActivatedVolume: -8
   pressurePlateVolume: -10
@@ -93,6 +94,7 @@ MonoBehaviour:
   slidingVolume: -10
   stoneNoisesVolume: -11
   teleportPlayersVolume: -10
+  timerVolume: -7
   trampolineVolume: -7
   footstepsAndLandingsVolume: -17
   buttonHighlightVolume: -5

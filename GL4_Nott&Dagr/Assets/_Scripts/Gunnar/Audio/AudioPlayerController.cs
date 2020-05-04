@@ -30,13 +30,13 @@ public class AudioPlayerController : MonoBehaviour
     public float height, oldHeight, heightDiff;
 
     //[HideInInspector]
-    public bool isDagr, isNott, isGrounded, isClimbing, isFalling, isMoving, isTeleporting, hasLanded, wasGrounded = true, onPlant, isDirt, isGrass, isIce, isLeaves, isPlant, isSnow, isStone, isWater, isWood;
+    public bool isDagr, isNott, dagrJumps, nottJumps, isGrounded, isClimbing, isFalling, isMoving, isTeleporting, hasLanded, wasGrounded = true, onPlant, isDirt, isGrass, isIce, isLeaves, isPlant, isSnow, isStone, isWater, isWood;
 
     //--------------------------------------------------------------------------//
 
     private int gt, fol;
 
-    private FMOD.Studio.EventInstance gtInstance, folInstance;
+    private FMOD.Studio.EventInstance gtInstance, folInstance, jumpInstance;
 
     //--------------------------------------------------------------------------//
 
@@ -49,6 +49,9 @@ public class AudioPlayerController : MonoBehaviour
 
     [FMODUnity.EventRef]
     public string footstepsLandings;
+
+    [FMODUnity.EventRef]
+    public string jumpGrunt;
 
     //-----------------------------------------//
 
@@ -118,8 +121,11 @@ public class AudioPlayerController : MonoBehaviour
         {
             onSprite = _pmt.currentSprite;
             isGrounded = _pmt.isGrounded;
+            jumpInstance.setParameterByName("PlayerJump", 0);
 
             CheckGroundTypes();
+
+            CheckJumps();
         }
 
         //-----------Nótt----------//
@@ -127,11 +133,17 @@ public class AudioPlayerController : MonoBehaviour
         {
             onSprite = _pmt.currentSprite;
             isGrounded = _pmt.isGrounded;
+            jumpInstance.setParameterByName("PlayerJump", 1);
 
             CheckGroundTypes();
+
+            CheckJumps();
         }
 
         LevelDone();
+
+        
+        
     }
 
     //-----------------------------------------//
@@ -146,6 +158,7 @@ public class AudioPlayerController : MonoBehaviour
             audioTrigger = GameObject.Find("Player1").transform.Find("AudioTriggerDagr").gameObject;
             gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
             folInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
+            jumpInstance = FMODUnity.RuntimeManager.CreateInstance(jumpGrunt);
             isDagr = true;
         }
 
@@ -157,6 +170,7 @@ public class AudioPlayerController : MonoBehaviour
             audioTrigger = GameObject.Find("Player2").transform.Find("AudioTriggerNott").gameObject;
             gtInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
             folInstance = FMODUnity.RuntimeManager.CreateInstance(footstepsLandings);
+            jumpInstance = FMODUnity.RuntimeManager.CreateInstance(jumpGrunt);
             isNott = true;
         }
     }
@@ -222,6 +236,79 @@ public class AudioPlayerController : MonoBehaviour
         if (isGrounded && !wasGrounded)
         {
             GroundTypes();
+        }
+    }
+
+    void CheckJumps()
+    {
+        if (_pmt.singlePlayer)
+        {
+            if (isDagr)
+            {
+                if (Input.GetButtonDown("JumpP" + _pmt.playerId))
+                {
+                    dagrJumps = true;
+                    if (isGrounded)
+                    {
+                        jumpInstance.start();
+                    }
+                }
+                else
+                {
+                    dagrJumps = false;
+                }
+            }
+
+            if (isNott)
+            {
+                if (Input.GetButtonDown("JumpP" + _pmt.playerId))
+                {
+                    nottJumps = true;
+                    if (isGrounded)
+                    {
+                        jumpInstance.start();
+                    }
+                }
+                else
+                {
+                    nottJumps = false;
+                }
+            }
+        }
+
+        if (!_pmt.singlePlayer)
+        {
+            if (isDagr)
+            {
+                if (Input.GetButtonDown("JumpP" + _pmt.playerId))
+                {
+                    dagrJumps = true;
+                    if (isGrounded)
+                    {
+                        jumpInstance.start();
+                    }
+                }
+                else
+                {
+                    dagrJumps = false;
+                }
+            }
+
+            if (isNott)
+            {
+                if (Input.GetButtonDown("JumpP" + _pmt.playerId))
+                {
+                    nottJumps = true;
+                    if (isGrounded)
+                    {
+                        jumpInstance.start();
+                    }
+                }
+                else
+                {
+                    nottJumps = false;
+                }
+            }
         }
     }
 

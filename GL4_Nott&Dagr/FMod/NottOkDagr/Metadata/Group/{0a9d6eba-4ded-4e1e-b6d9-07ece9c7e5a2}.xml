@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{0a9d6eba-4ded-4e1e-b6d9-07ece9c7e5a2}">
+		<property name="name">
+			<value>JumpGrunts</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{2215772f-5edd-4a25-9401-7ac06943671f}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{9a334b39-0bbb-4e72-8776-5ae832c2df95}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{d07d0845-1a87-4574-940f-ae6f16357169}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{2215772f-5edd-4a25-9401-7ac06943671f}">
+		<relationship name="effects">
+			<destination>{b65e2928-9f03-482c-baeb-3dfa14249f7f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{9a334b39-0bbb-4e72-8776-5ae832c2df95}" />
+	<object class="MixerBusFader" id="{b65e2928-9f03-482c-baeb-3dfa14249f7f}" />
+</objects>
