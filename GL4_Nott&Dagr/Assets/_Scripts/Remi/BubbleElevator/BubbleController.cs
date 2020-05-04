@@ -72,6 +72,8 @@ public class BubbleController : MonoBehaviour
                 _player2.transform.parent = this.transform;
                 _player2.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.None;
                 _player2.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
+                _player2.transform.Find("Aura").GetComponent<AuraBounce>().isFading = true;
+                _player2.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = false;
 
                 if (bubbleMoveInt == 0)
                 {
@@ -87,6 +89,8 @@ public class BubbleController : MonoBehaviour
                 _player1.transform.parent = this.transform;
                 _player1.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.None;
                 _player1.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
+                _player1.transform.Find("Aura").GetComponent<AuraBounce>().isFading = true;
+                _player1.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = false;
                 GetComponent<SpriteRenderer>().color = Color.yellow;
                 bubbleMoveInt = 2;
             }
@@ -102,6 +106,8 @@ public class BubbleController : MonoBehaviour
                 _player2.transform.parent = null;
                 _player2.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
                 _player2.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
+                _player2.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = true;
+                _player2.transform.Find("Aura").GetComponent<AuraBounce>().isFading = false;
 
                 bubbleMoveInt = 0;
             }
@@ -114,6 +120,8 @@ public class BubbleController : MonoBehaviour
                 _player1.transform.parent = null;
                 _player1.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
                 _player1.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
+                _player1.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = true;
+                _player1.transform.Find("Aura").GetComponent<AuraBounce>().isFading = false;
 
                 bubbleMoveInt = 0;
                 GetComponent<SpriteRenderer>().color = Color.white;

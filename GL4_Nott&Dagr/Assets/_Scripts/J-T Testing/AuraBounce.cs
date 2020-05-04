@@ -36,6 +36,17 @@ public class AuraBounce : MonoBehaviour
     public float colorIntensity;
     private Color auraColorOutput;
 
+    [Range(0f, 0.6f)]
+    public float targetFade = 0;
+    [Range(0.5f, 3f)]
+    public float fadeSpeed = 1;
+    private float currentFade;
+
+    [HideInInspector]
+    public bool isFading;
+    [HideInInspector]
+    public bool isRestoring;
+
     private float pixelStart;
     private float pixelTarget;
     private float pixelAmount;
@@ -77,12 +88,14 @@ public class AuraBounce : MonoBehaviour
             {
                 auraColorOutput = new Color(nightAuraColor.r * colorIntensity, nightAuraColor.g * colorIntensity, nightAuraColor.b * colorIntensity, nightAuraColor.a);
                 auraMat.SetColor("_Color", auraColorOutput);
+                currentFade = auraMat.GetColor("_Color").a;
             }
 
             if (player.setPlayer.ToString() == "Day")
             {
                 auraColorOutput = new Color(dayAuraColor.r * colorIntensity, dayAuraColor.g * colorIntensity, dayAuraColor.b * colorIntensity, dayAuraColor.a);
                 auraMat.SetColor("_Color", auraColorOutput);
+                currentFade = auraMat.GetColor("_Color").a;
             }
         }
     }
@@ -113,6 +126,25 @@ public class AuraBounce : MonoBehaviour
                 auraBounceTimer = 0;
                 auraBounce = false;
                 player.auraBounce = false;
+            }
+        }
+
+        if (isFading)
+        {
+            auraMat.SetColor("_Color", new Vector4(auraColorOutput.r, auraColorOutput.g, auraColorOutput.b, Mathf.MoveTowards(auraMat.GetColor("_Color").a, targetFade, Time.deltaTime * fadeSpeed)));
+
+            if (auraMat.GetColor("_Color").a <= targetFade)
+            {
+                isFading = false;
+            }
+        }
+        else if (isRestoring)
+        {
+            auraMat.SetColor("_Color", new Vector4(auraColorOutput.r, auraColorOutput.g, auraColorOutput.b, Mathf.MoveTowards(auraMat.GetColor("_Color").a, currentFade, Time.deltaTime * fadeSpeed)));
+
+            if (auraMat.GetColor("_Color").a >= currentFade)
+            {
+                isRestoring = false;
             }
         }
 

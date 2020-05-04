@@ -164,6 +164,10 @@ MonoBehaviour:
   dayAuraColor: {r: 0.7264151, g: 0.6015163, b: 0.23642756, a: 0.6}
   nightAuraColor: {r: 0.45698926, g: 0.6344086, b: 1, a: 0.6}
   colorIntensity: 1
+  targetFade: 0.1
+  fadeSpeed: 2
+  isFading: 0
+  isRestoring: 0
   auraPickupRight: {fileID: 1734484972}
   auraPickupLeft: {fileID: 1469931224}
 --- !u!70 &1699007064116312395
@@ -635,6 +639,8 @@ MonoBehaviour:
   heightDiff: 0
   isDagr: 0
   isNott: 0
+  dagrJumps: 0
+  nottJumps: 0
   isGrounded: 0
   isClimbing: 0
   isFalling: 0
@@ -833,6 +839,8 @@ MonoBehaviour:
   heightDiff: 0
   isDagr: 0
   isNott: 0
+  dagrJumps: 0
+  nottJumps: 0
   isGrounded: 0
   isClimbing: 0
   isFalling: 0

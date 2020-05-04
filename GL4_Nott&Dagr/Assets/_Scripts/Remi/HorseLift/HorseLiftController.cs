@@ -84,6 +84,8 @@ public class HorseLiftController : MonoBehaviour
         playerController.transform.parent = this.transform;
         playerController.theRB.interpolation = RigidbodyInterpolation2D.None;
         playerController.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
+        playerController.transform.Find("Aura").GetComponent<AuraBounce>().isFading = true;
+        playerController.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = false;
         _playersOnLift.Add(playerController);
     }
 
@@ -114,6 +116,8 @@ public class HorseLiftController : MonoBehaviour
         playerController.transform.parent = null;
         playerController.theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
         playerController.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
+        playerController.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = true;
+        playerController.transform.Find("Aura").GetComponent<AuraBounce>().isFading = false;
         _playersOnLift.Remove(playerController);
     }
 

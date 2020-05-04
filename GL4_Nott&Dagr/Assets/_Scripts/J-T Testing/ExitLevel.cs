@@ -52,6 +52,8 @@ public class ExitLevel : MonoBehaviour
         if (other.name == "Aura")
         {
             other.GetComponent<CapsuleCollider2D>().isTrigger = true;
+            other.GetComponent<AuraBounce>().isFading = true;
+            other.GetComponent<AuraBounce>().isRestoring = false;
         }
 
         if (other.gameObject == night || other.gameObject == day)
@@ -83,6 +85,8 @@ public class ExitLevel : MonoBehaviour
         if (other.name == "Aura")
         {
             other.GetComponent<CapsuleCollider2D>().isTrigger = false;
+            other.GetComponent<AuraBounce>().isRestoring = true;
+            other.GetComponent<AuraBounce>().isFading = false;
         }
 
         if (other.gameObject == night || other.gameObject == day)
@@ -123,6 +127,10 @@ public class ExitLevel : MonoBehaviour
             day.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             //night.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
             //day.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
+            night.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = true;
+            night.transform.Find("Aura").GetComponent<AuraBounce>().isFading = false;
+            day.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = true;
+            day.transform.Find("Aura").GetComponent<AuraBounce>().isFading = false;
             playerPixelate = true;
             Invoke("LevelFinished", 7f); //Origanl 5f GB
             StartCoroutine(instantiateLoadingScreen());
