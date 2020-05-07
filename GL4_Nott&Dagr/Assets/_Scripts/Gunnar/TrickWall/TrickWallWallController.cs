@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class TrickWallWallController : MonoBehaviour
     //... Original scripts used were PressurePlates and PressurePlatesWall. 
     //... I (Gunnar), made a copy those scripts to make alterations to them, add more variants of wall behaviours that I wanted.
 
+    public GameObject primePlate;
+
     public int wallHeight = 1;
     public int wallWidth = 1;
 
@@ -15,7 +18,16 @@ public class TrickWallWallController : MonoBehaviour
 
     public GameObject wallPrefab;
 
-    public bool showMe; // I only added this line(Gunnar)
+    public List<GameObject> children = new List<GameObject>();
+
+    public bool hideMe, usePrime;
+
+    private int cloneNr;
+
+    private void Awake()
+    {
+        
+    }
 
     private void Start()
     {
@@ -26,9 +38,25 @@ public class TrickWallWallController : MonoBehaviour
                 GameObject wall = Instantiate(wallPrefab, transform.position + new Vector3(i, j, 0f), transform.rotation);
                 wall.GetComponent<SpriteRenderer>().sprite = wallSprite;
                 wall.transform.parent = transform;
+
+
+                wall.tag = "WallClone";
+                wall.AddComponent<TrickWallBoolChecker>();
+                //wall.name = "WallClone" + cloneNr++;
+                children.Add(wall.gameObject);
+
+                if (usePrime)
+                {
+                    primePlate.GetComponent<TrickWallHideController>().clones.Add(wall.gameObject);
+
+                    //primePlate.GetComponent<TrickWallHideController>().wallClones = children.ToArray();
+                }
             }
         }
 
         Destroy(wallPrefab);
+        //wallPrefab.SetActive(false);
+
+
     }
 }

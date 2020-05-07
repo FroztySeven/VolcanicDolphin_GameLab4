@@ -22,6 +22,7 @@ TagManager:
   - AuraPickup
   - Wall
   - Plate
+  - WallClone
   layers:
   - Default
   - TransparentFX
