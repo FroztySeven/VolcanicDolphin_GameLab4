@@ -48,6 +48,13 @@ public class BubbleController : MonoBehaviour
     
     private BoxCollider2D childCollider;
 
+
+    private bool isMovingLeft, isMovingUp, belowOn, behindOn;
+
+    public ParticleSystem belowParticle, behindParticle;
+
+    private Vector3 targetPos;
+
     private void Start()
     {
         //childCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
@@ -60,6 +67,7 @@ public class BubbleController : MonoBehaviour
         posB = movePathChild.localPosition;
         endPos = posB;
         startPos = transform.position;
+        targetPos = movePathChild.position;
     }
 
 
@@ -135,6 +143,32 @@ public class BubbleController : MonoBehaviour
         // Bubble return to default path when no players are inside
         if (bubbleMoveInt == 0)
         {
+            if (transform.position.x == startPos.x)
+            {
+                isMovingLeft = false;
+            }
+            else if (transform.position.x < targetPos.x)
+            {
+                isMovingLeft = true;
+            }
+            else
+            {
+                isMovingLeft = false;
+            }
+
+            if (transform.position.y == startPos.y)
+            {
+                isMovingUp = false;
+            }
+            else if (transform.position.y > targetPos.y)
+            {
+                isMovingUp = true;
+            }
+            else
+            {
+                isMovingUp = false;
+            }
+
             if (pathSpeedModifier.ToString() == "ConsistentSpeed")
             {
                 currentBubble.localPosition =
@@ -160,6 +194,32 @@ public class BubbleController : MonoBehaviour
         // Bubble starts moving when player "Day" is inside
         if (bubbleMoveInt == 2)
         {
+            if (transform.position.x == startPos.x)
+            {
+                isMovingLeft = false;
+            }
+            else if (transform.position.x < startPos.x)
+            {
+                isMovingLeft = true;
+            }
+            else
+            {
+                isMovingLeft = false;
+            }
+
+            if (transform.position.y == startPos.y)
+            {
+                isMovingUp = false;
+            }
+            else if (transform.position.y > startPos.y)
+            {
+                isMovingUp = true;
+            }
+            else
+            {
+                isMovingUp = false;
+            }
+
             if (pathSpeedModifier.ToString() == "ConsistentSpeed")
             {
                 currentBubble.localPosition =
@@ -170,6 +230,28 @@ public class BubbleController : MonoBehaviour
                 currentBubble.localPosition =
                     Vector3.MoveTowards(currentBubble.localPosition, endPos, splitForwardSpeed * Time.deltaTime);
             }
+        }
+
+        if (isMovingLeft && !behindOn)
+        {
+            behindParticle.Play();
+            behindOn = true;
+        }
+        else if (!isMovingLeft)
+        {
+            behindParticle.Stop();
+            behindOn = false;
+        }
+
+        if (isMovingUp && !belowOn)
+        {
+            belowParticle.Play();
+            belowOn = true;
+        }
+        else if (!isMovingUp)
+        {
+            belowParticle.Stop();
+            belowOn = false;
         }
     }
 }
