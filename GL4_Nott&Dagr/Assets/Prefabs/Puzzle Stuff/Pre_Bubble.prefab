@@ -9820,7 +9820,7 @@ MonoBehaviour:
   CollisionTag: DagrAudioTrigger
   Event: event:/SFX/Objects/PlatformMoving
   PlayEvent: 5
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

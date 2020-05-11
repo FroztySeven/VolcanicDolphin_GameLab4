@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class AudioButtonHighlight : MonoBehaviour, ISelectHandler
 {
+    // This script is to used to play audio when buttons in the menu and pause menu are selected, it also has blockers for when player/s select and cancel
+    // so it should not play the sounds then. This script is attached to all the buttons in menu and pause menu and the menu controller.
+
     [FMODUnity.EventRef]
     public string buttonHighlight;
 
@@ -44,6 +47,4 @@ public class AudioButtonHighlight : MonoBehaviour, ISelectHandler
             }
         }
     }
-
-    
 }
