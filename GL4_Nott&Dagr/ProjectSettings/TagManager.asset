@@ -23,6 +23,7 @@ TagManager:
   - Wall
   - Plate
   - WallClone
+  - Minion
   layers:
   - Default
   - TransparentFX
@@ -44,7 +45,7 @@ TagManager:
   - DeathTrigger
   - Ground
   - Ignore All But Player & Aura
-  - 
+  - Minion
   - 
   - 
   - 
