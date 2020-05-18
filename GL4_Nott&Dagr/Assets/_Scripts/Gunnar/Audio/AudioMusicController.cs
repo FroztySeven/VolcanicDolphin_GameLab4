@@ -181,7 +181,7 @@ public class AudioMusicController : MonoBehaviour
 
         }
         //-----Chapter 3 - Level 2, 3, 4 -----//
-        if (sceneNr == 23 || sceneNr == 24 || sceneNr == 25 || sceneNr == 26 || sceneNr == 27 || sceneNr == 28 || sceneNr == 29 || sceneNr == 30 /*|| sceneNr == 31*/) // 31 is Sindres test level used as a placeholder to keep correct music transitions
+        if (sceneNr == 23 || sceneNr == 24 || sceneNr == 25 || sceneNr == 26 || sceneNr == 27 || sceneNr == 28 || sceneNr == 29 || sceneNr == 30 || sceneNr == 31)
         {
             menu = false;
             cutScene = false;

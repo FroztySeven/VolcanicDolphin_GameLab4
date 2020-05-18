@@ -255,7 +255,6 @@ MonoBehaviour:
   playEventCount: 0
   lastPressed: 0
   clones: []
-  wallClones: []
 --- !u!114 &8988638592701968143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +320,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/SFX/Objects/TimerNormal
   PlayEvent: 0
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -344,7 +343,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/SFX/Objects/TimerFast
   PlayEvent: 0
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -367,7 +366,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/SFX/Objects/TimerEnd
   PlayEvent: 0
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
