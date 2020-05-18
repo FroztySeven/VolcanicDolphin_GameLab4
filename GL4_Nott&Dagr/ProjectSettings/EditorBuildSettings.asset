@@ -99,6 +99,9 @@ EditorBuildSettings:
     path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_09.unity
     guid: 81b94be240b34264bbb181443a6d72e5
   - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_10.unity
+    guid: 45b067387a251a84e96915fe98014b4c
+  - enabled: 0
     path: Assets/Scenes/_Main Game/Unsorted/Not Used/Sindre Level 01 - Placeholder
       for 3x10 for scene number..unity
     guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
@@ -111,9 +114,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_03.unity
     guid: 59201db64d7fa29469c7a738f61c3dfb
-  - enabled: 1
-    path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_10.unity
-    guid: 45b067387a251a84e96915fe98014b4c
   - enabled: 1
     path: Assets/Scenes/_Main Game/Unsorted/In Testing/Remi_Vanaheim_04.unity
     guid: d5b6def6ff5e41a418b66a57c45efa87
