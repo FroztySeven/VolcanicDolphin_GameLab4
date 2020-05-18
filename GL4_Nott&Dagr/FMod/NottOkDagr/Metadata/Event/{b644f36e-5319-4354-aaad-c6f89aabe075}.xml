@@ -1417,9 +1417,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{b097c0ff-7b7d-4dd5-bdd5-b86783318c31}" />
 	<object class="SingleSound" id="{43f0da13-40ac-41d2-8d3d-d22f7c4ea60d}">
-		<property name="isAsync">
-			<value>true</value>
-		</property>
 		<property name="length">
 			<value>138.85714285714275</value>
 		</property>
@@ -2748,7 +2745,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>138.8571428571428</value>
+			<value>138.85714285714278</value>
 		</property>
 		<property name="name">
 			<value>Main Menu</value>
@@ -3098,7 +3095,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>138.8571428571428</value>
+			<value>138.85714285714278</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>5</value>
@@ -3649,7 +3646,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>138.85714285714278</value>
+			<value>138.85714285714275</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>5</value>
