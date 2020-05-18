@@ -9,7 +9,7 @@ public class MinionSpawn : MonoBehaviour
     public GameObject minionPrefab;
     public Sprite nottMinionSprite, dagrMinionSprite;
     public float timeToCompleteRoute;
-    public bool alwaysAliveAfterSpawned = false;
+    public bool alwaysAliveAfterSpawned = false, canCollideWithPlayer = false;
     public int timeAlive;
 
     [Header("Path number, needs to be added in the ITweenPath script")]
@@ -45,6 +45,15 @@ public class MinionSpawn : MonoBehaviour
         }
 
         gameObject.GetComponent<iTweenPath>().nodes[0] = transform.position; //set start node to the same position as the gameobject
+
+        if (canCollideWithPlayer)
+        {
+            minionPrefab.layer = 0;
+        }
+        else
+        {
+            minionPrefab.layer = 20;
+        }
     }
 
 
