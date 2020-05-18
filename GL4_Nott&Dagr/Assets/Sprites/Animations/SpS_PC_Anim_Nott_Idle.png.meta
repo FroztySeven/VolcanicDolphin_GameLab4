@@ -11,6 +11,18 @@ TextureImporter:
   - first:
       213: 8550490700973801672
     second: SpS_PC_Anim_Nott_Idle_2
+  - first:
+      213: -8575958185317704401
+    second: SpS_PC_Anim_Nott_Idle_0
+  - first:
+      213: 190918598168813915
+    second: SpS_PC_Anim_Nott_Idle_1
+  - first:
+      213: 7337368385644623647
+    second: SpS_PC_Anim_Nott_Idle_2
+  - first:
+      213: -7472327449129704983
+    second: SpS_PC_Anim_Nott_Idle_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,19 +122,19 @@ TextureImporter:
       name: SpS_PC_Anim_Nott_Idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 22
+        width: 17
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3cef0ea502df01f0800000000000000
-      internalID: -1076410864081310662
+      spriteID: f2dd883c7731cf880800000000000000
+      internalID: -8575958185317704401
       vertices: []
       indices: 
       edges: []
@@ -131,19 +143,19 @@ TextureImporter:
       name: SpS_PC_Anim_Nott_Idle_1
       rect:
         serializedVersion: 2
-        x: 22
+        x: 23
         y: 0
-        width: 22
+        width: 17
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a08baecd600a06600800000000000000
-      internalID: 459543113328408586
+      spriteID: b512ed8147746a200800000000000000
+      internalID: 190918598168813915
       vertices: []
       indices: 
       edges: []
@@ -152,19 +164,40 @@ TextureImporter:
       name: SpS_PC_Anim_Nott_Idle_2
       rect:
         serializedVersion: 2
-        x: 44
+        x: 43
         y: 0
-        width: 22
+        width: 17
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c003d67df179a670800000000000000
-      internalID: 8550490700973801672
+      spriteID: f177784fba193d560800000000000000
+      internalID: 7337368385644623647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpS_PC_Anim_Nott_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 17
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1293d66c5fc4890800000000000000
+      internalID: -7472327449129704983
       vertices: []
       indices: 
       edges: []

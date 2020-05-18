@@ -97,6 +97,11 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Sprite currentSprite;
 
+    public RuntimeAnimatorController animDay;
+    public RuntimeAnimatorController animNight;
+
+    private string animPlayer;
+
     private void Awake()
     {
         SetCharacterID();
@@ -109,6 +114,25 @@ public class PlayerController : MonoBehaviour
         amountOfJumpsLeft = amountOfJumps;
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
+        playerCanMove = false;
+        Invoke("SetPlayerMovement", 0.6f);
+
+        if (setPlayer.ToString() == "Night")
+        {
+            anim.runtimeAnimatorController = animNight;
+            animPlayer = "Night";
+        }
+
+        if (setPlayer.ToString() == "Day")
+        {
+            anim.runtimeAnimatorController = animDay;
+            animPlayer = "Day";
+        }
+    }
+
+    private void SetPlayerMovement()
+    {
+        playerCanMove = true;
     }
 
     private void FixedUpdate()
@@ -134,7 +158,18 @@ public class PlayerController : MonoBehaviour
             CheckJump();
             CheckLedgeClimb();
         }
+        UpdateAnimations();
+
     }
+
+    private void UpdateAnimations()
+    {
+        anim.SetBool("isWalking" + animPlayer, isWalking);
+        anim.SetBool("isGrounded" + animPlayer, isGrounded);
+        anim.SetFloat("yVelocity" + animPlayer, theRB.velocity.y);
+        anim.SetBool("isWallSliding" + animPlayer, isWallSliding);
+    }
+
     private void SetCharacterID()
     {
         if (setPlayer.ToString() == "Night")
@@ -210,7 +245,7 @@ public class PlayerController : MonoBehaviour
             canMove = false;
             canFlip = false;
 
-            anim.SetBool("canClimbLedge", canClimbLedge);
+            anim.SetBool("canClimbLedge" + animPlayer, canClimbLedge);
         }
 
         if (canClimbLedge)
@@ -226,7 +261,7 @@ public class PlayerController : MonoBehaviour
         canMove = true;
         canFlip = true;
         ledgeDetected = false;
-        anim.SetBool("canClimbLedge", canClimbLedge);
+        anim.SetBool("canClimbLedge" + animPlayer, canClimbLedge);
     }
 
     private void CheckSurroundings()
@@ -299,7 +334,7 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        if (theRB.velocity.x != 0)
+        if (theRB.velocity.x != 0 && (Input.GetAxis("HorizontalP" + playerId) != 0 || Input.GetAxis("VerticalP" + playerId) != 0))
         {
             isWalking = true;
         }

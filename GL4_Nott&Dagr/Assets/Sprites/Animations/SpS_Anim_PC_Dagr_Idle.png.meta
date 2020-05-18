@@ -11,6 +11,18 @@ TextureImporter:
   - first:
       213: -7140649382580035211
     second: SpS_Anim_PC_Dagr_Idle_2
+  - first:
+      213: 6234505924861923591
+    second: SpS_Anim_PC_Dagr_Idle_0
+  - first:
+      213: 7979183413074320005
+    second: SpS_Anim_PC_Dagr_Idle_1
+  - first:
+      213: 1051142549536084458
+    second: SpS_Anim_PC_Dagr_Idle_2
+  - first:
+      213: -4879443934336631464
+    second: SpS_Anim_PC_Dagr_Idle_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -110,19 +122,19 @@ TextureImporter:
       name: SpS_Anim_PC_Dagr_Idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 22
+        width: 17
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0f9bf86f536907f0800000000000000
-      internalID: -645875810116591860
+      spriteID: 70196795b1a658650800000000000000
+      internalID: 6234505924861923591
       vertices: []
       indices: 
       edges: []
@@ -131,19 +143,19 @@ TextureImporter:
       name: SpS_Anim_PC_Dagr_Idle_1
       rect:
         serializedVersion: 2
-        x: 22
+        x: 23
         y: 0
-        width: 22
+        width: 17
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3bf91b36d45ac770800000000000000
-      internalID: 8631804914900269887
+      spriteID: 58adbf5e901cbbe60800000000000000
+      internalID: 7979183413074320005
       vertices: []
       indices: 
       edges: []
@@ -152,19 +164,40 @@ TextureImporter:
       name: SpS_Anim_PC_Dagr_Idle_2
       rect:
         serializedVersion: 2
-        x: 44
+        x: 43
         y: 0
-        width: 22
+        width: 17
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57164b5283157ec90800000000000000
-      internalID: -7140649382580035211
+      spriteID: ae195616498669e00800000000000000
+      internalID: 1051142549536084458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpS_Anim_PC_Dagr_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 17
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d3e68189bb84cb0800000000000000
+      internalID: -4879443934336631464
       vertices: []
       indices: 
       edges: []
