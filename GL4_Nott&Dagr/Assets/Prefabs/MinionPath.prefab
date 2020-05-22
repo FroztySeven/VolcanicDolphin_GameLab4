@@ -90,6 +90,7 @@ MonoBehaviour:
   dagrMinionSprite: {fileID: 21300000, guid: 5da93cf317c60f548934515852b4836c, type: 3}
   timeToCompleteRoute: 5
   alwaysAliveAfterSpawned: 0
+  canCollideWithPlayer: 0
   timeAlive: 10
   pathNumber: 0
 --- !u!114 &2714187577198309313

@@ -515,20 +515,43 @@ public class TrickWallHideController : MonoBehaviour
                         plate.GetComponent<TrickWallHideController>().lastPressed = 1;
                     }
 
+                    foreach (var clone in clones)
+                    {
+                        if (clone.GetComponent<TrickWallBoolChecker>().imHidden == true)
+                        {
+                            clone.gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            clone.gameObject.SetActive(false);
+                        }
+                    }
+                    /*
                     for (int i = 0; i < walls.Length; i++)
                     {
                         foreach (GameObject walls in walls)
                         {
                             if (walls.GetComponent<TrickWallWallController>().hideMe == false)
                             {
-                                walls.SetActive(false);
+                                //walls.SetActive(false);
+
+                                foreach (var clone in clones)
+                                {
+                                    clone.SetActive(false);
+                                }
+
                             }
                             else
                             {
-                                walls.SetActive(true);
+                                //walls.SetActive(true);
+
+                                foreach (var clone in clones)
+                                {
+                                    clone.SetActive(true);
+                                }
                             }
                         }
-                    }
+                    }*/
                 }
                 else
                 {
@@ -537,20 +560,43 @@ public class TrickWallHideController : MonoBehaviour
                         plate.GetComponent<TrickWallHideController>().lastPressed = 0;
                     }
 
+                    foreach (var clone in clones)
+                    {
+                        if (clone.GetComponent<TrickWallBoolChecker>().imHidden == true)
+                        {
+                            clone.gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            clone.gameObject.SetActive(true);
+                        }
+                    }
+
+                    /*
                     for (int i = 0; i < walls.Length; i++)
                     {
                         foreach (GameObject walls in walls)
                         {
                             if (walls.GetComponent<TrickWallWallController>().hideMe == false)
                             {
-                                walls.SetActive(true);
+                                //walls.SetActive(true);
+
+                                foreach (var clone in clones)
+                                {
+                                    clone.SetActive(true);
+                                }
                             }
                             else
                             {
-                                walls.SetActive(false);
+                                //walls.SetActive(false);
+
+                                foreach (var clone in clones)
+                                {
+                                    clone.SetActive(false);
+                                }
                             }
                         }
-                    }
+                    }*/
                 }
             }
 
@@ -606,13 +652,13 @@ public class TrickWallHideController : MonoBehaviour
                     foreach (var plate in multiPlates)
                     {
                         plate.GetComponent<TrickWallHideController>().lastPressed = 1;
-                    }
 
-                    for (int i = 0; i < walls.Length; i++)
-                    {
-                        foreach (GameObject walls in walls)
+                        for (int i = 0; i < walls.Length; i++)
                         {
-                            walls.GetComponent<TrickWallMoveController>().move = true;
+                            foreach (GameObject walls in walls)
+                            {
+                                walls.GetComponent<TrickWallMoveController>().move = true;
+                            }
                         }
                     }
                 }
@@ -621,13 +667,13 @@ public class TrickWallHideController : MonoBehaviour
                     foreach (var plate in multiPlates)
                     {
                         plate.GetComponent<TrickWallHideController>().lastPressed = 0;
-                    }
 
-                    for (int i = 0; i < walls.Length; i++)
-                    {
-                        foreach (GameObject walls in walls)
+                        for (int i = 0; i < walls.Length; i++)
                         {
-                            walls.GetComponent<TrickWallMoveController>().move = false;
+                            foreach (GameObject walls in walls)
+                            {
+                                walls.GetComponent<TrickWallMoveController>().move = false;
+                            }
                         }
                     }
                 }
@@ -738,6 +784,7 @@ public class TrickWallHideController : MonoBehaviour
 
         if (other.tag == "Minion")
         {
+
             if (hideMoveMethod.ToString() == "HideAllOnStart")
             {
                 button.GetComponent<SpriteRenderer>().sprite = unPressed;
