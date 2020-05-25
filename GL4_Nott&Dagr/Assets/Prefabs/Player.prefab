@@ -727,7 +727,7 @@ MonoBehaviour:
   - {fileID: -8494171195161714512, guid: f05091599ce84e64c93e91b430732573, type: 3}
   - {fileID: -6994535563547939999, guid: f05091599ce84e64c93e91b430732573, type: 3}
   - {fileID: 1903851585086778966, guid: f05091599ce84e64c93e91b430732573, type: 3}
-  walkingSpeed: 0.23
+  walkingSpeed: 0.33
   height: 0
   oldHeight: 0
   heightDiff: 0
@@ -927,7 +927,7 @@ MonoBehaviour:
   - {fileID: -8494171195161714512, guid: f05091599ce84e64c93e91b430732573, type: 3}
   - {fileID: -6994535563547939999, guid: f05091599ce84e64c93e91b430732573, type: 3}
   - {fileID: 1903851585086778966, guid: f05091599ce84e64c93e91b430732573, type: 3}
-  walkingSpeed: 0.23
+  walkingSpeed: 0.33
   height: 0
   oldHeight: 0
   heightDiff: 0
