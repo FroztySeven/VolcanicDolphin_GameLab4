@@ -101,10 +101,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 3 - Muspelheim/Muspelheim_10.unity
     guid: 45b067387a251a84e96915fe98014b4c
-  - enabled: 0
-    path: Assets/Scenes/_Main Game/Unsorted/Not Used/Sindre Level 01 - Placeholder
-      for 3x10 for scene number..unity
-    guid: 5d3b27cbbfe8e7f45b5ef415fd482e37
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_01.unity
     guid: 7283bab6deeb62844a7dbad32945bbcc
@@ -113,11 +109,14 @@ EditorBuildSettings:
     guid: 1e8db88f05559ae4ca733dd23e48db79
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_03.unity
-    guid: 59201db64d7fa29469c7a738f61c3dfb
+    guid: 48e19666a581d014cb432cc08778ac08
   - enabled: 1
-    path: Assets/Scenes/_Main Game/Unsorted/In Testing/Remi_Vanaheim_04.unity
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_04.unity
     guid: d5b6def6ff5e41a418b66a57c45efa87
   - enabled: 1
-    path: Assets/Scenes/_Main Game/Unsorted/In Testing/SindreMinionLevel.unity
-    guid: 48e19666a581d014cb432cc08778ac08
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_05.unity
+    guid: 59201db64d7fa29469c7a738f61c3dfb
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_06.unity
+    guid: 4e05b3590d669564ba529b7b30cada7c
   m_configObjects: {}

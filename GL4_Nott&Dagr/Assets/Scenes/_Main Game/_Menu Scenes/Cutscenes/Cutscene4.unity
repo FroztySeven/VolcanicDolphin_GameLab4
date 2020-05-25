@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 627703905}
   - component: {fileID: 627703906}
   m_Layer: 5
-  m_Name: Image_Skip (1)
+  m_Name: Image_Skip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,8 +455,8 @@ MonoBehaviour:
   cutsceneLoadToLevel: 4
   cutsceneTimer: 0
   loadingText: {fileID: 886475096}
-  skipBG: {fileID: 0}
-  skipImage: {fileID: 0}
+  skipBG: {fileID: 1006911754}
+  skipImage: {fileID: 627703904}
   mainMenu: 
   firstLevelInChapter1: Helheim_01
   firstLevelInChapter2: Jotunheim_01
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 1006911757}
   - component: {fileID: 1006911756}
   m_Layer: 5
-  m_Name: Skip_BG (1)
+  m_Name: Skip_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
