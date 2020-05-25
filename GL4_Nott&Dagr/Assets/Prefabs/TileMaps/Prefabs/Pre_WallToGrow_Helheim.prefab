@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3893207975285638012}
   - component: {fileID: -6177493070190389667}
   m_Layer: 0
-  m_Name: Pre_WallToGrow
+  m_Name: Pre_WallToGrow_Helheim
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
