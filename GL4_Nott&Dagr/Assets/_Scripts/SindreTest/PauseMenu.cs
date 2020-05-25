@@ -70,6 +70,7 @@ public class PauseMenu : MonoBehaviour
             if (mainPanel.activeSelf) // turn off the pause menu if it is open
             {
                 mainPanel.SetActive(false);
+                howToPlayPanel.SetActive(false);
                 Time.timeScale = 1f;
                 dagr.GetComponent<PlayerController>().enabled = true;
                 nott.GetComponent<PlayerController>().enabled = true;
@@ -77,6 +78,7 @@ public class PauseMenu : MonoBehaviour
             else if (!mainPanel.activeSelf) // turn on the pause menu
             {
                 mainPanel.SetActive(true);
+                howToPlayPanel.SetActive(false);
                 EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
                 Time.timeScale = 0f;
                 dagr.GetComponent<PlayerController>().enabled = false;
