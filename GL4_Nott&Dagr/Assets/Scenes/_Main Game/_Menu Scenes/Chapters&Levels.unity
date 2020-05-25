@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8245,7 +8245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00061035156, y: -6.699997}
+  m_AnchoredPosition: {x: -0.00061035156, y: -6.700012}
   m_SizeDelta: {x: 243.3, y: 179.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808722574
@@ -11320,7 +11320,6 @@ MonoBehaviour:
   - {fileID: 1033344878}
   - {fileID: 168509879}
   - {fileID: 1258752921}
-  - {fileID: 639146224}
   allChapterButtons:
   - {fileID: 1067264170}
   - {fileID: 1676564337}
@@ -11370,23 +11369,8 @@ MonoBehaviour:
   - {fileID: 928340604}
   - {fileID: 1747178611}
   lastNumberOfC4: 31
-  C5:
-  - {fileID: 0}
-  - {fileID: 1771818087}
-  - {fileID: 1838660689}
-  - {fileID: 71716987}
-  - {fileID: 134534532}
-  - {fileID: 780770067}
-  - {fileID: 381932327}
-  - {fileID: 858044189}
-  - {fileID: 538486046}
-  - {fileID: 1421023973}
-  - {fileID: 2041406357}
-  - {fileID: 1903461957}
-  - {fileID: 959991570}
-  - {fileID: 0}
-  - {fileID: 0}
-  lastNumberOfC5: 90
+  C5: []
+  lastNumberOfC5: 0
   C6: []
   lastNumberOfC6: 0
   C7: []
