@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,6 +13,7 @@ public class MenuNavigation : MonoBehaviour
         Canvas_Start,
         Canvas_Options,
         Canvas_HowToPlay,
+        Canvas_Credits,
         Canvas_CharacterSelection;
 
     // Start is called before the first frame update
@@ -20,8 +22,10 @@ public class MenuNavigation : MonoBehaviour
         Canvas_Start.SetActive(true);
         Canvas_Options.SetActive(false);
         Canvas_HowToPlay.SetActive(false);
+        Canvas_Credits.SetActive(false);
         Canvas_CharacterSelection.SetActive(false);
     }
+
 
     public void Select_Options()
     {
@@ -29,6 +33,7 @@ public class MenuNavigation : MonoBehaviour
 
         Canvas_Start.SetActive(false);
         Canvas_HowToPlay.SetActive(false);
+        Canvas_Credits.SetActive(false);
     }
 
     public void Select_HowToPlay()
@@ -37,6 +42,16 @@ public class MenuNavigation : MonoBehaviour
 
         Canvas_Start.SetActive(false);
         Canvas_Options.SetActive(false);
+        Canvas_Credits.SetActive(false);
+    }
+    
+    public void Select_Credits()
+    {
+        Canvas_Credits.SetActive(true);
+
+        Canvas_Start.SetActive(false);
+        Canvas_Options.SetActive(false);
+        Canvas_HowToPlay.SetActive(false);
     }
 
     public void Select_SinglePlayer()
