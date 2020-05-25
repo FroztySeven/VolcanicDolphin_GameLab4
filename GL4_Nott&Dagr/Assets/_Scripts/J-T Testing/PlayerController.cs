@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private int currentlevelindex;
 
     private bool isFacingRight = true;
-    private bool isWalking;
     private bool isTouchingWall;
     private bool isWallSliding;
     private bool canNormalJump;
@@ -76,6 +75,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnLadder;
     [HideInInspector]
     public bool isGrounded;
+    public bool isWalking;
     [HideInInspector]
     public bool auraBounce;
     public bool playerCanMove = true;

@@ -183,11 +183,21 @@ public class AudioPlayerController : MonoBehaviour
 
         if (isDagr || isNott)
         {
+            /*
             if (_pmt.movementInputHorizontalDirection > 0.1 || _pmt.movementInputHorizontalDirection < -0.1)
             {
                 isMoving = true;
             }
             else if (_pmt.movementInputHorizontalDirection > -0.1 || _pmt.movementInputHorizontalDirection < 0.1)
+            {
+                isMoving = false;
+            }*/
+
+            if (_pmt.isWalking == true)
+            {
+                isMoving = true;
+            }
+            else
             {
                 isMoving = false;
             }
