@@ -334,7 +334,7 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        if (theRB.velocity.x != 0 && (Input.GetAxis("HorizontalP" + playerId) != 0 || Input.GetAxis("VerticalP" + playerId) != 0))
+        if (theRB.velocity.x != 0 && !isTouchingWall && (Input.GetAxis("HorizontalP" + playerId) != 0 || Input.GetAxis("VerticalP" + playerId) != 0))
         {
             isWalking = true;
         }
