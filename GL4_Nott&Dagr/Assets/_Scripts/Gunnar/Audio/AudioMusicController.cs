@@ -214,7 +214,7 @@ public class AudioMusicController : MonoBehaviour
         }
         
         //-----Chapter 4 - Level 2, 3, 4 -----//
-        if (sceneNr == 33 || sceneNr == 34 /*|| sceneNr == 35*/)
+        if (sceneNr == 33 || sceneNr == 34 || sceneNr == 35 || sceneNr == 36 || sceneNr == 37 || sceneNr == 38 || sceneNr == 39 || sceneNr == 40 || sceneNr == 41)
         {
             menu = false;
             cutScene = false;
