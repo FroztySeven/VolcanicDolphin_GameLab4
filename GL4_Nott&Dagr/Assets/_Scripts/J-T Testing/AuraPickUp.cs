@@ -33,6 +33,7 @@ public class AuraPickUp : MonoBehaviour
         if (Input.GetButton("PickupP" + playerId) && gemPickup != null && gem.isFrozen && gem.isPickedUp && pickedUp)
         {
             gemPickup.position = transform.position - new Vector3(0f, 0.5f, 0f);
+            gem.theRB.velocity = Vector3.zero;
         }
 
         if (Input.GetButtonUp("PickupP" + playerId) && gemPickup != null && gem.isFrozen && gem.isPickedUp && pickedUp)
