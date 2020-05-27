@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrickWallBoolChecker : MonoBehaviour
 {
+    // This is used to tell all the wall gameobjects in the trick wall prefab if they should or shouldn't be hidden.
+
     public TrickWallWallController _twwc;
 
     public bool imHidden;

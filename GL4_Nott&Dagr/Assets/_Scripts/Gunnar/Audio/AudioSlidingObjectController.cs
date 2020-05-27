@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioSlidingObjectController : MonoBehaviour
+
+// This script is used to play sliding sfx when pushing movable blocks, the gems, seeds and icecubes.
+
 {
     public bool audioPlaying, isGrounded, wasGrounded, isFalling;
 
@@ -23,7 +26,7 @@ public class AudioSlidingObjectController : MonoBehaviour
         pushSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Objects/PushSlide");
     }
 
-    void FixedUpdate()
+    void FixedUpdate() // This checks if the sliding objects is falling, the sliding sfx should not play while the object is falling.
     {
         
         wasGrounded = isGrounded;
@@ -42,7 +45,7 @@ public class AudioSlidingObjectController : MonoBehaviour
 
     void Update()
     {
-        if (_boxRB.velocity.y >= 0.1f || _boxRB.velocity.y <= -0.1f)
+        if (_boxRB.velocity.y >= 0.1f || _boxRB.velocity.y <= -0.1f) // This is to check if gameobject is grounded.
         {
             isGrounded = false;
         }
@@ -51,7 +54,8 @@ public class AudioSlidingObjectController : MonoBehaviour
             isGrounded = true;
         }
 
-        if (isGrounded)
+        if (isGrounded) // When object is grounded and if it is pushed, it will play the sfx event while there is velocity is greater then 0.1f, it then checks if the sound is
+                        // already playing so it will not overlay or double each time/frame it plays.
         {
             if (_boxRB.velocity.magnitude > 0.1f)
             {
@@ -77,7 +81,7 @@ public class AudioSlidingObjectController : MonoBehaviour
         }
     }
 
-    void CheckFalling()
+    void CheckFalling() // The method used to check if object is falling.
     {
         oldHeight = height;
 
@@ -91,7 +95,7 @@ public class AudioSlidingObjectController : MonoBehaviour
         }
     }
 
-    public static bool IsPlaying(FMOD.Studio.EventInstance instance)
+    public static bool IsPlaying(FMOD.Studio.EventInstance instance) // This checks the state of the event, if it is playing.
     {
         FMOD.Studio.PLAYBACK_STATE state;
         instance.getPlaybackState(out state);

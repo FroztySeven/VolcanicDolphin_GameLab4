@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class AudioPortalController : MonoBehaviour
 {
+    // This plays the portal chime sfx, each time the portal has been set to active it will play the chime event.
+
     [FMODUnity.EventRef]
     public string portalChime;
 

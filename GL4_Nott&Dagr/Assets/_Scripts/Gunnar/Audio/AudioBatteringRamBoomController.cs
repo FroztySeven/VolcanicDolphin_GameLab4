@@ -12,7 +12,7 @@ public class AudioBatteringRamBoomController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wallBoom = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Objects/BatRamBoom");
+        wallBoom = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Objects/BatRamBoom"); // This is the event from the FMod project
     }
 
     // Update is called once per frame

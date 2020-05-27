@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class AudioButtonPressed : MonoBehaviour
 {
-    //... this script is used to play sounds when interacting with UI.
+    //... this script is used to play sounds when interacting with UI, it should only play in the main menu and the pause menu.
     //--------------------------------------------------------------------------------------//
 
     [FMODUnity.EventRef]

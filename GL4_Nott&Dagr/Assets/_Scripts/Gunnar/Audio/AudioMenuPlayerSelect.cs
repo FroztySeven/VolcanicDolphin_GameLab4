@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class AudioMenuPlayerSelect : MonoBehaviour
 {
+    // This is only used in the menu scene, in the co-op section, when players are selecting their characters. I needed to make it like this because selecting the characters gameobject were not
+    // buttons, so using the onselect method wouldn't work. This works but the sound will continue to play while holding the movement controls to either the left or right side.
+
     [FMODUnity.EventRef] public string playerSelect;
 
     [HideInInspector]
     public GameObject player1, player2;
     [HideInInspector]
-    public bool left1, center1, right1, playLeft1, playCenter1, playRight1;
-    [HideInInspector]
+    public bool left1, center1, right1, playLeft1, playCenter1, playRight1; // This and the one benethe it are to tell in which postion the selection is on. For each time the bools become true it
+    [HideInInspector]                                                       // should play selection sound each time moving between the positions.    
     public bool left2, center2, right2, playLeft2, playCenter2, playRight2;
     [HideInInspector]
     public CharacterSelection _cs1, _cs2;
@@ -34,6 +37,9 @@ public class AudioMenuPlayerSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // This is all kind of messy but it boils down to when either player 1 and 2 are changing between the three locations given for the player, to tell the script top play sounds while
+        // switching between the locations, they should then start the given coroutines. The coroutines are used to give a "breathing space" when switching between locations/character selections.
+
         if (player1.GetComponent<CharacterSelection>().changedLocation && player1.transform.localPosition.x <= -355)
         {
             left1 = true;
@@ -107,6 +113,8 @@ public class AudioMenuPlayerSelect : MonoBehaviour
         }
 
     }
+
+    // These IEnumerator are used to play a one shot sound fx when each location is selected.
     private IEnumerator PlaySoundLeft1()
     {
         FMODUnity.RuntimeManager.PlayOneShot(playerSelect);

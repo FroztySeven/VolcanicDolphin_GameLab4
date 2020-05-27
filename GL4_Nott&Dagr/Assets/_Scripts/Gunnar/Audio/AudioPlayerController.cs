@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class AudioPlayerController : MonoBehaviour
 {
-    //... this script mostly controls the players audio, vocal, movement, skills or anything else players related.
-    //... it checks the sprites data to see what type of ground the players is standing on, to get the right type of footsteps sounds.
+    // This script mostly controls the players audio, vocal, movement, skills or anything else players related.
+    // It checks the sprites data to see what type of ground the players is standing on, to get the right type of footsteps sounds.
+    // It checks the players for if they are grounded, moving and falling and will then play the audio events needed.
 
     //--------------------------------------------------------------------------//
     [HideInInspector]
@@ -36,7 +37,8 @@ public class AudioPlayerController : MonoBehaviour
 
     private int gt, fol;
 
-    private FMOD.Studio.EventInstance gtInstance, folInstance, jumpInstance;
+    private FMOD.Studio.EventInstance gtInstance, folInstance, jumpInstance; // This is for FMod event parameters, they are changed depending if players are grounded or not, and on the
+                                                                             // types of ground they are standing on. Both players share the same events.
 
     //--------------------------------------------------------------------------//
 
@@ -73,10 +75,10 @@ public class AudioPlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        CheckLanding();
+        CheckLanding(); // Checks what happens when players has landed.
         wasGrounded = isGrounded;
 
-        CheckFalling();
+        CheckFalling(); // Checks what happens when players are falling.
 
         if (wasGrounded == false)
         {
@@ -92,20 +94,20 @@ public class AudioPlayerController : MonoBehaviour
     void Update()
     {
         
-        CheckPause();
+        CheckPause(); 
 
-        //----------Grounded------------//
+        //----------Grounded------------// FOL is short for footsteps or landing, fol 0 is footsteps while fol 1 is when the players land on ground. This is for the FMod event parameter.
         if (isGrounded)
         {
             if (isDagr || isNott)
             {
-                folInstance.setParameterByName("FOL", fol = 0);
+                folInstance.setParameterByName("FOL", fol = 0); 
             }
             
-            CheckMovement();
+            CheckMovement(); // Checks what happens when players are moving and on the ground.
         }
 
-        //----------Not Grounded------------//
+        //----------Not Grounded------------// If the players are not on ground, fol is set to landing, unless they are climbing up the plants gameobject.
         if (!isGrounded)
         {
             if (isDagr || isNott)
@@ -123,9 +125,9 @@ public class AudioPlayerController : MonoBehaviour
             isGrounded = _pmt.isGrounded;
             jumpInstance.setParameterByName("PlayerJump", 0);
 
-            CheckGroundTypes();
+            CheckGroundTypes(); // Checks what ground types the players are on.
 
-            CheckJumps();
+            CheckJumps(); // Checks what happens when the players jump.
         }
 
         //-----------Nótt----------//
@@ -140,7 +142,7 @@ public class AudioPlayerController : MonoBehaviour
             CheckJumps();
         }
 
-        LevelDone();
+        LevelDone(); // Checks what happens when the level is won.
 
         
         
@@ -148,7 +150,7 @@ public class AudioPlayerController : MonoBehaviour
 
     //-----------------------------------------//
 
-    void PlayerStart()
+    void PlayerStart() // This sets up the information needed for each player when game starts, since the two players are the same player gameobject.
     {
         if (this.gameObject == GameObject.Find("AudioTriggerDagr"))
         {
@@ -175,7 +177,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
     
-    void CheckMovement()
+    void CheckMovement() // This checks if the players are moving, through the player controller script. If they are moving, they are not climbing the plant.
     {
         //---Movement Checker---//
 
@@ -204,7 +206,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
     
-    void CallFootsteps()
+    void CallFootsteps() // This finds what kind of footsteps sfx is needed, depending on what type of ground the players are on, or when they are climbing the plant gameobject.
     {
         if (isMoving && isGrounded)
         {
@@ -217,7 +219,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
     
-    void CheckFalling()
+    void CheckFalling() // This checks if the players are falling, unless they are on the plant gameobject.
     {
         //----Checks Falling----//
 
@@ -241,7 +243,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
 
-    void CheckLanding()
+    void CheckLanding() // Finds the correct landing sounds when the players land on the ground depending in the ground type.
     {
         if (isGrounded && !wasGrounded)
         {
@@ -249,7 +251,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
 
-    void CheckJumps()
+    void CheckJumps() // This is used to play jump grunt sounds when the players are jumping.
     {
         if (_pmt.singlePlayer)
         {
@@ -322,7 +324,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
 
-    void CheckClimbing()
+    void CheckClimbing() // This checks if the players are climbing on the plant gameobject and play the corresponding footstep sfx for the plant.
     {
         //----Check Climbing----//
 
@@ -355,7 +357,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
     
-    void GroundTypes()
+    void GroundTypes() // GT is the parameter for Ground Types parameter in the FMod event. It assigns the parameter value depending on which type of sprite the players are on.
     {
         if (isDagr || isNott)
         {
@@ -407,10 +409,10 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
     
-    void CheckGroundTypes()
+    void CheckGroundTypes() // This compares the ground types of the level and which sprite the players are on.
     {
         // Check type of ground
-        if (!isGrounded)
+        if (!isGrounded) // If they are in the air.
         {
             isDirt = false;
             isGrass = false;
@@ -422,7 +424,7 @@ public class AudioPlayerController : MonoBehaviour
             isWater = false;
             isWood = false;
         }
-        if (!onSprite)
+        if (!onSprite) // If they are not on any sprite ground type.
         {
             isDirt = false;
             isGrass = false;
@@ -434,6 +436,8 @@ public class AudioPlayerController : MonoBehaviour
             isWater = false;
             isWood = false;
         }
+
+        // This goes through all the sprites assigned to the different ground types.
 
         for (int i = 0; i < dirtSprites.Length; i++)
         {
@@ -581,7 +585,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
 
-    void CheckPause()
+    void CheckPause() // This is to enable and disable the sfx when selecting between the buttons in the pause menu, so they should not play when in game.
     {
         if (pause != null)
         {
@@ -596,7 +600,7 @@ public class AudioPlayerController : MonoBehaviour
         }
     }
 
-    void LevelDone()
+    void LevelDone() // Plays the teleportation sfx when the players have entered the portal.
     {
         if (door.GetComponent<ExitLevel>().nightEnter && door.GetComponent<ExitLevel>().dayEnter)
         {
@@ -609,6 +613,8 @@ public class AudioPlayerController : MonoBehaviour
     }
 
     //-----------------------------------------//
+
+    // This is to check when the players are on the plant gameobjects.
 
     void OnTriggerStay2D(Collider2D other)
     {

@@ -10,6 +10,10 @@ public class TrickWallHideController : MonoBehaviour
     //... Original scripts used were PressurePlates and PressurePlatesWall. 
     //... I (Gunnar), made a copy those scripts to make alterations to them, add more variants of wall behaviours that I wanted.
 
+    // I wanted more options on using the walls, mostly it started by wanting more then one pressure plate to control the same walls, then I wanted to mix and match walls with the plates, to
+    // move them or hide them, even with a timer. By using the multiplates, it makes sure that all the plates in multiplates update the wall functions equally, so if one plate is pressed
+    // and it changes 0 to 1 all the plates in multiplates should have changed 0 to 1.
+
     public enum WhoCanUse { Night, Day, Both }
 
     public WhoCanUse setUser;
@@ -75,17 +79,17 @@ public class TrickWallHideController : MonoBehaviour
             button.GetComponent<SpriteRenderer>().sprite = unPressed;
         }
 
-        if (hideMoveMethod.ToString() == "HideAllOnStart")
+        if (hideMoveMethod.ToString() == "HideAllOnStart") // This function hides all the walls when game starts and shows them when the plate is pressed.
         {
             HideWall();
         }
 
-        if (hideMoveMethod.ToString() == "ShowAllOnStart")
+        if (hideMoveMethod.ToString() == "ShowAllOnStart") // This function shows all the walls when game starts and hides them when plate is pressed.
         {
             ShowWall();
         }
 
-        if (hideMoveMethod.ToString() == "SetByWall") // Set Reverse on or off on Wall object
+        if (hideMoveMethod.ToString() == "SetByWall") // With this you can select which wall gameobject should hide on start, if you want to show one wall and hide another.
         {
             for (int i = 0; i < walls.Length; i++)
             {
@@ -103,7 +107,7 @@ public class TrickWallHideController : MonoBehaviour
             }
         }
 
-        if (hideMoveMethod.ToString() == "SetByWallLockPermanent")
+        if (hideMoveMethod.ToString() == "SetByWallLockPermanent") // This is single use, it permanently shows or hides walls, then locks the button.
         {
             for (int i = 0; i < walls.Length; i++)
             {
@@ -120,32 +124,10 @@ public class TrickWallHideController : MonoBehaviour
                 }
             }
         }
-        /*
-        if (hideMoveMethod.ToString() == "SetByWallLockUnlockOnEnter")
+
+        if (hideMoveMethod.ToString() == "SetByWallLockUnlockOnEnter") // This is to make it so the plate needs to be pressed two times to turn on/off the hide or show instead of it happening
+                                                                       // automatically when stepping off the plates.
         {
-            for (int i = 0; i < walls.Length; i++)
-            {
-                foreach (GameObject walls in walls)
-                {
-                    playEnter.PlayEvent = EmitterGameEvent.None;
-                    playExit.PlayEvent = EmitterGameEvent.None;
-
-                    if (walls.GetComponent<TrickWallWallController>().hideMe == false)
-                    {
-                        walls.SetActive(true);
-                    }
-                    else
-                    {
-                        walls.SetActive(false);
-                    }
-                }
-            }
-        }
-        */
-
-        if (hideMoveMethod.ToString() == "SetByWallLockUnlockOnEnter")
-        {
-
             for (int i = 0; i < walls.Length; i++)
             {
                 foreach (GameObject walls in walls)
@@ -158,10 +140,8 @@ public class TrickWallHideController : MonoBehaviour
             }
         }
 
-        if (hideMoveMethod.ToString() == "SetByWallLockTimer")
+        if (hideMoveMethod.ToString() == "SetByWallLockTimer") // This makes the walls hide/show on a timer. Button can not be pressed again while the timer is on.
         {
-            //button.transform.position = startPos;
-
             playEnter.PlayEvent = EmitterGameEvent.None;
             playExit.PlayEvent = EmitterGameEvent.None;
 
@@ -183,14 +163,15 @@ public class TrickWallHideController : MonoBehaviour
             }
         }
 
-        if (hideMoveMethod.ToString() == "MoveLockUnlockOnEnter")
+        if (hideMoveMethod.ToString() == "MoveLockUnlockOnEnter")   // This is to make it so the plate needs to be pressed two times to move in the set direction and back instead of it happening
+                                                                    // automatically when stepping off the plates.
         {
             playEnter.PlayEvent = EmitterGameEvent.None;
             playExit.PlayEvent = EmitterGameEvent.None;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) // All the chosen function that will happen/start when player/minon enter the plate collider and sets the plate sprite to pressed state.
     {
         if (other.tag == "Player")
         {
@@ -198,17 +179,17 @@ public class TrickWallHideController : MonoBehaviour
             {
                 button.GetComponent<SpriteRenderer>().sprite = pressed;
 
-                if (hideMoveMethod.ToString() == "HideAllOnStart")
+                if (hideMoveMethod.ToString() == "HideAllOnStart") // This function hides all the walls when game starts and shows them when the plate is pressed.
                 {
                     ShowWall();
                 }
 
-                if (hideMoveMethod.ToString() == "ShowAllOnStart")
+                if (hideMoveMethod.ToString() == "ShowAllOnStart") // This function shows all the walls when game starts and hides them when plate is pressed.
                 {
                     HideWall();
                 }
 
-                if (hideMoveMethod.ToString() == "SetByWall") // Set Reverse on or off on Wall object
+                if (hideMoveMethod.ToString() == "SetByWall") // With this you can select which wall gameobject should hide on start, if you want to show one wall and hide another.
                 {
                     for (int i = 0; i < walls.Length; i++)
                     {
@@ -226,7 +207,7 @@ public class TrickWallHideController : MonoBehaviour
                     }
                 }
 
-                if (hideMoveMethod.ToString() == "SetByWallLockPermanent")
+                if (hideMoveMethod.ToString() == "SetByWallLockPermanent") // This is single use, it permanently shows or hides walls, then locks the button.
                 {
                     for (int i = 0; i < walls.Length; i++)
                     {
@@ -254,7 +235,8 @@ public class TrickWallHideController : MonoBehaviour
                     }
                 }
 
-                if (hideMoveMethod.ToString() == "SetByWallLockUnlockOnEnter")
+                if (hideMoveMethod.ToString() == "SetByWallLockUnlockOnEnter")  // This is to make it so the plate needs to be pressed two times to move in the set direction and back instead of it happening
+                                                                                // automatically when stepping off the plates.
                 {
                     playEnter.Play();
 
@@ -310,7 +292,7 @@ public class TrickWallHideController : MonoBehaviour
                             plate.GetComponent<TrickWallHideController>().lastPressed = 0;
                         }
 
-                        foreach (var clone in clones)
+                        foreach (var clone in clones) // Hides all the clones insted of hiding the parent, this was needed to make all the parents with multiplates would update their on/off position correctly.
                         {
                             if (clone.GetComponent<TrickWallBoolChecker>().imHidden == true)
                             {
@@ -321,36 +303,10 @@ public class TrickWallHideController : MonoBehaviour
                                 clone.gameObject.SetActive(true);
                             }
                         }
-
-                        /*
-                        for (int i = 0; i < walls.Length; i++)
-                        {
-                            foreach (GameObject walls in walls)
-                            {
-                                if (walls.GetComponent<TrickWallWallController>().hideMe == false)
-                                {
-                                    //walls.SetActive(true);
-                                    
-                                    foreach (var clone in clones)
-                                    {
-                                        clone.SetActive(true);
-                                    }
-                                }
-                                else
-                                {
-                                    //walls.SetActive(false);
-                                    
-                                    foreach (var clone in clones)
-                                    {
-                                        clone.SetActive(false);
-                                    }
-                                }
-                            }
-                        }*/
                     }
                 }
 
-                if (hideMoveMethod.ToString() == "SetByWallLockTimer")
+                if (hideMoveMethod.ToString() == "SetByWallLockTimer") // This makes the walls hide/show on a timer. Button can not be pressed again while the timer is on.
                 {
                     button.GetComponent<SpriteRenderer>().sprite = pressed;
 
@@ -361,7 +317,7 @@ public class TrickWallHideController : MonoBehaviour
 
                 }
 
-                if (hideMoveMethod.ToString() == "MoveAllWalls")
+                if (hideMoveMethod.ToString() == "MoveAllWalls") // This moves all the walls assigned to their direction when plate is pressed and back when off the plate.
                 {
                     for (int i = 0; i < walls.Length; i++)
                     {
@@ -372,7 +328,7 @@ public class TrickWallHideController : MonoBehaviour
                     }
                 }
 
-                if (hideMoveMethod.ToString() == "MoveLockPermanent")
+                if (hideMoveMethod.ToString() == "MoveLockPermanent") // Moves the walls and then locks the plate permanently.
                 {
                     for (int i = 0; i < walls.Length; i++)
                     {
@@ -393,7 +349,8 @@ public class TrickWallHideController : MonoBehaviour
                     }
                 }
 
-                if (hideMoveMethod.ToString() == "MoveLockUnlockOnEnter")
+                if (hideMoveMethod.ToString() == "MoveLockUnlockOnEnter")   // This is to make it so the plate needs to be pressed two times to move in the set direction and back instead of it happening
+                                                                            // automatically when stepping off the plates.
                 {
                     playEnter.Play();
 
@@ -429,7 +386,7 @@ public class TrickWallHideController : MonoBehaviour
                     }
                 }
 
-                if (hideMoveMethod.ToString() == "MoveLockOnTimer")
+                if (hideMoveMethod.ToString() == "MoveLockOnTimer") // This makes the walls move on a timer and back when time is up. Button can not be pressed again while the timer is on.
                 {
                     button.GetComponent<SpriteRenderer>().sprite = pressed;
 
@@ -444,7 +401,7 @@ public class TrickWallHideController : MonoBehaviour
             }
         }
 
-        if (other.tag == "Minion")
+        if (other.tag == "Minion") // The minion functions are the same as for the players.
         {
             button.GetComponent<SpriteRenderer>().sprite = pressed;
 
@@ -458,7 +415,7 @@ public class TrickWallHideController : MonoBehaviour
                 HideWall();
             }
 
-            if (hideMoveMethod.ToString() == "SetByWall") // Set Reverse on or off on Wall object
+            if (hideMoveMethod.ToString() == "SetByWall")
             {
                 for (int i = 0; i < walls.Length; i++)
                 {
@@ -526,32 +483,6 @@ public class TrickWallHideController : MonoBehaviour
                             clone.gameObject.SetActive(false);
                         }
                     }
-                    /*
-                    for (int i = 0; i < walls.Length; i++)
-                    {
-                        foreach (GameObject walls in walls)
-                        {
-                            if (walls.GetComponent<TrickWallWallController>().hideMe == false)
-                            {
-                                //walls.SetActive(false);
-
-                                foreach (var clone in clones)
-                                {
-                                    clone.SetActive(false);
-                                }
-
-                            }
-                            else
-                            {
-                                //walls.SetActive(true);
-
-                                foreach (var clone in clones)
-                                {
-                                    clone.SetActive(true);
-                                }
-                            }
-                        }
-                    }*/
                 }
                 else
                 {
@@ -571,32 +502,6 @@ public class TrickWallHideController : MonoBehaviour
                             clone.gameObject.SetActive(true);
                         }
                     }
-
-                    /*
-                    for (int i = 0; i < walls.Length; i++)
-                    {
-                        foreach (GameObject walls in walls)
-                        {
-                            if (walls.GetComponent<TrickWallWallController>().hideMe == false)
-                            {
-                                //walls.SetActive(true);
-
-                                foreach (var clone in clones)
-                                {
-                                    clone.SetActive(true);
-                                }
-                            }
-                            else
-                            {
-                                //walls.SetActive(false);
-
-                                foreach (var clone in clones)
-                                {
-                                    clone.SetActive(false);
-                                }
-                            }
-                        }
-                    }*/
                 }
             }
 
@@ -694,7 +599,7 @@ public class TrickWallHideController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other) // All the chosen function that will happen/stop when player/minon exit the plate collider and resets the plate sprite to unpressed state.
     {
         if (other.tag == "Player")
         {
@@ -707,7 +612,7 @@ public class TrickWallHideController : MonoBehaviour
                     HideWall();
                 }
 
-                if (hideMoveMethod.ToString() == "ShowAllOnStart")
+                if (hideMoveMethod.ToString() == "ShowAllOnStart") 
                 {
                     button.GetComponent<SpriteRenderer>().sprite = unPressed;
                     ShowWall();
@@ -797,7 +702,7 @@ public class TrickWallHideController : MonoBehaviour
                 ShowWall();
             }
 
-            if (hideMoveMethod.ToString() == "SetByWall") // Set Reverse on or off on Wall object
+            if (hideMoveMethod.ToString() == "SetByWall")
             {
                 button.GetComponent<SpriteRenderer>().sprite = unPressed;
                 for (int i = 0; i < walls.Length; i++)

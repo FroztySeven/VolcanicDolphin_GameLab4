@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AudioIcecubeDestroy : MonoBehaviour
 {
+    // This plays the audio event when the ice cubes are destroyed. There is a problem I have not managed to fix which is when the next scene starts the remaining ice cubes are
+    // destroyed and thus play the sound event for it, which is noticeable for the players.
+
     private FMOD.Studio.EventInstance icecubeDestroy;
 
     // Start is called before the first frame update

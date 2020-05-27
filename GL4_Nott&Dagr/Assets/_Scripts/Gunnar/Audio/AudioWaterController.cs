@@ -9,6 +9,9 @@ using Debug = UnityEngine.Debug;
 
 public class AudioWaterController : MonoBehaviour
 {
+    // This script is used on the water gameobject, it is used to play two audio events. It will play a water splash when Dagr falls into the water and it
+    // will play water freezing sfx when Nótt hits the water.
+
     [HideInInspector]
     public Water _water;
     [HideInInspector]
@@ -31,7 +34,7 @@ public class AudioWaterController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) // Checks which audio trigger hit the water.
     {
         if (other.gameObject == nottTrigger && !_water.isFrozen)
         {

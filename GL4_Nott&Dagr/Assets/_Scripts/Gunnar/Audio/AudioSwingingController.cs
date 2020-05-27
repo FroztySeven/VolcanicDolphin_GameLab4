@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AudioSwingingController : MonoBehaviour
 {
+    // This script is for the rope gameobjects. It is based on the velocity of the gameobject. Once it has crossed the velocity threshold it will play the woosh sfx and twisting sfx.
+    // It also checks if the audio is already playing, it should not play if it is already playing, this is to prevent doubling/stacking the sfx while it plays.
+
     public bool ropeSwinging, ropeTwisting;
 
     public Rigidbody2D objectRB;
@@ -67,7 +70,7 @@ public class AudioSwingingController : MonoBehaviour
         }
     }
 
-    public static bool IsPlaying(FMOD.Studio.EventInstance instance)
+    public static bool IsPlaying(FMOD.Studio.EventInstance instance) // Checks the state of the event if it is playing.
     {
         FMOD.Studio.PLAYBACK_STATE state;
         instance.getPlaybackState(out state);

@@ -8,6 +8,7 @@ public class TrickWallWallController : MonoBehaviour
     //... Notice! This script was originally made by Jan-Tore.
     //... Original scripts used were PressurePlates and PressurePlatesWall. 
     //... I (Gunnar), made a copy those scripts to make alterations to them, add more variants of wall behaviours that I wanted.
+    //... This script instantiate the wall prefabs and adds the wall clones to a list and assigns them to a master controller plate, in case there are more then one plates the interact with walls.
 
     public GameObject primePlate;
 

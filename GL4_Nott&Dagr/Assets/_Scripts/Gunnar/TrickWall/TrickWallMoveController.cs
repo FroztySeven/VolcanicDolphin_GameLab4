@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TrickWallMoveController : MonoBehaviour
 {
+    // This script add the functions of moving the wall clones to four different directions.
+
     public float speed = 5.0f;
 
     public int moveUnits;

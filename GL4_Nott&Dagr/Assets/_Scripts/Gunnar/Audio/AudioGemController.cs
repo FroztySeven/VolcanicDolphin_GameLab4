@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class AudioGemController : MonoBehaviour
 {
+    // This controls the audio events for the gem gameobject, when the players interact with it, when Nótt touches the gem it will play the freeze sounds
+    // and when Dagr touches it it should play the thaw/melt sounds.
+
     [FMODUnity.EventRef]
     public string freezeGem;
 

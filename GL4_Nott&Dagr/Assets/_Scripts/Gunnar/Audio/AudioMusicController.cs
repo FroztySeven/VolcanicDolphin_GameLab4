@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class AudioMusicController : MonoBehaviour
 {
+    // This script controls all the music and ambiance for the game and when the track should change with the FMod music event. The way the music is controlled is a fragile system, it is based on the
+    // scene numbering, so the scenes need to be correctly setup in the build settings in unity. The parts are seperated into four main catagories, menu, cutscenes, chapters and chapter loops.
+    // The menu plays the menu track when in the main menu, levelselection and player selection. The cutscenes play when the game transitions from menu to first level in each chapter or from last
+    // level in previous chapter to the first level in the next chapter. The chapters refer to the first level in each chapter, this is where the song starts from the beginning, but only the first levels.
+    // The chapter loops are for all the levels in each chapter after the first level. This is done because the music is made for the whole chapter instead of levels. Making the music start from the beginning of each level
+    // was not feeling right, so keeping the music flowing in a more constent pace felt better and felt less repetitive.
+    // With the ambiance it should start when changing between each chapters.
+
     private FMOD.Studio.EventInstance music, ambiance;
 
     public static AudioMusicController instance;
@@ -29,7 +37,7 @@ public class AudioMusicController : MonoBehaviour
         chapt4LoopVal = 10,
         levelWonVal = 11;
 
-    private void Awake()
+    private void Awake() // This is to keep the music player going when loading between scenes.
     {
         if (instance == null)
         {
@@ -64,7 +72,7 @@ public class AudioMusicController : MonoBehaviour
         PlayTrack();
     }
 
-    void SceneCheck()
+    void SceneCheck() // This checks which scene is playing and sets the appropriate bool to true. To make it work the scenes need to be loaded in the correct order in the Unity build settings.
     {
         for (int i = 0; i < menuNr.Length; i++)
         {
@@ -231,13 +239,13 @@ public class AudioMusicController : MonoBehaviour
         
     }
 
-    void PlayTrack()
+    void PlayTrack() // This function plays the events assigned to each scene.
     {
         if (menu)
         {
-            music.setParameterByName("Music Controller", menuVal);
-            ambiance.setParameterByName("Ambience", 0);
-        }
+            music.setParameterByName("Music Controller", menuVal);   // Set the music event parameter to fit each section.
+            ambiance.setParameterByName("Ambience", 0);         // Set the ambiance event parameter to fit each section. 
+        }                                                            // This makes more sense when compared with the FMod project, looking at how the events/parameters are set up.
 
         if (cutScene)
         {
@@ -250,9 +258,7 @@ public class AudioMusicController : MonoBehaviour
         {
             music.setParameterByName("Music Controller", chapt1Val);
             ambiance.setParameterByName("Ambience", 1);
-            
-
-            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true)
+            if (GameObject.Find("Door").GetComponent<ExitLevel>().bothEntered == true) // This if statement decides when the level won jingle is played and sets the event parameter to the right value.
             {
                 levelWon = true; 
                 if (levelWon)

@@ -22,7 +22,7 @@ public class AudioButtonHighlight : MonoBehaviour, ISelectHandler
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Cancel") || Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Cancel") || Input.GetButtonDown("Submit")) // This is so it doesn't play when player presses A button or B button while playing a level.
         {
             play = false;
         }
