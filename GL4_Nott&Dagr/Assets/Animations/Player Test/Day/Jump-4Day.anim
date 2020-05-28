@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jump-3Night
+  m_Name: Jump-4Day
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,14 +20,14 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 7140ae1e06d1ee74a869192b7f9a4642, type: 3}
+      value: {fileID: 21300000, guid: 463acc203fb4f8845a073d2848a0e415, type: 3}
     attribute: m_Sprite
     path: PlayerSprite/Temp
     classID: 212
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: 2375926210727925472, guid: 75adc2be60e00ab4a8d6bd439a058390,
+      value: {fileID: -5748202780852820706, guid: 151a8f2e0fc99d14d81966db0a034926,
         type: 3}
     attribute: m_Sprite
     path: PlayerSprite
@@ -55,8 +55,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 7140ae1e06d1ee74a869192b7f9a4642, type: 3}
-    - {fileID: 2375926210727925472, guid: 75adc2be60e00ab4a8d6bd439a058390, type: 3}
+    - {fileID: 21300000, guid: 463acc203fb4f8845a073d2848a0e415, type: 3}
+    - {fileID: -5748202780852820706, guid: 151a8f2e0fc99d14d81966db0a034926, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
