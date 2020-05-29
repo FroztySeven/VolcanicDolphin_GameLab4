@@ -35,6 +35,10 @@ public class AudioButtonHighlight : MonoBehaviour, ISelectHandler
         {
             play = true;
         }
+        if (Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") < 0 || Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Vertical") > 0) // Controller D-pad sounds
+        {
+            play = true;
+        }
     }
 
     public void OnSelect(BaseEventData eventData)
