@@ -7,7 +7,7 @@ public class Plant : MonoBehaviour
 
     public int freezeDuration;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool isFrozen = false;
     [HideInInspector]
     public bool freeze = false;

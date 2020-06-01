@@ -68,15 +68,6 @@ public class AnimalHide : MonoBehaviour
         {
             Flip();
         }
-
-        //if (isFacingRight && isMovingToIdle)
-        //{
-        //    Flip();
-        //}
-        //else if (!isFacingRight && isMovingToIdle)
-        //{
-        //    Flip();
-        //}
     }
 
     private void Flip()

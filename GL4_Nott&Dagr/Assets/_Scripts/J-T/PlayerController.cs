@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnLadder;
     [HideInInspector]
     public bool isGrounded;
+    [HideInInspector]
     public bool isWalking;
     [HideInInspector]
     public bool auraBounce;

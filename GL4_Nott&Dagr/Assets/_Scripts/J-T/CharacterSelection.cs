@@ -23,11 +23,6 @@ public class CharacterSelection : MonoBehaviour
     [HideInInspector] public bool characterSelected = false;
     [HideInInspector] public bool playersSelected = true;
 
-    //private void Start()
-    //{
-    //    levelSelect.SetActive(false);
-    //}
-
     private void Update()
     {
         moveInput.x = Input.GetAxisRaw("HorizontalP" + playerId);
@@ -57,13 +52,10 @@ public class CharacterSelection : MonoBehaviour
                     transform.position = controllerNight.position;
                     if (Input.GetButtonDown("JumpP" + playerId))
                     {
-                        //Destroy(P1.GetComponent<CharacterSelection>().controllerNight.gameObject);
-                        //Destroy(P2.GetComponent<CharacterSelection>().controllerNight.gameObject);
                         P1.GetComponent<CharacterSelection>().controllerNight.gameObject.SetActive(false);
                         P2.GetComponent<CharacterSelection>().controllerNight.gameObject.SetActive(false);
                         P1.GetComponent<CharacterSelection>().positionMin++;
                         P2.GetComponent<CharacterSelection>().positionMin++;
-                        //enabled = false;
                         CharacterStoredInfo.instance.night = playerId;
                         checkmark.SetActive(true);
                         characterSelected = true;
@@ -72,13 +64,11 @@ public class CharacterSelection : MonoBehaviour
                         {
                             if (!P1.GetComponent<CharacterSelection>().characterSelected)
                             {
-                                //P1.transform.position = controllerStart.position;
                                 P1.GetComponent<CharacterSelection>().position++;
                             }
 
                             if (!P2.GetComponent<CharacterSelection>().characterSelected)
                             {
-                                //P2.transform.position = controllerStart.position;
                                 P2.GetComponent<CharacterSelection>().position++;
                             }
                         }
@@ -97,7 +87,6 @@ public class CharacterSelection : MonoBehaviour
                         P2.GetComponent<CharacterSelection>().controllerDay.gameObject.SetActive(false);
                         P1.GetComponent<CharacterSelection>().positionMax--;
                         P2.GetComponent<CharacterSelection>().positionMax--;
-                        //enabled = false;
                         CharacterStoredInfo.instance.day = playerId;
                         checkmark.SetActive(true);
                         characterSelected = true;
@@ -106,14 +95,12 @@ public class CharacterSelection : MonoBehaviour
                         {
                             if (!P1.GetComponent<CharacterSelection>().characterSelected)
                             {
-                                //P1.transform.position = controllerStart.position;
                                 P1.GetComponent<CharacterSelection>().position--;
                                 Debug.Log("P1");
                             }
 
                             if (!P2.GetComponent<CharacterSelection>().characterSelected)
                             {
-                                //P2.transform.position = controllerStart.position;
                                 P2.GetComponent<CharacterSelection>().position--;
                                 Debug.Log("P2");
                             }
@@ -131,23 +118,7 @@ public class CharacterSelection : MonoBehaviour
                 P1.GetComponent<CharacterSelection>().playersSelected = true;
                 P2.GetComponent<CharacterSelection>().playersSelected = true;
                 SceneManager.LoadScene("Chapters&Levels");
-                //levelSelect.SetActive(true);
-                //EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-                //es.SetSelectedGameObject(null);
-                //es.SetSelectedGameObject(levelSelectFirstButton);
-                //pressAToPlay.SetActive(true);
-                //selectedCounter++;
             }
-
-            //if (Input.GetButtonUp("JumpP" + playerId))
-            //{
-            //    selectedCounter++;
-            //}
-
-            //if (Input.GetButtonDown("JumpP" + playerId) && playersSelected && selectedCounter >= 2)
-            //{
-            //    SceneManager.LoadScene("Test");
-            //}
         }
     }
 

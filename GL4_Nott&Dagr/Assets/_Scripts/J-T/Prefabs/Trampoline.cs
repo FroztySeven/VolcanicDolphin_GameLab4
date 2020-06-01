@@ -14,10 +14,6 @@ public class Trampoline : MonoBehaviour
 
     public Sprite singleTile, leftEnd, middle, rightEnd;
 
-    private Color nightColor, dayColor, bothColor;
-
-    private SpriteRenderer theSR;
-
     private float playerJumpForce;
 
     private int startLayer;
@@ -26,7 +22,6 @@ public class Trampoline : MonoBehaviour
 
     private void Start()
     {
-        //Debug.Log(trampolineLength);
         theBC = GetComponent<BoxCollider2D>();
 
         theBC.size = new Vector2(trampolineLength, 1f);
@@ -54,7 +49,6 @@ public class Trampoline : MonoBehaviour
                 sprite.transform.parent = transform;
                 sprite.transform.position = transform.position + new Vector3(i, 0f, 0f);
                 sprite.AddComponent<SpriteRenderer>().sprite = middle;
-                //sprite.transform.parent = transform;
 
                 if (i == 0)
                 {
@@ -68,43 +62,10 @@ public class Trampoline : MonoBehaviour
             }
         }
 
-        theSR = GetComponentInChildren<SpriteRenderer>();
-        nightColor = Color.blue;
-        dayColor = Color.yellow;
-        bothColor = Color.green;
-
         playerJumpForce = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().jumpForce;
 
         startLayer = gameObject.layer;
-
-        //if (setJumper.ToString() == "Both")
-        //{
-        //    theSR.color = bothColor;
-        //}
-        //if (setJumper.ToString() == "Night")
-        //{
-        //    theSR.color = nightColor;
-        //}
-        //if (setJumper.ToString() == "Day")
-        //{
-        //    theSR.color = dayColor;
-        //}
     }
-
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        other.GetComponent<PlayerMovementTest>().theRB.velocity = Vector2.zero;
-    //        other.GetComponent<PlayerMovementTest>().theRB.AddForce(new Vector2(0f, jumpForce));
-    //    }
-
-    //    if (other.name == "PickupKey")
-    //    {
-    //        //other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    //        other.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce * 5));
-    //    }
-    //}
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -142,10 +103,6 @@ public class Trampoline : MonoBehaviour
                 }
             }
 
-            //if (other.gameObject.GetComponent<PlayerController>().amountOfJumps == 1)
-            //{
-            //    other.gameObject.GetComponent<PlayerController>().amountOfJumpsLeft = other.gameObject.GetComponent<PlayerController>().amountOfJumps;
-            //}
             if (other.gameObject.GetComponent<PlayerController>().amountOfJumps > 1)
             {
                 other.gameObject.GetComponent<PlayerController>().amountOfJumpsLeft = other.gameObject.GetComponent<PlayerController>().amountOfJumps - 1;
@@ -154,7 +111,6 @@ public class Trampoline : MonoBehaviour
 
         if (other.gameObject.name == "Gem")
         {
-            //other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce * 10));
         }
     }
@@ -178,11 +134,6 @@ public class Trampoline : MonoBehaviour
                     gameObject.layer = startLayer;
                 }
             }
-
-            //if (other.gameObject.GetComponent<PlayerMovementTest>().canDoubleJump)
-            //{
-            //    other.gameObject.GetComponent<PlayerMovementTest>().doubleJumpCounter = 1;
-            //}
         }
     }
 }

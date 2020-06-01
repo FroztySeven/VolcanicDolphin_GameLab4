@@ -13,8 +13,6 @@ public class ExitLevel : MonoBehaviour
     private ParticleSystem.MainModule fireNightMain, fireDayMain;
     private ParticleSystem.MainModule sparksNightMain, sparksDayMain;
 
-    //public Transform firePosNight, firePosDay;
-
     [HideInInspector] //--Changed private to public to let audiotrigger know level is over-- Gunnar
     public bool nightEnter, dayEnter, bothEntered, levelFinished, loadingScreenIsActive;
 
@@ -61,7 +59,6 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 nightEnter = true;
-                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
                 fireNigth.Play();
                 fireNightMain.loop = true;
                 sparksNight.Play();
@@ -71,7 +68,6 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 dayEnter = true;
-                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = false;
                 fireDay.Play();
                 fireDayMain.loop = true;
                 sparksDay.Play();
@@ -94,7 +90,6 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
             {
                 nightEnter = false;
-                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
                 fireNightMain.loop = false;
                 sparksNightMain.loop = false;
             }
@@ -102,7 +97,6 @@ public class ExitLevel : MonoBehaviour
             if (other.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
             {
                 dayEnter = false;
-                //other.transform.Find("Aura").GetComponent<CapsuleCollider2D>().enabled = true;
                 fireDayMain.loop = false;
                 sparksDayMain.loop = false;
             }
@@ -125,8 +119,6 @@ public class ExitLevel : MonoBehaviour
             day.GetComponent<PlayerController>().theRB.gravityScale = 0f;
             night.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             day.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            //night.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
-            //day.GetComponent<PlayerController>().theRB.velocity = new Vector2(0f, -10f);
             night.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = true;
             night.transform.Find("Aura").GetComponent<AuraBounce>().isFading = false;
             day.transform.Find("Aura").GetComponent<AuraBounce>().isRestoring = true;
@@ -155,24 +147,12 @@ public class ExitLevel : MonoBehaviour
 
         if (levelFinished)
         {
-            //finished.SetActive(true);
             EventSystem es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
             es.SetSelectedGameObject(null);
             es.SetSelectedGameObject(es.firstSelectedGameObject);
-            //night.GetComponent<PlayerMovementTest>().canMove = false;
-            //day.GetComponent<PlayerMovementTest>().canMove = false;
             nightEnter = false;
             dayEnter = false;
             levelFinished = false;
-
-
-            //Move to next level
-            // SceneManager.LoadScene(nextSceneLoad);
-            //Setting Int for Index
-            // if (nextSceneLoad > PlayerPrefs.GetInt("LevelPrefs"))
-            // {
-            //     PlayerPrefs.SetInt("LevelPrefs", nextSceneLoad);
-            // }
         }
     }
 

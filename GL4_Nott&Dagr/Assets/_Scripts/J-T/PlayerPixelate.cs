@@ -44,10 +44,6 @@ public class PlayerPixelate : MonoBehaviour
 
             material.SetFloat("_PixelateAmount", pixelateAmount);
 
-            //if (pixelateAmount > 0.5f)
-            //{
-            //    pixelateSpeed = 0.5f;
-            //}
             if (pixelateAmount >= 1 && !isOnAura)
             {
                 GetComponent<SpriteRenderer>().enabled = false;

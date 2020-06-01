@@ -13,8 +13,9 @@ public class Water : MonoBehaviour
 
     private SpriteRenderer theSR;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool isFrozen;
+    [HideInInspector]
     public bool unfreeze;
 
     private float spriteTimer = 0;
@@ -25,7 +26,7 @@ public class Water : MonoBehaviour
     [HideInInspector]
     public int unfreezeNumber = 0;
 
-    //[HideInInspector]
+    [HideInInspector]
     public int waterId;
 
     private WaterPit waterPit;
@@ -41,35 +42,8 @@ public class Water : MonoBehaviour
 
     private void Update()
     {
-        //if (!isFrozen)
-        //{
-        //    //if (spriteTimer < 1)
-        //    //{
-        //    //    spriteTimer += Time.deltaTime * animationRate;
-        //    //}
-        //    //if (spriteTimer >= 1)
-        //    //{
-        //    //    spriteNumber++;
-        //    //    spriteTimer = 0;
-        //    //}
-        //    //if (spriteNumber == animatedWater.Length)
-        //    //{
-        //    //    spriteNumber = 0;
-        //    //}
-
-        //    gameObject.layer = 10;
-        //    theSR.color = Color.white;
-        //    theSR.sprite = animatedWater[waterPit.spriteNumber];
-        //    unfreezeNumber = 0;
-        //    unfreezeTimer = 0;
-        //    unfreeze = false;
-        //}
-
         if (isFrozen)
         {
-            //gameObject.layer = default;
-            //theSR.sprite = frozenWater;
-
             if (unfreeze)
             {
                 float freezeSpeed = 4;
@@ -97,7 +71,6 @@ public class Water : MonoBehaviour
                     unfreezeTimer = 0;
                     unfreeze = false;
                     waterPit.UnfreezeWater(waterId, true);
-                    //StartCoroutine(waterPit.UnFreezeWater(waterId, waterId));
                 }
             }
         }
