@@ -40,12 +40,12 @@ public class SwingingRopeEndZone : MonoBehaviour
     {
         if (dagrOnRope)
         {
-            if (_sr.dagr || _sr.both)
+            if (_sr.dagr || _sr.both) //check if the bool in the swinging rope scripts allow dagr on the rope
             {
                 dagrGO.transform.SetParent(this.transform);
                 dagrGO.transform.position = transform.position;
                 
-                if (Input.GetButtonDown("JumpP" + dagrGO.GetComponent<PlayerController>().playerId))
+                if (Input.GetButtonDown("JumpP" + dagrGO.GetComponent<PlayerController>().playerId)) // if dagr jumps, disconnect from the rope
                 {
                     dagrOnRope = false;
                     dagrGO.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
@@ -58,12 +58,12 @@ public class SwingingRopeEndZone : MonoBehaviour
 
         if (nottOnRope)
         {
-            if (_sr.nott || _sr.both)
+            if (_sr.nott || _sr.both) //check if the bool in the swinging rope scripts allow Nott on the rope
             {
                 nottGO.transform.SetParent(this.transform);
                 nottGO.transform.position = transform.position;
                 
-                if (Input.GetButtonDown("JumpP" + nottGO.GetComponent<PlayerController>().playerId))
+                if (Input.GetButtonDown("JumpP" + nottGO.GetComponent<PlayerController>().playerId)) //if nott jumps, disconnect from the rope
                 {
                     nottOnRope = false;
                     nottGO.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
@@ -87,13 +87,12 @@ public class SwingingRopeEndZone : MonoBehaviour
 
             if (other.gameObject.CompareTag("Player"))
             {
-                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day") //if dagr enters the trigger on the bottom of the rope
                 {
                     dagrOnRope = true;
-                    Debug.Log("DAGR ON ROPE");
                 }
 
-                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
+                if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night") //if nott enters the trigger on the bottom of the rope
                 {
                     nottOnRope = true;
                 }
@@ -102,78 +101,9 @@ public class SwingingRopeEndZone : MonoBehaviour
 
         isTriggered = true;
     }
+    
 
-    /*private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (_sr.dagr)
-            {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
-                {
-                    other.gameObject.transform.SetParent(this.transform);
-                    other.transform.position = this.transform.position;
-
-                    if (Input.GetButtonDown("JumpP" + other.gameObject.GetComponent<PlayerMovementTest>().playerId))
-                    {
-                        gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                        other.transform.SetParent(null);
-                        StartCoroutine(turnOnTriggerAgain());
-                    }
-                }
-            }
-            if (_sr.nott)
-            {
-                if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
-                {
-                    other.gameObject.transform.SetParent(this.transform);
-                    other.transform.position = this.transform.position;
-
-                    if (Input.GetButtonDown("JumpP" + other.gameObject.GetComponent<PlayerMovementTest>().playerId))
-                    {
-                        gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                        other.transform.SetParent(null);
-                        StartCoroutine(turnOnTriggerAgain());
-                    }
-                }
-            }
-            
-            if (_sr.both)
-            { 
-                other.gameObject.transform.SetParent(this.transform);
-                other.transform.position = transform.position;
-
-                if (Input.GetButtonDown("JumpP" + other.gameObject.GetComponent<PlayerMovementTest>().playerId)) 
-                {
-                    gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                    other.transform.SetParent(null);
-                    StartCoroutine(turnOnTriggerAgain());
-                } 
-            }
-        }
-    }*/
-
-
-    /*private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.transform.SetParent(null);
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            StartCoroutine(turnOnTriggerAgain());
-
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Day")
-            {
-                dagrOnRope = false;
-            }
-            if (other.gameObject.GetComponent<PlayerMovementTest>().setPlayer.ToString() == "Night")
-            {
-                nottOnRope = false;
-            }
-        }
-    }*/
-
-    public IEnumerator turnOnTriggerAgain()
+    public IEnumerator turnOnTriggerAgain() //the trigger is disabled becuase of issues when jumping off the rope. So here we enable it again
     {
         yield return new WaitForSeconds(1f);
         gameObject.GetComponent<BoxCollider2D>().enabled = true;

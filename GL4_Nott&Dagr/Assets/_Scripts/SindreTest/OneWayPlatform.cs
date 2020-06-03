@@ -15,13 +15,7 @@ public class OneWayPlatform : MonoBehaviour
         _platformEffector = GetComponent<PlatformEffector2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) //if the player enters the trigger above the two way platform
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -39,12 +33,12 @@ public class OneWayPlatform : MonoBehaviour
         {
             if (Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -0.9)
             {
-                other.GetComponent<PlayerController>().jumpForce = 0;
+                other.GetComponent<PlayerController>().jumpForce = 0; // disable the jumping if the joystick is held downwards
 
                 if (other.GetComponent<PlayerController>().isGrounded && Input.GetAxis("VerticalP" + other.GetComponent<PlayerController>().playerId) <= -0.9 && 
-                    Input.GetButton("JumpP" + other.GetComponent<PlayerController>().playerId))
+                    Input.GetButton("JumpP" + other.GetComponent<PlayerController>().playerId)) //if the joystick is held downwards and the player presses the jump button
                 {
-                    _platformEffector.rotationalOffset = 180;
+                    _platformEffector.rotationalOffset = 180; //rotate the platform effector 180 degrees so the player can fall through it from the top
                     StartCoroutine(rotateBack());
                 }
             }
@@ -59,13 +53,13 @@ public class OneWayPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().jumpForce = _startJumpforce;
+            other.GetComponent<PlayerController>().jumpForce = _startJumpforce; // enable the jumping again
         }
     }
 
     private IEnumerator rotateBack()
     {
         yield return new WaitForSeconds(0.5f);
-        _platformEffector.rotationalOffset = 0;
+        _platformEffector.rotationalOffset = 0; // turn the platform effector back so you can jump through it from the bottom
     }
 }

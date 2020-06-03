@@ -76,7 +76,7 @@ public class Platform : MonoBehaviour
     void Update()
     {
         
-        if (sideWays)
+        if (sideWays) //sideways movement
         {
             currentXPos += moveSpeed * Time.deltaTime;
             gameObject.transform.position = new Vector2(xCenter + Mathf.PingPong(currentXPos, moveDistance),transform.position.y);
@@ -86,7 +86,7 @@ public class Platform : MonoBehaviour
             }
         }
 
-        if (upAndDown)
+        if (upAndDown) // vertical movement
         {
             currentYPos += moveSpeed * Time.deltaTime;
             gameObject.transform.position = new Vector2(transform.position.x, yCenter + Mathf.PingPong(currentYPos, moveDistance));
@@ -96,7 +96,7 @@ public class Platform : MonoBehaviour
             }
         }
 
-        if (seeSaw)
+        if (seeSaw) // seesaw effect
         {
             _jointMotor2D.motorSpeed = seeSawSpeed;
             _hingeJoint2D.motor = _jointMotor2D;
@@ -134,34 +134,34 @@ public class Platform : MonoBehaviour
             other.transform.SetParent(this.transform);
         }
 
-        if (disappearing)
+        if (disappearing) // if the disappearing effect is used on a platform
         {
             if (other.gameObject.CompareTag("Player"))
             {
                 other.transform.SetParent(null);
                 other.GetComponent<PlayerController>().theRB.interpolation = RigidbodyInterpolation2D.Interpolate;
 
-                if (disappearBehindNott)
+                if (disappearBehindNott) // if the platform disappears when nott is nearby
                 {
                     if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Night")
                     {
                         foreach (Transform child in gameObject.transform)
                         {
-                            child.GetComponentInChildren<Renderer>().enabled = false;
-                            child.GetComponentInChildren<BoxCollider2D>().enabled = false;
+                            child.GetComponentInChildren<Renderer>().enabled = false; //turning off the renderer and collider in the children, since i know that the parent object is
+                            child.GetComponentInChildren<BoxCollider2D>().enabled = false; // an empty gameobject and the sprites and colliders are one the children
                         }
 
                         StartCoroutine(turnOnPlatform());
                     }
                 }
 
-                if (disappearBehindDagr)
+                if (disappearBehindDagr) // if the platform disappears when dagr is nearby
                 {
                     if (other.gameObject.GetComponent<PlayerController>().setPlayer.ToString() == "Day")
                     {
                         foreach (Transform child in gameObject.transform)
                         {
-                            child.GetComponentInChildren<Renderer>().enabled = false;
+                            child.GetComponentInChildren<Renderer>().enabled = false; 
                             child.GetComponentInChildren<BoxCollider2D>().enabled = false;
                         }
 

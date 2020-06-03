@@ -10,7 +10,7 @@ public class KeyOpenDoor : MonoBehaviour
 
     private void Start()
     {
-        if (GameObject.Find("Door"))
+        if (GameObject.Find("Door")) // find the door/portal in the scene
         {
             door = GameObject.Find("Door");
         }
@@ -18,7 +18,7 @@ public class KeyOpenDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Key"))
+        if (other.gameObject.CompareTag("Key")) //if the key enters this gameobject open door
         {
             door.GetComponent<ExitLevel>().DoorOpen();
             Destroy(other.gameObject.transform.parent.gameObject);

@@ -120,7 +120,7 @@ public class MinionSpawn : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) //minion enters the trigger to start the path
     {
         if (other.gameObject.CompareTag("Minion"))
         {
@@ -139,7 +139,7 @@ public class MinionSpawn : MonoBehaviour
     }
     
     
-    private void PathOne()
+    private void PathOne() //send the minion on the path
     {
         iTween.MoveTo(minionToMove, iTween.Hash("path", iTweenPath.GetPath("MinionPath" + pathNumber), "time", timeToCompleteRoute, "easetype", iTween.EaseType.linear, "oncomplete", "PathOne"));
 

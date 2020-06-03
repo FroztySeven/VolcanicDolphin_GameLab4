@@ -21,10 +21,10 @@ public class Disappearing : MonoBehaviour
     {
         nott = GameObject.Find("Player2");
         dagr = GameObject.Find("Player1");
-        nottStartPosition = nott.transform.position;
+        nottStartPosition = nott.transform.position; // find the position the players start in so if they get stuck in the wall we can reset them.
         dagrStartPosition = dagr.transform.position;
         
-        if (startDisappeared)
+        if (startDisappeared) // if the wall is starting disappeared i turn it off here
         {
             foreach (Transform child in gameObject.transform)
             {
@@ -35,7 +35,7 @@ public class Disappearing : MonoBehaviour
 
     private void Update()
     {
-        if (!dagrInsideTrigger)
+        if (!dagrInsideTrigger) // update the "startposition" of each player to reset them to their newest position
         {
             dagrStartPosition = dagr.transform.position;
         }
