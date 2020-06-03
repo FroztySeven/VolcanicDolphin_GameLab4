@@ -30,6 +30,11 @@ public class MinionSpawn : MonoBehaviour
     private static MinionSpawn instance;
     private bool disableSpawning;
 
+    private Animator n_Anim, d_Anim;
+    [SerializeField]
+    private RuntimeAnimatorController n_AC, d_AC;
+    private bool isIdle = true;
+
     private void Start()
     {
         dagr = GameObject.Find("Player1");
@@ -70,6 +75,8 @@ public class MinionSpawn : MonoBehaviour
                 dagrMinionClone.transform.localPosition = new Vector3(0, 2, 0);
                 originalParent = dagr;
                 dagrMinionClone.GetComponent<SpriteRenderer>().sprite = dagrMinionSprite;
+                d_Anim = dagrMinionClone.GetComponent<Animator>();
+                dagrMinionClone.GetComponent<Animator>().runtimeAnimatorController = d_AC;
                 if (!alwaysAliveAfterSpawned)
                 {
                     StartCoroutine(despawnDagrMinion());
@@ -85,6 +92,8 @@ public class MinionSpawn : MonoBehaviour
                 nottMinionClone.transform.localPosition = new Vector3(0, 2, 0);
                 originalParent = nott;
                 nottMinionClone.GetComponent<SpriteRenderer>().sprite = nottMinionSprite;
+                n_Anim = nottMinionClone.GetComponent<Animator>();
+                nottMinionClone.GetComponent<Animator>().runtimeAnimatorController = n_AC;
                 if (!alwaysAliveAfterSpawned)
                 {
                     StartCoroutine(despawnNottMinion());
@@ -92,6 +101,22 @@ public class MinionSpawn : MonoBehaviour
             }
         }
 
+        if (d_Anim != null)
+        {
+            d_Anim.SetBool("DayIdle", isIdle);
+        }
+        if (n_Anim != null)
+        {
+            n_Anim.SetBool("NightIdle", isIdle);
+        }
+
+        if (minionToMove != null && !isIdle)
+        {
+            if (minionToMove.transform.position == iTween.PointOnPath(iTweenPath.GetPath("MinionPath" + pathNumber), 1))
+            {
+                isIdle = true;
+            }
+        }
     }
 
 
@@ -104,6 +129,7 @@ public class MinionSpawn : MonoBehaviour
             other.gameObject.transform.SetParent(null);
             minionToMove.GetComponent<MinionIdleMovement>().onPath = true;
             PathOne();
+            isIdle = false;
         }
 
         if (other.gameObject.CompareTag("Player"))
@@ -116,6 +142,7 @@ public class MinionSpawn : MonoBehaviour
     private void PathOne()
     {
         iTween.MoveTo(minionToMove, iTween.Hash("path", iTweenPath.GetPath("MinionPath" + pathNumber), "time", timeToCompleteRoute, "easetype", iTween.EaseType.linear, "oncomplete", "PathOne"));
+
         if (alwaysAliveAfterSpawned)
         {
             StartCoroutine(parentMinion());

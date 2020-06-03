@@ -93,6 +93,8 @@ MonoBehaviour:
   canCollideWithPlayer: 0
   timeAlive: 10
   pathNumber: 0
+  n_AC: {fileID: 9100000, guid: ad1a844c93110134e8e98c8c63708978, type: 2}
+  d_AC: {fileID: 9100000, guid: 8dba5bbacc7ef0e4b82ad1cec4493cac, type: 2}
 --- !u!114 &2714187577198309313
 MonoBehaviour:
   m_ObjectHideFlags: 0

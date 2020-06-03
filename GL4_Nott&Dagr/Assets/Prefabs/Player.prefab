@@ -478,7 +478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5691724472619773030
 Transform:
   m_ObjectHideFlags: 0
@@ -1132,6 +1132,7 @@ MonoBehaviour:
   ledgeClimbYOffset2: 1.5
   isOnLadder: 0
   isGrounded: 0
+  isWalking: 0
   auraBounce: 0
   playerCanMove: 1
   playerCanJump: 1
