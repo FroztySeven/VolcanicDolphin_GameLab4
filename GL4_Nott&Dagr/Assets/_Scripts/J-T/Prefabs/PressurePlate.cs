@@ -111,6 +111,29 @@ public class PressurePlate : MonoBehaviour
                 }
             }
         }
+
+        if (other.tag == "Minion")
+        {
+            Debug.Log("Minion Hit!");
+
+            theSR.sprite = pressed;
+
+            if (setItemToControl.ToString() == "Wall")
+            {
+                wall.SetActive(false);
+            }
+
+            if (setItemToControl.ToString() == "Platform")
+            {
+                thePF.moveSpeed = platformMoveSpeed;
+            }
+
+            if (setItemToControl.ToString() == "Rope")
+            {
+                rope.SetActive(false);
+                ropeDuplicate.SetActive(true);
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -155,6 +178,26 @@ public class PressurePlate : MonoBehaviour
                     rope.SetActive(false);
                     ropeDuplicate.SetActive(true);
                 }
+            }
+        }
+
+        if (other.tag == "Minion")
+        {
+            theSR.sprite = pressed;
+            if (setItemToControl.ToString() == "Wall")
+            {
+                wall.SetActive(false);
+            }
+
+            if (setItemToControl.ToString() == "Platform")
+            {
+                thePF.moveSpeed = platformMoveSpeed;
+            }
+
+            if (setItemToControl.ToString() == "Rope")
+            {
+                rope.SetActive(false);
+                ropeDuplicate.SetActive(true);
             }
         }
     }
@@ -217,6 +260,29 @@ public class PressurePlate : MonoBehaviour
                     }
                     ropeDuplicate.SetActive(false);
                 }
+            }
+        }
+
+        if (other.tag == "Minion")
+        {
+            theSR.sprite = unPressed;
+            if (setItemToControl.ToString() == "Wall")
+            {
+                wall.SetActive(true);
+            }
+
+            if (setItemToControl.ToString() == "Rope")
+            {
+                rope.SetActive(true);
+                if (ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.childCount > 0)
+                {
+                    ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.GetChild(0).GetComponent<PlayerController>().theRB.velocity = Vector2.zero;
+                    ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).transform.DetachChildren();
+                    ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).GetComponent<SwingingRopeEndZone>().dagrOnRope = false;
+                    ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).GetComponent<SwingingRopeEndZone>().nottOnRope = false;
+                    StartCoroutine(ropeDuplicate.transform.GetChild(ropeDuplicate.transform.childCount - 1).GetChild(0).GetComponent<SwingingRopeEndZone>().turnOnTriggerAgain());
+                }
+                ropeDuplicate.SetActive(false);
             }
         }
     }
