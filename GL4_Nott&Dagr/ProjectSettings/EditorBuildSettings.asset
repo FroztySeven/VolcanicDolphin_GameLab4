@@ -106,17 +106,29 @@ EditorBuildSettings:
     guid: 7283bab6deeb62844a7dbad32945bbcc
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_02.unity
-    guid: 1e8db88f05559ae4ca733dd23e48db79
+    guid: 39e5667345c5c764cb2808cfd935b0fc
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_03.unity
     guid: 773bd3157c7734e4598ceff5294fed84
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_04.unity
-    guid: d5b6def6ff5e41a418b66a57c45efa87
+    guid: 75b9903f05ab84144868dc3fb8534e19
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_05.unity
-    guid: 48e19666a581d014cb432cc08778ac08
+    guid: d5b6def6ff5e41a418b66a57c45efa87
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_06.unity
+    guid: 683858b3d0b8e214f9b0178180834f11
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_07.unity
+    guid: 6e51c630edae1cc48905026bbcfc6e02
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_08.unity
+    guid: 1e8db88f05559ae4ca733dd23e48db79
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_09.unity
     guid: 4e05b3590d669564ba529b7b30cada7c
+  - enabled: 1
+    path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_10.unity
+    guid: 48e19666a581d014cb432cc08778ac08
   m_configObjects: {}
