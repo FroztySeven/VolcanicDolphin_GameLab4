@@ -11,7 +11,7 @@ public class AudioMenuPlayerSelect : MonoBehaviour
 
     [HideInInspector]
     public GameObject player1, player2;
-    [HideInInspector]
+    //[HideInInspector]
     public bool left1, center1, right1, playLeft1, playCenter1, playRight1; // This and the one benethe it are to tell in which postion the selection is on. For each time the bools become true it
     [HideInInspector]                                                       // should play selection sound each time moving between the positions.    
     public bool left2, center2, right2, playLeft2, playCenter2, playRight2;
@@ -40,7 +40,7 @@ public class AudioMenuPlayerSelect : MonoBehaviour
         // This is all kind of messy but it boils down to when either player 1 and 2 are changing between the three locations given for the player, to tell the script top play sounds while
         // switching between the locations, they should then start the given coroutines. The coroutines are used to give a "breathing space" when switching between locations/character selections.
 
-        if (player1.GetComponent<CharacterSelection>().changedLocation && player1.transform.localPosition.x <= -355)
+        if (player1.GetComponent<CharacterSelection>().changedLocation && player1.transform.localPosition.x <= -338)
         {
             left1 = true;
 
@@ -76,7 +76,7 @@ public class AudioMenuPlayerSelect : MonoBehaviour
             }
         }
 
-        if (player2.GetComponent<CharacterSelection>().changedLocation && player2.transform.localPosition.x <= -355)
+        if (player2.GetComponent<CharacterSelection>().changedLocation && player2.transform.localPosition.x <= -338)
         {
             left2 = true;
 
