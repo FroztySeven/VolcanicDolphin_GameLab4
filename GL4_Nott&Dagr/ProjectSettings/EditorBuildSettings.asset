@@ -115,7 +115,7 @@ EditorBuildSettings:
     guid: 75b9903f05ab84144868dc3fb8534e19
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_05.unity
-    guid: d5b6def6ff5e41a418b66a57c45efa87
+    guid: 48e19666a581d014cb432cc08778ac08
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_06.unity
     guid: 683858b3d0b8e214f9b0178180834f11
@@ -130,5 +130,5 @@ EditorBuildSettings:
     guid: 4e05b3590d669564ba529b7b30cada7c
   - enabled: 1
     path: Assets/Scenes/_Main Game/Chapter 4 - Vanaheim/Vanaheim_10.unity
-    guid: 48e19666a581d014cb432cc08778ac08
+    guid: d6623a6262226b04893cd9e42978056f
   m_configObjects: {}
