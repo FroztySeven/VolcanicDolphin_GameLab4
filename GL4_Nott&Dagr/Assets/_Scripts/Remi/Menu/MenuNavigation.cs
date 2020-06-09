@@ -24,6 +24,8 @@ public class MenuNavigation : MonoBehaviour
         Canvas_HowToPlay.SetActive(false);
         Canvas_Credits.SetActive(false);
         Canvas_CharacterSelection.SetActive(false);
+        CharacterStoredInfo.instance.night = 0;
+        CharacterStoredInfo.instance.day = 0;
     }
 
 
