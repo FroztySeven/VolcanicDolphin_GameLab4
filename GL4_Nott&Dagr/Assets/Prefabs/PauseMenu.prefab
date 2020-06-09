@@ -6576,7 +6576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3878778971344271805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8445,8 +8445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.001953, y: 304}
-  m_SizeDelta: {x: 4128.5, y: 866.1}
+  m_AnchoredPosition: {x: 14, y: 304}
+  m_SizeDelta: {x: 5789.8, y: 749.8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4618246678982649209
 CanvasRenderer:
@@ -8488,8 +8488,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Both players N\xF3tt and Dagr need to work together to solve puzzles.
-    Each of the players have different abilities to help progressing through the
-    levels."
+    \nEach of the players have different abilities to help progressing through the
+    game.\nDagr also earns the possibility to double jump in Jotunheim and later
+    levels!"
 --- !u!1 &8355180670916151937
 GameObject:
   m_ObjectHideFlags: 0

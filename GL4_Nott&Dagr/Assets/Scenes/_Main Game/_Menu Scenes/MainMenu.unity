@@ -14557,8 +14557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.001953, y: 304}
-  m_SizeDelta: {x: 4128.5, y: 866.1}
+  m_AnchoredPosition: {x: 14, y: 304}
+  m_SizeDelta: {x: 5789.8, y: 749.8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2083871964
 MonoBehaviour:
@@ -14592,8 +14592,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Both players N\xF3tt and Dagr need to work together to solve puzzles.
-    Each of the players have different abilities to help progressing through the
-    levels."
+    \nEach of the players have different abilities to help progressing through the
+    game.\nDagr also earns the possibility to double jump in Jotunheim and later
+    levels!"
 --- !u!222 &2083871965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15203,6 +15204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454679496987764316, guid: a2ce810f4b8f49841b44ddb4906cbcd0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -410.89996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2ce810f4b8f49841b44ddb4906cbcd0, type: 3}
