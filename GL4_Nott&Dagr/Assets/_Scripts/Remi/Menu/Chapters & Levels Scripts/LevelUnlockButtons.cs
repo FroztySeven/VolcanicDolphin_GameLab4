@@ -180,7 +180,7 @@ public class LevelUnlockButtons : MonoBehaviour
         {
             if (i + 1 > levelReached)
             {
-                C1[i].interactable = false;
+                C1[i].gameObject.SetActive(false);
             }
         }
         //Disable all level buttons in chapter 2 and the LevelPrefs int increases to unlock every button
@@ -190,7 +190,7 @@ public class LevelUnlockButtons : MonoBehaviour
             //The first level button is enabled when chapter 2 is unlocked
             if (i + lastNumberOfC1 >= levelReached)
             {
-                C2[i].interactable = false;
+                C2[i].gameObject.SetActive(false);
             }
         }
 
@@ -201,7 +201,7 @@ public class LevelUnlockButtons : MonoBehaviour
             //The first level button is enabled when chapter 3 is unlocked
             if (i + lastNumberOfC2 >= levelReached)
             {
-                C3[i].interactable = false;
+                C3[i].gameObject.SetActive(false);
             }
         }
         
@@ -212,7 +212,7 @@ public class LevelUnlockButtons : MonoBehaviour
             //The first level button is enabled when chapter 3 is unlocked
             if (i + lastNumberOfC3 >= levelReached)
             {
-                C4[i].interactable = false;
+                C4[i].gameObject.SetActive(false);
             }
         }
         

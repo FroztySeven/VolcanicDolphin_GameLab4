@@ -10,6 +10,7 @@ public class OptionConfigs : MonoBehaviour
         Canvas_Start,
         Canvas_Options,
         Canvas_HowToPlay,
+        Canvas_UnlockLevelsConfirm,
         Canvas_CharacterSelection;
 
 
@@ -49,6 +50,11 @@ public class OptionConfigs : MonoBehaviour
     public void SetPlayerPrefsToMax()
     {
         PlayerPrefs.SetInt("LevelPrefs", 999);
+        Canvas_UnlockLevelsConfirm.SetActive(true);
+        Invoke("AutoReturnToMenu", 1f);
+    }
+    void AutoReturnToMenu()
+    {  
         SceneManager.LoadScene("MainMenu");
     }
 
