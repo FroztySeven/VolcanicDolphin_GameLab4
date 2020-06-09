@@ -50,7 +50,7 @@ public class CutsceneController : MonoBehaviour
         if (cutsceneLoadToLevel.ToString() == "Helheim")
         {
             //When the cutscene timer is bigger than 1 second, show the skip image in the corner of the scene
-            if (cutsceneTimer >= 1f)
+            if (cutsceneTimer >= 1.5f)
             {
                 skipBG.SetActive(true);
                 skipImage.SetActive(true);
@@ -62,12 +62,12 @@ public class CutsceneController : MonoBehaviour
                 _animator.SetTrigger("SetFadeOut");
             }
 
-            //While the fading animation happens, disable the skip image in the corner of the scene
+            /*//While the fading animation happens, disable the skip image in the corner of the scene
             if (cutsceneTimer >= 6.5f)
             {
                 skipBG.SetActive(false);
                 skipImage.SetActive(false);
-            }
+            }*/
 
             //Change scene when passing 7 seconds
             if (cutsceneTimer >= 7f)
@@ -87,7 +87,7 @@ public class CutsceneController : MonoBehaviour
         if (cutsceneLoadToLevel.ToString() == "Jotunheim")
         {
             //When the cutscene timer is bigger than 1 second, show the skip image in the corner of the scene
-            if (cutsceneTimer >= 1f)
+            if (cutsceneTimer >= 1.5f)
             {
                 skipBG.SetActive(true);
                 skipImage.SetActive(true);
@@ -99,12 +99,12 @@ public class CutsceneController : MonoBehaviour
                 _animator.SetTrigger("SetFadeOut");
             }
 
-            //While the fading animation happens, disable the skip image in the corner of the scene
+            /*//While the fading animation happens, disable the skip image in the corner of the scene
             if (cutsceneTimer >= 6.5f)
             {
                 skipBG.SetActive(false);
                 skipImage.SetActive(false);
-            }
+            }*/
 
             //Change scene when passing 7 seconds
             if (cutsceneTimer >= 7f)
@@ -114,7 +114,7 @@ public class CutsceneController : MonoBehaviour
             }
 
             //Enable either one of the players to press the "A" button to skip straight to the first defined level of the chapter
-            if (Input.GetButtonDown("JumpP1") || Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButtonDown("JumpP1") || Input.GetButtonDown("JumpP2") || Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(firstLevelInChapter2);
             }
@@ -125,7 +125,7 @@ public class CutsceneController : MonoBehaviour
         if (cutsceneLoadToLevel.ToString() == "Muspelheim")
         {
             //When the cutscene timer is bigger than 1 second, show the skip image in the corner of the scene
-            if (cutsceneTimer >= 1f)
+            if (cutsceneTimer >= 1.5f)
             {
                 skipBG.SetActive(true);
                 skipImage.SetActive(true);
@@ -137,12 +137,12 @@ public class CutsceneController : MonoBehaviour
                 _animator.SetTrigger("SetFadeOut");
             }
 
-            //While the fading animation happens, disable the skip image in the corner of the scene
+            /*//While the fading animation happens, disable the skip image in the corner of the scene
             if (cutsceneTimer >= 6.5f)
             {
                 skipBG.SetActive(false);
                 skipImage.SetActive(false);
-            }
+            }*/
 
             //Change scene when passing 7 seconds
             if (cutsceneTimer >= 7f)
@@ -152,7 +152,7 @@ public class CutsceneController : MonoBehaviour
             }
             
             //Enable either one of the players to press the "A" button to skip straight to the first defined level of the chapter
-            if (Input.GetButtonDown("JumpP1") || Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButtonDown("JumpP1") || Input.GetButtonDown("JumpP2") || Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(firstLevelInChapter3);
             }
@@ -162,7 +162,7 @@ public class CutsceneController : MonoBehaviour
         if (cutsceneLoadToLevel.ToString() == "Vanaheim")
         {
             //When the cutscene timer is bigger than 1 second, show the skip image in the corner of the scene
-            if (cutsceneTimer >= 1f)
+            if (cutsceneTimer >= 1.5f)
             {
                 skipBG.SetActive(true);
                 skipImage.SetActive(true);
@@ -174,12 +174,12 @@ public class CutsceneController : MonoBehaviour
                 _animator.SetTrigger("SetFadeOut");
             }
 
-            //While the fading animation happens, disable the skip image in the corner of the scene
+            /*//While the fading animation happens, disable the skip image in the corner of the scene
             if (cutsceneTimer >= 6.5f)
             {
                 skipBG.SetActive(false);
                 skipImage.SetActive(false);
-            }
+            }*/
 
             //Change scene when passing 7 seconds
             if (cutsceneTimer >= 7f)
@@ -189,7 +189,7 @@ public class CutsceneController : MonoBehaviour
             }
             
             //Enable either one of the players to press the "A" button to skip straight to the first defined level of the chapter
-            if (Input.GetButtonDown("JumpP1") || Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButtonDown("JumpP1") || Input.GetButtonDown("JumpP2") || Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(firstLevelInChapter4);
             }
@@ -198,11 +198,12 @@ public class CutsceneController : MonoBehaviour
         // Cutscene TBC
         if (cutsceneLoadToLevel.ToString() == "ToBeContinued")
         {
-            //When the cutscene timer is bigger than 1 second, show the loading text
-            if (cutsceneTimer >= 1f)
+            loadingText.gameObject.SetActive(true);
+            /*//When the cutscene timer is bigger than 1 second, show the loading text
+            if (cutsceneTimer >= 1.5f)
             {
                 loadingText.gameObject.SetActive(true);
-            }
+            }*/
             //Start fading out the cutscene after 5 seconds
             if (cutsceneTimer >= 3f)
             {

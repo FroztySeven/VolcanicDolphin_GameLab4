@@ -137,13 +137,13 @@ public class ExitLevel : MonoBehaviour
             day.transform.position = Vector3.Lerp(day.transform.position, transform.position + new Vector3(0.5f, -0.15f, 0f), 2f * Time.deltaTime);
         }
 
-        //Cheat complete level
+        /*//Cheat complete level
         if (Input.GetKeyDown(KeyCode.V))
         {
             tempLoadingScreen = Instantiate(loadingScreen);
             StartCoroutine(nextLevel());
             loadingScreenIsActive = true;
-        }
+        }*/
 
         if (levelFinished)
         {
