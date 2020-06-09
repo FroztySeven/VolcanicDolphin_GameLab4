@@ -788,7 +788,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Move controller
+  m_Text: Select Character
 --- !u!222 &143464061
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1366,7 +1366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: -134.00002}
+  m_AnchoredPosition: {x: -35, y: -134.00002}
   m_SizeDelta: {x: 2589.1, y: 359.24}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &205641063
@@ -1389,7 +1389,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: db883359c5159764eaa55db625874dfa, type: 3}
-    m_FontSize: 200
+    m_FontSize: 170
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -2888,7 +2888,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: All levels & chapters are now accessable!
+  m_Text: All levels & chapters are now accessable
 --- !u!222 &388954669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3157,7 +3157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 304}
+  m_AnchoredPosition: {x: 0, y: 111.00003}
   m_SizeDelta: {x: 4128.5, y: 866.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &451811554
@@ -3191,7 +3191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Team Volcanic Dolphin
+  m_Text: Credits
 --- !u!222 &451811555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4608,7 +4608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -42.000015}
   m_SizeDelta: {x: 500, y: 93.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625893841
@@ -4876,7 +4876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38431376, g: 0.5764706, b: 0.6901961, a: 1}
+  m_Color: {r: 0.08627451, g: 0.18431373, b: 0.24705884, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4940,7 +4940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -70}
+  m_AnchoredPosition: {x: 0, y: 37.999985}
   m_SizeDelta: {x: 500, y: 93.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &646165860
@@ -5460,7 +5460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 435}
+  m_AnchoredPosition: {x: 0, y: 242}
   m_SizeDelta: {x: 1906, y: 263.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &739120067
@@ -5494,7 +5494,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits
+  m_Text: Volcanic Dolphin
 --- !u!222 &739120068
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5765,7 +5765,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Two controllers are required!
+  m_Text: Two controllers are required
 --- !u!222 &839592077
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6066,7 +6066,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: by Volcanic Dolphin - 2020
+  m_Text: Volcanic Dolphin
 --- !u!222 &862735683
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6667,7 +6667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165, y: 40}
+  m_AnchoredPosition: {x: -165, y: 147.99998}
   m_SizeDelta: {x: 455, y: 160.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995900822
@@ -8351,7 +8351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -230}
+  m_AnchoredPosition: {x: 0, y: -122.000015}
   m_SizeDelta: {x: 500, y: 93.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343494124
@@ -8488,7 +8488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1372983863
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9207,10 +9207,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The game was built using Xbox controllers.
+  m_Text: 'The game is optimised for Xbox controllers.
 
-    Other controllers are
-    not guaranteed to work correctly, use at own risk!'
+    Other controllers may
+    not work correctly.'
 --- !u!222 &1460164711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9337,7 +9337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165, y: 40}
+  m_AnchoredPosition: {x: 165, y: 148}
   m_SizeDelta: {x: 455, y: 160.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475833806
@@ -10590,7 +10590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 315, y: 126}
+  m_AnchoredPosition: {x: 306, y: 41}
   m_SizeDelta: {x: 1789.8, y: 1150.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1606664162
@@ -11299,7 +11299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8470589, g: 0.7490196, b: 0.53333336, a: 1}
+  m_Color: {r: 0.7176471, g: 0.4156863, b: 0.12941177, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -12026,7 +12026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -310}
+  m_AnchoredPosition: {x: 0, y: -202.00002}
   m_SizeDelta: {x: 500, y: 93.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767397015
@@ -13873,7 +13873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: 126}
+  m_AnchoredPosition: {x: -142, y: 41}
   m_SizeDelta: {x: 1789.8, y: 1150.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2007300976
@@ -14557,7 +14557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: 304}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 5789.8, y: 749.8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2083871964
@@ -14585,16 +14585,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 200
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Both players N\xF3tt and Dagr need to work together to solve puzzles.
-    \nEach of the players have different abilities to help progressing through the
-    game.\nDagr also earns the possibility to double jump in Jotunheim and later
-    levels!"
+  m_Text: "N\xF3tt and Dagr need to work together to solve puzzles. \nFrom chapter
+    2 onwards Dagr has the ability to double jump."
 --- !u!222 &2083871965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15053,8 +15051,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Are you sure you want to delete your chapters \nand levels progressions?\nYou
-    will have to re-unlock them all"
+  m_Text: 'Are you sure you want to delete your chapter
+
+    and level progression?'
 --- !u!222 &2145239891
 CanvasRenderer:
   m_ObjectHideFlags: 0
