@@ -13,7 +13,15 @@ public class CharacterStoredInfo : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
         DontDestroyOnLoad(gameObject);
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

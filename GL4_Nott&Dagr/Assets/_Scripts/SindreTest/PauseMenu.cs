@@ -9,7 +9,9 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject mainPanel, settingsPanel, howToPlayPanel;
-    
+
+    public GameObject contButton;
+
     public Button[] nottAbilities;
     public Button[] dagrAbilities;
 
@@ -70,7 +72,7 @@ public class PauseMenu : MonoBehaviour
             if (mainPanel.activeSelf) // turn off the pause menu if it is open
             {
                 mainPanel.SetActive(false);
-                howToPlayPanel.SetActive(false);
+                //howToPlayPanel.SetActive(false);
                 Time.timeScale = 1f;
                 dagr.GetComponent<PlayerController>().enabled = true;
                 nott.GetComponent<PlayerController>().enabled = true;
@@ -78,8 +80,9 @@ public class PauseMenu : MonoBehaviour
             else if (!mainPanel.activeSelf) // turn on the pause menu
             {
                 mainPanel.SetActive(true);
-                howToPlayPanel.SetActive(false);
-                EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
+                //howToPlayPanel.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(contButton);
                 Time.timeScale = 0f;
                 dagr.GetComponent<PlayerController>().enabled = false;
                 nott.GetComponent<PlayerController>().enabled = false;
@@ -130,28 +133,28 @@ public class PauseMenu : MonoBehaviour
         
     }
 
-    public void settingsButton()
-    {
-        mainPanel.SetActive(false);
-        settingsPanel.SetActive(true);
-        howToPlayPanel.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(settingsPanel.GetComponentInChildren<Button>().gameObject);
-    }
+    //public void settingsButton()
+    //{
+    //    mainPanel.SetActive(false);
+    //    settingsPanel.SetActive(true);
+    //    howToPlayPanel.SetActive(false);
+    //    EventSystem.current.SetSelectedGameObject(settingsPanel.GetComponentInChildren<Button>().gameObject);
+    //}
 
-    public void howToPlayButton()
-    {
-        mainPanel.SetActive(false);
-        settingsPanel.SetActive(false);
-        howToPlayPanel.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(howToPlayPanel.GetComponentInChildren<Button>().gameObject);
-    }
+    //public void howToPlayButton()
+    //{
+    //    mainPanel.SetActive(false);
+    //    settingsPanel.SetActive(false);
+    //    howToPlayPanel.SetActive(true);
+    //    EventSystem.current.SetSelectedGameObject(howToPlayPanel.GetComponentInChildren<Button>().gameObject);
+    //}
 
-    public void backButton()
-    {
-        mainPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        howToPlayPanel.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
-    }
+    //public void backButton()
+    //{
+    //    mainPanel.SetActive(true);
+    //    settingsPanel.SetActive(false);
+    //    howToPlayPanel.SetActive(false);
+    //    EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
+    //}
 }
 

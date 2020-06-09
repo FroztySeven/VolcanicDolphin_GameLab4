@@ -77,7 +77,7 @@ public class CutsceneController : MonoBehaviour
             }
             
             //Enable either one of the players to press the "A" button to skip straight to the first defined level of the chapter
-            if (Input.GetButtonDown("JumpP1") || Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButtonDown("JumpP1") || Input.GetButtonDown("JumpP2") || Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(firstLevelInChapter1);
             }
